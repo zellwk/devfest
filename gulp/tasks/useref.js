@@ -10,7 +10,7 @@ gulp.task('useref', function() {
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.uncss({
       html: [config.handlebars.dest + '/*' + config.handlebars.extname],
-      ignore: [/.globals/],
+      ignore: [/.is-open/],
     })))
     .pipe($.if('*.css', $.minifyCss()))
     .pipe($.rev())

@@ -15,7 +15,6 @@ jQuery(document).ready(function($) {
     event.preventDefault();
     event.stopPropagation();
 
-    console.log('tesing');
     if ($container.hasClass('is-open')) {
       $container.removeClass('is-open');
     } else {

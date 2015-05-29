@@ -30,11 +30,11 @@ $offCanvasWidth: 300px;
   background: white;
   @include trans-prep;
   transition: transform 0.4s ease-out;
+}
 
-  .c-canvas.is-open & {
-    overflow: hidden;
-    transform: translate3d(-#{$offCanvasWidth}, 0, 0);
-  }
+.c-canvas.is-open .c-canvas__on-canvas {
+  overflow: hidden;
+  transform: translate3d(-#{$offCanvasWidth}, 0, 0);
 }
 
 .c-canvas-toggle {

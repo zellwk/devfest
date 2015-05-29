@@ -1,0 +1,29 @@
+// Layouts
+// =======
+
+.wrap {
+  @include container;
+  padding-left: rhythm(0.5);
+  padding-right: rhythm(0.5);
+
+  @include bp(med) {
+    padding-left: rhythm(1.5);
+    padding-right: rhythm(1.5);
+  }
+}
+
+.wrap--header {
+  @extend .wrap;
+  max-width: 1240px;
+}
+
+.wrap--events-header {
+  @extend .wrap;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+}

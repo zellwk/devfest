@@ -1,0 +1,187 @@
+.c-events-header {
+  line-height: 1;
+  border: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  padding-top: rhythm(1);
+  padding-bottom: rhythm(1);
+
+  .wrap {
+    @include bp(max "med+1") {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.c-events-header__title {
+  margin-bottom: rhythm(1);
+  font-size: ms(1);
+}
+
+.c-events-nav-mobile {
+  text-align: center;
+
+  @include bp("med+1") {
+    display: none;
+  }
+}
+
+.c-events-nav {
+  display: none;
+
+  @include bp("med+1") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: bold;
+    width: 100%;
+    flex-wrap: nowrap;
+
+    a {
+      color: color(mobster);
+      padding: 0 0.5em;
+      font-size: ms(1);
+    }
+  }
+}
+
+.c-dates {
+  @include container;
+  @extend .wrap;
+  margin-top: gutter();
+  margin-bottom: gutter();
+
+  @include bp("med+1") {
+    margin-top: gutter() * 0.5;
+    margin-bottom: 0;
+  }
+}
+
+.c-date {
+  text-align: center;
+
+  @include bp("med+1") {
+    text-align: left;
+    @include span(2);
+  }
+
+  .day {
+    display: inline-block;
+    font-size: ms(2);
+    font-weight: bold;
+    @include adjust-leading-to(1.5);
+    margin-top: rhythm(1);
+    margin-bottom: rhythm(1);
+
+    @include bp("med+1") {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .weekday {
+    display: inline-block;
+
+    @include bp("med+1") {
+      display: block;
+    }
+  }
+}
+
+.c-events {
+  @include bp(max "med+1") {
+    margin-top: rhythm(-1);
+  }
+
+  @include bp("med+1") {
+    @include span(10 last);
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.c-event {
+  @include bp(max "med+1") {
+    margin-top: rhythm(1);
+  }
+
+  @include bp("med+1") {
+    width: span(5 of 10);
+    padding: 0 (gutter(10) * 0.5);
+
+    + & {
+      margin-top: 0;
+    }
+
+    &:nth-child(n+3) {
+      margin-top: gutter(10);
+    }
+  }
+}
+
+.c-event__header {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-position: center center;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  }
+}
+
+.c-event__title {
+  position: relative;
+  padding: rhythm(0.5);
+  color: rgba(255, 255, 255, 1);
+  z-index: 2;
+}
+
+.c-event__desc {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: rhythm(0.5);
+}
+
+.c-event__time {
+  margin-top: rhythm(1);
+}
+
+.i-location {
+  vertical-align: middle;
+  display: inline-block;
+  width: rhythm(1);
+  margin-right: 0.25em;
+}
+
+.c-event__cta {
+  text-align: center;
+}
+
+// interrupt div
+.c-interrupt {
+  text-align: center;
+  display: block;
+  background: #fafafa;
+  margin-top: rhythm(1);
+  margin-bottom: rhythm(1);
+  padding-top: rhythm(2);
+  padding-bottom: rhythm(2);
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
+  @include bp("med+1") {
+    margin-top: rhythm(3);
+    margin-bottom: rhythm(3);
+  }
+}

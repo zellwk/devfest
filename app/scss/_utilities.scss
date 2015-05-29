@@ -1,0 +1,5 @@
+.u-hide-mobile {
+  @include bp(max $bp-med) {
+    display: none !important;
+  }
+}

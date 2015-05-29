@@ -1,0 +1,13 @@
+.wrap--header {
+  .c-canvas-toggle {
+    @include bp("med+1") {
+      display: none;
+    }
+  }
+
+  .c-nav {
+    @include bp(max "med+1") {
+      display: none;
+    }
+  }
+}

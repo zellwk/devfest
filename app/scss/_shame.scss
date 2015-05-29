@@ -1,0 +1,17 @@
+.c-tickets {
+  text-align: center;
+}
+
+.c-jobs {
+  @include cf;
+}
+
+.c-job {
+  margin-top: rhythm(1);
+
+  @include bp(med) {
+    @include gallery(4 of 12);
+    margin-top: rhythm(2);
+  }
+}
+

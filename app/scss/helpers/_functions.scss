@@ -1,0 +1,51 @@
+// Functions
+// ---------
+// General functions for projects
+// ==========
+
+// Color
+// -----
+// An easy way to get colors from the $colors map 
+// =====
+
+@function color($color, $map: $colors) {
+  @return map-get($map, $color);
+}
+
+// MAP-FETCH
+// ---------
+// An easy way to fetch a deep value in a multi-level map.
+// Works much like map-get() except that you pass multiple
+// keys as the second parameter to go down multiple levels
+// in the nested map.
+//
+// https://gist.github.com/jlong/8760275
+// =========
+
+@function map-fetch($map, $keys) {
+  $key: nth($keys, 1);
+  $length: length($keys);
+  $value: map-get($map, $key);
+  @if $length > 1 {
+    $rest: ();
+    @for $i from 2 through $length {
+      $rest: append($rest, nth($keys, $i));
+    }
+    @return map-fetch($value, $rest);
+  }
+  @else {
+    @return $value;
+  }
+}
+
+// Rem [Function]
+// --------------
+// Converts pixels to rem with $base-font-size
+// or any other font size
+// - https://gist.github.com/ijy/1441967
+@function rem($target, $context: $base-font-size) {
+  @if $target == 0 {
+    @return 0;
+  }
+  @return $target / $context + 0rem;
+}

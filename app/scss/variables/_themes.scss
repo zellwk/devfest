@@ -1,0 +1,21 @@
+
+// Themes
+// ------
+// Map for project themes. Uses a theming method 
+// developed by @zellwk with the help of @ezekkkg. 
+// See Themify mixin for more info.
+// ======
+$themes: (
+  theme1: (
+    color: #333,
+    background: #fff,
+    ),
+  theme2: (
+    color: color(white),
+    background: #000
+    ),
+  theme3: (
+    color: red, 
+    background: url("../images/someimage.png")
+    )
+  );

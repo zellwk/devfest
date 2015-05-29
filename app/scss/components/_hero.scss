@@ -1,0 +1,55 @@
+// hero
+.c-hero {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  padding-top: rhythm(4);
+  padding-bottom: rhythm(4);
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+
+  .wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.7;
+    z-index: -0;
+  }
+
+  .c-logo--hero {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+// intro
+.c-hero__intro {
+  button {
+    margin-top: rhythm(1);
+  }
+
+  button + div {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.c-hero__subtitle {
+  margin-bottom: rhythm(0.5);
+}
+
+// sponsors
+.c-hero__sponsors {
+  margin-top: rhythm(2);
+}

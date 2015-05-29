@@ -1,0 +1,80 @@
+// Typography
+// ---------------
+// Sets typography for all of document 
+// ===============
+//
+html {
+  @include ff(primary);
+  // font-weight: 300;
+}
+
+body {
+  // Optmizes font rendering for legibility.
+  // May break with some browsers, comment out as necessary.
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+h2 {
+  font-weight: 400;
+
+  @include bp(med) {
+    font-size: ms(2);
+    @include adjust-leading-to(2);
+  }
+}
+
+h3 {
+  font-size: ms(1);
+  font-weight: normal;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+strong {
+  @include fw(bold);
+}
+
+em {
+  font-style: italic;
+}
+
+pre {
+  white-space: pre;
+}
+
+.o-cursive {
+  @include ff(secondary);
+}
+
+.o-italic {
+  font-family: 'Volkorn';
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: color(salt-box);
+
+  &:visited {
+    color: color(mobster);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: color(froly);
+  }
+}

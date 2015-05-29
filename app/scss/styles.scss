@@ -1,0 +1,59 @@
+// Libraries 
+// ---------
+@import "lib/lib";
+
+// Helpers 
+// -------
+@import "helpers/helpers";
+
+// @import "sprite"; // Import sprite if gulp-spriting is used
+
+// Variables
+// ---------
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/themes";
+@import "variables/breakpoints";
+
+// Reset and base files
+// --------------------
+@import "base/reset";
+@import "base/base";
+
+// Layouts 
+// -------
+@import "layouts/susy";
+@import "layouts/layouts";
+@import "layouts/canvas";
+@import "layouts/header";
+
+// Objects
+// -------
+// Repeatable objects across the site
+@import "objects/buttons";
+
+// @import "objects/form";
+// @import "objects/media";
+@import "objects/typography";
+
+// Components
+// ----------
+// For individual, isolated components
+@import "components/logo";
+@import "components/nav";
+@import "components/hero";
+@import "components/sponsors";
+@import "components/events";
+
+// Utilities
+// ---------
+// @import "utilities";
+
+// Page Specific Overrides
+// -----------------------
+// Rarely ever used. Exceptions may be homepage, for example
+
+// Shame
+// -----
+// For new style snippets that haven't been sorted and commented yet
+@import "shame";

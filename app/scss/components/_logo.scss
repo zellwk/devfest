@@ -1,0 +1,43 @@
+.c-logo {
+  margin: rhythm(1) 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: #2E2C2C;
+  font-size: 0.5rem;
+
+  @include bp(large) {
+    font-size: 0.5rem;
+  }
+
+  .c-logo__devfest {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .c-logo__2015 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.c-logo--hero {
+  @extend .c-logo;
+  font-size: 1rem;
+
+  .c-logo__devfest,
+  .c-logo__2015 {
+    display: block;
+  }
+
+  .c-logo__singapore {
+    padding: rhythm(0.5) 0;
+    font-size: 1em;
+    letter-spacing: 1.1em;
+  }
+}

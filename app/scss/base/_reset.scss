@@ -1,0 +1,63 @@
+// THEME RESET
+// -----------
+// Personal resets in addition to Normalize.scss
+// ===========
+
+// Use border-box for everything
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// Resets margins and paddings for headers, ul, ol and p
+h1, h2, h3, h4, h5, h6, ul, li, p, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+// Removes all decimals and discs from li
+li {
+  list-style: none;
+}
+
+// Completely resets form items
+// ----------------------------
+// Super hard reset that removes all borders 
+// and radiuses of all form items. 
+// ============================
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  outline: 0;
+  border: 0;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    border: 0;
+  }
+}
+
+// Set Image and Objects to have a max-width of 100%
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+// Set Img height and width to auto for IE8
+img {
+  // IE8
+  height: auto;
+  width: auto;
+}

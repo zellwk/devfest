@@ -1,0 +1,32 @@
+// Theme base
+// ----------
+@include establish-baseline;
+
+// Adaptation of Lobotomized Owls Selector on p elements
+// http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+p + p,
+p + img,
+img + p {
+  margin-top: rhythm(1);
+}
+
+// Adds default UL and LI styles back ONLY for articles
+// Adds margin bottom of 1 rhythm to images ONLY for articles
+article {
+  ul,
+  ol {
+    margin-left: 1em;
+  }
+
+  li + li {
+    margin-top: rhythm(0.5);
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+}

@@ -1,0 +1,57 @@
+html,
+body,
+.c-canvas,
+.c-canvas__off-canvas,
+.c-canvas__on-canvas {
+  height: 100%;
+}
+
+$offCanvasWidth: 300px;
+
+.c-canvas {
+  position: relative;
+  overflow: hidden;
+}
+
+.c-canvas__off-canvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: $offCanvasWidth;
+  overflow: auto;
+  background: color(grandis);
+}
+
+.c-canvas__on-canvas {
+  position: relative;
+  z-index: 20;
+  overflow: auto;
+  background: white;
+  @include trans-prep;
+  transition: transform 0.4s ease-out;
+
+  .c-canvas.is-open & {
+    overflow: hidden;
+    transform: translate3d(-#{$offCanvasWidth}, 0, 0);
+  }
+}
+
+.c-canvas-toggle {
+  background: none;
+
+  span, .i-menu {
+    vertical-align: middle;
+  }
+
+  span {
+    margin-right: 0.25em;
+    color: color(mobster);
+  }
+
+  .i-menu {
+    path {
+      fill: color(mobster);
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "starter-kit",
+  "version": "0.0.1",
+  "description": "",
+  "browser": {
+    "jquery": "./app/bower_components/jquery/dist/jquery.js"
+  },
+  "browserify-shim": {
+    "jquery": "$"
+  },
+  "dependencies": {
+    "svg-injector": "^1.1.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.7.3",
+    "browserify": "^10.2.1",
+    "browserify-shim": "^3.8.6",
+    "css-sprite": "^0.9.9",
+    "css-sprites": "0.0.4",
+    "del": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.0",
+    "gulp-cache": "^0.2.9",
+    "gulp-changed": "^1.2.1",
+    "gulp-compile-handlebars": "^0.5.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-data": "^1.2.0",
+    "gulp-debug": "^2.0.1",
+    "gulp-filter": "^2.0.2",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^4.0.0",
+    "gulp-rev-replace": "^0.4.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-svgmin": "^1.1.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-uncss": "^1.0.1",
+    "gulp-useref": "^1.1.2",
+    "gulp-util": "^3.0.4",
+    "jquery": "^2.1.4",
+    "lodash": "^3.9.1",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

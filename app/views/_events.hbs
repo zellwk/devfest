@@ -1,0 +1,105 @@
+<div class="c-events-header">
+  <div class="wrap">
+    <h4 class="o-italic c-events-header__title">Browse by date</h4>
+    <div class="c-events-nav-mobile">
+      <select name="" id="">
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+      </select>
+    </div>
+
+    <nav class="c-events-nav">
+      <a href="#7">7</a>
+      <a href="#8">8</a>
+      <a href="#9">9</a>
+      <a href="#10">10</a>
+      <a href="#11">11</a>
+      <a href="#12">12</a>
+      <a href="#13">13</a>
+      <a href="#14">14</a>
+      <a href="#15">15</a>
+      <a href="#16">16</a>
+      <a href="#17">17</a>
+      <a href="#18">18</a>
+      <a href="#19">19</a>
+      <a href="#20">20</a>
+      <a href="#21">21</a>
+    </nav>
+  </div>
+</div>
+
+{{#each dates}}
+
+{{#compare this.type 'event'}}
+<div id="{{date}}" class="c-dates">
+  <div class="c-date">
+    <h2 class="day">{{date}}</h2>
+    <h4 class="weekday">{{day}}</h4>
+  </div>
+  
+  <div class="c-events">
+    {{#each events}}
+    <div class="c-event">
+      <div class="c-event__header" style="background-image: url({{image}});">
+        <h2 class="c-event__title">{{title}}</h2>
+      </div>
+      <div class="c-event__desc">
+        <p>{{desc}}</p>
+        <div class="c-event__time">
+          {{startTime}} - {{endTime}}
+        </div>
+        <a class="c-event__location" href="http://maps.google.com/?q={{location}}"> <img class="i-location jsSvgInject" src="images/location.svg" /> {{location}}</a>
+      </div>
+      <div class="c-event__cta">
+        <a class="o-btn" href="#">Get Ticket</a>
+      </div>
+    </div>  
+    {{/each}}
+  </div>
+</div>
+{{/compare}}
+
+{{#compare this.type "job"}}
+<div class="c-interrupt">  
+  <div class="wrap">
+    <h2 class="o-italic"><strong>{{title}}</strong></h2>
+    <h4>{{desc}}</h4>
+    <div class="c-jobs">
+      {{#listItems 0 3 ../../jobs}}
+      <div class="c-job">
+        <img src="http://placehold.it/160x90" alt="">
+        <h4><strong>{{title}} at {{employer}}</strong></h4>
+        <p>{{jd}}</p>
+      </div>
+      {{/listItems}}
+    </div>      
+
+    <button class="o-btn">See other jobs</button>
+  </div>
+</div> 
+{{/compare}}
+
+{{#compare this.type "tickets"}}
+<div class="c-interrupt c-tickets">  
+  <div class="wrap">
+    <h2 class="o-italic">{{{title}}}</h2>
+    <h4>{{{desc}}}</h4>
+    <button class="o-btn--highlight">{{button}}</button>
+  </div>
+</div> 
+{{/compare}}
+
+{{/each}}

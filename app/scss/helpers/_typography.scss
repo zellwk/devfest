@@ -1,0 +1,41 @@
+// Typography mixins
+// -----------------
+
+// Font weight
+// -----------
+@mixin fw($target, $map: $font-weights) {  
+  font-weight: map-fetch($font-weights, $target); 
+}
+
+// Font Family
+// -----------
+@mixin ff($family: primary, $map: $font-families) {
+  font-family: map-get($map, $family);
+}
+
+// Type-scale
+// ----------
+// Gets font-size and baseline from typography map located
+// in variables/typography and creates the necessary
+// font-size and line-height property in CSS with the
+// compass vertical rhythm.
+//
+// This uses the @include adjust-font-size-to mixin and
+// requires Compass Vertical Rhythm to be used.
+//
+// https://medium.com/p/8e51498c3713
+// ==========
+@mixin type-scale($scale, $map: $type-scale) {
+  $font-size: map-fetch($map, $scale font-size);
+  $base-lines: map-fetch($map, $scale base-lines);
+  @include adjust-font-size-to($font-size, $base-lines);
+}
+
+// Text overflow
+// -------------
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

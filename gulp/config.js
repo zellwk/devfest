@@ -50,6 +50,10 @@ module.exports = {
     dest: src + '/css',
     includePaths: [src + '/bower_components']
   },
+  svg: {
+    src: src + '/images/**/*.svg',
+    dest: dest + '/images',
+  },
   sprites: {
     src: src + '/images/sprites/*.{png,jpg}',
     imageDest: src + '/images',

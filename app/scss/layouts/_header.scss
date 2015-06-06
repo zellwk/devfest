@@ -1,3 +1,13 @@
+.c-site-header {
+  background: color(bleu-de-france);
+  color: rgba(255, 255, 255, 0.85);
+
+  a,
+  a:visited {
+    color: rgba(255, 255, 255, 0.85);
+  }
+}
+
 .wrap--header {
   .c-canvas-toggle {
     @include bp("med+1") {
@@ -10,4 +20,22 @@
       display: none;
     }
   }
+}
+
+.c-nav {
+  @include ff(primary);
+  font-size: 0.875em;
+
+  a {
+    padding: 0 0.5em;
+  }
+}
+
+.i-menu {
+  height: rhythm(1);
+  width: rhythm(1);
+}
+
+.c-canvas__on-canvas {
+  background: color(patterns-blue);
 }

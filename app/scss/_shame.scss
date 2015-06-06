@@ -1,3 +1,47 @@
+.c-events-header {
+  line-height: 1;
+  padding-top: rhythm(1);
+  padding-bottom: rhythm(1);
+  background: color(malibu);
+  overflow-x: scroll;
+}
+
+.c-events-nav {
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+
+  a {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0 0.5em;
+    font-size: ms(1);
+    text-align: center;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .c-events-nav__weekend {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .c-events-nav__day {
+    display: block;
+    text-transform: uppercase;
+    font-size: ms(-2);
+  }
+
+  .c-events-nav__date {
+    display: block;
+  }
+}
+
 .c-tickets {
   text-align: center;
 }
@@ -14,4 +58,3 @@
     margin-top: rhythm(2);
   }
 }
-

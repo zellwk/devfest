@@ -1,12 +1,10 @@
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+// Initializes scripts
+require('./svg');
+require('./canvas');
+require('./smart-head');
+},{"./canvas":2,"./smart-head":3,"./svg":4}],2:[function(require,module,exports){
 var jQuery = require('jquery');
-var svgInjector = require('svg-injector');
-
-var svgsToInject = document.querySelector('.jsSvgInject');
-
-if (svgsToInject) {
-  svgInjector(svgsToInject);
-}
 
 jQuery(document).ready(function($) {
   var $container = $('.jsCanvasContainer');
@@ -47,7 +45,173 @@ jQuery(document).ready(function($) {
   }
 });
 
-},{"jquery":"jquery","svg-injector":2}],2:[function(require,module,exports){
+},{"jquery":"jquery"}],3:[function(require,module,exports){
+var jQuery = require('jquery');
+
+var SmartHead = (function() {
+  'use strict';
+
+  function SmartHead(args) {
+    // enforces new
+    if (!(this instanceof SmartHead)) {
+      return new SmartHead(args);
+    }
+    // constructor body
+    this.selectors = {
+      window: '.c-canvas__on-canvas'
+    };
+
+    this.$smartHeads = $('.jsSmartHead');
+    this.smartHeads = [];
+    this.totalHeights = 0;
+
+    this.initialize();
+  }
+
+  SmartHead.prototype = {
+    constructor: SmartHead,
+
+    initialize: function() {
+      this.initializeSmartHeads();
+      this.onScroll();
+      console.log(this.smartHeads[0]);
+      console.log(this.smartHeads[1]);
+    },
+
+    initializeSmartHeads: function() {
+      var SH = this;
+      var totalHeights;
+      this.$smartHeads.each(function(index, el) {
+        var $el = $(el),
+          $clone = $el.clone().removeClass('jsSmartHead').addClass('jsSmartHeadClone'),
+          props = {},
+          prevSmartHeadHeight = 0;
+
+        $el.after($clone);
+        // Initialize Appended Clone CSS 
+        $clone.css({
+          display: 'none',
+          position: 'absolute',
+          left: '0',
+          right: '0',
+          // background: 'red',
+          // opacity: '0.75'
+        });
+
+        props.$el = $el;
+        props.$clone = $clone;
+        props.height = $el.outerHeight();
+        props.activationPos = $el.position().top
+        props.deactivationPos = $el.position().top;
+
+        if (index == 0) {
+          props.posWhenScrollingDown = -props.height;
+          props.posWhenScrollingUp = 0;
+          console.log(props.height);
+
+        } else {
+          prevSmartHeadHeight = SH.smartHeads[index - 1].height;
+          props.deactivationPos = $el.position().top - props.height;
+          props.posWhenScrollingDown = 0;
+          props.posWhenScrollingUp = prevSmartHeadHeight;
+        }
+
+        SH.totalHeights = SH.totalHeights + props.height;
+        SH.smartHeads.push(props);
+      });
+    },
+
+    onScroll: function() {
+      var SH = this;
+      var prevScrollTop = 0;
+      var scrollTop = $(SH.selectors.window).scrollTop();
+      this.toggleSmartHeads(prevScrollTop, scrollTop);
+
+      $(SH.selectors.window).scroll(function(event) {
+        prevScrollTop = scrollTop;
+        scrollTop = $(SH.selectors.window).scrollTop();
+
+        SH.toggleSmartHeads(prevScrollTop, scrollTop);
+      });
+    },
+
+    toggleSmartHeads: function(prevScrollTop, scrollTop) {
+      var SH = this;
+      var scrollDirection = (scrollTop - prevScrollTop > 0) ? 'down' : 'up';
+
+      this.smartHeads.forEach(function(element, index) {
+        if (scrollTop > element.activationPos) {
+          SH.activateSmartHeadCss(scrollDirection, element);
+        }
+
+        if (scrollTop <= element.deactivationPos) {
+          SH.deactivateSmartHeadCss(element);
+        }
+      });
+
+      if (scrollTop <= this.smartHeads[0].activationPos) {
+        this.deactivateAllSmartHeads();
+      }
+    },
+
+    activateSmartHeadCss: function(direction, props) {
+      if (direction == 'down') {
+        console.log('activating', props.$clone);
+        props.$clone.css({
+          'display': 'block',
+          'position': 'fixed',
+          'z-index': '9999',
+          'top': props.posWhenScrollingDown,
+          'webkit-transition': 'top 0.25s ease-out',
+          'transition': 'top 0.25s ease-out'
+
+        })
+      } else {
+        props.$clone.css({
+          'top': props.posWhenScrollingUp
+        });
+      }
+    },
+
+    deactivateSmartHeadCss: function(props) {
+      console.log('deactivating', props.$clone);
+      props.$clone.css({
+        'display': 'none',
+        'position': 'absolute',
+        'top': '0',
+        'z-index': '-1'
+      })
+    },
+
+    deactivateAllSmartHeads: function() {
+      var SH = this;
+      console.log('deactivating everything');
+      this.smartHeads.forEach(function(props, index) {
+        SH.deactivateSmartHeadCss(props);
+      });
+    }
+  };
+
+  return SmartHead;
+}());
+
+// using window load instead of document ready to ensure all images
+// are loaded before firing smart head
+jQuery(window).load(function($) {
+  'use-strict';
+  SmartHead();
+});
+
+},{"jquery":"jquery"}],4:[function(require,module,exports){
+var svgInjector = require('svg-injector');
+
+var svgsToInject = document.getElementsByClassName('.jsSvgInject');
+
+if (svgsToInject) {
+  svgInjector(svgsToInject);
+}
+
+},{"svg-injector":5}],5:[function(require,module,exports){
 /**
  * SVGInjector v1.1.2 - Fast, caching, dynamic inline SVG DOM injection library
  * https://github.com/iconic/SVGInjector
@@ -21875,6 +22039,8 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[1]);
+
+},{}]},{},[1])
+
 
 //# sourceMappingURL=bundle.js.map

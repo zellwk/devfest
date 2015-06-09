@@ -1,16 +1,12 @@
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-// Initializes scripts
-require('./svg');
-require('./canvas');
-require('./smart-head');
-},{"./canvas":2,"./smart-head":3,"./svg":4}],2:[function(require,module,exports){
 var jQuery = require('jquery');
 
 jQuery(document).ready(function($) {
+  'use-strict';
   var $container = $('.jsCanvasContainer');
-  var $toggle = $('.jsCanvasToggle');
 
-  $toggle.on('click', function(event) {
+  $container.on('click', '.jsCanvasToggle', function(event) {
+    console.log('toggling');
     event.preventDefault();
     event.stopPropagation();
 
@@ -45,7 +41,13 @@ jQuery(document).ready(function($) {
   }
 });
 
-},{"jquery":"jquery"}],3:[function(require,module,exports){
+},{"jquery":"jquery"}],2:[function(require,module,exports){
+// Initializes scripts
+require('./svg');
+require('./smart-head');
+require('./canvas');
+
+},{"./canvas":1,"./smart-head":3,"./svg":4}],3:[function(require,module,exports){
 var jQuery = require('jquery');
 
 var SmartHead = (function() {
@@ -83,7 +85,7 @@ var SmartHead = (function() {
       var totalHeights;
       this.$smartHeads.each(function(index, el) {
         var $el = $(el),
-          $clone = $el.clone().removeClass('jsSmartHead').addClass('jsSmartHeadClone'),
+          $clone = $el.clone(true, true).removeClass('jsSmartHead').addClass('jsSmartHeadClone'),
           props = {},
           prevSmartHeadHeight = 0;
 
@@ -101,13 +103,13 @@ var SmartHead = (function() {
         props.$el = $el;
         props.$clone = $clone;
         props.height = $el.outerHeight();
-        props.activationPos = $el.position().top
+        props.activationPos = $el.position().top;
         props.deactivationPos = $el.position().top;
+        props.isActivated = false;
 
         if (index == 0) {
           props.posWhenScrollingDown = -props.height;
           props.posWhenScrollingUp = 0;
-          console.log(props.height);
 
         } else {
           prevSmartHeadHeight = SH.smartHeads[index - 1].height;
@@ -140,11 +142,18 @@ var SmartHead = (function() {
       var scrollDirection = (scrollTop - prevScrollTop > 0) ? 'down' : 'up';
 
       this.smartHeads.forEach(function(element, index) {
+
         if (scrollTop > element.activationPos) {
-          SH.activateSmartHeadCss(scrollDirection, element);
+          if (!element.isActivated) {
+            SH.activateSmartHeadCss(scrollDirection, element);
+            element.isActivated = true;
+          }
+
+          SH.directionDependentCss(scrollDirection, element);
         }
 
-        if (scrollTop <= element.deactivationPos) {
+        if (scrollTop <= element.deactivationPos && element.isActivated) {
+          element.isActivated = false;
           SH.deactivateSmartHeadCss(element);
         }
       });
@@ -155,17 +164,36 @@ var SmartHead = (function() {
     },
 
     activateSmartHeadCss: function(direction, props) {
-      if (direction == 'down') {
-        console.log('activating', props.$clone);
-        props.$clone.css({
-          'display': 'block',
-          'position': 'fixed',
-          'z-index': '9999',
-          'top': props.posWhenScrollingDown,
-          'webkit-transition': 'top 0.25s ease-out',
-          'transition': 'top 0.25s ease-out'
+      props.$clone.css({
+        'display': 'block',
+        'position': 'fixed',
+        'z-index': '9999',
+        'webkit-transition': 'top 0.25s ease-out',
+        'transition': 'top 0.25s ease-out',
+        'webkit-backface-visiblity': 'hidden',
+        'webkit-transform': 'translateZ(0)'
+      });
 
-        })
+      props.$clone.addClass('is-fixed');
+    },
+
+    deactivateSmartHeadCss: function(props) {
+      props.$clone.css({
+        'display': 'none',
+        'position': 'absolute',
+        'top': '0',
+        'z-index': '-1'
+      });
+
+      props.$clone.removeClass('is-fixed')
+
+    },
+
+    directionDependentCss: function(direction, props) {
+      if (direction === 'down') {
+        props.$clone.css({
+          'top': props.posWhenScrollingDown,
+        });
       } else {
         props.$clone.css({
           'top': props.posWhenScrollingUp
@@ -173,19 +201,8 @@ var SmartHead = (function() {
       }
     },
 
-    deactivateSmartHeadCss: function(props) {
-      console.log('deactivating', props.$clone);
-      props.$clone.css({
-        'display': 'none',
-        'position': 'absolute',
-        'top': '0',
-        'z-index': '-1'
-      })
-    },
-
     deactivateAllSmartHeads: function() {
       var SH = this;
-      console.log('deactivating everything');
       this.smartHeads.forEach(function(props, index) {
         SH.deactivateSmartHeadCss(props);
       });
@@ -9864,7 +9881,7 @@ return jQuery;
 (function (global){
 /**
  * @license
- * lodash 3.9.1 (Custom Build) <https://lodash.com/>
+ * lodash 3.9.3 (Custom Build) <https://lodash.com/>
  * Build: `lodash modern -d -o ./index.js`
  * Copyright 2012-2015 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
@@ -9877,7 +9894,7 @@ return jQuery;
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '3.9.1';
+  var VERSION = '3.9.3';
 
   /** Used to compose bitmasks for wrapper metadata. */
   var BIND_FLAG = 1,
@@ -9982,6 +9999,9 @@ return jQuery;
   /** Used to detect host constructors (Safari > 5). */
   var reIsHostCtor = /^\[object .+?Constructor\]$/;
 
+  /** Used to detect unsigned integer values. */
+  var reIsUint = /^\d+$/;
+
   /** Used to match latin-1 supplementary letters (excluding mathematical operators). */
   var reLatin1 = /[\xc0-\xd6\xd8-\xde\xdf-\xf6\xf8-\xff]/g;
 
@@ -10016,9 +10036,8 @@ return jQuery;
     'Array', 'ArrayBuffer', 'Date', 'Error', 'Float32Array', 'Float64Array',
     'Function', 'Int8Array', 'Int16Array', 'Int32Array', 'Math', 'Number',
     'Object', 'RegExp', 'Set', 'String', '_', 'clearTimeout', 'document',
-    'isFinite', 'parseInt', 'setTimeout', 'TypeError', 'Uint8Array',
-    'Uint8ClampedArray', 'Uint16Array', 'Uint32Array', 'WeakMap',
-    'window'
+    'isFinite', 'parseFloat', 'parseInt', 'setTimeout', 'TypeError', 'Uint8Array',
+    'Uint8ClampedArray', 'Uint16Array', 'Uint32Array', 'WeakMap', 'window'
   ];
 
   /** Used to make template sourceURLs easier to identify. */
@@ -10143,6 +10162,8 @@ return jQuery;
    * restricted `window` object, otherwise the `window` object is used.
    */
   var root = freeGlobal || ((freeWindow !== (this && this.window)) && freeWindow) || freeSelf || this;
+
+  /*--------------------------------------------------------------------------*/
 
   /**
    * The base implementation of `compareAscending` which compares values and
@@ -10512,6 +10533,8 @@ return jQuery;
     return htmlUnescapes[chr];
   }
 
+  /*--------------------------------------------------------------------------*/
+
   /**
    * Create a new pristine `lodash` function using the given `context` object.
    *
@@ -10605,6 +10628,7 @@ return jQuery;
         clearTimeout = context.clearTimeout,
         floor = Math.floor,
         getPrototypeOf = getNative(Object, 'getPrototypeOf'),
+        parseFloat = context.parseFloat,
         push = arrayProto.push,
         Set = getNative(context, 'Set'),
         setTimeout = context.setTimeout,
@@ -10637,7 +10661,8 @@ return jQuery;
         nativeRandom = Math.random;
 
     /** Used as references for `-Infinity` and `Infinity`. */
-    var POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
+    var NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY,
+        POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
 
     /** Used as references for the maximum length and index of an array. */
     var MAX_ARRAY_LENGTH = 4294967295,
@@ -10658,6 +10683,8 @@ return jQuery;
 
     /** Used to lookup unminified function names. */
     var realNames = {};
+
+    /*------------------------------------------------------------------------*/
 
     /**
      * Creates a `lodash` object which wraps `value` to enable implicit chaining.
@@ -10879,6 +10906,8 @@ return jQuery;
       }
     };
 
+    /*------------------------------------------------------------------------*/
+
     /**
      * Creates a lazy wrapper object which wraps `value` to enable lazy evaluation.
      *
@@ -11007,6 +11036,8 @@ return jQuery;
       return result;
     }
 
+    /*------------------------------------------------------------------------*/
+
     /**
      * Creates a cache object to store key/value pairs.
      *
@@ -11075,6 +11106,8 @@ return jQuery;
       return this;
     }
 
+    /*------------------------------------------------------------------------*/
+
     /**
      *
      * Creates a cache object to store unique values.
@@ -11123,6 +11156,8 @@ return jQuery;
         data.hash[value] = true;
       }
     }
+
+    /*------------------------------------------------------------------------*/
 
     /**
      * Copies the values of `source` to `array`.
@@ -11207,7 +11242,7 @@ return jQuery;
     }
 
     /**
-     * A specialized version of `baseExtremum` for arrays whichs invokes `iteratee`
+     * A specialized version of `baseExtremum` for arrays which invokes `iteratee`
      * with one argument: (value).
      *
      * @private
@@ -11979,7 +12014,7 @@ return jQuery;
       if (value === other) {
         return true;
       }
-      if (value == null || other == null || (!isObject(value) && !isObject(other))) {
+      if (value == null || other == null || (!isObject(value) && !isObjectLike(other))) {
         return value !== value && other !== other;
       }
       return baseIsEqualDeep(value, other, baseIsEqual, customizer, isLoose, stackA, stackB);
@@ -12156,8 +12191,7 @@ return jQuery;
     }
 
     /**
-     * The base implementation of `_.matchesProperty` which does not which does
-     * not clone `value`.
+     * The base implementation of `_.matchesProperty` which does not clone `srcValue`.
      *
      * @private
      * @param {string} path The path of the property to get.
@@ -13922,7 +13956,7 @@ return jQuery;
      * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
      */
     function isIndex(value, length) {
-      value = typeof value == 'number' ? value : parseFloat(value);
+      value = (typeof value == 'number' || reIsUint.test(value)) ? +value : -1;
       length = length == null ? MAX_SAFE_INTEGER : length;
       return value > -1 && value % 1 == 0 && value < length;
     }
@@ -13979,7 +14013,15 @@ return jQuery;
      */
     function isLaziable(func) {
       var funcName = getFuncName(func);
-      return !!funcName && func === lodash[funcName] && funcName in LazyWrapper.prototype;
+      if (!(funcName in LazyWrapper.prototype)) {
+        return false;
+      }
+      var other = lodash[funcName];
+      if (func === other) {
+        return true;
+      }
+      var data = getData(other);
+      return !!data && func === data[0];
     }
 
     /**
@@ -14295,6 +14337,8 @@ return jQuery;
         : new LodashWrapper(wrapper.__wrapped__, wrapper.__chain__, arrayCopy(wrapper.__actions__));
     }
 
+    /*------------------------------------------------------------------------*/
+
     /**
      * Creates an array of elements split into groups the length of `size`.
      * If `collection` can't be split evenly, the final chunk will be the remaining
@@ -14362,8 +14406,8 @@ return jQuery;
     }
 
     /**
-     * Creates an array excluding all values of the provided arrays using
-     * [`SameValueZero`](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
+     * Creates an array of unique `array` values not included in the other
+     * provided arrays using [`SameValueZero`](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
      * for equality comparisons.
      *
      * @static
@@ -14836,8 +14880,8 @@ return jQuery;
     }
 
     /**
-     * Creates an array of unique values in all provided arrays using
-     * [`SameValueZero`](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
+     * Creates an array of unique values that are included in all of the provided
+     * arrays using [`SameValueZero`](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
      * for equality comparisons.
      *
      * @static
@@ -15390,8 +15434,8 @@ return jQuery;
     }
 
     /**
-     * Creates an array of unique values, in order, of the provided arrays using
-     * [`SameValueZero`](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
+     * Creates an array of unique values, in order, from all of the provided arrays
+     * using [`SameValueZero`](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-samevaluezero)
      * for equality comparisons.
      *
      * @static
@@ -15572,7 +15616,7 @@ return jQuery;
     });
 
     /**
-     * Creates an array that is the [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference)
+     * Creates an array of unique values that is the [symmetric difference](https://en.wikipedia.org/wiki/Symmetric_difference)
      * of the provided arrays.
      *
      * @static
@@ -15688,6 +15732,8 @@ return jQuery;
       arrays.length = length;
       return unzipWith(arrays, iteratee, thisArg);
     });
+
+    /*------------------------------------------------------------------------*/
 
     /**
      * Creates a `lodash` object that wraps `value` with explicit method
@@ -15938,6 +15984,8 @@ return jQuery;
     function wrapperValue() {
       return baseWrapperValue(this.__wrapped__, this.__actions__);
     }
+
+    /*------------------------------------------------------------------------*/
 
     /**
      * Creates an array of elements corresponding to the given keys, or indexes,
@@ -16746,8 +16794,20 @@ return jQuery;
         var length = collection.length;
         return length > 0 ? collection[baseRandom(0, length - 1)] : undefined;
       }
-      var result = shuffle(collection);
-      result.length = nativeMin(n < 0 ? 0 : (+n || 0), result.length);
+      var index = -1,
+          result = toArray(collection),
+          length = result.length,
+          lastIndex = length - 1;
+
+      n = nativeMin(n < 0 ? 0 : (+n || 0), length);
+      while (++index < n) {
+        var rand = baseRandom(index, lastIndex),
+            value = result[rand];
+
+        result[rand] = result[index];
+        result[index] = value;
+      }
+      result.length = n;
       return result;
     }
 
@@ -16766,20 +16826,7 @@ return jQuery;
      * // => [4, 1, 3, 2]
      */
     function shuffle(collection) {
-      collection = toIterable(collection);
-
-      var index = -1,
-          length = collection.length,
-          result = Array(length);
-
-      while (++index < length) {
-        var rand = baseRandom(0, index);
-        if (index != rand) {
-          result[index] = result[rand];
-        }
-        result[rand] = collection[index];
-      }
-      return result;
+      return sample(collection, POSITIVE_INFINITY);
     }
 
     /**
@@ -17060,6 +17107,8 @@ return jQuery;
       return filter(collection, baseMatches(source));
     }
 
+    /*------------------------------------------------------------------------*/
+
     /**
      * Gets the number of milliseconds that have elapsed since the Unix epoch
      * (1 January 1970 00:00:00 UTC).
@@ -17077,6 +17126,8 @@ return jQuery;
     var now = nativeNow || function() {
       return new Date().getTime();
     };
+
+    /*------------------------------------------------------------------------*/
 
     /**
      * The opposite of `_.before`; this method creates a function that invokes
@@ -18058,6 +18109,8 @@ return jQuery;
       return createWrapper(wrapper, PARTIAL_FLAG, null, [value], []);
     }
 
+    /*------------------------------------------------------------------------*/
+
     /**
      * Creates a clone of `value`. If `isDeep` is `true` nested objects are cloned,
      * otherwise they are assigned by reference. If `customizer` is provided it is
@@ -18888,6 +18941,8 @@ return jQuery;
     function toPlainObject(value) {
       return baseCopy(value, keysIn(value));
     }
+
+    /*------------------------------------------------------------------------*/
 
     /**
      * Assigns own enumerable properties of source object(s) to the destination
@@ -19722,13 +19777,13 @@ return jQuery;
 
       var index = -1,
           length = path.length,
-          endIndex = length - 1,
+          lastIndex = length - 1,
           nested = object;
 
       while (nested != null && ++index < length) {
         var key = path[index];
         if (isObject(nested)) {
-          if (index == endIndex) {
+          if (index == lastIndex) {
             nested[key] = value;
           } else if (nested[key] == null) {
             nested[key] = isIndex(path[index + 1]) ? [] : {};
@@ -19846,6 +19901,8 @@ return jQuery;
       return baseValues(object, keysIn(object));
     }
 
+    /*------------------------------------------------------------------------*/
+
     /**
      * Checks if `n` is between `start` and up to but not including, `end`. If
      * `end` is not specified it is set to `start` with `start` then set to `0`.
@@ -19949,6 +20006,8 @@ return jQuery;
       }
       return baseRandom(min, max);
     }
+
+    /*------------------------------------------------------------------------*/
 
     /**
      * Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
@@ -20815,6 +20874,8 @@ return jQuery;
       return string.match(pattern || reWords) || [];
     }
 
+    /*------------------------------------------------------------------------*/
+
     /**
      * Attempts to invoke `func`, returning either the result or the caught error
      * object. Any additional arguments are provided to `func` when it is invoked.
@@ -20932,7 +20993,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function which performs a deep comparison between a given object
+     * Creates a function that performs a deep comparison between a given object
      * and `source`, returning `true` if the given object has equivalent property
      * values, else `false`.
      *
@@ -20961,7 +21022,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function which compares the property value of `path` on a given
+     * Creates a function that compares the property value of `path` on a given
      * object to `value`.
      *
      * **Note:** This method supports comparing arrays, booleans, `Date` objects,
@@ -20989,12 +21050,14 @@ return jQuery;
     }
 
     /**
-     * Creates a function which invokes the method at `path` on a given object.
+     * Creates a function that invokes the method at `path` on a given object.
+     * Any additional arguments are provided to the invoked method.
      *
      * @static
      * @memberOf _
      * @category Utility
      * @param {Array|string} path The path of the method to invoke.
+     * @param {...*} [args] The arguments to invoke the method with.
      * @returns {Function} Returns the new function.
      * @example
      *
@@ -21016,13 +21079,15 @@ return jQuery;
     });
 
     /**
-     * The opposite of `_.method`; this method creates a function which invokes
-     * the method at a given path on `object`.
+     * The opposite of `_.method`; this method creates a function that invokes
+     * the method at a given path on `object`. Any additional arguments are
+     * provided to the invoked method.
      *
      * @static
      * @memberOf _
      * @category Utility
      * @param {Object} object The object to query.
+     * @param {...*} [args] The arguments to invoke the method with.
      * @returns {Function} Returns the new function.
      * @example
      *
@@ -21148,7 +21213,7 @@ return jQuery;
     }
 
     /**
-     * A no-operation function which returns `undefined` regardless of the
+     * A no-operation function that returns `undefined` regardless of the
      * arguments it receives.
      *
      * @static
@@ -21166,7 +21231,7 @@ return jQuery;
     }
 
     /**
-     * Creates a function which returns the property value at `path` on a
+     * Creates a function that returns the property value at `path` on a
      * given object.
      *
      * @static
@@ -21192,7 +21257,7 @@ return jQuery;
     }
 
     /**
-     * The opposite of `_.property`; this method creates a function which returns
+     * The opposite of `_.property`; this method creates a function that returns
      * the property value at a given path on `object`.
      *
      * @static
@@ -21346,6 +21411,8 @@ return jQuery;
       return baseToString(prefix) + id;
     }
 
+    /*------------------------------------------------------------------------*/
+
     /**
      * Adds two numbers.
      *
@@ -21411,7 +21478,7 @@ return jQuery;
      * _.max(users, 'age');
      * // => { 'user': 'fred', 'age': 40 }
      */
-    var max = createExtremum(gt, -Infinity);
+    var max = createExtremum(gt, NEGATIVE_INFINITY);
 
     /**
      * Gets the minimum value of `collection`. If `collection` is empty or falsey
@@ -21460,7 +21527,7 @@ return jQuery;
      * _.min(users, 'age');
      * // => { 'user': 'barney', 'age': 36 }
      */
-    var min = createExtremum(lt, Infinity);
+    var min = createExtremum(lt, POSITIVE_INFINITY);
 
     /**
      * Gets the sum of the values in `collection`.
@@ -21509,6 +21576,8 @@ return jQuery;
         ? arraySum(isArray(collection) ? collection : toIterable(collection))
         : baseSum(collection, iteratee);
     }
+
+    /*------------------------------------------------------------------------*/
 
     // Ensure wrappers are instances of `baseLodash`.
     lodash.prototype = baseLodash.prototype;
@@ -21657,6 +21726,8 @@ return jQuery;
     // Add functions to `lodash.prototype`.
     mixin(lodash, lodash);
 
+    /*------------------------------------------------------------------------*/
+
     // Add functions that return unwrapped values when chaining.
     lodash.add = add;
     lodash.attempt = attempt;
@@ -21765,6 +21836,8 @@ return jQuery;
       return source;
     }()), false);
 
+    /*------------------------------------------------------------------------*/
+
     // Add functions capable of returning wrapped and unwrapped values when chaining.
     lodash.sample = sample;
 
@@ -21776,6 +21849,8 @@ return jQuery;
         return sample(value, n);
       });
     };
+
+    /*------------------------------------------------------------------------*/
 
     /**
      * The semantic version number.
@@ -22004,6 +22079,8 @@ return jQuery;
     return lodash;
   }
 
+  /*--------------------------------------------------------------------------*/
+
   // Export lodash.
   var _ = runInContext();
 
@@ -22040,7 +22117,7 @@ return jQuery;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}]},{},[1])
+},{}]},{},[2])
 
 
 //# sourceMappingURL=bundle.js.map

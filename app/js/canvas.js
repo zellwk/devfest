@@ -1,10 +1,11 @@
 var jQuery = require('jquery');
 
 jQuery(document).ready(function($) {
+  'use-strict';
   var $container = $('.jsCanvasContainer');
-  var $toggle = $('.jsCanvasToggle');
 
-  $toggle.on('click', function(event) {
+  $container.on('click', '.jsCanvasToggle', function(event) {
+    console.log('toggling');
     event.preventDefault();
     event.stopPropagation();
 

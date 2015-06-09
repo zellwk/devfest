@@ -35,7 +35,7 @@ var SmartHead = (function() {
       var totalHeights;
       this.$smartHeads.each(function(index, el) {
         var $el = $(el),
-          $clone = $el.clone().removeClass('jsSmartHead').addClass('jsSmartHeadClone'),
+          $clone = $el.clone(true, true).removeClass('jsSmartHead').addClass('jsSmartHeadClone'),
           props = {},
           prevSmartHeadHeight = 0;
 
@@ -53,13 +53,13 @@ var SmartHead = (function() {
         props.$el = $el;
         props.$clone = $clone;
         props.height = $el.outerHeight();
-        props.activationPos = $el.position().top
+        props.activationPos = $el.position().top;
         props.deactivationPos = $el.position().top;
+        props.isActivated = false;
 
         if (index == 0) {
           props.posWhenScrollingDown = -props.height;
           props.posWhenScrollingUp = 0;
-          console.log(props.height);
 
         } else {
           prevSmartHeadHeight = SH.smartHeads[index - 1].height;
@@ -92,11 +92,18 @@ var SmartHead = (function() {
       var scrollDirection = (scrollTop - prevScrollTop > 0) ? 'down' : 'up';
 
       this.smartHeads.forEach(function(element, index) {
+
         if (scrollTop > element.activationPos) {
-          SH.activateSmartHeadCss(scrollDirection, element);
+          if (!element.isActivated) {
+            SH.activateSmartHeadCss(scrollDirection, element);
+            element.isActivated = true;
+          }
+
+          SH.directionDependentCss(scrollDirection, element);
         }
 
-        if (scrollTop <= element.deactivationPos) {
+        if (scrollTop <= element.deactivationPos && element.isActivated) {
+          element.isActivated = false;
           SH.deactivateSmartHeadCss(element);
         }
       });
@@ -107,17 +114,36 @@ var SmartHead = (function() {
     },
 
     activateSmartHeadCss: function(direction, props) {
-      if (direction == 'down') {
-        console.log('activating', props.$clone);
-        props.$clone.css({
-          'display': 'block',
-          'position': 'fixed',
-          'z-index': '9999',
-          'top': props.posWhenScrollingDown,
-          'webkit-transition': 'top 0.25s ease-out',
-          'transition': 'top 0.25s ease-out'
+      props.$clone.css({
+        'display': 'block',
+        'position': 'fixed',
+        'z-index': '9999',
+        'webkit-transition': 'top 0.25s ease-out',
+        'transition': 'top 0.25s ease-out',
+        'webkit-backface-visiblity': 'hidden',
+        'webkit-transform': 'translateZ(0)'
+      });
 
-        })
+      props.$clone.addClass('is-fixed');
+    },
+
+    deactivateSmartHeadCss: function(props) {
+      props.$clone.css({
+        'display': 'none',
+        'position': 'absolute',
+        'top': '0',
+        'z-index': '-1'
+      });
+
+      props.$clone.removeClass('is-fixed')
+
+    },
+
+    directionDependentCss: function(direction, props) {
+      if (direction === 'down') {
+        props.$clone.css({
+          'top': props.posWhenScrollingDown,
+        });
       } else {
         props.$clone.css({
           'top': props.posWhenScrollingUp
@@ -125,19 +151,8 @@ var SmartHead = (function() {
       }
     },
 
-    deactivateSmartHeadCss: function(props) {
-      console.log('deactivating', props.$clone);
-      props.$clone.css({
-        'display': 'none',
-        'position': 'absolute',
-        'top': '0',
-        'z-index': '-1'
-      })
-    },
-
     deactivateAllSmartHeads: function() {
       var SH = this;
-      console.log('deactivating everything');
       this.smartHeads.forEach(function(props, index) {
         SH.deactivateSmartHeadCss(props);
       });

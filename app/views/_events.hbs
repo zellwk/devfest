@@ -1,5 +1,5 @@
 <div class="c-events-header jsSmartHead" data-SH-offset="68">
-  <div class="wrap">
+  <div class="wrap c-canvas__fixed-item">
     <nav class="c-events-nav">
       <a href="#7th" class="c-events-nav__weekend">
         <span class="c-events-nav__day">sat</span>
@@ -68,31 +68,35 @@
 {{#each dates}}
 
 {{#compare this.type 'event'}}
-<div id="{{date}}" class="c-dates">
-  <div class="c-date">
-    <h2 class="day">{{date}}</h2>
-    <h4 class="weekday">{{day}}</h4>
-  </div>
-  
-  <div class="c-events">
-    {{#each events}}
-    <div class="c-event">
-      <div class="c-event__image">
-        <img src="{{image}}" alt="">
+<div class="wrap">
+  <div id="{{date}}" class="c-dates l-dates">
+    <div class="c-date l-date">
+      <div class="c-date__cal">
+        <h2 class="day">{{date}}</h2>
+        <h4 class="weekday">{{day}}</h4>  
       </div>
-      <h2 class="c-event__title">{{title}}</h2>
-      <div class="c-event__desc">
-        <p>{{desc}}</p>
-      </div>
-      <div class="c-event__aside">
-        <a href="#" class="o-btn">Get Ticket</a>
-        <div class="c-event__time">
-          {{startTime}} - {{endTime}}
-          <a class="c-event__location" href="http://maps.google.com/?q={{location}}"> <img class="i-location jsSvgInject" src="images/location.svg" /> {{location}}</a>
+    </div>
+
+    <div class="c-events l-events">
+      {{#each events}}
+      <div class="c-event l-event">
+        <div class="c-event__image" style="background-image:url('{{image}}');"></div>
+        <div class="c-event__content">
+          <div class="c-event__desc">
+            <h2 class="c-event__title">{{title}}</h2>
+            <p>{{desc}}</p>
+            <div class="c-event__time">
+              {{startTime}} - {{endTime}}
+              <a class="c-event__location" href="http://maps.google.com/?q={{location}}"> <img class="i-location jsSvgInject" src="images/location.svg" /> {{location}}</a>
+            </div>
+          </div>
+          <div class="c-event__aside">
+            <a href="#" class="o-btn">Get Ticket</a>
+          </div>
         </div>
-      </div>
-    </div>  
-    {{/each}}
+      </div>  
+      {{/each}}
+    </div>
   </div>
 </div>
 {{/compare}}
@@ -100,7 +104,7 @@
 {{#compare this.type "job"}}
 <div class="c-interrupt">  
   <div class="wrap">
-    <h2 class="o-italic"><strong>{{title}}</strong></h2>
+    <h1 class="o-italic"><strong>{{title}}</strong></h1>
     <h4>{{desc}}</h4>
     <div class="c-jobs">
       {{#listItems 0 3 ../../jobs}}
@@ -120,7 +124,7 @@
 {{#compare this.type "tickets"}}
 <div class="c-interrupt c-tickets">  
   <div class="wrap">
-    <h2 class="o-italic">{{{title}}}</h2>
+    <h1 class="o-italic">{{{title}}}</h1>
     <h4>{{{desc}}}</h4>
     <button class="o-btn--highlight">{{button}}</button>
   </div>

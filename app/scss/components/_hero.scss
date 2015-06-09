@@ -9,6 +9,17 @@
   background-position: center center;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
+  // &:before {
+  //   content: ""; 
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   width: rhythm(0.5);
+  //   height: 100%;
+  //   background: linear-gradient(to bottom, color(bleu-de-france), color(malibu));
+  //   z-index: 20;
+  // }
 
   .wrap {
     position: relative;

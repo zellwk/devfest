@@ -1,97 +1,90 @@
-
-.c-dates {
-  @include container;
-  @extend .wrap;
-  margin-top: gutter();
-  margin-bottom: gutter();
-
-  @include bp("med+1") {
-    margin-top: gutter() * 0.5;
-    margin-bottom: 0;
-  }
-}
-
 .c-date {
-  text-align: center;
+  font-family: 'Open Sans Condensed';
+  color: white;
 
-  @include bp("med+1") {
-    text-align: left;
-    @include span(2);
+  .c-date__cal {
+    display: inline-block;
+    padding: rhythm(0.5);
+    background: color(malibu);
   }
 
   .day {
-    display: inline-block;
     font-size: ms(2);
     font-weight: bold;
     @include adjust-leading-to(1.5);
-    margin-top: rhythm(1);
-    margin-bottom: rhythm(1);
-
-    @include bp("med+1") {
-      display: block;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-
-  .weekday {
-    display: inline-block;
-
-    @include bp("med+1") {
-      display: block;
-    }
-  }
-}
-
-.c-events {
-  @include bp(max "med+1") {
-    margin-top: rhythm(-1);
-  }
-
-  @include bp("med+1") {
-    @include span(10 last);
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 
 .c-event {
-  @include bp(max "med+1") {
-    margin-top: rhythm(1);
-  }
+  background: white;
+  border: 1px solid #eee;
 
   @include bp("med+1") {
-    width: span(5 of 10);
-    padding: 0 (gutter(10) * 0.5);
-
-    + & {
-      margin-top: 0;
-    }
-
-    &:nth-child(n+3) {
-      margin-top: gutter(10);
-    }
+    border-radius: 6px;
+    box-shadow: 0 1px 0px 0px rgba(black, 0.1);
   }
+}
+
+.c-event__image {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  height: 0;
+  padding-bottom: 56.25%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: rhythm(0.5);
+    width: 100%;
+    background: color(malibu);
+  }
+}
+
+.c-event__content {
+  padding: rhythm(0.5) rhythm(1);
+  @include cf;
 }
 
 .c-event__title {
   font-family: 'Open Sans Condensed';
   font-weight: 700;
+  margin-top: rhythm(0.25);
+  margin-bottom: rhythm(0.75);
 }
 
 .c-event__desc {
-  float: left;
-  width: 65%;
-  font-size: ms(0);
+  @include bp("large") {
+    @include span(5 of 7);
+  }
 }
 
 .c-event__aside {
-  float: right;
-  width: 35%;
+  .o-btn {
+    display: block;
+    text-align: center;
+    margin-top: rhythm(0.5);
+  }
+
+  @include bp("large") {
+    @include span(2 of 7 last);
+
+    .o-btn {
+      display: inline-block;
+      margin-top: rhythm(0.25);
+    }
+  }
 }
 
 .c-event__time {
   margin-top: rhythm(1);
+}
+
+.c-event__location {
+  display: block;
+  margin-top: rhythm(0.25);
 }
 
 .i-location {
@@ -99,10 +92,6 @@
   display: inline-block;
   width: rhythm(1);
   margin-right: 0.25em;
-}
-
-.c-event__cta {
-  text-align: center;
 }
 
 // interrupt div

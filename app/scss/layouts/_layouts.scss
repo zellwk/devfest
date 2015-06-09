@@ -25,5 +25,66 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+
+// Events Layout
+
+.l-dates {
+  display: flex;
+  align-items: stretch;
+  padding-top: gutter();
+  padding-bottom: gutter();
+
+  @include bp("med+1") {
+    padding-top: gutter();
+    padding-bottom: 0;
+  }
+}
+
+.l-date {
+  text-align: center;
+  border-left: rhythm(0.5) solid color(malibu);
+
+  @include bp("med+1") {
+    text-align: left;
+    width: span(1);
+    margin-right: gutter(15);
+  }
+}
+
+.l-events {
+  @include bp(max "med+1") {
+    margin-top: rhythm(-1);
+  }
+
+  @include bp("med+1") {
+    width: span(14 of 15);
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.l-event {
+  @include bp(max "med+1") {
+    margin-top: rhythm(1);
+  }
+
+  @include bp("med+1") {
+    width: span(7 of 14);
+    margin-right: gutter(14);
+    overflow: hidden;
+
+    + & {
+      margin-top: 0;
+    }
+
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n+3) {
+      margin-top: gutter(14);
+    }
+  }
 }

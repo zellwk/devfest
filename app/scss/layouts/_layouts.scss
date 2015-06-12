@@ -29,7 +29,6 @@
 }
 
 // Events Layout
-
 .l-dates {
   display: flex;
   align-items: stretch;
@@ -42,9 +41,12 @@
   }
 }
 
+.l-content .wrap:first-child .l-dates {
+  padding-top: 0;
+}
+
 .l-date {
   text-align: center;
-  border-left: rhythm(0.5) solid color(malibu);
 
   @include bp("med+1") {
     text-align: left;

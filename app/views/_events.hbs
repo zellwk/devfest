@@ -1,5 +1,6 @@
 <div class="c-events-header jsSmartHead" data-SH-offset="68">
-  <div class="wrap c-canvas__fixed-item">
+  <div class="c-events-wrap">
+    <div class="wrap c-canvas__fixed-item">
     <nav class="c-events-nav">
       <a href="#7th" class="c-events-nav__weekend">
         <span class="c-events-nav__day">sat</span>
@@ -63,6 +64,8 @@
       </a>
     </nav>
   </div>
+  </div>
+  
 </div>
 
 {{#each dates}}
@@ -70,10 +73,11 @@
 {{#compare this.type 'event'}}
 <div class="wrap">
   <div id="{{date}}" class="c-dates l-dates">
-    <div class="c-date l-date">
-      <div class="c-date__cal">
+    <div class="c-date l-date jsScrollSpyContainer">
+      <div class="c-date__cal jsScrollSpy {{date}}">
+        {{#if day}}<h4 class="weekday">Nov</h4> {{/if}}
         <h2 class="day">{{date}}</h2>
-        <h4 class="weekday">{{day}}</h4>  
+        {{#if text}}<h4 class="allweek">All<br>Week</h4> {{/if}}
       </div>
     </div>
 

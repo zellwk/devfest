@@ -1,17 +1,58 @@
 .c-date {
-  font-family: 'Open Sans Condensed';
-  color: white;
-
-  .c-date__cal {
-    display: inline-block;
-    padding: rhythm(0.5);
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: calc(#{rhythm(1.5)} - 1px);
+    width: 2px;
     background: color(malibu);
   }
 
+  .c-date__cal {
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 2px solid color(malibu);
+    background: color(patterns-blue);
+    height: rhythm(3);
+    width: rhythm(3);
+    text-align: center;
+  }
+
   .day {
-    font-size: ms(2);
     font-weight: bold;
-    @include adjust-leading-to(1.5);
+    font-size: ms(1);
+    line-height: 1;
+  }
+
+  .weekday {
+    font-family: 'Open Sans Condensed';
+    font-size: ms(-1);
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .allweek {
+    font-family: 'Open Sans Condensed';
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: ms(0);
+    line-height: 1.2;
+    font-weight: bold;
+  }
+}
+
+.wrap + .wrap {
+  .c-date:before {
+    top: rhythm(-1);
   }
 }
 
@@ -37,7 +78,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    height: rhythm(0.5);
+    height: rhythm(0.25);
     width: 100%;
     background: color(malibu);
   }

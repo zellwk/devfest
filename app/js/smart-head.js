@@ -1,4 +1,4 @@
-var jQuery = require('jquery');
+var $ = require('jquery');
 
 var SmartHead = (function() {
   'use strict';
@@ -26,8 +26,6 @@ var SmartHead = (function() {
     initialize: function() {
       this.initializeSmartHeads();
       this.onScroll();
-      console.log(this.smartHeads[0]);
-      console.log(this.smartHeads[1]);
     },
 
     initializeSmartHeads: function() {
@@ -164,7 +162,7 @@ var SmartHead = (function() {
 
 // using window load instead of document ready to ensure all images
 // are loaded before firing smart head
-jQuery(window).load(function($) {
+$(window).load(function($) {
   'use-strict';
   SmartHead();
 });

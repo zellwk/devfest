@@ -49,11 +49,28 @@ global.jQuery = require('jquery');
 require('./svg');
 require('./smart-head');
 require('./zell-scrollspy');
+require('./nav-scroll');
 require('./canvas');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"./canvas":1,"./smart-head":3,"./svg":4,"./zell-scrollspy":5,"jquery":"jquery"}],3:[function(require,module,exports){
+},{"./canvas":1,"./nav-scroll":3,"./smart-head":4,"./svg":5,"./zell-scrollspy":6,"jquery":"jquery"}],3:[function(require,module,exports){
+var $ = require('jquery');
+
+
+$(document).ready(function() {
+  $('.c-events-nav').on('click','a', function(event) {
+    event.preventDefault();
+    var curPos = $('.c-canvas__on-canvas').scrollTop();
+    var $target = $($(this).attr('href'));
+    var targetTop = parseInt($target.offset().top);
+    $('.c-canvas__on-canvas').animate({
+      scrollTop: curPos + targetTop 
+    }, 1500);
+  });
+});
+
+},{"jquery":"jquery"}],4:[function(require,module,exports){
 var $ = require('jquery');
 
 var SmartHead = (function() {
@@ -223,7 +240,7 @@ $(window).load(function($) {
   SmartHead();
 });
 
-},{"jquery":"jquery"}],4:[function(require,module,exports){
+},{"jquery":"jquery"}],5:[function(require,module,exports){
 var svgInjector = require('svg-injector');
 
 var svgsToInject = document.getElementsByClassName('.jsSvgInject');
@@ -232,7 +249,7 @@ if (svgsToInject) {
   svgInjector(svgsToInject);
 }
 
-},{"svg-injector":6}],5:[function(require,module,exports){
+},{"svg-injector":7}],6:[function(require,module,exports){
 var $ = require('jquery');
 
 var ScrollSpy = (function() {
@@ -383,11 +400,15 @@ var ScrollSpy = (function() {
       this.status = 'enter';
       this.removeTransition();
 
+      this.options.props.highlightComponent.addClass('is-active');
     },
 
     onLeave: function($el, pos) {
       this.status = 'leave';
       this.removeTransition();
+
+      this.options.props.highlightComponent.removeClass('is-active');
+
 
       if (this.direction === 'down') {
         this.options.$item.css({
@@ -457,6 +478,11 @@ var ScrollSpy = (function() {
       }
 
       this.options = o;
+    },
+
+    update: function(props) {
+      this.options.props = $.extend({}, this.options.props, props);
+      this.changeMinMax();
     }
   }
 
@@ -464,25 +490,17 @@ var ScrollSpy = (function() {
 }());
 
 $(window).load(function() {
-
-  var hiddenHeader = $('.c-site-header').outerHeight();
-  var stickyHeadHeight = $('.c-events-header').outerHeight();
-  var extraPadding = parseInt($('.c-events-header').css('margin-bottom'));
-  var circleSize = $('.jsScrollSpy').outerHeight();
-  var fixedTop = stickyHeadHeight + extraPadding;
-
-  console.log(fixedTop);
+  'use-strict';
+  var globalProps = getProps();
 
   $('.jsScrollSpyContainer').each(function(index, el) {
+    var $el = $(el);
+    var props = calcScrollSpyProps(globalProps, $el);
+    var scrollSpyHighlight = $el.find('.jsScrollSpy').attr('data-scrollSpyHighlight');
 
-    var props = {},
-      $el = $(el);
-
-    props.height = $el.height();
-    props.min = parseInt($el.offset().top) - stickyHeadHeight - extraPadding;
-    props.max = props.min + props.height - circleSize;
-    props.buffer = hiddenHeader;
-    props.fixedTop = fixedTop;
+    props.highlightComponent = $('.jsScrollSpyHighlight').filter(function() {
+      return $(this).attr('data-scrollSpyHighlight') === scrollSpyHighlight;
+    });
 
     el.scrollSpy = new ScrollSpy({
       $el: $(el),
@@ -494,10 +512,62 @@ $(window).load(function() {
     });
   });
 
+  $(window).on('resize', function(event) {
+    var globalProps = getProps();
 
+    $('.jsScrollSpyContainer').each(function(index, el) {
+      var $el = $(el);
+      console.log('calc props');
+      var props = calcScrollSpyProps(globalProps, $el);
+
+      el.scrollSpy.update(props);
+    });
+
+  });
+
+  function getProps() {
+    var o = {};
+    o.hiddenHeader = $('.c-site-header').outerHeight();
+    o.stickyHeadHeight = $('.c-events-header').outerHeight();
+    o.extraPadding = parseInt($('.c-events-header').css('margin-bottom'));
+    o.circleSize = $('.jsScrollSpy').outerHeight();
+    o.fixedTop = o.stickyHeadHeight + o.extraPadding;
+
+    return o;
+  }
+
+  function calcScrollSpyProps(globalProps, $el) {
+    var props = {};
+
+    props.height = parseInt($el.outerHeight());
+    props.min = parseInt($el.offset().top) - globalProps.stickyHeadHeight - globalProps.extraPadding;
+    props.max = props.min + props.height - globalProps.circleSize;
+    props.buffer = globalProps.hiddenHeader;
+    props.fixedTop = globalProps.fixedTop;
+
+    return props;
+  }
+
+  function debounce(func, wait, immediate) {
+    var timeout;
+
+    return function() {
+      var context = this,
+        args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    }
+  }
 });
 
-},{"jquery":"jquery"}],6:[function(require,module,exports){
+},{"jquery":"jquery"}],7:[function(require,module,exports){
 /**
  * SVGInjector v1.1.2 - Fast, caching, dynamic inline SVG DOM injection library
  * https://github.com/iconic/SVGInjector

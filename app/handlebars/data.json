@@ -43,7 +43,7 @@
     {
       "type": "event",
       "date": "8",
-      "day": "Sunday",
+      "day": "Sun",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -71,7 +71,7 @@
     {
       "type": "event",
       "date": "9",
-      "day": "Monday",
+      "day": "Mon",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -92,7 +92,7 @@
     {
       "type": "event",
       "date": "10",
-      "day": "Tuesday",
+      "day": "Tue",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -120,7 +120,7 @@
     {
       "type": "event",
       "date": "11",
-      "day": "Wednesday",
+      "day": "Wed",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -141,7 +141,7 @@
     {
       "type": "event",
       "date": "12",
-      "day": "Thursday",
+      "day": "Thu",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -168,7 +168,7 @@
     {
       "type": "event",
       "date": "13",
-      "day": "Friday",
+      "day": "Fri",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -210,7 +210,7 @@
     {
       "type": "event",
       "date": "15",
-      "day": "Sunday",
+      "day": "Sun",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -231,7 +231,7 @@
     {
       "type": "event",
       "date": "16",
-      "day": "Monday",
+      "day": "Mon",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -252,7 +252,7 @@
     {
       "type": "event",
       "date": "17",
-      "day": "Tuesday",
+      "day": "Tue",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -273,7 +273,7 @@
     {
       "type": "event",
       "date": "18",
-      "day": "Wednesday",
+      "day": "Wed",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -294,7 +294,7 @@
     {
       "type": "event",
       "date": "19",
-      "day": "Thursday",
+      "day": "Thu",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -315,7 +315,7 @@
     {
       "type": "event",
       "date": "20",
-      "day": "Friday",
+      "day": "Fri",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",

@@ -148,11 +148,15 @@ var ScrollSpy = (function() {
       this.status = 'enter';
       this.removeTransition();
 
+      this.options.props.highlightComponent.addClass('is-active');
     },
 
     onLeave: function($el, pos) {
       this.status = 'leave';
       this.removeTransition();
+
+      this.options.props.highlightComponent.removeClass('is-active');
+
 
       if (this.direction === 'down') {
         this.options.$item.css({
@@ -222,6 +226,11 @@ var ScrollSpy = (function() {
       }
 
       this.options = o;
+    },
+
+    update: function(props) {
+      this.options.props = $.extend({}, this.options.props, props);
+      this.changeMinMax();
     }
   }
 
@@ -229,25 +238,17 @@ var ScrollSpy = (function() {
 }());
 
 $(window).load(function() {
-
-  var hiddenHeader = $('.c-site-header').outerHeight();
-  var stickyHeadHeight = $('.c-events-header').outerHeight();
-  var extraPadding = parseInt($('.c-events-header').css('margin-bottom'));
-  var circleSize = $('.jsScrollSpy').outerHeight();
-  var fixedTop = stickyHeadHeight + extraPadding;
-
-  console.log(fixedTop);
+  'use-strict';
+  var globalProps = getProps();
 
   $('.jsScrollSpyContainer').each(function(index, el) {
+    var $el = $(el);
+    var props = calcScrollSpyProps(globalProps, $el);
+    var scrollSpyHighlight = $el.find('.jsScrollSpy').attr('data-scrollSpyHighlight');
 
-    var props = {},
-      $el = $(el);
-
-    props.height = $el.height();
-    props.min = parseInt($el.offset().top) - stickyHeadHeight - extraPadding;
-    props.max = props.min + props.height - circleSize;
-    props.buffer = hiddenHeader;
-    props.fixedTop = fixedTop;
+    props.highlightComponent = $('.jsScrollSpyHighlight').filter(function() {
+      return $(this).attr('data-scrollSpyHighlight') === scrollSpyHighlight;
+    });
 
     el.scrollSpy = new ScrollSpy({
       $el: $(el),
@@ -259,5 +260,57 @@ $(window).load(function() {
     });
   });
 
+  $(window).on('resize', function(event) {
+    var globalProps = getProps();
 
+    $('.jsScrollSpyContainer').each(function(index, el) {
+      var $el = $(el);
+      console.log('calc props');
+      var props = calcScrollSpyProps(globalProps, $el);
+
+      el.scrollSpy.update(props);
+    });
+
+  });
+
+  function getProps() {
+    var o = {};
+    o.hiddenHeader = $('.c-site-header').outerHeight();
+    o.stickyHeadHeight = $('.c-events-header').outerHeight();
+    o.extraPadding = parseInt($('.c-events-header').css('margin-bottom'));
+    o.circleSize = $('.jsScrollSpy').outerHeight();
+    o.fixedTop = o.stickyHeadHeight + o.extraPadding;
+
+    return o;
+  }
+
+  function calcScrollSpyProps(globalProps, $el) {
+    var props = {};
+
+    props.height = parseInt($el.outerHeight());
+    props.min = parseInt($el.offset().top) - globalProps.stickyHeadHeight - globalProps.extraPadding;
+    props.max = props.min + props.height - globalProps.circleSize;
+    props.buffer = globalProps.hiddenHeader;
+    props.fixedTop = globalProps.fixedTop;
+
+    return props;
+  }
+
+  function debounce(func, wait, immediate) {
+    var timeout;
+
+    return function() {
+      var context = this,
+        args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    }
+  }
 });

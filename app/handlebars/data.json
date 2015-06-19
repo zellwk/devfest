@@ -390,5 +390,16 @@
   }, {
     "name": "Braintree",
     "logo": "http://placehold.it/160x90"
-  }]
+  }], 
+
+  "community": {
+    "title": "developer community", 
+    "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "list" : [
+      "List item one", 
+      "list item 2", 
+      "list item 3", 
+      "and so on..."
+    ]
+  }
 }

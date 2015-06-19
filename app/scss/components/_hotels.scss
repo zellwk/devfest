@@ -1,0 +1,49 @@
+.c-hotel-carousel {
+  > div {
+    height: 0;
+    padding-bottom: 56.25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.c-hotel {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 0px 0px rgba(black, 0.1);
+}
+
+.c-hotel__title {
+  padding: rhythm(0.25) rhythm(0.5);
+  text-align: center;
+  background-color: color(patterns-blue);
+}
+
+.c-hotel-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px 6px 0 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: rhythm(0.25);
+    background: color(malibu);
+  }
+}
+
+.widSSPData {
+  padding: rhythm(0.25) rhythm(0.5) 0 !important;
+}
+
+.c-hotel__cta {
+  text-align: center;
+
+  .o-btn {
+    margin-bottom: rhythm(1);
+  }
+}

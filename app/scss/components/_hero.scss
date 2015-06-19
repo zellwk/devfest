@@ -8,18 +8,8 @@
   background-size: cover;
   background-position: center center;
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
-  // &:before {
-  //   content: ""; 
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   bottom: 0;
-  //   width: rhythm(0.5);
-  //   height: 100%;
-  //   background: linear-gradient(to bottom, color(bleu-de-france), color(malibu));
-  //   z-index: 20;
-  // }
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 2px 1px #000;
 
   .wrap {
     position: relative;
@@ -35,13 +25,12 @@
     right: 0;
     height: 100%;
     width: 100%;
-    background: black;
-    opacity: 0.7;
+    background: radial-gradient(circle, rgba(0,0,0,0.05), rgba(0,0,0,0.2));
     z-index: -0;
   }
 
   .c-logo--hero {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 1);
   }
 }
 

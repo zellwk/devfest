@@ -134,21 +134,3 @@
   width: rhythm(1);
   margin-right: 0.25em;
 }
-
-// interrupt div
-.c-interrupt {
-  text-align: center;
-  display: block;
-  background: #fafafa;
-  margin-top: rhythm(1);
-  margin-bottom: rhythm(1);
-  padding-top: rhythm(2);
-  padding-bottom: rhythm(2);
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-
-  @include bp("med+1") {
-    margin-top: rhythm(3);
-    margin-bottom: rhythm(3);
-  }
-}

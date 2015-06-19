@@ -28,6 +28,10 @@
   flex-wrap: wrap;
 }
 
+.l-content {
+  margin-top: rhythm(2);
+}
+
 // Events Layout
 .l-dates {
   display: flex;
@@ -88,5 +92,18 @@
     &:nth-child(n+3) {
       margin-top: gutter(14);
     }
+  }
+}
+
+// Hotel Layout
+// ------------
+
+.l-hotel {
+  @include bp("med+1") {
+    @include gallery(5);
+  }
+
+  .widSSP {
+    width: auto !important;
   }
 }

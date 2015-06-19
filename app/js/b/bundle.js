@@ -44,13 +44,13 @@ jQuery(document).ready(function($) {
 },{"jquery":"jquery"}],2:[function(require,module,exports){
 (function (global){
 // Initializes scripts
-global.jQuery = require('jquery');
+global.jQuery = require( 'jquery' );
 
-require('./svg');
-require('./smart-head');
-require('./zell-scrollspy');
-require('./nav-scroll');
-require('./canvas');
+require( './svg' );
+require( './smart-head' );
+require( './zell-scrollspy' );
+require( './nav-scroll' );
+require( './canvas' );
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
@@ -77,19 +77,19 @@ var SmartHead = (function() {
   'use strict';
 
   function SmartHead(args) {
+
     // enforces new
     if (!(this instanceof SmartHead)) {
       return new SmartHead(args);
     }
+
     // constructor body
     this.selectors = {
       window: '.c-canvas__on-canvas'
     };
-
     this.$smartHeads = $('.jsSmartHead');
     this.smartHeads = [];
     this.totalHeights = 0;
-
     this.initialize();
   }
 
@@ -111,12 +111,14 @@ var SmartHead = (function() {
           prevSmartHeadHeight = 0;
 
         $el.after($clone);
+
         // Initialize Appended Clone CSS 
         $clone.css({
           display: 'none',
           position: 'absolute',
           left: '0',
           right: '0',
+
           // background: 'red',
           // opacity: '0.75'
         });

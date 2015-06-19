@@ -4,19 +4,19 @@ var SmartHead = (function() {
   'use strict';
 
   function SmartHead(args) {
+
     // enforces new
     if (!(this instanceof SmartHead)) {
       return new SmartHead(args);
     }
+
     // constructor body
     this.selectors = {
       window: '.c-canvas__on-canvas'
     };
-
     this.$smartHeads = $('.jsSmartHead');
     this.smartHeads = [];
     this.totalHeights = 0;
-
     this.initialize();
   }
 
@@ -38,12 +38,14 @@ var SmartHead = (function() {
           prevSmartHeadHeight = 0;
 
         $el.after($clone);
+
         // Initialize Appended Clone CSS 
         $clone.css({
           display: 'none',
           position: 'absolute',
           left: '0',
           right: '0',
+
           // background: 'red',
           // opacity: '0.75'
         });

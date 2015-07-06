@@ -73,8 +73,9 @@
   line-height: 1.3em;
   margin-bottom: rhythm(0.5);
   animation: subtitle 2s ease-out;
-  text-shadow: 1px 1px 0 rgba(0,0,0,.4);
+  text-shadow: 1px 1px 0 rgba(0,0,0,.7);
   margin-bottom: 1.5em;
+  font-weight: 100;
 }
 
 @keyframes subtitle {
@@ -92,6 +93,8 @@
 
 .c-hero__description {
   animation: herodesc 2.6s ease-out;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+  font-weight: 100;
 }
 
 @keyframes herodesc {

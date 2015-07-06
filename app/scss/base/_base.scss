@@ -2,6 +2,11 @@
 // ----------
 @include establish-baseline;
 
+html {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+}
+
 // Adaptation of Lobotomized Owls Selector on p elements
 // http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
 p + p,

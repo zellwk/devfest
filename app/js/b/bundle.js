@@ -1,11 +1,13 @@
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict';
+
 var jQuery = require('jquery');
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   'use-strict';
   var $container = $('.jsCanvasContainer');
 
-  $container.on('click', '.jsCanvasToggle', function(event) {
+  $container.on('click', '.jsCanvasToggle', function (event) {
     console.log('toggling');
     event.preventDefault();
     event.stopPropagation();
@@ -18,7 +20,7 @@ jQuery(document).ready(function($) {
     }
   });
 
-  $(window).resize(function(event) {
+  $(window).resize(function (event) {
     var ww = $(window).width();
     if (ww >= 960) {
       resetOffCanvas();
@@ -44,36 +46,41 @@ jQuery(document).ready(function($) {
 },{"jquery":"jquery"}],2:[function(require,module,exports){
 (function (global){
 // Initializes scripts
-global.jQuery = require( 'jquery' );
+'use strict';
 
-require( './svg' );
-require( './smart-head' );
-require( './zell-scrollspy' );
-require( './nav-scroll' );
-require( './canvas' );
+global.jQuery = require('jquery');
+
+require('./svg');
+require('./smart-head');
+require('./zell-scrollspy');
+require('./nav-scroll');
+require('./canvas');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
 },{"./canvas":1,"./nav-scroll":3,"./smart-head":4,"./svg":5,"./zell-scrollspy":6,"jquery":"jquery"}],3:[function(require,module,exports){
+'use strict';
+
 var $ = require('jquery');
 
-
-$(document).ready(function() {
-  $('.c-events-nav').on('click','a', function(event) {
+$(document).ready(function () {
+  $('.c-events-nav').on('click', 'a', function (event) {
     event.preventDefault();
     var curPos = $('.c-canvas__on-canvas').scrollTop();
     var $target = $($(this).attr('href'));
     var targetTop = parseInt($target.offset().top);
     $('.c-canvas__on-canvas').animate({
-      scrollTop: curPos + targetTop 
+      scrollTop: curPos + targetTop
     }, 1500);
   });
 });
 
 },{"jquery":"jquery"}],4:[function(require,module,exports){
+'use strict';
+
 var $ = require('jquery');
 
-var SmartHead = (function() {
+var SmartHead = (function () {
   'use strict';
 
   function SmartHead(args) {
@@ -96,31 +103,29 @@ var SmartHead = (function() {
   SmartHead.prototype = {
     constructor: SmartHead,
 
-    initialize: function() {
+    initialize: function initialize() {
       this.initializeSmartHeads();
       this.onScroll();
     },
 
-    initializeSmartHeads: function() {
+    initializeSmartHeads: function initializeSmartHeads() {
       var SH = this;
       var totalHeights;
-      this.$smartHeads.each(function(index, el) {
+      this.$smartHeads.each(function (index, el) {
         var $el = $(el),
-          $clone = $el.clone(true, true).removeClass('jsSmartHead').addClass('jsSmartHeadClone'),
-          props = {},
-          prevSmartHeadHeight = 0;
+            $clone = $el.clone(true, true).removeClass('jsSmartHead').addClass('jsSmartHeadClone'),
+            props = {},
+            prevSmartHeadHeight = 0;
 
         $el.after($clone);
 
-        // Initialize Appended Clone CSS 
+        // Initialize Appended Clone CSS
         $clone.css({
           display: 'none',
           position: 'absolute',
           left: '0',
-          right: '0',
+          right: '0'
 
-          // background: 'red',
-          // opacity: '0.75'
         });
 
         props.$el = $el;
@@ -133,7 +138,6 @@ var SmartHead = (function() {
         if (index == 0) {
           props.posWhenScrollingDown = -props.height;
           props.posWhenScrollingUp = 0;
-
         } else {
           prevSmartHeadHeight = SH.smartHeads[index - 1].height;
           props.deactivationPos = $el.position().top - props.height;
@@ -146,13 +150,13 @@ var SmartHead = (function() {
       });
     },
 
-    onScroll: function() {
+    onScroll: function onScroll() {
       var SH = this;
       var prevScrollTop = 0;
       var scrollTop = $(SH.selectors.window).scrollTop();
       this.toggleSmartHeads(prevScrollTop, scrollTop);
 
-      $(SH.selectors.window).scroll(function(event) {
+      $(SH.selectors.window).scroll(function (event) {
         prevScrollTop = scrollTop;
         scrollTop = $(SH.selectors.window).scrollTop();
 
@@ -160,11 +164,11 @@ var SmartHead = (function() {
       });
     },
 
-    toggleSmartHeads: function(prevScrollTop, scrollTop) {
+    toggleSmartHeads: function toggleSmartHeads(prevScrollTop, scrollTop) {
       var SH = this;
-      var scrollDirection = (scrollTop - prevScrollTop > 0) ? 'down' : 'up';
+      var scrollDirection = scrollTop - prevScrollTop > 0 ? 'down' : 'up';
 
-      this.smartHeads.forEach(function(element, index) {
+      this.smartHeads.forEach(function (element, index) {
 
         if (scrollTop > element.activationPos) {
           if (!element.isActivated) {
@@ -186,7 +190,7 @@ var SmartHead = (function() {
       }
     },
 
-    activateSmartHeadCss: function(direction, props) {
+    activateSmartHeadCss: function activateSmartHeadCss(direction, props) {
       props.$clone.css({
         'display': 'block',
         'position': 'fixed',
@@ -200,7 +204,7 @@ var SmartHead = (function() {
       props.$clone.addClass('is-fixed');
     },
 
-    deactivateSmartHeadCss: function(props) {
+    deactivateSmartHeadCss: function deactivateSmartHeadCss(props) {
       props.$clone.css({
         'display': 'none',
         'position': 'absolute',
@@ -208,14 +212,13 @@ var SmartHead = (function() {
         'z-index': '-1'
       });
 
-      props.$clone.removeClass('is-fixed')
-
+      props.$clone.removeClass('is-fixed');
     },
 
-    directionDependentCss: function(direction, props) {
+    directionDependentCss: function directionDependentCss(direction, props) {
       if (direction === 'down') {
         props.$clone.css({
-          'top': props.posWhenScrollingDown,
+          'top': props.posWhenScrollingDown
         });
       } else {
         props.$clone.css({
@@ -224,37 +227,45 @@ var SmartHead = (function() {
       }
     },
 
-    deactivateAllSmartHeads: function() {
+    deactivateAllSmartHeads: function deactivateAllSmartHeads() {
       var SH = this;
-      this.smartHeads.forEach(function(props, index) {
+      this.smartHeads.forEach(function (props, index) {
         SH.deactivateSmartHeadCss(props);
       });
     }
   };
 
   return SmartHead;
-}());
+})();
 
 // using window load instead of document ready to ensure all images
 // are loaded before firing smart head
-$(window).load(function($) {
+$(window).load(function ($) {
   'use-strict';
   SmartHead();
 });
+// background: 'red',
+// opacity: '0.75'
 
 },{"jquery":"jquery"}],5:[function(require,module,exports){
+'use strict';
+
 var svgInjector = require('svg-injector');
 
-var svgsToInject = document.getElementsByClassName('.jsSvgInject');
+var svgsToInject = document.getElementsByClassName('jsSvgInject');
+
+console.log(svgsToInject);
 
 if (svgsToInject) {
   svgInjector(svgsToInject);
 }
 
 },{"svg-injector":7}],6:[function(require,module,exports){
+'use strict';
+
 var $ = require('jquery');
 
-var ScrollSpy = (function() {
+var ScrollSpy = (function () {
   'use strict';
 
   function ScrollSpy(options) {
@@ -270,11 +281,11 @@ var ScrollSpy = (function() {
       props: {
         min: 0,
         max: 0,
-        buffer: 0,
+        buffer: 0
       },
       mode: 'vertical',
       namespace: 'scrollSpy',
-      container: window,
+      container: window
     };
 
     this.options = $.extend({}, defaults, options);
@@ -301,7 +312,7 @@ var ScrollSpy = (function() {
   ScrollSpy.prototype = {
     constructor: ScrollSpy,
 
-    init: function() {
+    init: function init() {
       var SS = this;
       var o = this.options;
       var $el = o.$el;
@@ -314,18 +325,18 @@ var ScrollSpy = (function() {
 
       this.$el = $el;
 
-      $container.on('scroll.' + o.namespace, function(event) {
+      $container.on('scroll.' + o.namespace, function (event) {
         event.preventDefault();
 
         // Updates old position
-        SS.oldPosition = SS.curPosition
+        SS.oldPosition = SS.curPosition;
 
         var position = {
           top: $(this).scrollTop(),
           left: $(this).scrollLeft()
         };
 
-        var xy = (mode == 'vertical') ? position.top + buffer : position.left + buffer;
+        var xy = mode == 'vertical' ? position.top + buffer : position.left + buffer;
 
         var max = o.max;
         var min = o.min;
@@ -334,16 +345,16 @@ var ScrollSpy = (function() {
         // Updates new position
         SS.curPosition = position;
 
-        // Updates Direction 
+        // Updates Direction
         if (o.mode === 'vertical') {
-          SS.direction = (SS.curPosition.top > SS.oldPosition.top ? 'down' : 'up');
+          SS.direction = SS.curPosition.top > SS.oldPosition.top ? 'down' : 'up';
         }
 
         if (oldDirection != SS.direction) {
           SS.onScrollDirectionChange();
         }
 
-        // fit max 
+        // fit max
         // if (typeof o.max === 'function') {
         //   max = o.max();
         // }
@@ -353,17 +364,17 @@ var ScrollSpy = (function() {
         // }
 
         if (max === 0) {
-          max = (mode == 'vertical') ? $container.height() : $container.outerWidth() + $(element).outerWidth();
+          max = mode == 'vertical' ? $container.height() : $container.outerWidth() + $(element).outerWidth();
         }
 
-        // if we have reached the minimum bound but are below the max ... 
+        // if we have reached the minimum bound but are below the max ...
         if (xy >= min && xy <= max) {
-          // Trigger enter event 
+          // Trigger enter event
           if (!inside) {
             inside = true;
             enters++;
 
-            // Fire enter event 
+            // Fire enter event
             // $el.trigger('scrollEnter', {
             //   position: position
             // });
@@ -371,7 +382,7 @@ var ScrollSpy = (function() {
             SS.onEnter($el, position);
           }
 
-          // Trigger Tick 
+          // Trigger Tick
           $el.trigger('scrollTick', {
             position: position,
             inside: inside,
@@ -395,82 +406,80 @@ var ScrollSpy = (function() {
           }
         }
       });
-
     },
 
-    onEnter: function($el, pos) {
+    onEnter: function onEnter($el, pos) {
       this.status = 'enter';
       this.removeTransition();
 
       this.options.props.highlightComponent.addClass('is-active');
     },
 
-    onLeave: function($el, pos) {
+    onLeave: function onLeave($el, pos) {
       this.status = 'leave';
       this.removeTransition();
 
       this.options.props.highlightComponent.removeClass('is-active');
 
-
       if (this.direction === 'down') {
         this.options.$item.css({
           position: 'absolute',
           top: 'auto',
-          bottom: '0',
+          bottom: '0'
         });
       } else {
         this.options.$item.css({
           position: 'absolute',
           top: '0',
-          bottom: 'auto',
+          bottom: 'auto'
         });
       }
     },
 
-    onTick: function($el, pos, inside, enters, leaves) {
+    onTick: function onTick($el, pos, inside, enters, leaves) {
       if (this.direction === 'down') {
         this.options.$item.css({
           position: 'fixed',
           top: this.options.props.fixedTop,
-          bottom: 'auto',
+          bottom: 'auto'
         });
       } else {
         this.options.$item.css({
           position: 'fixed',
-          top: this.options.props.fixedTop + this.options.props.buffer,
+          top: this.options.props.fixedTop + this.options.props.buffer
         });
       }
     },
 
-    setTransition: function() {
-      var transition = 'top 0.25s ease-out'
+    setTransition: function setTransition() {
+      var transition = 'top 0.25s ease-out';
       if (this.transition === 'none') {
         this.transition = transition;
         this.options.$item.css({
           'webkit-transition': transition,
-          'transition': transition,
+          'transition': transition
         });
       }
     },
 
-    removeTransition: function() {
+    removeTransition: function removeTransition() {
       var transition = 'none';
       if (this.transition !== 'none') {
         this.transition = 'none';
         this.options.$item.css({
           'webkit-transition': transition,
-          'transition': transition,
+          'transition': transition
         });
       }
     },
 
-    onScrollDirectionChange: function() {
+    onScrollDirectionChange: function onScrollDirectionChange() {
       this.setTransition();
       this.changeMinMax();
     },
 
-    changeMinMax: function() {
-      var o = this.options
+    changeMinMax: function changeMinMax() {
+      var o = this.options;
       if (this.direction === 'down') {
         o.min = o.props.min;
         o.max = o.props.max;
@@ -482,25 +491,25 @@ var ScrollSpy = (function() {
       this.options = o;
     },
 
-    update: function(props) {
+    update: function update(props) {
       this.options.props = $.extend({}, this.options.props, props);
       this.changeMinMax();
     }
-  }
+  };
 
   return ScrollSpy;
-}());
+})();
 
-$(window).load(function() {
+$(window).load(function () {
   'use-strict';
   var globalProps = getProps();
 
-  $('.jsScrollSpyContainer').each(function(index, el) {
+  $('.jsScrollSpyContainer').each(function (index, el) {
     var $el = $(el);
     var props = calcScrollSpyProps(globalProps, $el);
     var scrollSpyHighlight = $el.find('.jsScrollSpy').attr('data-scrollSpyHighlight');
 
-    props.highlightComponent = $('.jsScrollSpyHighlight').filter(function() {
+    props.highlightComponent = $('.jsScrollSpyHighlight').filter(function () {
       return $(this).attr('data-scrollSpyHighlight') === scrollSpyHighlight;
     });
 
@@ -510,21 +519,20 @@ $(window).load(function() {
       container: '.c-canvas__on-canvas',
       props: props,
       min: props.min,
-      max: props.max,
+      max: props.max
     });
   });
 
-  $(window).on('resize', function(event) {
+  $(window).on('resize', function (event) {
     var globalProps = getProps();
 
-    $('.jsScrollSpyContainer').each(function(index, el) {
+    $('.jsScrollSpyContainer').each(function (index, el) {
       var $el = $(el);
       console.log('calc props');
       var props = calcScrollSpyProps(globalProps, $el);
 
       el.scrollSpy.update(props);
     });
-
   });
 
   function getProps() {
@@ -553,10 +561,10 @@ $(window).load(function() {
   function debounce(func, wait, immediate) {
     var timeout;
 
-    return function() {
+    return function () {
       var context = this,
-        args = arguments;
-      var later = function() {
+          args = arguments;
+      var later = function later() {
         timeout = null;
         if (!immediate) func.apply(context, args);
       };
@@ -565,7 +573,7 @@ $(window).load(function() {
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
       if (callNow) func.apply(context, args);
-    }
+    };
   }
 });
 

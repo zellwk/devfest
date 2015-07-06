@@ -9,8 +9,7 @@ gulp.task('sass', function() {
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-      includePaths: sassConfig.includePaths,
-      errLogToConsole: true
+      includePaths: sassConfig.includePaths
     }))
     .pipe($.autoprefixer(autoprefixerConfig))
     .pipe($.sourcemaps.write())

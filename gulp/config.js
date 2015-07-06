@@ -11,7 +11,7 @@ module.exports = {
     entries: src + '/js/main.js',
     dest: src + '/js/b/',
     outputName: 'bundle.js',
-    transform: ['browserify-shim'],
+    transform: ['browserify-shim', 'babelify'],
     extensions: ['.hbs'],
     require: ['jquery', 'lodash'],
   },

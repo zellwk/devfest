@@ -12,9 +12,10 @@
     "svg-injector": "^1.1.2"
   },
   "devDependencies": {
-    "browser-sync": "^2.7.3",
+    "babelify": "^6.1.2",
+    "browser-sync": "^2.7.12",
     "browserify": "^10.2.1",
-    "browserify-shim": "^3.8.6",
+    "browserify-shim": "^3.8.9",
     "css-sprite": "^0.9.9",
     "css-sprites": "0.0.4",
     "del": "^1.2.0",
@@ -28,7 +29,7 @@
     "gulp-debug": "^2.0.1",
     "gulp-filter": "^2.0.2",
     "gulp-if": "^1.2.5",
-    "gulp-imagemin": "^2.2.1",
+    "gulp-imagemin": "^2.3.0",
     "gulp-load-plugins": "^0.10.0",
     "gulp-minify-css": "^1.1.1",
     "gulp-modernizr": "^1.0.0-alpha",

@@ -1,0 +1,52 @@
+$fill-color: color(bleu-de-france);
+$background-color: white !default;
+
+@for $firstTime from 1 through 12 {
+  @for $secondTime from 1 through 12 {
+    $difference: (abs(12 - $firstTime) + abs(0 - $secondTime)) % 12;
+    $firstDeg: ($firstTime - 9) * 30deg;
+    $secondDeg: ($secondTime - 9) * 30deg;
+
+    @if $difference >= 6 or $difference == 0 {
+      $bgc: $fill-color;
+      $secondDeg: ($secondTime - 3) * 30deg;
+    }
+
+    @else {
+      $bgc: $background-color;
+    }
+
+    .css-clock[data-time="#{$firstTime}-#{$secondTime}"]:before {
+      transform: rotate($firstDeg);
+      background: $fill-color;
+    }
+
+    .css-clock[data-time="#{$firstTime}-#{$secondTime}"]:after {
+      transform: rotate($secondDeg);
+      background: $bgc;
+    }
+  }
+}
+
+$cssclockSize: 16px;
+
+.css-clock {
+  background: white;
+  box-sizing: content-box;
+  display: inline-block;
+  height: $cssclockSize;
+  width: $cssclockSize;
+  border: 1px solid color(bleu-de-france);
+  border-radius: 100%;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: $cssclockSize;
+    height: $cssclockSize / 2;
+    background: black;
+    border-radius: ($cssclockSize / 2) ($cssclockSize / 2) 0 0;
+    transform-origin: ($cssclockSize / 2) ($cssclockSize / 2);
+  }
+}

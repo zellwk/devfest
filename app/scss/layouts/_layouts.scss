@@ -40,7 +40,8 @@
   padding-bottom: gutter();
 
   @include bp("med+1") {
-    padding-top: gutter();
+    margin-top: gutter();
+    padding-top: 0;
     padding-bottom: 0;
   }
 }
@@ -54,18 +55,19 @@
 
   @include bp("med+1") {
     text-align: left;
-    width: span(1);
-    margin-right: gutter(15);
   }
 }
 
 .l-events {
+  width: calc(100% - #{rhythm(3)});
+  margin-left: #{rhythm(3)};
+  padding-left: span(1);
+
   @include bp(max "med+1") {
     margin-top: rhythm(-1);
   }
 
   @include bp("med+1") {
-    width: span(14 of 15);
     display: flex;
     flex-wrap: wrap;
   }

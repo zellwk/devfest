@@ -47,6 +47,7 @@
 @import "components/events";
 @import "components/hotels";
 @import "components/interrupt";
+@import "components/css-clock";
 
 // Utilities
 // ---------
@@ -60,3 +61,19 @@
 // -----
 // For new style snippets that haven't been sorted and commented yet
 @import "shame";
+
+$breakpoints: (
+  'lores': 300px,
+  );
+
+.testing {
+  @include bp(0 min-resolution 1.5ddpx) {
+    color: red;
+  }
+}
+
+.blah {
+  @include bp('lores') {
+    top: 20;
+  }
+}

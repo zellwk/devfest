@@ -1,5 +1,14 @@
 .c-date {
   position: relative;
+
+  @include bp("med+1") {
+    // left: rhythm(-0.75);
+  }
+
+  @include bp(1000px) {
+    // left: rhythm(-1.5);
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -52,7 +61,8 @@
 
 .wrap + .wrap {
   .c-date:before {
-    top: rhythm(-1);
+    // top: rhythm(-1);
+ 
   }
 }
 
@@ -61,7 +71,7 @@
   border: 1px solid #eee;
 
   @include bp("med+1") {
-    border-radius: 6px;
+    border-radius: 3px;
     box-shadow: 0 1px 0px 0px rgba(black, 0.1);
   }
 }
@@ -85,15 +95,17 @@
 }
 
 .c-event__content {
-  padding: rhythm(0.5) rhythm(1);
+  padding: rhythm(1);
   @include cf;
+  font-size: 0.875rem;
+  line-height: 1.333;
 }
 
 .c-event__title {
   font-family: 'Open Sans Condensed';
   font-weight: 700;
-  margin-top: rhythm(0.25);
-  margin-bottom: rhythm(0.75);
+  font-size: rhythm(1);
+  margin-bottom: rhythm(0.5);
 }
 
 .c-event__desc {
@@ -106,31 +118,63 @@
   .o-btn {
     display: block;
     text-align: center;
-    margin-top: rhythm(0.5);
   }
 
   @include bp("large") {
     @include span(2 of 7 last);
 
     .o-btn {
+      float: right;
       display: inline-block;
-      margin-top: rhythm(0.25);
+      margin-top: rhythm(0);
+      font-size: 0.75rem;
+      padding: 0.875em 1.5em;
+      line-height: 1;
     }
   }
 }
 
 .c-event__time {
-  margin-top: rhythm(1);
+  margin-top: rhythm(0.75);
+
+  .css-clock {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25em;
+  }
 }
 
 .c-event__location {
   display: block;
   margin-top: rhythm(0.25);
+
+  img {
+    float: left;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+  }
+
+  svg path {
+    fill: color(bleu-de-france);
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  div {
+    line-height: 1.33;
+  }
 }
 
 .i-location {
   vertical-align: middle;
   display: inline-block;
-  width: rhythm(1);
   margin-right: 0.25em;
+  width: rhythm(1);
 }

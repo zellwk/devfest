@@ -50,15 +50,60 @@ jQuery(document).ready(function ($) {
 
 global.jQuery = require('jquery');
 
+var $ = global.jQuery;
+
 require('./svg');
-require('./smart-head');
+// require('./smart-head');
 require('./zell-scrollspy');
 require('./nav-scroll');
 require('./canvas');
 
+$(window).load(function () {
+  var $el = $('.jsFixedHeader');
+  var $clone = $('.jsFixedHeader').clone(true, true).removeClass('jsFixedHeader').addClass('jsFixedHeaderClone');
+
+  var activationPos = $el.position().top;
+
+  $clone.css({
+    display: 'none',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    right: '0',
+    zIndex: '9999'
+  });
+
+  $el.after($clone);
+
+  function activateFixed() {
+    $clone.css({
+      'display': 'block',
+      'position': 'fixed'
+    });
+  }
+
+  function deactivateFixed() {
+    $clone.css({
+      'display': 'none',
+      'position': 'absolute'
+    });
+  }
+
+  $('.c-canvas__on-canvas').scroll(function (event) {
+    var $container = $('.c-canvas__on-canvas');
+    if ($container.scrollTop() > activationPos) {
+      console.log('activated');
+      activateFixed();
+    } else {
+      console.log('deactivated');
+      deactivateFixed();
+    }
+  });
+});
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"./canvas":1,"./nav-scroll":3,"./smart-head":4,"./svg":5,"./zell-scrollspy":6,"jquery":"jquery"}],3:[function(require,module,exports){
+},{"./canvas":1,"./nav-scroll":3,"./svg":4,"./zell-scrollspy":5,"jquery":"jquery"}],3:[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
@@ -78,189 +123,15 @@ $(document).ready(function () {
 },{"jquery":"jquery"}],4:[function(require,module,exports){
 'use strict';
 
-var $ = require('jquery');
-
-var SmartHead = (function () {
-  'use strict';
-
-  function SmartHead(args) {
-
-    // enforces new
-    if (!(this instanceof SmartHead)) {
-      return new SmartHead(args);
-    }
-
-    // constructor body
-    this.selectors = {
-      window: '.c-canvas__on-canvas'
-    };
-    this.$smartHeads = $('.jsSmartHead');
-    this.smartHeads = [];
-    this.totalHeights = 0;
-    this.initialize();
-  }
-
-  SmartHead.prototype = {
-    constructor: SmartHead,
-
-    initialize: function initialize() {
-      this.initializeSmartHeads();
-      this.onScroll();
-    },
-
-    initializeSmartHeads: function initializeSmartHeads() {
-      var SH = this;
-      var totalHeights;
-      this.$smartHeads.each(function (index, el) {
-        var $el = $(el),
-            $clone = $el.clone(true, true).removeClass('jsSmartHead').addClass('jsSmartHeadClone'),
-            props = {},
-            prevSmartHeadHeight = 0;
-
-        $el.after($clone);
-
-        // Initialize Appended Clone CSS
-        $clone.css({
-          display: 'none',
-          position: 'absolute',
-          left: '0',
-          right: '0'
-
-        });
-
-        props.$el = $el;
-        props.$clone = $clone;
-        props.height = $el.outerHeight();
-        props.activationPos = $el.position().top;
-        props.deactivationPos = $el.position().top;
-        props.isActivated = false;
-
-        if (index == 0) {
-          props.posWhenScrollingDown = -props.height;
-          props.posWhenScrollingUp = 0;
-        } else {
-          prevSmartHeadHeight = SH.smartHeads[index - 1].height;
-          props.deactivationPos = $el.position().top - props.height;
-          props.posWhenScrollingDown = 0;
-          props.posWhenScrollingUp = prevSmartHeadHeight;
-        }
-
-        SH.totalHeights = SH.totalHeights + props.height;
-        SH.smartHeads.push(props);
-      });
-    },
-
-    onScroll: function onScroll() {
-      var SH = this;
-      var prevScrollTop = 0;
-      var scrollTop = $(SH.selectors.window).scrollTop();
-      this.toggleSmartHeads(prevScrollTop, scrollTop);
-
-      $(SH.selectors.window).scroll(function (event) {
-        prevScrollTop = scrollTop;
-        scrollTop = $(SH.selectors.window).scrollTop();
-
-        SH.toggleSmartHeads(prevScrollTop, scrollTop);
-      });
-    },
-
-    toggleSmartHeads: function toggleSmartHeads(prevScrollTop, scrollTop) {
-      var SH = this;
-      var scrollDirection = scrollTop - prevScrollTop > 0 ? 'down' : 'up';
-
-      this.smartHeads.forEach(function (element, index) {
-
-        if (scrollTop > element.activationPos) {
-          if (!element.isActivated) {
-            SH.activateSmartHeadCss(scrollDirection, element);
-            element.isActivated = true;
-          }
-
-          SH.directionDependentCss(scrollDirection, element);
-        }
-
-        if (scrollTop <= element.deactivationPos && element.isActivated) {
-          element.isActivated = false;
-          SH.deactivateSmartHeadCss(element);
-        }
-      });
-
-      if (scrollTop <= this.smartHeads[0].activationPos) {
-        this.deactivateAllSmartHeads();
-      }
-    },
-
-    activateSmartHeadCss: function activateSmartHeadCss(direction, props) {
-      props.$clone.css({
-        'display': 'block',
-        'position': 'fixed',
-        'z-index': '9999',
-        'webkit-transition': 'top 0.25s ease-out',
-        'transition': 'top 0.25s ease-out',
-        'webkit-backface-visiblity': 'hidden',
-        'webkit-transform': 'translateZ(0)'
-      });
-
-      props.$clone.addClass('is-fixed');
-    },
-
-    deactivateSmartHeadCss: function deactivateSmartHeadCss(props) {
-      props.$clone.css({
-        'display': 'none',
-        'position': 'absolute',
-        'top': '0',
-        'z-index': '-1'
-      });
-
-      props.$clone.removeClass('is-fixed');
-    },
-
-    directionDependentCss: function directionDependentCss(direction, props) {
-      if (direction === 'down') {
-        props.$clone.css({
-          'top': props.posWhenScrollingDown
-        });
-      } else {
-        props.$clone.css({
-          'top': props.posWhenScrollingUp
-        });
-      }
-    },
-
-    deactivateAllSmartHeads: function deactivateAllSmartHeads() {
-      var SH = this;
-      this.smartHeads.forEach(function (props, index) {
-        SH.deactivateSmartHeadCss(props);
-      });
-    }
-  };
-
-  return SmartHead;
-})();
-
-// using window load instead of document ready to ensure all images
-// are loaded before firing smart head
-$(window).load(function ($) {
-  'use-strict';
-  SmartHead();
-});
-// background: 'red',
-// opacity: '0.75'
-
-},{"jquery":"jquery"}],5:[function(require,module,exports){
-'use strict';
-
 var svgInjector = require('svg-injector');
 
 var svgsToInject = document.getElementsByClassName('jsSvgInject');
-
-console.log(svgsToInject);
 
 if (svgsToInject) {
   svgInjector(svgsToInject);
 }
 
-},{"svg-injector":7}],6:[function(require,module,exports){
+},{"svg-injector":6}],5:[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
@@ -577,7 +448,7 @@ $(window).load(function () {
   }
 });
 
-},{"jquery":"jquery"}],7:[function(require,module,exports){
+},{"jquery":"jquery"}],6:[function(require,module,exports){
 /**
  * SVGInjector v1.1.2 - Fast, caching, dynamic inline SVG DOM injection library
  * https://github.com/iconic/SVGInjector

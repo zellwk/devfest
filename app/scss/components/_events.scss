@@ -28,11 +28,15 @@
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    border: 2px solid color(malibu);
-    background: color(patterns-blue);
+    background: radial-gradient(lighten(color(bleu-de-france), 5%), color(bleu-de-france));
+    border: 2px solid color(bleu-de-france);
+    box-shadow: inset 0 0 0 2px white;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.4);
     height: rhythm(3);
     width: rhythm(3);
     text-align: center;
+    color: white;
+    font-family: 'Open Sans Condensed';
   }
 
   .day {
@@ -42,7 +46,6 @@
   }
 
   .weekday {
-    font-family: 'Open Sans Condensed';
     font-size: ms(-1);
     line-height: 1.2;
     text-transform: uppercase;
@@ -50,7 +53,6 @@
   }
 
   .allweek {
-    font-family: 'Open Sans Condensed';
     text-transform: uppercase;
     letter-spacing: 0.02em;
     font-size: ms(0);
@@ -62,7 +64,7 @@
 .wrap + .wrap {
   .c-date:before {
     // top: rhythm(-1);
- 
+
   }
 }
 

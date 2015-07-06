@@ -9,7 +9,6 @@
   background-position: center center;
   text-align: center;
   color: rgba(255, 255, 255, 1);
-  //text-shadow: 0 2px 1px #000;
 
   .wrap {
     position: relative;
@@ -74,6 +73,8 @@
   line-height: 1.3em;
   margin-bottom: rhythm(0.5);
   animation: subtitle 2s ease-out;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.4);
+  margin-bottom: 1.5em;
 }
 
 @keyframes subtitle {
@@ -90,11 +91,11 @@
 
 
 .c-hero__description {
-  animation: herodesc 2.5s ease-out;
+  animation: herodesc 2.6s ease-out;
 }
 
 @keyframes herodesc {
-  0%, 50% {
+  0%, 60% {
     opacity: 0;
     transform: translateY(10px);
   }

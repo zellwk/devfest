@@ -1,6 +1,6 @@
 .c-logo {
   margin: rhythm(1) 0;
-  line-height: 1.1;
+  line-height: 1.4;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
@@ -19,7 +19,8 @@
   }
 
   .c-logo__2015 {
-    font-size: 3em;
+    font-size: 2.5em;
+    line-height: 1.1;
     letter-spacing: 0.1em;
     display: inline-block;
     vertical-align: middle;
@@ -28,7 +29,43 @@
 
 .c-logo--hero {
   @extend .c-logo;
-  font-size: 1rem;
+  font-size: 0.98rem;
+  width: 300px;
+  height: 300px;
+  padding: 70px 0 0 2px;
+  border-radius: 150px;
+  border: 6px solid color(bleu-de-france);
+  box-shadow: 0 0 0 9px white, 0 0 0 18px color(bleu-de-france), 0 0 18px 20px rgba(255,255,255,.2);
+  background: radial-gradient(lighten(color(bleu-de-france), 5%), color(bleu-de-france));
+  margin: 0 auto;
+  transform: scale(0.88);
+  position: relative;
+  overflow: hidden;
+  animation: openup .8s cubic-bezier(.88,-0.03,.63,1.52);
+  text-shadow: 1px 1px 0 rgba(0,0,0,.4);
+
+  &:after, &:before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    background: linear-gradient(to bottom, color(bleu-de-france) 50%, white 100%);
+    height: 180px;
+    top: -130px;
+    left: -50px;
+    transform: rotateZ(-9deg);
+    border-bottom: 9px solid white;
+    box-shadow: inset 0 0 0 9px color(bleu-de-france);
+    animation: openup_top .8s cubic-bezier(.88,-0.03,.63,1.52);
+  }
+
+  &:after {
+    background: linear-gradient(to top, color(bleu-de-france) 50%, white 100%);
+    top: auto;
+    bottom: -130px;
+    border-top: 9px solid white;
+    border-bottom: 0;
+    animation: openup_bottom .8s cubic-bezier(.88,-0.03,.63,1.52);
+  }
 
   .c-logo__devfest,
   .c-logo__2015 {
@@ -39,5 +76,36 @@
     padding: rhythm(0.5) 0;
     font-size: 1em;
     letter-spacing: 1.1em;
+  }
+}
+
+@keyframes openup {
+  0% {
+    overflow: hidden;
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(0.88);
+  }
+}
+
+@keyframes openup_top {
+  0% {
+    transform: translate(0, 96px) rotateZ(0);
+  }
+
+  100% {
+    transform: translate(0,0) rotateZ(-9deg);
+  }
+}
+
+@keyframes openup_bottom {
+  0% {
+    transform: translate(0, -96px) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translate(0,0) rotateZ(-9deg);
   }
 }

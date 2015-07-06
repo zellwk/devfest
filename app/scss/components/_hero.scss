@@ -9,7 +9,7 @@
   background-position: center center;
   text-align: center;
   color: rgba(255, 255, 255, 1);
-  text-shadow: 0 2px 1px #000;
+  //text-shadow: 0 2px 1px #000;
 
   .wrap {
     position: relative;
@@ -30,7 +30,7 @@
   }
 
   .c-logo--hero {
-    color: rgba(255, 255, 255, 1);
+    margin-bottom: 4em;
   }
 }
 
@@ -46,6 +46,8 @@
 }
 
 .c-hero__subtitle {
+  max-width: 450px;
+  line-height: 1.3em;
   margin-bottom: rhythm(0.5);
 }
 

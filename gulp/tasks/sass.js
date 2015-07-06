@@ -10,7 +10,6 @@ gulp.task('sass', function() {
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       includePaths: sassConfig.includePaths,
-      errLogToConsole: true
     }))
     .pipe($.autoprefixer(autoprefixerConfig))
     .pipe($.sourcemaps.write())

@@ -48,9 +48,13 @@ $offCanvasWidth: 300px;
 .c-canvas.is-open .c-canvas__on-canvas {
   overflow: hidden;
   left: -$offCanvasWidth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.c-canvas.is-open .jsSmartHeadClone .c-canvas__fixed-item  {
+.c-canvas.is-open .jsSmartHeadClone .c-canvas__fixed-item {
   left: -$offCanvasWidth;
   right: $offCanvasWidth;
 }

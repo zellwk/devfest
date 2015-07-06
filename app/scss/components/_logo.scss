@@ -6,7 +6,7 @@
   font-weight: bold;
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.5rem;
-  text-shadow: 1px 1px 0 rgba(0,0,0,.4);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
 
   @include bp(large) {
     font-size: 0.5rem;
@@ -36,13 +36,15 @@
   padding: 70px 0 0 2px;
   border-radius: 150px;
   border: 6px solid color(bleu-de-france);
-  box-shadow: 0 0 0 9px white, 0 0 0 18px color(bleu-de-france), 0 0 18px 20px rgba(255,255,255,.2);
+  box-shadow: 0 0 0 9px white, 0 0 0 18px color(bleu-de-france), 0 0 18px 20px rgba(255, 255, 255, 0.2);
   background: radial-gradient(lighten(color(bleu-de-france), 5%), color(bleu-de-france));
-  margin: 0 auto;
+  margin: rhythm(7) auto 0;
   transform: scale(0.88);
   position: relative;
   overflow: hidden;
-  animation: openup .8s cubic-bezier(.88,-0.03,.63,1.52);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation: openup 0.8s cubic-bezier(0.88, -0.03, 0.63, 1.52);
 
   &:after, &:before {
     content: "";
@@ -55,7 +57,7 @@
     transform: rotateZ(-9deg);
     border-bottom: 9px solid white;
     box-shadow: inset 0 0 0 9px color(bleu-de-france);
-    animation: openup_top .8s cubic-bezier(.88,-0.03,.63,1.52);
+    animation: openup_top 0.8s cubic-bezier(0.88, -0.03, 0.63, 1.52);
   }
 
   &:after {
@@ -64,7 +66,7 @@
     bottom: -130px;
     border-top: 9px solid white;
     border-bottom: 0;
-    animation: openup_bottom .8s cubic-bezier(.88,-0.03,.63,1.52);
+    animation: openup_bottom 0.8s cubic-bezier(0.88, -0.03, 0.63, 1.52);
   }
 
   .c-logo__devfest,
@@ -86,9 +88,11 @@
   }
 
   100% {
+    overflow: hidden;
     transform: scale(0.88);
   }
 }
+
 
 @keyframes openup_top {
   0% {
@@ -96,9 +100,10 @@
   }
 
   100% {
-    transform: translate(0,0) rotateZ(-9deg);
+    transform: translate(0, 0) rotateZ(-9deg);
   }
 }
+
 
 @keyframes openup_bottom {
   0% {
@@ -106,6 +111,6 @@
   }
 
   100% {
-    transform: translate(0,0) rotateZ(-9deg);
+    transform: translate(0, 0) rotateZ(-9deg);
   }
 }

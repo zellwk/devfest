@@ -6,6 +6,7 @@
   font-weight: bold;
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.5rem;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.4);
 
   @include bp(large) {
     font-size: 0.5rem;
@@ -42,7 +43,6 @@
   position: relative;
   overflow: hidden;
   animation: openup .8s cubic-bezier(.88,-0.03,.63,1.52);
-  text-shadow: 1px 1px 0 rgba(0,0,0,.4);
 
   &:after, &:before {
     content: "";

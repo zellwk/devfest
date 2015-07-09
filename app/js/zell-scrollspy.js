@@ -183,7 +183,8 @@ var ScrollSpy = (function() {
       } else {
         this.options.$item.css({
           position: 'fixed',
-          top: this.options.props.fixedTop + this.options.props.buffer,
+          // top: this.options.props.fixedTop + this.options.props.buffer,
+          top: this.options.props.fixedTop
         });
       }
     },
@@ -217,13 +218,13 @@ var ScrollSpy = (function() {
 
     changeMinMax: function() {
       var o = this.options
-      if (this.direction === 'down') {
+      // if (this.direction === 'down') {
         o.min = o.props.min;
         o.max = o.props.max;
-      } else {
-        o.min = o.props.min - o.props.buffer;
-        o.max = o.props.max - o.props.buffer;
-      }
+      // } else {
+      //   o.min = o.props.min - o.props.buffer;
+      //   o.max = o.props.max - o.props.buffer;
+      // }
 
       this.options = o;
     },

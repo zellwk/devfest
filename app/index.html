@@ -51,18 +51,22 @@
               <p class="c-hero__description">November 7th - 21st, 2015</p>
             </div>
     
-            <form action="">
-              <div class="input-group">
-                <input type="text" name="name" id="name" required>
-                <label for="name" placeholder="Your name" alt="Name"></label>
+            <form id="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
+              <div class="inputs">
+                <input type="hidden" style="display: none;" name="group" value="DevFest" />
+                <div class="input-group">
+                  <input type="text" name="name" id="name" required>
+                  <label for="name" placeholder="Your name" alt="Name"></label>
+                </div>
+                <div class="input-group">
+                  <input type="text" name="email" id="email" required>
+                  <label for="email" placeholder="Your email" alt="Email"></label>
+                </div>
+                <div class="input-group">
+                  <button class="o-btn">Let me know!</button>
+                </div>
               </div>
-              <div class="input-group">
-                <input type="text" name="email" id="email" required>
-                <label for="email" placeholder="Your email" alt="Email"></label>
-              </div>
-              <div class="input-group">
-                <button class="o-btn">Let me know!</button>
-              </div>
+              <div class="msg" style="display: block; textalign: center;"><span></span></div>
             </form>
           </div>
         </div>  </div>

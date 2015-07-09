@@ -1,8 +1,8 @@
 
 // Typography
 // ----------
-// For all Typography related values. 
-// Uses Compass Vertical Rhythms. 
+// For all Typography related values.
+// Uses Compass Vertical Rhythms.
 // ==========
 
 // Compass Vertical Rhythms Settings
@@ -18,7 +18,7 @@ $ms-ratio: 1.333333333333;
 // Font Families
 // ------------
 $font-families: (
-  primary: ('Lato', sans-serif),
+  primary: ('Open Sans', sans-serif),
   secondary: ('Sue Ellen Francisco', cursive),
   code: ('Menlo', 'Monaco', 'Consolas', monospace)
   );
@@ -30,7 +30,7 @@ $font-weights : (
     light: 300 ,
     normal: 400,
     bold: 700
-    ), 
+    ),
   secondary: (
     light: 300 ,
     normal: 400,
@@ -40,8 +40,8 @@ $font-weights : (
 
 // Type Sizes
 // ----------
-// Sets font sizes and line height. 
-// Adapted from https://medium.com/p/8e51498c3713 
+// Sets font sizes and line height.
+// Adapted from https://medium.com/p/8e51498c3713
 // See mixin type-scale for more info
 //
 // - requires compass vertical rhythm (included by default)

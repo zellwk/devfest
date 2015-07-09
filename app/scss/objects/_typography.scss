@@ -1,6 +1,6 @@
 // Typography
 // ---------------
-// Sets typography for all of document 
+// Sets typography for all of document
 // ===============
 //
 html {
@@ -73,10 +73,6 @@ pre {
 a {
   text-decoration: none;
   color: color(charcoal);
-
-  &:visited {
-    color: color(hoki);
-  }
 
   &:hover,
   &:active,

@@ -2,12 +2,14 @@
   display: inline-block;
   margin-top: rhythm(1);
   padding: 0.75em 1.5em;
-  border-radius: 6px;
-  background: color(hoki);
-  color: rgba(white, 0.7);
-  font-size: 0.875rem;
+  background: #E74840;
+  color: white;
+  font-family: 'Open Sans Condensed';
+  font-size: 1rem;
   letter-spacing: 0.05em;
-  font-weight: normal;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.4);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.2);
   transition: all 0.15s ease;
   text-transform: uppercase;
 
@@ -18,7 +20,7 @@
   &:hover,
   &:active,
   &:focus {
-    background: color(charcoal);
+    background: lighten(#E74840, 10%);
     color: white;
   }
 }

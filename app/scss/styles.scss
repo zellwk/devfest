@@ -33,7 +33,8 @@
 @import "objects/buttons";
 @import "objects/block";
 
-// @import "objects/form";
+@import "objects/form";
+
 // @import "objects/media";
 @import "objects/typography";
 
@@ -61,19 +62,3 @@
 // -----
 // For new style snippets that haven't been sorted and commented yet
 @import "shame";
-
-$breakpoints: (
-  'lores': 300px,
-  );
-
-.testing {
-  @include bp(0 min-resolution 1.5ddpx) {
-    color: red;
-  }
-}
-
-.blah {
-  @include bp('lores') {
-    top: 20;
-  }
-}

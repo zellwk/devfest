@@ -1,12 +1,13 @@
 // hero
 .c-hero {
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1;
   // padding-top: rhythm(4);
   // padding-bottom: rhythm(4);
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-position: center center;
   text-align: center;
@@ -78,6 +79,8 @@
   text-shadow: 1px 1px 0 rgba(0,0,0,.7);
   margin-bottom: 1.5em;
   font-weight: 100;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes subtitle {

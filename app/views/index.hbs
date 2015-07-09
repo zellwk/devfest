@@ -6,10 +6,25 @@
   </div>
   <div class="c-canvas__on-canvas jsOnCanvas">
 
-    {{> _header }}
+    {{!-- {{> _header }} --}}
+
+    <header class="c-site-header">
+      <div class="wrap--header c-canvas__fixed-item">
+        <div class="flex">
+          <div class="c-logo">
+            <div class="o-cursive c-logo__devfest">Devfest.Asia</div>
+          </div>
+
+          <nav class="c-nav" style="display: block;">
+            <a href="sponsors.html">Sponsors</a>
+            <a href="sponsors.html" class="o-btn">List your event</a>
+          </nav>
+        </div>
+      </div>
+    </header>
 
     {{> _hero }}
-
+{{!-- 
     {{> _events-header }}
     <div class="l-content">
       {{> _events }}
@@ -17,9 +32,8 @@
 
     <div class="footer">
       Footer area. Credits + SG 50 here. 
-    </div>
+    </div> --}}
   </div>
 
   {{> _foot }}
 
- 

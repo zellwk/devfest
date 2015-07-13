@@ -107,3 +107,41 @@
     list-style-position: inside;
   }
 }
+
+// Form and social
+@keyframes formsup {
+  0%, 70% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+form {
+  animation: formsup 3s ease-out;
+}
+
+.social {
+  animation: formsup 4s ease-out;
+}
+
+@keyframes socialup {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.social.form-show {
+  animation: formsup 0.5s ease-out;
+}

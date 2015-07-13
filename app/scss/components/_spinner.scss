@@ -1,0 +1,44 @@
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+
+.spinner {
+  position: relative;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.spinner:before {
+  content: 'Loading...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rhythm(1.5);
+  height: rhythm(1.5);
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.spinner:not(:required):before {
+  content: '';
+  border-radius: 50%;
+  border-top: 3px solid white;
+  border-right: 3px solid transparent;
+  animation: spinner .6s linear infinite;
+  -webkit-animation: spinner .6s linear infinite;
+  animation-play-state: paused;
+}
+
+.spinner.play:not(:required):before {
+  animation-play-state: running;
+}

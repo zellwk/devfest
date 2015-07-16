@@ -394,8 +394,12 @@ $(document).ready(function () {
         $form.find('input').val('');
         $text.text('Thanks. We\'ll keep you updated!');
 
-        $form.find('.social-msg').text('You might want to check out our Facebook or Twitter page :)');
-        $social.show().addClass('form-show');
+        $form.find('.social-msg').text('Check out our facebook page now! :)');
+        // $social.show().addClass('form-show');
+
+        setTimeout(function () {
+          window.location.href = 'http://facebook.com/devfestasia';
+        }, 2000);
       }
     },
     error: function error(r, s) {

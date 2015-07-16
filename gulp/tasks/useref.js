@@ -8,10 +8,6 @@ gulp.task('useref', function() {
   return gulp.src(config.handlebars.dest + '/*' + config.handlebars.extname)
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.uncss({
-      html: [config.handlebars.dest + '/*' + config.handlebars.extname],
-      ignore: [/.is-open/],
-    })))
     .pipe($.if('*.css', $.minifyCss()))
     .pipe($.rev())
     .pipe(assets.restore())

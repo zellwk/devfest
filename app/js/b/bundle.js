@@ -415,7 +415,6 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-
 },{"./canvas":1,"./jqueryform":2,"./nav-scroll":4,"./svg":5,"./zell-scrollspy":6,"jquery":"jquery"}],4:[function(require,module,exports){
 'use strict';
 
@@ -22650,8 +22649,6 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-
-},{}]},{},[3])
-
+},{}]},{},[3]);
 
 //# sourceMappingURL=bundle.js.map

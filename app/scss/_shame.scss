@@ -151,7 +151,7 @@ form {
 .c-nav {
   text-align: center;
 
-  @include bp(max 480px) {
+  @include bp(max 350px) {
     a + a {
       display: inline-block;
       margin-top: rhythm(0.5) !important;

@@ -47,6 +47,10 @@
   -webkit-animation: none;
   animation: openup 0.8s cubic-bezier(0.88, -0.03, 0.63, 1.52);
 
+  @include bp(max 480px) {
+    margin-top: rhythm(9);
+  }
+
   &:after, &:before {
     content: "";
     position: absolute;

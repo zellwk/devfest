@@ -67,9 +67,31 @@
   <div class="wrap">
     <h1 class="o-italic">{{{title}}}</h1>
     <h4>{{{desc}}}</h4>
-    <button class="o-btn--highlight">{{button}}</button>
+    <button class="o-btn">{{button}}</button>
   </div>
 </div> 
+{{/compare}}
+
+{{#compare this.type "add-event" }}
+<div class="wrap">
+  <div class="c-dates c-dates--new l-dates">
+    <div class="c-date l-date jsScrollSpyContainer">
+      <div class="c-date__cal jsScrollSpy" data-scrollSpyHighlight="{{date}}">
+        <h2 class="day">?</h2>
+      </div>
+    </div>
+
+    <div class="c-events l-events">
+
+      <a href="https://jsconfasia.wufoo.com/forms/devfestasia-2015-list-my-event/" class="c-event--new l-event">
+        <div class="c-event-new-item">
+          <span>+</span>
+          <span>Add your event</span>
+        </div>
+      </a>  
+    </div>
+  </div>
+</div>
 {{/compare}}
 
 {{/each}}

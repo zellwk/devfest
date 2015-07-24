@@ -39,7 +39,7 @@
     {
       "type": "tickets",
       "title": "Pssst. Want go to every conference?",
-      "desc": "You can grab a Devfest Ticket for just $1,000 and save up to 35%!",
+      "desc": "You can grab a Devfest Ticket for just $999!",
       "button": "Get the Devfest Ticket"
     },
 
@@ -176,8 +176,7 @@
 
     {
       "type": "job",
-      "title": "Looking for a job in Singapore?",
-      "desc": "How do these sound?"
+      "title": "Looking for a job in Singapore?"
     },
 
     {
@@ -362,7 +361,17 @@
         "location": "71 Ayer Rajah Crescent",
         "location-2": "#05-16, Singapore 139951"
       }]
-    }, {
+    }, 
+
+
+    {
+      "type": "tickets",
+      "title": "Decided to join us at every event yet?",
+      "desc": "",
+      "button": "Get the Devfest Ticket at $999"
+    }, 
+    
+    {
       "type": "event",
       "date": "21",
       "day": "Sat",
@@ -386,10 +395,7 @@
     }, 
 
     {
-      "type": "tickets",
-      "title": "Decided to join us at every event yet?",
-      "desc": "",
-      "button": "Get the Devfest Ticket at $1,000"
+      "type": "add-event"
     }
   ],
 

@@ -17,13 +17,13 @@
 .c-hotel__title {
   padding: rhythm(0.25) rhythm(0.5);
   text-align: center;
-  background-color: color(patterns-blue);
+  // background-color: color(patterns-blue);
 }
 
 .c-hotel-carousel {
   position: relative;
   overflow: hidden;
-  border-radius: 6px 6px 0 0;
+  // border-radius: 6px 6px 0 0;
 
   &:after {
     content: "";

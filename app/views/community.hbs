@@ -5,36 +5,29 @@
     Mobile Menu located here, but not styled yet
   </div>
   <div class="c-canvas__on-canvas jsOnCanvas">
-
-
     {{> _header }}
 
-    <div class="c-hero" style="background-image: url('images/hero-4.jpg');">
-      <div class="wrap">
-        <div class="c-hero__intro">
-          <div class="c-logo--hero">
-            <div class="o-cursive c-logo__devfest">{{community.title}}</div>
-          </div>  
-        </div>
-      </div>
-    </div>
-
     <div class="l-content">
-      <div class="wrap">
-        <article class="c-generic">
-          <p class="desc">{{community.desc}}</p>
-          <ul>
-            {{#each community.list}}
-            <li>{{this}}</li>
-            {{/each}}
-          </ul>
-        </article>
-      </div>
-    </div>
-  </div>
+      <section>
+        <div class="wrap">
+          <div class="c-section-intro">
+            <h1 class="o-italic">Developer Community in Singapore</h1>
+          </div>
 
-  <div class="footer">
-    Footer area. Credits + SG 50 here. 
+          <article class="c-generic">
+            <p class="desc">{{community.desc}}</p>
+            <ul>
+              {{#each community.list}}
+              <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+
+  {{> _footer }}
+
   </div>
 </div>
 

@@ -53,6 +53,7 @@
   }
 }
 
+
 form {
   animation: formsup 3s ease-out;
 }
@@ -78,22 +79,80 @@ form {
   animation: formsup 0.5s ease-out;
 }
 
-.c-nav {
-  text-align: center;
+// .c-nav {
+//   text-align: center;
 
-  @include bp(max 350px) {
-    a + a {
-      display: inline-block;
-      margin-top: rhythm(0.5) !important;
-      margin-bottom: rhythm(0.5);
-    }
+//   @include bp(max 350px) {
+//     a + a {
+//       display: inline-block;
+//       margin-top: rhythm(0.5) !important;
+//       margin-bottom: rhythm(0.5);
+//     }
+//   }
+// }
+
+.c-interrupt-2 {
+  @extend .c-interrupt;
+  background: #eee;
+  color: black;
+  margin-bottom: 0;
+
+  h3 {
+    margin-top: rhythm(3);
+  }
+
+  p {
+    color: black;
+    font-size: 14px;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: rhythm(0.75) rhythm(1);
+    background: white;
+    margin-top: rhythm(1);
+    margin-bottom: rhythm(1);
   }
 }
 
 // Footer
 // ------------
+
+.c-interrupt-2 + .site-footer {
+  margin-top: auto;
+}
 .site-footer {
+  margin-top: rhythm(3);
+  padding: 1px 0 rhythm(4);
   background: radial-gradient(circle, mix(black, color(bleu-de-france), 65%), mix(black, color(bleu-de-france), 80%));
-  padding: rhythm(4) 0;
-  color: white;
+  color: rgba(white, 0.5);
+  text-align: center;
+
+  .c-logo--hero {
+    margin-top: rhythm(4);
+    margin-bottom: rhythm(2);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+      // text-decoration: none;
+   
+    }
+  }
+}
+
+.nerdherd {
+  margin-top: rhythm(1);
+}
+
+.c-designed {
+  margin-top: rhythm(2);
 }

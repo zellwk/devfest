@@ -50,10 +50,6 @@
 
   @include bp(max 480px) {
     margin-top: rhythm(9);
-    // transform: scale(1);
-    .c-logo__devfest {
-      // font-size: 2.5em !important; 
-    }
   }
 
   &:after, &:before {

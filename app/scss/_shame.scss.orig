@@ -1,0 +1,173 @@
+<<<<<<< Updated upstream
+.c-events-header {
+  line-height: 1;
+  background: radial-gradient(circle, lighten(color(bleu-de-france), 10%), color(bleu-de-france));
+  overflow: hidden;
+  margin-bottom: rhythm(3);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.25);
+
+  &.is-fixed {
+    //
+ 
+  }
+}
+
+.c-events-wrap {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-top: rhythm(0.7);
+  padding-bottom: rhythm(0.8);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.c-events-nav {
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans Condensed';
+  font-weight: bold;
+
+  a {
+    display: inline-block;
+    color: white;
+    padding: 0 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .c-events-nav__weekend {
+    color: rgba(white, 0.7);
+  }
+
+  .c-events-nav__day {
+    display: block;
+    text-transform: uppercase;
+    font-size: ms(-2);
+    font-weight: normal;
+    line-height: 1.2em;
+  }
+
+  .c-events-nav__date {
+    display: block;
+  }
+
+  .is-active {
+    color: color(charcoal);
+  }
+}
+
+.c-tickets {
+  text-align: center;
+}
+
+.c-jobs {
+  @include cf;
+}
+
+.c-job {
+  margin-top: rhythm(1);
+
+  @include bp(med) {
+    @include gallery(4 of 12);
+    margin-top: rhythm(2);
+  }
+}
+
+.c-section-intro {
+  text-align: center;
+  margin-top: rhythm(3);
+  margin-bottom: rhythm(2);
+}
+
+.c-generic {
+  text-align: center;
+  margin-top: rhythm(3);
+
+  ul {
+    max-width: span(8);
+    margin-top: rhythm(1);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    column-count: 2;
+    column-width: span(4 of 8);
+  }
+
+  li {
+    list-style-position: inside;
+  }
+}
+
+=======
+>>>>>>> Stashed changes
+// Form and social
+@keyframes formsup {
+  0%, 70% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+form {
+  animation: formsup 3s ease-out;
+}
+
+.social {
+  animation: formsup 4s ease-out;
+}
+
+@keyframes socialup {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.social.form-show {
+  animation: formsup 0.5s ease-out;
+}
+
+<<<<<<< Updated upstream
+.c-nav {
+  text-align: center;
+
+  @include bp(max 350px) {
+    a + a {
+      display: inline-block;
+      margin-top: rhythm(0.5) !important;
+      margin-bottom: rhythm(0.5);
+    }
+  }
+=======
+// Footer
+// ------------
+.site-footer {
+  background: radial-gradient(circle, mix(black, color(bleu-de-france), 65%), mix(black, color(bleu-de-france), 80%));
+  padding: rhythm(4) 0;
+  color: white;
+>>>>>>> Stashed changes
+}

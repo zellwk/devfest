@@ -1,4 +1,19 @@
 .c-site-header {
+  background: radial-gradient(circle, lighten(color(bleu-de-france), 10%), color(bleu-de-france));
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 100;
+
+  a {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  a:hover {
+    color: white;
+  }
+}
+
+.c-site-header--main {
+  @extend .c-site-header;
   position: absolute;
   top: 0;
   left: 0;
@@ -6,15 +21,6 @@
   z-index: 999;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   text-shadow: 1px 1px 0 #000;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 100;
-
-  a {
-    color: rgba(255, 255, 255, 0.85);
-  }
-  a:hover {
-    color: white;
-  }
 }
 
 .wrap--header {
@@ -52,11 +58,13 @@
 
 // Only for Temp Landing page
 .c-site-header .flex {
-  justify-content: center; 
+  justify-content: center;
+
   @include bp(500px) {
     justify-content: space-between;
   }
 }
+
 // .c-site-header .c-logo {
 //   display: block;
 //   text-align: center;

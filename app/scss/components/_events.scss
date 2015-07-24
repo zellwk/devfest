@@ -19,53 +19,46 @@
     width: 2px;
     background: color(malibu);
   }
-
-  .c-date__cal {
-    position: absolute;
-    z-index: 20;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    background: radial-gradient(lighten(color(bleu-de-france), 5%), color(bleu-de-france));
-    border: 2px solid color(bleu-de-france);
-    box-shadow: inset 0 0 0 2px white;
-    text-shadow: 1px 1px 0 rgba(0,0,0,.4);
-    height: rhythm(3);
-    width: rhythm(3);
-    text-align: center;
-    color: white;
-    font-family: 'Open Sans Condensed';
-  }
-
-  .day {
-    font-weight: bold;
-    font-size: ms(1);
-    line-height: 1;
-  }
-
-  .weekday {
-    font-size: ms(-1);
-    line-height: 1.2;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  .allweek {
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    font-size: ms(0);
-    line-height: 1.2;
-    font-weight: bold;
-  }
 }
 
-.wrap + .wrap {
-  .c-date:before {
-    // top: rhythm(-1);
+.c-date__cal {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: radial-gradient(lighten(color(bleu-de-france), 5%), color(bleu-de-france));
+  border: 2px solid color(bleu-de-france);
+  box-shadow: inset 0 0 0 2px white;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  height: rhythm(3);
+  width: rhythm(3);
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans Condensed';
+}
 
-  }
+.day {
+  font-weight: bold;
+  font-size: ms(1);
+  line-height: 1;
+}
+
+.weekday {
+  font-size: ms(-1);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.allweek {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: ms(0);
+  line-height: 1.2;
+  font-weight: bold;
 }
 
 .c-event {
@@ -179,4 +172,60 @@
   display: inline-block;
   margin-right: 0.25em;
   width: rhythm(1);
+}
+
+// Adding new items
+
+.c-dates--new {
+  .c-date:before {
+    background: #ddd;
+  }
+
+  .c-date__cal {
+    background: #ddd;
+    border: 2px solid #ddd;
+    box-shadow: inset 0 0 0 2px white;
+    text-shadow: none;
+  }
+}
+
+.c-event--new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px dashed #ddd;
+  border-radius: 6px;
+  height: rhythm(12);
+  transition: all 0.15s ease-out;
+
+  &:hover {
+    transition: none;
+    border-color: color(carmine);
+
+    span {
+      transition: none;
+      color: color(carmine);
+    }
+  }
+
+  // @include bp("med+1") {
+  //   padding-bottom: span(7 of 14);
+  //   height: 0;
+  // }
+}
+
+.c-event-new-item {
+  text-align: center;
+
+  span {
+    font-size: ms(6);
+    font-weight: bold;
+    color: #ddd;
+    transition: all 0.15s ease-out;
+  }
+
+  span + span {
+    font-size: ms(1);
+    display: block;
+  }
 }

@@ -13,7 +13,8 @@
   }
 
   .c-logo__devfest {
-    font-size: 3em;
+    // font-size: 3em;
+    font-size: 2.75em;
     letter-spacing: 0.1em;
     display: inline-block;
     vertical-align: middle;
@@ -46,6 +47,14 @@
   backface-visibility: hidden;
   -webkit-animation: none;
   animation: openup 0.8s cubic-bezier(0.88, -0.03, 0.63, 1.52);
+
+  @include bp(max 480px) {
+    margin-top: rhythm(9);
+    // transform: scale(1);
+    .c-logo__devfest {
+      // font-size: 2.5em !important; 
+    }
+  }
 
   &:after, &:before {
     content: "";

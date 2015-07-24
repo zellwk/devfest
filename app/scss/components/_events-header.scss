@@ -1,0 +1,67 @@
+.c-events-header {
+  line-height: 1;
+  background: radial-gradient(circle, lighten(color(bleu-de-france), 10%), color(bleu-de-france));
+  overflow: hidden;
+  margin-bottom: rhythm(3);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.25);
+
+  &.is-fixed {
+    //
+  }
+}
+
+.c-events-wrap {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-top: rhythm(.7);
+  padding-bottom: rhythm(.8);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.c-events-nav {
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans Condensed';
+  font-weight: bold;
+
+  a {
+    display: inline-block;
+    color: white;
+    padding: 0 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .c-events-nav__weekend {
+    color: rgba(white, 0.7);
+  }
+
+  .c-events-nav__day {
+    display: block;
+    text-transform: uppercase;
+    font-size: ms(-2);
+    font-weight: normal;
+    line-height: 1.2em;
+  }
+
+  .c-events-nav__date {
+    display: block;
+  }
+
+  .is-active {
+    color: color(charcoal);
+  }
+}

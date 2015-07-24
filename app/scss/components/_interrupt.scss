@@ -10,8 +10,53 @@
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 
+  background: mix(rgba(255,255,255,0.8), color(bleu-de-france), 65%);
+  
+
   @include bp("med+1") {
     margin-top: rhythm(3);
     margin-bottom: rhythm(3);
+  }
+}
+
+.c-tickets {
+  text-align: center;
+}
+
+.c-jobs {
+  @include cf;
+}
+
+.c-job {
+  margin-top: rhythm(1);
+
+  @include bp(med) {
+    @include gallery(4 of 12);
+    margin-top: rhythm(2);
+  }
+}
+
+.c-section-intro {
+  text-align: center;
+  margin-top: rhythm(3);
+  margin-bottom: rhythm(2);
+}
+
+.c-generic {
+  text-align: center;
+  margin-top: rhythm(3);
+
+  ul {
+    max-width: span(8);
+    margin-top: rhythm(1);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    column-count: 2;
+    column-width: span(4 of 8);
+  }
+
+  li {
+    list-style-position: inside;
   }
 }

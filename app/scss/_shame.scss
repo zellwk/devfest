@@ -1,20 +1,3 @@
-.c-tickets {
-  text-align: center;
-}
-
-.c-jobs {
-  @include cf;
-}
-
-.c-job {
-  margin-top: rhythm(1);
-
-  @include bp(med) {
-    @include gallery(4 of 12);
-    margin-top: rhythm(2);
-  }
-}
-
 .c-section-intro {
   text-align: center;
   margin-top: rhythm(3);
@@ -27,16 +10,16 @@
 
   ul {
     max-width: span(8);
-    margin-top: rhythm(1);
     margin-left: auto;
     margin-right: auto;
+    padding: 0;
     text-align: left;
-    column-count: 2;
+    columns: 2;
     column-width: span(4 of 8);
   }
 
   li {
-    list-style-position: inside;
+    margin-top: rhythm(0.5);
   }
 }
 
@@ -105,16 +88,6 @@ form {
     color: black;
     font-size: 14px;
   }
-
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: rhythm(0.75) rhythm(1);
-    background: white;
-    margin-top: rhythm(1);
-    margin-bottom: rhythm(1);
-  }
 }
 
 // Footer
@@ -123,6 +96,7 @@ form {
 .c-interrupt-2 + .site-footer {
   margin-top: auto;
 }
+
 .site-footer {
   margin-top: rhythm(3);
   padding: 1px 0 rhythm(4);
@@ -155,4 +129,36 @@ form {
 
 .c-designed {
   margin-top: rhythm(2);
+}
+
+// New stuff
+
+.c-new {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 4px dashed #ddd;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #ddd;
+  transition: all 0.15s ease-out;
+
+  span + span {
+    margin-left: rhythm(0.5);
+  }
+}
+
+.c-new__plus {
+  font-size: ms(3);
+}
+
+.c-new:hover {
+  transition: none;
+  border-color: color(carmine);
+
+  span {
+    transition: none;
+    color: color(carmine);
+  }
 }

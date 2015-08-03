@@ -1,0 +1,74 @@
+.l-company-and-jobs {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include bp(max med) {
+    flex-wrap: wrap;
+  }
+}
+
+.l-company {
+  position: relative;
+  flex-grow: 1;
+  margin-bottom: rhythm(1);
+  @include bp(med) {
+    @include span(first 5 before);
+  }
+
+  .jsScrollSpy {
+    max-width: 300px;
+  }
+}
+
+.l-jobs {
+  flex-grow: 1;
+  margin-bottom: rhythm(1);
+  @include bp(med) {
+    @include span(before 10);
+  }
+}
+
+a.c-job {
+  display: block;
+  @extend .c-event;
+  padding: rhythm(1);
+  margin-bottom: rhythm(0.5);
+
+  h4 {
+    font-weight: bold;
+    margin-bottom: rhythm(0.25);
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.c-company {
+  text-align: center;
+
+  img {
+    display: inline-block;
+
+    @include bp(med) {
+      display: block;
+      padding: rhythm(0.75) rhythm(1);
+      background: white;
+    }
+  }
+}
+
+// new 
+.c-company--new,
+.c-jobs--new {
+  .c-new {
+    padding: rhythm(1);
+  }
+}
+
+.c-company--new {
+  @include bp(max med) {
+    display: none;
+  }
+}

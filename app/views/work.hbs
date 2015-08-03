@@ -1,0 +1,85 @@
+{{> _head }}
+
+<div class="c-canvas jsCanvasContainer">
+  <div class="c-canvas__off-canvas jsOffCanvas">
+    Mobile Menu located here, but not styled yet
+  </div>
+  <div class="c-canvas__on-canvas jsOnCanvas">
+    {{> _header active="community" }}
+
+    <div class="l-content">
+
+      <section>
+        <div class="wrap">
+          <div class="c-section-intro">
+            <h1 class="o-italic">Working in Singapore</h1>
+            <p>Singapore is awesome to work in, and <br>we have a vibrant community to back it up! </p>
+            <div>
+              <a class="o-btn" href="/community.html">Check out the community!</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="section-intro">
+            <h1 class="o-italic">These companies are hiring!</h1>
+          </div>
+        </div>
+      </section>
+      {{#each jobs}}
+      {{#compare this.type 'company'}}
+      <div class="wrap">
+        <div class="c-company-and-jobs l-company-and-jobs">
+          {{!-- Recommended not to scrollspy. Breaks logos on resize --}}
+          <div class="c-company l-company">
+            <div>
+              <img src="{{image}}" alt="{{employer}}">
+            </div>
+          </div>
+
+          <div class="c-jobs l-jobs">
+            {{#each jobs}}
+            <a href="#" class="c-job l-job">
+              <div class="c-job__content">
+                <h4>{{job-title}}</h4>
+                <p>{{job-desc}}</p>
+              </div>
+            </a>  
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      {{/compare}}
+      {{/each}}
+
+      <div class="wrap">
+        <div class="c-company-and-jobs l-company-and-jobs">
+        <div class="c-company--new l-company jsScrollSpyContainer">
+            <div class="jsScrollSpy">
+              <a href="#" class="c-new">
+                <span class="c-new__plus">+</span>
+                <span>Your company</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="c-jobs--new l-jobs">
+            <a href="#" class="c-new">
+              <span class="c-new__plus">+</span>
+              <span>List your job offer</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    {{> _footer }}
+  </div>
+</div>
+
+
+
+{{> _foot }}
+

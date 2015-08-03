@@ -15,6 +15,10 @@ $(window).load(function() {
   var $el = $('.jsFixedHeader');
   var $clone = $('.jsFixedHeader').clone(true, true).removeClass('jsFixedHeader').addClass('jsFixedHeaderClone');
 
+  if(!$el.length) {
+    return;
+  }
+
   var activationPos = $el.position().top;
 
   $clone.css({

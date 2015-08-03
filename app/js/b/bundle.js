@@ -330,6 +330,10 @@ $(window).load(function () {
   var $el = $('.jsFixedHeader');
   var $clone = $('.jsFixedHeader').clone(true, true).removeClass('jsFixedHeader').addClass('jsFixedHeaderClone');
 
+  if (!$el.length) {
+    return;
+  }
+
   var activationPos = $el.position().top;
 
   $clone.css({
@@ -725,10 +729,11 @@ $(window).load(function () {
     var o = {};
     o.hiddenHeader = $('.c-site-header').outerHeight();
     o.stickyHeadHeight = $('.c-events-header').outerHeight();
-    o.extraPadding = parseInt($('.c-events-header').css('margin-bottom'));
+    o.extraPadding = parseInt($('.c-events-header').css('margin-bottom')) || 0;
     o.circleSize = $('.jsScrollSpy').outerHeight();
     o.fixedTop = o.stickyHeadHeight + o.extraPadding;
 
+    console.log(o);
     return o;
   }
 

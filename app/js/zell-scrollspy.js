@@ -278,10 +278,11 @@ $(window).load(function() {
     var o = {};
     o.hiddenHeader = $('.c-site-header').outerHeight();
     o.stickyHeadHeight = $('.c-events-header').outerHeight();
-    o.extraPadding = parseInt($('.c-events-header').css('margin-bottom'));
+    o.extraPadding = parseInt($('.c-events-header').css('margin-bottom')) || 0;
     o.circleSize = $('.jsScrollSpy').outerHeight();
     o.fixedTop = o.stickyHeadHeight + o.extraPadding;
 
+    console.log(o);
     return o;
   }
 

@@ -57,16 +57,13 @@ $(window).load(function() {
         // Gets scroll direction 
         this.setScrollDirection(false);
         this.removeTransition();
-
-        console.log(this.status, this.scrollDirection);
-
       },
+      
       onLeave: function(elem, pos) {
         var nextEnterDirection;
         this.status = 'leave';
         this.setScrollDirection();
         this.removeTransition();
-        console.log(this.status, this.scrollDirection);
 
         /**
          * Checks whether scrollSpy is leaving from Bottom or Top
@@ -165,7 +162,5 @@ $(window).load(function() {
         console.log('min', this.min, 'max', this.max);
       }
     });
-
-    console.log(el.asd.changeMinMax);
   });
 });

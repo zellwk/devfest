@@ -5,29 +5,41 @@
     Mobile Menu located here, but not styled yet
   </div>
   <div class="c-canvas__on-canvas jsOnCanvas">
-    {{> _header }}
+    {{> _header active="community" }}
 
     <div class="l-content">
       <section>
         <div class="wrap">
           <div class="c-section-intro">
             <h1 class="o-italic">Developer Community in Singapore</h1>
+            <p>Here are some ways you can connect with the vibrant developer community in Singapopre!</p>
           </div>
-
-          <article class="c-generic">
-            <p class="desc">{{community.desc}}</p>
-            <ul>
-              {{#each community.list}}
-              <li>{{this}}</li>
-              {{/each}}
-            </ul>
-          </article>
         </div>
       </section>
+      <section>
+        <h1 class="o-italic">Follow Cool People</h1>            
+      </section>
+
+      <section>
+        <h1 class="o-italic">Hang out at meetups</h1>            
+      </section>
+
+      <section>
+        <h1 class="o-italic">Chat with us online</h1>            
+      </section>
+
+      <section>
+        <h1 class="o-italic">Work together side by side</h1>            
+      </section>
+
+      <section>
+        <h1 class="o-italic">Come to awesome conferences!</h1>            
+      </section>
+
+      <section>
+        <h1 class="o-italic">Interested? Get a Job in Singapore! </h1> </section>
     </div>
-
-  {{> _footer }}
-
+    {{> _footer }}
   </div>
 </div>
 

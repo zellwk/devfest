@@ -361,7 +361,7 @@
         "location": "71 Ayer Rajah Crescent",
         "location-2": "#05-16, Singapore 139951"
       }]
-    }, 
+    },
 
 
     {
@@ -369,8 +369,8 @@
       "title": "Decided to join us at every event yet?",
       "desc": "",
       "button": "Get the Devfest Ticket at $999"
-    }, 
-    
+    },
+
     {
       "type": "event",
       "date": "21",
@@ -392,7 +392,7 @@
         "location": "71 Ayer Rajah Crescent",
         "location-2": "#05-16, Singapore 139951"
       }]
-    }, 
+    },
 
     {
       "type": "add-event"
@@ -400,44 +400,115 @@
   ],
 
   "jobs": [{
-    "employer": "Google",
-    "title": "Design Lead",
-    "jd": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    "type": "featured",
+    "jobs": [{
+      "employer": "Google",
+      "title": "Design Lead",
+      "jd": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "employer": "Google",
+      "title": "Design Lead",
+      "jd": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "employer": "Google",
+      "title": "Design Lead",
+      "jd": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }]
   }, {
-    "employer": "Google",
-    "title": "Design Lead",
-    "jd": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    "type": "company",
+    "employer": "microsoft",
+    "image": "images/microsoft.png",
+    "jobs": [{
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping. lorem ipsum dolor sit"
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping. lorem ipsum dolor sit"
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping. lorem ipsum dolor sit"
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping. lorem ipsum dolor sit"
+    }]
   }, {
-    "employer": "Google",
-    "title": "Design Lead",
-    "jd": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    "type": "company",
+    "employer": "Piktochart",
+    "image": "images/piktochart.png",
+    "jobs": [{
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }]
   }, {
-    "employer": "Google",
-    "title": "Design Lead",
-    "jd": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    "type": "company",
+    "employer": "Meteor",
+    "image": "images/meteor.png",
+    "jobs": [{
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }]
+  },  {
+    "type": "company",
+    "employer": "Paypal",
+    "image": "images/paypal.png",
+    "jobs": [{
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }]
   }],
 
   "sponsors": [{
-    "name": "Google",
-    "logo": "http://placehold.it/160x90"
+    "name": "Microsift",
+    "logo": "images/microsoft.png"
   }, {
-    "name": "Microsoft",
-    "logo": "http://placehold.it/160x90"
+    "name": "Piktochart",
+    "logo": "images/piktochart.png"
   }, {
-    "name": "Linkedin",
-    "logo": "http://placehold.it/160x90"
+    "name": "Meteor",
+    "logo": "images/meteor.png"
   }, {
-    "name": "Braintree",
-    "logo": "http://placehold.it/160x90"
-  }], 
+    "name": "Paypal",
+    "logo": "images/paypal.png"
+  }],
 
   "community": {
-    "title": "developer community", 
-    "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "list" : [
-      "List item one", 
-      "list item 2", 
-      "list item 3", 
+    "title": "developer community",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "list": [
+      "List item 1",
+      "list item 2",
+      "list item 3",
+      "list item 4",
+      "list item 5",
+      "list item 6",
+      "list item 7",
       "and so on..."
     ]
   }

@@ -26,7 +26,7 @@
   text-align: center;
 }
 
-.c-jobs {
+.c-interrupt__jobs {
   @include cf;
 
   h4 {
@@ -34,7 +34,7 @@
   }
 }
 
-.c-job {
+.c-interrupt__job {
   margin-top: rhythm(1);
 
   @include bp(med) {

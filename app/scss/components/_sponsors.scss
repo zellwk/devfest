@@ -4,8 +4,17 @@
   display: flex;
   justify-content: center;
 
-  img {
+   img {
     display: block;
-    margin: 0 (gutter() * 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    padding: rhythm(0.75) rhythm(1);
+    background: white;
+    margin-top: rhythm(1);
+    margin-bottom: rhythm(1);
   }
+}
+
+.c-sponsors--home {
+  @extend .c-sponsors;
 }

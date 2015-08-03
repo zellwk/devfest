@@ -42,19 +42,24 @@
 </div>
 {{/compare}}
 
+{{!-- TODO: Change Job coding method --}}
 {{#compare this.type "job"}}
 <div class="c-interrupt">  
   <div class="wrap">
     <h1 class="o-italic"><strong>{{title}}</strong></h1>
     <h4>{{desc}}</h4>
-    <div class="c-jobs">
-      {{#listItems 0 3 ../../jobs}}
-      <div class="c-job">
-        <img src="http://placehold.it/160x90" alt="">
-        <h4><strong>{{title}} at {{employer}}</strong></h4>
-        <p>{{jd}}</p>
-      </div>
-      {{/listItems}}
+    <div class="c-interrupt__jobs">
+      {{#each ../../jobs}}
+        {{#compare this.type "featured"}}
+        {{#each jobs}}
+        <div class="c-interrupt__job">
+          <img src="http://placehold.it/160x90" alt="">
+          <h4><strong>{{title}} at {{employer}}</strong></h4>
+          <p>{{jd}}</p>
+        </div>
+        {{/each}}
+        {{/compare}}
+      {{/each}}
     </div>      
 
     <button class="o-btn">See other jobs</button>

@@ -33,7 +33,8 @@
 }
 
 // Events Layout
-.l-dates {
+.l-dates,
+.l-company-and-jobs {
   display: flex;
   align-items: stretch;
   padding-top: gutter();
@@ -50,7 +51,7 @@
   padding-top: 0;
 }
 
-.l-date {
+.l-date{
   text-align: center;
 
   @include bp("med+1") {

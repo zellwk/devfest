@@ -400,7 +400,7 @@ $(window).load(function () {
 
 //         $form.find('.social-msg').text('Check out our facebook page now! :)')
 //         // $social.show().addClass('form-show');
-
+//
 //         setTimeout(function() {
 //           window.location.href = 'http://facebook.com/devfestasia'
 //         }, 2000);

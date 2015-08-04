@@ -6,7 +6,7 @@ body,
   height: 100%;
 }
 
-$offCanvasWidth: 300px;
+$offCanvasWidth: 280px;
 
 .c-canvas {
   position: relative;
@@ -20,7 +20,7 @@ $offCanvasWidth: 300px;
   right: -$offCanvasWidth;
   width: $offCanvasWidth;
   overflow: auto;
-  background: color(grandis);
+  background: mix(black, color(bleu-de-france), 90%);
   transition: right 0.4s ease-out;
   z-index: 10000;
 }

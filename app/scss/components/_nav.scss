@@ -1,0 +1,49 @@
+.c-mobile-menu {
+  color: rgba(white, 0.9);
+  padding: rhythm(0.5) rhythm(1);
+
+  .c-event__title {
+    padding-top: rhythm(0.5);
+    padding-bottom: rhythm(0.5);
+  }
+}
+
+.c-mobile-menu__nav {
+  a {
+    display: block;
+    color: rgba(white, 0.5);
+    padding: rhythm(0.5) 0;
+    margin-right: rhythm(-1);
+    padding-right: rhythm(1);
+    border-top: 1px solid rgba(white, 0.25);
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+      color: white;
+    }
+  }
+}
+
+.c-footer__nav {
+  margin-top: rhythm(2);
+  margin-bottom: rhythm(-2);
+  padding: rhythm(0) rhythm(0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a {
+    padding: 0 rhythm(0.25);
+    text-decoration: none !important;
+    line-height: rhythm(1.5);
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+}

@@ -60,16 +60,7 @@
   width: rhythm(1);
 }
 
-// Only for Temp Landing page
 .c-site-header .flex {
-  justify-content: center;
-
-  @include bp(500px) {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 }
 
-// .c-site-header .c-logo {
-//   display: block;
-//   text-align: center;
-// }

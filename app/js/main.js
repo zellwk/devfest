@@ -1,7 +1,7 @@
 // Initializes scripts
 global.jQuery = require('jquery');
 
-var $ = global.jQuery; 
+var $ = global.jQuery;
 
 require('./svg');
 // require('./smart-head');
@@ -10,14 +10,14 @@ require('./nav-scroll');
 require('./canvas');
 require('./jqueryform');
 
-// Header 
+// Header
 $(window).load(function() {
   var $el = $('.jsFixedHeader');
-  var $clone = $('.jsFixedHeader').clone(true, true).removeClass('jsFixedHeader').addClass('jsFixedHeaderClone');
+  var $clone = $('.jsFixedHeader').clone(true, true)
+    .removeClass('jsFixedHeader')
+    .addClass('jsFixedHeaderClone');
 
-  if(!$el.length) {
-    return;
-  }
+  if (!$el.length) {return;}
 
   var activationPos = $el.position().top;
 
@@ -85,7 +85,7 @@ $(window).load(function() {
 
 //         $form.find('.social-msg').text('Check out our facebook page now! :)')
 //         // $social.show().addClass('form-show');
-        
+//
 //         setTimeout(function() {
 //           window.location.href = 'http://facebook.com/devfestasia'
 //         }, 2000);

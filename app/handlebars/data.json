@@ -465,7 +465,7 @@
       "job-title": "Design Lead",
       "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
     }]
-  },  {
+  }, {
     "type": "company",
     "employer": "Paypal",
     "image": "images/paypal.png",
@@ -484,20 +484,23 @@
     }]
   }],
 
-  "sponsors": [{
-    "name": "Microsift",
-    "logo": "images/microsoft.png"
-  }, {
-    "name": "Piktochart",
-    "logo": "images/piktochart.png"
-  }, {
-    "name": "Meteor",
-    "logo": "images/meteor.png"
-  }, {
-    "name": "Paypal",
-    "logo": "images/paypal.png"
-  }],
-
+  "sponsors": {
+    "main": [{
+      "name": "Microsoft",
+      "logo": "images/microsoft.png"
+    }],
+    "supporters": [{
+      "name": "Piktochart",
+      "logo": "images/piktochart.png"
+    }, {
+      "name": "Meteor",
+      "logo": "images/meteor.png"
+    }, {
+      "name": "Paypal",
+      "logo": "images/paypal.png"
+    }]
+  },
+  
   "community": {
     "title": "developer community",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

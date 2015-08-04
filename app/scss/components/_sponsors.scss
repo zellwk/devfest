@@ -1,10 +1,17 @@
-
 // Sponsors
 .c-sponsors {
   display: flex;
   justify-content: center;
 
-   img {
+  h1, h3, p, div {
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: rhythm(2);
+  }
+
+  img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -13,8 +20,4 @@
     margin-top: rhythm(1);
     margin-bottom: rhythm(1);
   }
-}
-
-.c-sponsors--home {
-  @extend .c-sponsors;
 }

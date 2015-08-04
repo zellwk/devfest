@@ -21,7 +21,7 @@ $(window).load(function() {
 
     // Note to self: Need to set new scrollspy for every date
     el.asd = $el.scrollspy({
-      container: '.c-canvas__on-canvas',
+      // container: '.c-canvas__on-canvas',
       min: props.minWhenScrollingDown,
       max: props.maxWhenScrollingDown,
       props: props,
@@ -52,7 +52,7 @@ $(window).load(function() {
 
         // Initializes variables
         this.$el = $el.find('.jsScrollSpy');
-        this.$container = $(this.container)
+        this.$container = $(this.container) || window;
 
         // Gets scroll direction 
         this.setScrollDirection(false);
@@ -99,7 +99,6 @@ $(window).load(function() {
         var SS = this;
         $(this.container).on('scroll', function(event) {
           event.preventDefault();
-          console.log('test');
           SS.setScrollDirection();
         });        
       }, 
@@ -158,8 +157,6 @@ $(window).load(function() {
           this.min = this.props.minWhenScrollingUp;
           this.max = this.props.maxWhenScrollingUp;
         }
-
-        console.log('min', this.min, 'max', this.max);
       }
     });
   });

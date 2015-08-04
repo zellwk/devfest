@@ -1,17 +1,17 @@
-html,
-body,
-.c-canvas,
-.c-canvas__off-canvas,
-.c-canvas__on-canvas {
-  height: 100%;
-}
+// html,
+// body,
+// .c-canvas,
+// .c-canvas__off-canvas,
+// .c-canvas__on-canvas {
+//   height: 100%;
+// }
 
 $offCanvasWidth: 280px;
 
-.c-canvas {
-  position: relative;
-  overflow: hidden;
-}
+// .c-canvas {
+//   position: relative;
+//   overflow: hidden;
+// }
 
 .c-canvas__off-canvas {
   position: fixed;

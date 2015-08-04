@@ -361,8 +361,8 @@ $(window).load(function () {
     });
   }
 
-  $('.c-canvas__on-canvas').scroll(function (event) {
-    var $container = $('.c-canvas__on-canvas');
+  $(window).scroll(function (event) {
+    var $container = $(window);
     if ($container.scrollTop() > activationPos) {
       console.log('activated');
       activateFixed();
@@ -427,13 +427,16 @@ $(window).load(function () {
 var $ = require('jquery');
 
 $(document).ready(function () {
+  var eventsHeaderHeight = $('.c-events-nav').outerHeight();
+
   $('.c-events-nav').on('click', 'a', function (event) {
     event.preventDefault();
-    var curPos = $('.c-canvas__on-canvas').scrollTop();
+    var curPos = $(window).scrollTop();
     var $target = $($(this).attr('href'));
     var targetTop = parseInt($target.offset().top);
-    $('.c-canvas__on-canvas').animate({
-      scrollTop: curPos + targetTop
+
+    $('body').animate({
+      scrollTop: targetTop - eventsHeaderHeight
     }, 1500);
   });
 });
@@ -706,7 +709,7 @@ $(window).load(function () {
     el.scrollSpy = new ScrollSpy({
       $el: $(el),
       $item: $(el).find('.jsScrollSpy'),
-      container: '.c-canvas__on-canvas',
+      // container: '.c-canvas__on-canvas',
       props: props,
       min: props.min,
       max: props.max
@@ -733,7 +736,6 @@ $(window).load(function () {
     o.circleSize = $('.jsScrollSpy').outerHeight();
     o.fixedTop = o.stickyHeadHeight + o.extraPadding;
 
-    console.log(o);
     return o;
   }
 

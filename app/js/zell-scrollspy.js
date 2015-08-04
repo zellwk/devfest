@@ -254,7 +254,7 @@ $(window).load(function() {
     el.scrollSpy = new ScrollSpy({
       $el: $(el),
       $item: $(el).find('.jsScrollSpy'),
-      container: '.c-canvas__on-canvas',
+      // container: '.c-canvas__on-canvas',
       props: props,
       min: props.min,
       max: props.max,
@@ -282,7 +282,6 @@ $(window).load(function() {
     o.circleSize = $('.jsScrollSpy').outerHeight();
     o.fixedTop = o.stickyHeadHeight + o.extraPadding;
 
-    console.log(o);
     return o;
   }
 

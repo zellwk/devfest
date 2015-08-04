@@ -43,11 +43,11 @@ $(window).load(function() {
     $clone.css({
       'display': 'none',
       'position': 'absolute',
-    })
+    });
   }
 
-  $('.c-canvas__on-canvas').scroll(function(event) {
-    var $container = $('.c-canvas__on-canvas');
+  $(window).scroll(function(event) {
+    var $container = $(window);
     if ($container.scrollTop() > activationPos) {
       console.log('activated');
       activateFixed();

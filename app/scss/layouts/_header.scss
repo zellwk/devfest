@@ -25,6 +25,8 @@
 
 .wrap--header {
   .c-canvas-toggle {
+    margin: rhythm(1) 0;
+
     @include bp(850px) {
       display: none;
     }
@@ -62,5 +64,7 @@
 
 .c-site-header .flex {
   justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
 }
 

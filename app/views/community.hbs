@@ -4,7 +4,7 @@
   <div class="c-canvas__off-canvas jsOffCanvas">
     {{> _mobile-menu active="community"}}
   </div>
-  <div class="c-canvas__on-canvas jsOnCanvas">
+  <div class="c-canvas__on-canvas jsOnCanvas community">
     {{> _header active="community" }}
 
     <div class="l-content">
@@ -12,32 +12,95 @@
         <div class="wrap">
           <div class="c-section-intro">
             <h1 class="o-italic">Developer Community in Singapore</h1>
-            <p>Here are some ways you can connect with the vibrant developer community in Singapopre!</p>
+            <p>The community in Singapore is especially vibrant. Here are some ways you can connect with us!</p>
           </div>
         </div>
       </section>
+      
       <section>
-        <h1 class="o-italic">Follow Cool People</h1>            
+        <div class="wrap">
+          <div class="c-community-intro">
+            <h1 class="o-italic">Hanging out at meetups</h1>            
+            <p>We have more than 50 Meetups and Facebook groups in Singapore. Just join whatever that interests you :)</p>         
+          </div>
+          <div class="c-hangouts">
+            {{#each community.hangout }}
+            <a class="c-hangout" href="{{url}}">
+              {{#if image}}
+              <img src="images/meetups/{{image}}" alt="{{name}}">            
+              {{/if}}
+              <span>{{name}}</span>
+            </a>
+            {{/each}}
+          </div>
+        </div>
       </section>
 
       <section>
-        <h1 class="o-italic">Hang out at meetups</h1>            
+        <div class="wrap">
+          <div class="c-community-intro">
+            <h1 class="o-italic">Chatting with us online</h1>
+            <p>We have a few chat groups online as well, and you're welcome to chat with us even before coming over to Singapore!</p>
+          </div>
+          <div class="c-chats">
+            {{#each community.chat}}
+            <a class="c-chat" href="{{url}}">
+              {{#if image}}
+              <img src="images/chat/{{image}}" alt="{{name}}">            
+              {{/if}}
+              <span>{{name}}</span>
+            </a>
+            {{/each}}
+          </div>   
+        </div>
       </section>
 
       <section>
-        <h1 class="o-italic">Chat with us online</h1>            
+        <div class="wrap">
+          <div class="c-community-intro">
+            <h1 class="o-italic">Working side by side</h1>
+            <p>And when you're in Singapore, you can always get a Co-working space and work together with the locals!</p>
+          </div>
+
+          <div class="c-workspaces">
+            {{#each community.workspaces}}
+            <a class="c-workspace" href="{{url}}">
+              {{#if image}}
+              <img src="images/workspace/{{image}}" alt="{{name}}">            
+              {{/if}}
+              <span>{{name}}</span>
+            </a>
+            {{/each}}
+          </div>   
+        </div>
       </section>
 
       <section>
-        <h1 class="o-italic">Work together side by side</h1>            
+        <div class="wrap">
+          <div class="c-community-intro">
+            <h1 class="o-italic">Coming to conferences!</h1>           
+            <p>There are awesome conferences in Singapore as well, and two of them are happening in Devfest!</p>
+          </div>
+          <div class="c-conferences">
+            {{#each community.conferences}}
+            <a href="{{url}}" class="c-conference">
+              <img src="images/conferences/{{image}}" alt="{{name}}">
+              <span>{{name}}</span>
+            </a>
+            {{/each}}
+          </div>
+        </div>
       </section>
 
       <section>
-        <h1 class="o-italic">Come to awesome conferences!</h1>            
+        <div class="c-community-intro">
+          <h1 class="o-italic">Interested to get a job in Singapore?</h1> 
+          <p>Well well, aren't you excited? Some great companies are hiring right now, and you'd love to find out more from them :)</p>
+          <div>
+            <a href="/work.html" class="o-btn">See Job Openings</a>
+          </div>
+        </div>
       </section>
-
-      <section>
-        <h1 class="o-italic">Interested? Get a Job in Singapore! </h1> </section>
     </div>
     {{> _footer }}
   </div>

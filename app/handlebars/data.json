@@ -500,19 +500,285 @@
       "logo": "images/paypal.png"
     }]
   },
-  
+
   "community": {
-    "title": "developer community",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "list": [
-      "List item 1",
-      "list item 2",
-      "list item 3",
-      "list item 4",
-      "list item 5",
-      "list item 6",
-      "list item 7",
-      "and so on..."
-    ]
+    "hangout": [{
+      "name": "Adobe InDesign Singapore User Group",
+      "image": "adobe-indesign.png",
+      "url": "http://www.meetup.com/Singapore-Graphic-Design-and-Publishing-Group/"
+    }, {
+      "name": "Agile & DevOps SG",
+      "url": "https://www.facebook.com/groups/agiledevopssg"
+    }, {
+      "name": "Agile Singapore",
+      "image": "agile-singapore.jpeg",
+      "url": "http://www.meetup.com/Agile-Singapore/"
+    }, {
+      "name": "Arduino Community Singapore",
+      "image": "arduino.svg",
+      "url": "https://www.facebook.com/groups/arduinosg"
+    }, {
+      "name": "ArtScience Museum",
+      "url": "http://www.marinabaysands.com/museum.html"
+    }, {
+      "name": "AWS User Group Singapore",
+      "image": "aws.jpeg",
+      "url": "http://www.meetup.com/AWS-SG/"
+    }, {
+      "name": "BigData SG",
+      "url": "https://www.facebook.com/groups/bigdatasg"
+    }, {
+      "name": "BigData.SG & Hadoop.SG",
+      "url": "http://www.meetup.com/BigData-Hadoop-SG/"
+    }, {
+      "name": "Bitcoin Singapore Meetup Group",
+      "image": "bitcoin.png",
+      "url": "http://www.meetup.com/BitcoinSingapore/"
+    }, {
+      "name": "Creative Coders",
+      "url": "https://www.facebook.com/groups/ccmail"
+    }, {
+      "name": "Creative Crew Singapore",
+      "image": "creativecrew.png",
+      "url": "https://www.facebook.com/groups/creativecrewsg"
+    }, {
+      "name": "DataScience SG",
+      "image": "datascience.jpeg",
+      "url": "http://www.meetup.com/DataScience-SG-Singapore/"
+    }, {
+      "name": "DevOps Singapore",
+      "image": "devops.png",
+      "url": "http://www.meetup.com/devops-singapore/"
+    }, {
+      "name": "DIYbio sg",
+      "url": "https://www.facebook.com/groups/300351496770239"
+    }, {
+      "name": "Drupal Developer Network (Singapore)",
+      "url": "https://www.facebook.com/groups/drupal.singapore"
+    }, {
+      "name": "Engineers.SG",
+      "url": "http://engineers.sg/"
+    }, {
+      "name": "FPGA Community Singapore",
+      "url": "https://www.facebook.com/groups/835999373134899"
+    }, {
+      "name": "Front End Developers Singapore",
+      "url": "http://feds.strikingly.com/"
+    }, {
+      "name": "Grumpy Gits Singapore",
+      "url": "https://www.facebook.com/groups/sggrumpygits"
+    }, {
+      "name": "Hackers and Painters",
+      "url": "https://www.facebook.com/groups/hackerspainters"
+    }, {
+      "name": "HackerspaceSG",
+      "image": "hackerspace-sg.png",
+      "url": "http://hackerspace.sg/"
+    }, {
+      "name": "Hackware",
+      "image": "hackware.png",
+      "url": "http://www.meetup.com/hackware/"
+    }, {
+      "name": "HASKELL.SG",
+      "url": "http://www.meetup.com/HASKELL-SG/"
+    }, {
+      "name": "iOS Dev Scout",
+      "image": "iosdevscout.png",
+      "url": "https://www.facebook.com/groups/iosdevscout"
+    }, {
+      "name": "MakerSpace.sg",
+      "url": "https://www.facebook.com/groups/makerspacesg"
+    }, {
+      "name": "Meteor Singapore",
+      "image": "meteor.png",
+      "url": "http://www.meetup.com/Meteor-Singapore/"
+    }, {
+      "name": "NodeBots Singapore",
+      "image": "nodebots.png",
+      "url": "http://www.meetup.com/NodeBotsSingapore/"
+    }, {
+      "name": "NTU Open Source Society",
+      "image": "ntu.png",
+      "url": "http://www.ntuoss.com/"
+    }, {
+      "name": "NUS Hackers",
+      "image": "nus.gif",
+      "url": "http://nushackers.org/"
+    }, {
+      "name": "Papers We Love Singapore",
+      "url": "https://www.facebook.com/groups/paperswelovesg"
+    }, {
+      "name": "Postgres Users Group",
+      "url": "http://www.meetup.com/PUGS-Postgres-Users-Group-Singapore/"
+    }, {
+      "name": "PyData Singapore",
+      "image": "pydata.png",
+      "url": "https://www.facebook.com/groups/pydatasg"
+    }, {
+      "name": "R User Group (Singapore RUGS)",
+      "image": "r.png",
+      "url": "http://www.meetup.com/R-User-Group-SG/"
+    }, {
+      "name": "RaspberryPI & Co Singapore",
+      "url": "https://www.facebook.com/groups/raspberrypisingapore"
+    }, {
+      "name": "SG Geek Girls",
+      "image": "geekgirls.png",
+      "url": "http://www.sggeekgirls.com/"
+    }, {
+      "name": "SingaporeJS",
+      "image": "singaporejs.png",
+      "url": "http://www.meetup.com/Singapore-JS/"
+    }, {
+      "name": "Singapore Amateur Radio",
+      "image": "sarts.jpg",
+      "url": "https://www.facebook.com/AmateurRadioSingapore"
+    }, {
+      "name": "Singapore Android Developers",
+      "image": "sgandroid.png",
+      "url": "http://www.meetup.com/Singapore-Android-Developers/"
+    }, {
+      "name": "Singapore Creative Coding",
+      "image": "creativecoding.png",
+      "url": "http://www.meetup.com/Singapore-Creative-Coding-Meetup/"
+    }, {
+      "name": "Singapore Docker Group",
+      "image": "docker.png",
+      "url": "http://www.meetup.com/Docker-Singapore/"
+    }, {
+      "name": "Singapore Drone Fun Meetup",
+      "image": "drone.jpeg",
+      "url": "http://www.meetup.com/dronesg/"
+    }, {
+      "name": "Singapore Gophers",
+      "image": "gopher.png",
+      "url": "https://www.facebook.com/groups/golang.sg"
+    }, {
+      "name": "Singapore GPU Users",
+      "image": "gpu.png",
+      "url": "http://www.meetup.com/Singapore-GPU-Users/"
+    }, {
+      "name": "Singapore Makers",
+      "image": "makers.jpg",
+      "url": "https://www.facebook.com/sgmakers"
+    }, {
+      "name": "Singapore MongoDB User Group",
+      "url": "https://www.facebook.com/groups/mongosg"
+    }, {
+      "name": "Singapore Node.JS User Group",
+      "url": "https://www.facebook.com/groups/sg.nodejs"
+    }, {
+      "name": "Singapore PHP User Group",
+      "url": "https://www.facebook.com/groups/sghypertextpreprocessors"
+    }, {
+      "name": "Singapore Python User Group",
+      "url": "https://www.facebook.com/groups/pythonsg"
+    }, {
+      "name": "Singapore Ruby Group",
+      "url": "http://ruby.sg/"
+    }, {
+      "name": "Singapore WebRTC Meetup",
+      "url": "http://www.meetup.com/Singapore-WebRTC-Meetup/"
+    }, {
+      "name": "Singapore WordPress User Group",
+      "url": "https://www.facebook.com/groups/wpug.sg"
+    }, {
+      "name": "Team Ubuntu Singapore",
+      "url": "https://www.facebook.com/groups/ubuntu.sg"
+    }, {
+      "name": "The Orange Hive Community",
+      "image": "orangehive.png",
+      "url": "http://www.theorangehive.com/"
+    }, {
+      "name": "UXSG",
+      "image": "uxsg.png",
+      "url": "https://www.facebook.com/groups/uxsingapore"
+    }, {
+      "name": "We Build SG",
+      "image": "webuild.png",
+      "url": "https://webuild.sg"
+    }],
+    "chat": [{
+      "name": "Singapore JS Gitter",
+      "image": "singaporejs.png",
+      "url": "https://gitter.im/SingaporeJS/discussions"
+    }, {
+      "name": "KopiJS Slack",
+      "image": "kopijs.svg",
+      "url": "http://kopijs.herokuapp.com"
+    }, {
+      "name": "Ruby Slack Group",
+      "image": "rubysg.png",
+      "url": "https://rubysg.slack.com"
+    }, {
+      "name": "Hackerspace IRC on Freenode (#hackerspacesg)",
+      "image": "hackerspace-sg.png",
+      "url": "https://webchat.freenode.net"
+    }],
+    "workspaces": [{
+      "name": "Hackerspace",
+      "url": "http://hackerspaces.org"
+    }, {
+      "name": "Plugin @Blk 71",
+      "url": "http://www2.blk71.com"
+    }, {
+      "name": "The Working Capitol",
+      "url": "http://www.theworkingcapitol.com/en"
+    }, {
+      "name": "The Hub Singapore",
+      "url": "http://singapore.impacthub.net"
+    }, {
+      "name": "The Co",
+      "url": "http://jointhe.co"
+    }],
+    "conferences": [{
+      "name": "Agile Conf",
+      "image": "agile-singapore.jpeg",
+      "url": "http://agilesingapore.org/"
+    }, {
+      "name": "Barcamp",
+      "image": "barcamp.jpeg",
+      "url": "http://letsjoin.in/barcampsg"
+    }, {
+      "name": "CSS Conf Asia",
+      "image": "cssconf.png",
+      "url": "http://cssconf.asia"
+    }, {
+      "name": "Drupal Camp",
+      "image": "drupalcamp.png",
+      "url": "http://www.drupalcamp.sg"
+    }, {
+      "name": "Geekcamp",
+      "image": "geekcamp.png",
+      "url": "http://www.geekcamp.sg"
+    }, {
+      "name": "iOS Conf",
+      "image": "iosconf.png",
+      "url": "http://www.iosconf.sg/"
+    }, {
+      "name": "JS Conf",
+      "image": "jsconf.png",
+      "url": "http://jsconf.asia"
+    }, {
+      "name": "Maker Faire Singapore",
+      "image": "makerfaire.png",
+      "url": "http://makerfairesingapore.com/"
+    }, {
+      "name": "PHP Conf Asia",
+      "image": "phpconf.png",
+      "url": "http://phpconf.asia"
+    }, {
+      "name": "Pycon",
+      "image": "pyconf.jpg",
+      "url": "https://pycon.sg"
+    }, {
+      "name": "Red Dot Ruby conf",
+      "image": "rubyconf.png",
+      "url": "http://www.reddotrubyconf.com"
+    }, {
+      "name": "UX SG",
+      "image": "uxsg.png",
+      "url": "http://uxsg.org"
+    }]
   }
 }

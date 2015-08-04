@@ -93,7 +93,7 @@ form {
     &:focus {
       color: white;
       // text-decoration: none;
-   
+
     }
   }
 }
@@ -136,4 +136,92 @@ form {
     transition: none;
     color: color(carmine);
   }
+}
+
+// hangouts
+
+.c-hangouts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.c-hangout {
+  flex: 1 0 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: white;
+  margin: rhythm(0.5);
+  padding: rhythm(1);
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+
+  img {
+    max-height: 63px;
+    width: auto;
+    margin-bottom: rhythm(0.5);
+  }
+
+  span {
+    flex: 1 0 100%;
+  }
+}
+
+.c-chats,
+.c-conferences,
+.c-workspaces {
+  @extend .c-hangouts;
+}
+
+.c-chat,
+.c-conference,
+.c-workspace {
+  @extend .c-hangout;
+}
+
+.c-workspace {
+  flex: 1 0 300px;
+}
+
+.c-conference {
+  @include bp(450px) {
+    flex: 1 0 400px;
+
+  }
+  padding: rhythm(2);
+
+  img {
+    max-height: 100px;
+    margin-bottom: rhythm(1);
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+// Community Site CSS
+.community {
+  section + section {
+    margin-top: rhythm(3);
+  }
+
+  section:nth-child(2n+3) {
+    padding-top: rhythm(3);
+    padding-bottom: rhythm(3);
+    background: #eee;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.c-community-intro {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: rhythm(0.5);
 }

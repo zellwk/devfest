@@ -26,6 +26,8 @@
 .wrap--header {
   .c-canvas-toggle {
     margin: rhythm(1) 0;
+    // Strangely not centering, hence fixing with flex start instead
+    align-self: flex-start;
 
     @include bp(850px) {
       display: none;
@@ -33,6 +35,8 @@
   }
 
   .c-nav {
+    margin-top: rhythm(1);
+    margin-bottom: rhythm(1);
     @include bp(max 850px) {
       display: none;
     }
@@ -64,7 +68,6 @@
 
 .c-site-header .flex {
   justify-content: space-between;
-  align-items: flex-start;
   align-content: center;
 }
 

@@ -209,15 +209,21 @@ form {
     margin-top: rhythm(3);
   }
 
-  section:first-child:after {
-    content: "";
-    display: block;
-    max-width: rhythm(12);
-    height: 1px;
-    margin-top: rhythm(1.5);
-    margin-right: auto;
-    margin-left: auto;
-    background: #ccc;
+  section:first-child {
+    .c-community-intro {
+      margin-top: rhythm(3);
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      max-width: rhythm(12);
+      height: 1px;
+      margin-top: rhythm(1.5);
+      margin-right: auto;
+      margin-left: auto;
+      background: #ccc;
+    }
   }
 
   section:nth-child(2n+3) {

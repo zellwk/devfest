@@ -10,18 +10,27 @@
     <div class="l-content">
       <section>
         <div class="wrap">
-          <div class="c-section-intro">
-            <h1 class="o-italic">Developer Community in Singapore</h1>
-            <p>The community in Singapore is especially vibrant. Here are some ways you can connect with us!</p>
+          <div class="c-community-intro">
+            <article>
+              <h1 class="o-italic">Developer Community in Singapore</h1>
+              <p>The community in Singapore is especially vibrant. Here are some ways you can connect with us!</p>
+
+              <ol class="c-community__ways">
+                <li><a href="#hangout">Hang out at a meetup</a></li>
+                <li><a href="#chat">Chat with us online</a></li>
+                <li><a href="#workspace">Work side by side with us</a></li>
+                <li><a href="#conference">Come to a conference</a></li>
+                </ol>
+            </article>
           </div>
         </div>
       </section>
       
-      <section>
+      <section id="hangout">
         <div class="wrap">
           <div class="c-community-intro">
-            <h1 class="o-italic">Hanging out at meetups</h1>            
-            <p>We have more than 50 Meetups and Facebook groups in Singapore. Just join whatever that interests you :)</p>         
+            <h1 class="o-italic">Hang out a meetup</h1>            
+            <p>We have more than 50 engineering and design related user groups in Singapore. Just join whatever that interests you :)</p>         
           </div>
           <div class="c-hangouts">
             {{#each community.hangout }}
@@ -36,10 +45,10 @@
         </div>
       </section>
 
-      <section>
+      <section id="chat">
         <div class="wrap">
           <div class="c-community-intro">
-            <h1 class="o-italic">Chatting with us online</h1>
+            <h1 class="o-italic">Chat with us online</h1>
             <p>We have a few chat groups online as well, and you're welcome to chat with us even before coming over to Singapore!</p>
           </div>
           <div class="c-chats">
@@ -55,10 +64,10 @@
         </div>
       </section>
 
-      <section>
+      <section id="workspace">
         <div class="wrap">
           <div class="c-community-intro">
-            <h1 class="o-italic">Working side by side</h1>
+            <h1 class="o-italic">Work side by side with us</h1>
             <p>And when you're in Singapore, you can always get a Co-working space and work together with the locals!</p>
           </div>
 
@@ -75,10 +84,10 @@
         </div>
       </section>
 
-      <section>
+      <section id="conference">
         <div class="wrap">
           <div class="c-community-intro">
-            <h1 class="o-italic">Coming to conferences!</h1>           
+            <h1 class="o-italic">Come to a conference!</h1>           
             <p>There are awesome conferences in Singapore as well, and two of them are happening in Devfest!</p>
           </div>
           <div class="c-conferences">

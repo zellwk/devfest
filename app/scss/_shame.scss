@@ -93,7 +93,7 @@ form {
     &:focus {
       color: white;
       // text-decoration: none;
-
+   
     }
   }
 }
@@ -189,8 +189,8 @@ form {
 .c-conference {
   @include bp(450px) {
     flex: 1 0 400px;
-
   }
+
   padding: rhythm(2);
 
   img {
@@ -209,6 +209,17 @@ form {
     margin-top: rhythm(3);
   }
 
+  section:first-child:after {
+    content: "";
+    display: block;
+    max-width: rhythm(12);
+    height: 1px;
+    margin-top: rhythm(1.5);
+    margin-right: auto;
+    margin-left: auto;
+    background: #ccc;
+  }
+
   section:nth-child(2n+3) {
     padding-top: rhythm(3);
     padding-bottom: rhythm(3);
@@ -224,4 +235,16 @@ form {
   margin-right: auto;
   text-align: center;
   margin-bottom: rhythm(0.5);
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.c-community__ways {
+  margin-top: rhythm(2);
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
 }

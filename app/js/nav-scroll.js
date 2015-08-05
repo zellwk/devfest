@@ -1,6 +1,5 @@
 var $ = require('jquery');
 
-
 $(document).ready(function() {
   var eventsHeaderHeight = $('.c-events-nav').outerHeight();
 
@@ -12,6 +11,20 @@ $(document).ready(function() {
 
     $('body').animate({
       scrollTop: targetTop - eventsHeaderHeight
+    }, 1500);
+  });
+});
+
+
+$(document).ready(function() {
+  $('.c-community__ways').on('click','a', function(event) {
+    event.preventDefault();
+    var curPos = $(window).scrollTop();
+    var $target = $($(this).attr('href'));
+    var targetTop = parseInt($target.offset().top);
+
+    $('body').animate({
+      scrollTop: targetTop
     }, 1500);
   });
 });

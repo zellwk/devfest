@@ -420,6 +420,7 @@ $(window).load(function () {
 // });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{"./canvas":1,"./jqueryform":2,"./nav-scroll":4,"./svg":5,"./zell-scrollspy":6,"jquery":"jquery"}],4:[function(require,module,exports){
 'use strict';
 
@@ -436,6 +437,19 @@ $(document).ready(function () {
 
     $('body').animate({
       scrollTop: targetTop - eventsHeaderHeight
+    }, 1500);
+  });
+});
+
+$(document).ready(function () {
+  $('.c-community__ways').on('click', 'a', function (event) {
+    event.preventDefault();
+    var curPos = $(window).scrollTop();
+    var $target = $($(this).attr('href'));
+    var targetTop = parseInt($target.offset().top);
+
+    $('body').animate({
+      scrollTop: targetTop
     }, 1500);
   });
 });
@@ -22657,6 +22671,8 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[3]);
+
+},{}]},{},[3])
+
 
 //# sourceMappingURL=bundle.js.map

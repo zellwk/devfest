@@ -15,8 +15,38 @@
 
     {
       "type": "event",
-      "date": "10",
-      "day": "Tue",
+      "date": "7",
+      "day": "Sat",
+      "events": [{
+        "title": "Co-working at JFDI.Asia ",
+        "image": "images/jfdi.jpg",
+        "desc": "Southeast Asias leading startup accelerator opens its co-working café for you. Power, Wi-Fi and a cup of coffee included. Please note that the space is limited to ~15pax!",
+        "startTime": "9am",
+        "endTime": "6pm",
+        "location": "71 Ayer Rajah Crescent",
+        "location-2": "#05-16, Singapore 139951"
+      }, {
+        "title": "Co-working at JFDI.Asia ",
+        "image": "images/jfdi.jpg",
+        "desc": "Southeast Asias leading startup accelerator opens its co-working café for you. Power, Wi-Fi and a cup of coffee included. Please note that the space is limited to ~15pax!",
+        "startTime": "9am",
+        "endTime": "6pm",
+        "location": "71 Ayer Rajah Crescent",
+        "location-2": "#05-16, Singapore 139951"
+      }]
+    },
+
+    {
+      "type": "tickets",
+      "title": "Pssst. Want go to every conference?",
+      "desc": "You can grab a Devfest Ticket for just $999!",
+      "button": "Get the Devfest Ticket"
+    },
+
+    {
+      "type": "event",
+      "date": "8",
+      "day": "Sun",
       "events": [{
         "title": "Co-working at JFDI.Asia ",
         "image": "images/jfdi.jpg",
@@ -45,10 +75,57 @@
     },
 
     {
-      "type": "tickets",
-      "title": "Pssst. Want go to every conference?",
-      "desc": "You can grab a Devfest Ticket for just $999!",
-      "button": "Get the Devfest Ticket"
+      "type": "event",
+      "date": "9",
+      "day": "Mon",
+      "events": [{
+        "title": "Co-working at JFDI.Asia ",
+        "image": "images/jfdi.jpg",
+        "desc": "Southeast Asias leading startup accelerator opens its co-working café for you. Power, Wi-Fi and a cup of coffee included. Please note that the space is limited to ~15pax!",
+        "startTime": "9am",
+        "endTime": "6pm",
+        "location": "71 Ayer Rajah Crescent",
+        "location-2": "#05-16, Singapore 139951"
+      }, {
+        "title": "Co-working at JFDI.Asia ",
+        "image": "images/jfdi.jpg",
+        "desc": "Southeast Asias leading startup accelerator opens its co-working café for you. Power, Wi-Fi and a cup of coffee included. Please note that the space is limited to ~15pax!",
+        "startTime": "9am",
+        "endTime": "6pm",
+        "location": "71 Ayer Rajah Crescent",
+        "location-2": "#05-16, Singapore 139951"
+      }]
+    },
+
+    {
+      "type": "event",
+      "date": "10",
+      "day": "Tue",
+      "events": [{
+        "title": "Co-working at JFDI.Asia ",
+        "image": "images/jfdi.jpg",
+        "desc": "Southeast Asias leading startup accelerator opens its co-working café for you. Power, Wi-Fi and a cup of coffee included. Please note that the space is limited to ~15pax!",
+        "startTime": "9am",
+        "endTime": "6pm",
+        "location": "71 Ayer Rajah Crescent",
+        "location-2": "#05-16, Singapore 139951"
+      }, {
+        "title": "Co-working at JFDI.Asia ",
+        "image": "images/jfdi.jpg",
+        "desc": "Southeast Asias leading startup accelerator opens its co-working café for you. Power, Wi-Fi and a cup of coffee included. Please note that the space is limited to ~15pax!",
+        "startTime": "9am",
+        "endTime": "6pm",
+        "location": "71 Ayer Rajah Crescent",
+        "location-2": "#05-16, Singapore 139951"
+      }, {
+        "title": "Co-working at JFDI.Asia ",
+        "image": "images/jfdi.jpg",
+        "desc": "Southeast Asias leading startup accelerator opens its co-working café for you. Power, Wi-Fi and a cup of coffee included. Please note that the space is limited to ~15pax!",
+        "startTime": "9am",
+        "endTime": "6pm",
+        "location": "71 Ayer Rajah Crescent",
+        "location-2": "#05-16, Singapore 139951"
+      }]
     },
 
     {

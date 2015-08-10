@@ -73,11 +73,16 @@ form {
 }
 
 .site-footer {
+  font-weight: 100;
   margin-top: rhythm(3);
   padding: 1px 0 rhythm(4);
   background: radial-gradient(circle, mix(black, color(bleu-de-france), 65%), mix(black, color(bleu-de-france), 80%));
   color: rgba(white, 0.5);
   text-align: center;
+
+  h4 {
+    font-weight: 100;
+  }
 
   .c-logo--hero {
     margin-top: rhythm(4);
@@ -104,6 +109,7 @@ form {
 
 .c-designed {
   margin-top: rhythm(2);
+  font-weight: 400;
 }
 
 // New stuff

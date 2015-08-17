@@ -7,6 +7,8 @@
   <div class="c-canvas__on-canvas jsOnCanvas community">
     {{> _header active="community" }}
 
+    <div class="c-hero--community" style="background-image: url('images/community.jpg');"></div>
+
     <div class="l-content">
       <section>
         <div class="wrap">
@@ -25,81 +27,121 @@
           </div>
         </div>
       </section>
-      
-      <section id="hangout">
+
+      <section class="c-quote">
         <div class="wrap">
-          <div class="c-community-intro">
-            <h1 class="o-italic">Hang out a meetup</h1>            
-            <p>We have more than 50 engineering and design related user groups in Singapore. Just join whatever that interests you :)</p>         
-          </div>
-          <div class="c-hangouts">
-            {{#each community.hangout }}
-            <a class="c-hangout" href="{{url}}">
-              {{#if image}}
-              <img src="images/meetups/{{image}}" alt="{{name}}">            
-              {{/if}}
-              <span>{{name}}</span>
-            </a>
-            {{/each}}
+          <div class="c-quote__message">
+            <div class="p">
+              <p>Developers are special here. We are rarer than bankers, doctors, lawyers. Like poets and philosophers, we weave experience from thought alone. We are the self-taught teachers, the self-starting founders, the self-made makers. Some of us survived school with passions intact: those are the troublemakers, the crazy ones. Some of us followed the frontier from West to East: the misfits, the round pegs in the square holes. We have come farther, and we go farther. Where previous generations built a city, we now make magic for the world.</p>
+            </p>
           </div>
         </div>
-      </section>
-
-      <section id="chat">
-        <div class="wrap">
-          <div class="c-community-intro">
-            <h1 class="o-italic">Chat with us online</h1>
-            <p>We have a few chat groups online as well, and you're welcome to chat with us even before coming over to Singapore!</p>
-          </div>
-          <div class="c-chats">
-            {{#each community.chat}}
-            <a class="c-chat" href="{{url}}">
-              {{#if image}}
-              <img src="images/chat/{{image}}" alt="{{name}}">            
-              {{/if}}
-              <span>{{name}}</span>
-            </a>
-            {{/each}}
-          </div>   
+        <div class="c-quote__author">
+          <div class="c-quote__image" style="background-image: url('images/meng.jpg')"> </div>
+          <div class="c-quote__person">
+            <h4>Wong Meng Weng</h4>
+            <span>Co-founder, Hackerspace SG</span>
+          </div>  
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="workspace">
-        <div class="wrap">
-          <div class="c-community-intro">
-            <h1 class="o-italic">Work side by side with us</h1>
-            <p>And when you're in Singapore, you can always get a Co-working space and work together with the locals!</p>
-          </div>
-
-          <div class="c-workspaces">
-            {{#each community.workspaces}}
-            <a class="c-workspace" href="{{url}}">
-              {{#if image}}
-              <img src="images/workspace/{{image}}" alt="{{name}}">            
-              {{/if}}
-              <span>{{name}}</span>
-            </a>
-            {{/each}}
-          </div>   
+    <section id="hangout">
+      <div class="wrap">
+        <div class="c-community-intro">
+          <h1 class="o-italic">Hang out a meetup</h1>            
+          <p>We have more than 50 engineering and design related user groups in Singapore. Just join whatever that interests you :)</p>         
         </div>
-      </section>
-
-      <section id="conference">
-        <div class="wrap">
-          <div class="c-community-intro">
-            <h1 class="o-italic">Come to a conference!</h1>           
-            <p>There are awesome conferences in Singapore as well, and two of them are happening in Devfest!</p>
-          </div>
-          <div class="c-conferences">
-            {{#each community.conferences}}
-            <a href="{{url}}" class="c-conference">
-              <img src="images/conferences/{{image}}" alt="{{name}}">
-              <span>{{name}}</span>
-            </a>
-            {{/each}}
-          </div>
+        <div class="c-hangouts">
+          {{#each community.hangout }}
+          <a class="c-hangout" href="{{url}}">
+            {{#if image}}
+            <img src="images/meetups/{{image}}" alt="{{name}}">            
+            {{/if}}
+            <span>{{name}}</span>
+          </a>
+          {{/each}}
         </div>
-      </section>
+      </div>
+    </section>
+
+    <section id="chat">
+      <div class="wrap">
+        <div class="c-community-intro">
+          <h1 class="o-italic">Chat with us online</h1>
+          <p>We have a few chat groups online as well, and you're welcome to chat with us even before coming over to Singapore!</p>
+        </div>
+        <div class="c-chats">
+          {{#each community.chat}}
+          <a class="c-chat" href="{{url}}">
+            {{#if image}}
+            <img src="images/chat/{{image}}" alt="{{name}}">            
+            {{/if}}
+            <span>{{name}}</span>
+          </a>
+          {{/each}}
+        </div>   
+      </div>
+    </section>
+
+    <section class="c-quote">
+      <div class="wrap">
+        <div class="c-quote__message">
+          <div class="p">
+           <p> The developer community in Singapore is young, vibrant and eager to learn. The past 5 years has seen a burst of the number of people and also the variety of topics which can span from programming languages to electronics and design.</p>
+
+           <p>Being centrally located in Asia means this tiny tropical island is a confluence of many travelers and settlers from various parts of the world. Attend a typical <a href="community.html">developer meetup</a> or one of the <a href="community.html">annual conferences</a> and it is hardly uncommon to find people from almost all continents. Also, as a result of the high population density in Singapore, the local developer community is tightly-knit with startups, educational or research institutes and co-working spaces. Thus, seeking collaboration in completely different domains such as drones or bitcoin becomes easy.</p>
+
+           <p>DevFest.Asia is a celebration of this very community. Come and experience the variety of workshops, talks, seminars and other events that will showcase the vibrant and exciting developer scene in Singapore!</p>
+         </p>
+       </div>
+     </div>
+     <div class="c-quote__author">
+      <div class="c-quote__image" style="background-image: url('images/sayanee.jpeg')"> </div>
+      <div class="c-quote__person">
+        <h4>Sayanee Basuu</h4>
+        <span>curator <a href="https://twitter.com/webuildsg">@webuildsg</a>, podcaster <a href="https://twitter.com/buildpodcast">@buildpodcast</a>, engineer</span>
+      </div>  
+    </div>
+  </div>
+</section>
+
+<section id="workspace">
+  <div class="wrap">
+    <div class="c-community-intro">
+      <h1 class="o-italic">Work side by side with us</h1>
+      <p>And when you're in Singapore, you can always get a Co-working space and work together with the locals!</p>
+    </div>
+
+    <div class="c-workspaces">
+      {{#each community.workspaces}}
+      <a class="c-workspace" href="{{url}}">
+        {{#if image}}
+        <img src="images/workspace/{{image}}" alt="{{name}}">            
+        {{/if}}
+        <span>{{name}}</span>
+      </a>
+      {{/each}}
+    </div>   
+  </div>
+</section>
+
+<section id="conference">
+  <div class="wrap">
+    <div class="c-community-intro">
+      <h1 class="o-italic">Come to a conference!</h1>           
+      <p>There are awesome conferences in Singapore as well, and two of them are happening in Devfest!</p>
+    </div>
+    <div class="c-conferences">
+      {{#each community.conferences}}
+      <a href="{{url}}" class="c-conference">
+        <img src="images/conferences/{{image}}" alt="{{name}}">
+        <span>{{name}}</span>
+      </a>
+      {{/each}}
+    </div>
+  </div>
+</section>
 
 {{!--       <section>
         <div class="c-community-intro">

@@ -1,0 +1,90 @@
+.c-quote {
+  @include cf;
+  padding: rhythm(2) calc(50% - 380px);
+  background: white !important;
+
+  &:first-child {
+    margin-top: rhythm(-2);
+    margin-bottom: rhythm(2);
+  }
+
+  .wrap {
+    position: relative;
+    padding: 0 rhythm(2);
+  }
+}
+
+.c-quote__message {
+  position: relative;
+  padding-bottom: rhythm(1);
+  margin-bottom: rhythm(1.5);
+  line-height: 1.4;
+
+  .p {
+    position: relative;
+    font-size: ms(1);
+    color: #444;
+
+    &:before {
+      content: "\201c";
+      color: #aaa;
+      font-family: Georgia, Times, serif;
+      position: absolute;
+      font-size: ms(8);
+      line-height: 0.75;
+      left: -0.5em;
+      top: 0;
+      vertical-align: baseline;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    @include triangle(8px, #ddd, top);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #bbb;
+  }
+}
+
+.c-quote__author {
+  text-align: center;
+  margin-top: rhythm(1);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-quote__image {
+  @include square(rhythm(4));
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: rhythm(0.5);
+  background-size: cover;
+}
+
+.c-quote__person {
+  h4 {
+    font-weight: bold;
+  }
+
+  span {
+    font-size: rhythm(0.6);
+  }
+}

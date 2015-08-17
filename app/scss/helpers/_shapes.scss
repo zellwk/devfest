@@ -6,7 +6,8 @@
 // Square
 // ------
 @mixin square($size) {
-  @include size($size, $size);
+  width: $size;
+  height: $size;
 }
 
 // Circle

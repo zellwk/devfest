@@ -46,7 +46,6 @@
 </div>
 {{/compare}}
 
-{{!-- TODO: Change Job coding method --}}
 {{#compare this.type "job"}}
 <div class="c-interrupt">  
   <div class="wrap">
@@ -54,15 +53,15 @@
     <h4>{{desc}}</h4>
     <div class="c-interrupt__jobs">
       {{#each ../../jobs}}
-        {{#compare this.type "featured"}}
-        {{#each jobs}}
-        <div class="c-interrupt__job">
-          <img src="http://placehold.it/160x90" alt="">
-          <h4><strong>{{title}} at {{employer}}</strong></h4>
-          <p>{{jd}}</p>
-        </div>
-        {{/each}}
-        {{/compare}}
+      {{#compare this.type "featured"}}
+      {{#each jobs}}
+      <div class="c-interrupt__job">
+        <img src="http://placehold.it/160x90" alt="">
+        <h4><strong>{{title}} at {{employer}}</strong></h4>
+        <p>{{jd}}</p>
+      </div>
+      {{/each}}
+      {{/compare}}
       {{/each}}
     </div>      
 
@@ -77,6 +76,19 @@
     <h1 class="o-italic">{{{title}}}</h1>
     <h4>{{{desc}}}</h4>
     <button class="o-btn">{{button}}</button>
+  </div>
+</div> 
+{{/compare}}
+
+{{#compare this.type "sponsors"}}
+<div class="c-interrupt-2 c-sponsors l-sponsors">  
+  <div class="wrap">
+    <h1 class="o-italic">{{title}}</h1>
+    <img src="images/microsoft.png" alt="Microsoft">
+    <p> Interested to be part of Devfest? 
+      <br>
+      <a href="mailto:sponsors@devfest.asia?subject=Devfest Sponsorship" class="o-btn">Be a sponsor!</a>
+    </p>
   </div>
 </div> 
 {{/compare}}

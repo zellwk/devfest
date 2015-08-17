@@ -28,6 +28,11 @@
     },
 
     {
+      "type": "sponsors",
+      "title": "Our Sponsors"
+    },
+
+    {
       "type": "event",
       "date": "15",
       "day": "Sun",

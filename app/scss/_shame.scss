@@ -211,8 +211,12 @@ form {
 
 // Community Site CSS
 .community {
+  section {
+    padding-bottom: rhythm(3);
+  }
+
   section + section {
-    margin-top: rhythm(3);
+    padding-top: rhythm(3);
   }
 
   section:first-child {
@@ -220,16 +224,16 @@ form {
       margin-top: rhythm(3);
     }
 
-    &:after {
-      content: "";
-      display: block;
-      max-width: rhythm(12);
-      height: 1px;
-      margin-top: rhythm(1.5);
-      margin-right: auto;
-      margin-left: auto;
-      background: #ccc;
-    }
+    // &:after {
+    //   content: "";
+    //   display: block;
+    //   max-width: rhythm(12);
+    //   height: 1px;
+    //   margin-top: rhythm(1.5);
+    //   margin-right: auto;
+    //   margin-left: auto;
+    //   background: #ccc;
+    // }
   }
 
   section:nth-child(2n+3) {

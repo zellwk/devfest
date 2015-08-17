@@ -36,7 +36,7 @@ module.exports = {
     extname: '.html'
   },
   images: {
-    src: [src + '/images/**/*.{png,jpg,gif}', '!' + src + '/images/sprites/*'],
+    src: [src + '/images/**/*.{png,jpg,jpeg,gif}', '!' + src + '/images/sprites/*'],
     dest: dest + '/images',
     options: {
       optimizationLevel: 5,

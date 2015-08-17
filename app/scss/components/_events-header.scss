@@ -7,14 +7,21 @@
 
   &.is-fixed {
     //
+ 
   }
 }
 
 .c-events-wrap {
   overflow-x: scroll;
   overflow-y: hidden;
-  padding-top: rhythm(.7);
-  padding-bottom: rhythm(.8);
+  padding-top: rhythm(0.7);
+  padding-bottom: rhythm(0.8);
+
+  .wrap {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -22,9 +29,8 @@
 }
 
 .c-events-nav {
-  width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
   font-family: 'Open Sans Condensed';
   font-weight: bold;
 
@@ -34,7 +40,7 @@
     padding: 0 0.5em;
     font-size: 1.5em;
     text-align: center;
-    text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
 
     &:first-child {
       padding-left: 0;

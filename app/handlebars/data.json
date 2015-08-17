@@ -15,7 +15,8 @@
         "location-2": "Singapore 208576"
       }, {
         "title": "NodeBots - Sumo Bot Battles",
-        "image": "",
+        "image": "images/events/nodebots.png",
+        "logo": "images/events/nodebots-logo.png",
         "desc": "A day workshop where participants will learn how to build a simplebot with Arduino, servos and cardboard. They will then programme it using node.js.",
         "startTime": "9",
         "startTimeSuffix": "am",
@@ -501,6 +502,16 @@
       "url": "http://jointhe.co"
     }],
     "conferences": [{
+      "name": "CSSConf Asia",
+      "image": "cssconf.png",
+      "url": "http://cssconf.asia",
+      "devfest": true
+    },{
+      "name": "JSConf Asia",
+      "image": "jsconf.png",
+      "url": "http://jsconf.asia",
+      "devfest": true
+    },{
       "name": "Agile Conf",
       "image": "agile-singapore.jpeg",
       "url": "http://agilesingapore.org/"
@@ -508,11 +519,7 @@
       "name": "Barcamp",
       "image": "barcamp.jpeg",
       "url": "http://letsjoin.in/barcampsg"
-    }, {
-      "name": "CSSConf Asia",
-      "image": "cssconf.png",
-      "url": "http://cssconf.asia"
-    }, {
+    },  {
       "name": "Drupal Camp",
       "image": "drupalcamp.png",
       "url": "http://www.drupalcamp.sg"
@@ -524,11 +531,7 @@
       "name": "iOS Conf",
       "image": "iosconf.png",
       "url": "http://www.iosconf.sg/"
-    }, {
-      "name": "JSConf",
-      "image": "jsconf.png",
-      "url": "http://jsconf.asia"
-    }, {
+    },  {
       "name": "Maker Faire Singapore",
       "image": "makerfaire.png",
       "url": "http://makerfairesingapore.com/"

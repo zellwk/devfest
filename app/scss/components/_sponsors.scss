@@ -3,11 +3,11 @@
   display: flex;
   justify-content: center;
 
-  h1, h3, p, div {
+  h1, h2, h3, p, div {
     text-align: center;
   }
 
-  h3 {
+  h2, h3 {
     margin-top: rhythm(2);
   }
 

@@ -14,14 +14,18 @@
     <div class="c-events l-events">
       {{#each events}}
       <div class="c-event l-event">
-        <div class="c-event__image" style="background-image:url('{{image}}');"></div>
+        <div class="c-event__image" style="background-image:url('{{image}}');">
+          {{#if logo}} 
+          <div class="c-event__logo" style="background-image:url('{{logo}}');"></div>
+          {{/if}}
+        </div>
         <div class="c-event__content">
           <div class="c-event__desc">
             <h3 class="c-event__title">{{title}}</h3>
             <p>{{desc}}</p>
             <div class="c-event__time">
-              <div class="css-clock" data-time="9-6"></div>
-              {{startTime}} - {{endTime}}
+              <div class="css-clock" data-time="{{startTime}}-{{endTime}}"></div>
+              {{startTime}}{{startTimeSuffix}} - {{endTime}}{{endTimeSuffix}}
             </div>
             <div class="c-event__location">
               <img class="i-location jsSvgInject" src="images/location1.svg" />

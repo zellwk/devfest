@@ -89,6 +89,17 @@
   }
 }
 
+.c-event__logo {
+  position: absolute;
+  border: 4px solid white;
+  box-shadow: 0 0 1px 0 black;
+  bottom: rhythm(0.25);
+  right: rhythm(1);
+  width: rhythm(4);
+  height: rhythm(4);
+  background-size: cover;
+}
+
 .c-event__content {
   padding: rhythm(1);
   @include cf;

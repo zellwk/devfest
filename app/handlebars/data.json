@@ -28,11 +28,6 @@
     },
 
     {
-      "type": "sponsors",
-      "title": "Our Sponsors"
-    },
-
-    {
       "type": "event",
       "date": "15",
       "day": "Sun",
@@ -260,19 +255,19 @@
   }],
 
   "sponsors": {
-    "main": [{
-      "name": "Microsoft",
-      "logo": "images/microsoft.png"
-    }],
+    "main": [],
     "supporters": [{
+      "name": "Microsoft",
+      "logo": "images/sponsors/microsoft.png"
+    }, {
       "name": "Piktochart",
-      "logo": "images/piktochart.png"
+      "logo": "images/sponsors/piktochart.png"
     }, {
       "name": "Meteor",
-      "logo": "images/meteor.png"
+      "logo": "images/sponsors/meteor.png"
     }, {
-      "name": "Paypal",
-      "logo": "images/paypal.png"
+      "name": "Braintree",
+      "logo": "images/sponsors/braintree.png"
     }]
   },
 

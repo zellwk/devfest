@@ -5,7 +5,8 @@
       "day": "Sat",
       "events": [{
         "title": "HackerspaceSG 6th Birthday Party",
-        "image": "",
+        "image": "images/events/hackerspacesg-party.png",
+        "logo": "images/events/hackerspacesg-party-logo.png",
         "desc": "BBQ at HackerspaceSG",
         "startTime": "7",
         "startTimeSuffix": "pm",
@@ -16,7 +17,6 @@
       }, {
         "title": "NodeBots - Sumo Bot Battles",
         "image": "images/events/nodebots.png",
-        "logo": "images/events/nodebots-logo.png",
         "desc": "A day workshop where participants will learn how to build a simplebot with Arduino, servos and cardboard. They will then programme it using node.js.",
         "startTime": "9",
         "startTimeSuffix": "am",

@@ -15,7 +15,12 @@
 }
 
 .c-hotel__title {
-  padding: rhythm(0.25) rhythm(0.5);
+  padding: rhythm(0.75) rhythm(0.5);
+
+  @include bp("med") {
+    padding: rhythm(0.25) rhythm(0.5);
+  }
+
   text-align: center;
   // background-color: color(patterns-blue);
 }

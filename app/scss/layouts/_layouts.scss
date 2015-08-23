@@ -51,7 +51,7 @@
   padding-top: 0;
 }
 
-.l-date{
+.l-date {
   text-align: center;
 
   @include bp("med+1") {
@@ -101,9 +101,43 @@
 // Hotel Layout
 // ------------
 
+.l-hotels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
 .l-hotel {
-  @include bp("med+1") {
-    @include gallery(5);
+  display: block;
+  width: 100%;
+  margin-bottom: rhythm(1);
+
+  @include bp("med-1") {
+    display: flex;
+    flex-direction: column;
+    width: span(6 of 12);
+    margin-right: gutter(12);
+    margin-bottom: gutter(12);
+
+    .TA_selfserveprop {
+      flex: 1;
+    }
+  }
+
+  @include bp("med-1" large) {
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @include bp(large) {
+    width: span(5);
+    margin-right: gutter();
+    margin-bottom: gutter();
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 
   .widSSP {

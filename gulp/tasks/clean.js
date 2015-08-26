@@ -8,5 +8,5 @@ gulp.task('clean:dev', function () {
 });
 
 gulp.task('clean:dist', function () {
-  del([config.dest]);
+  del(['dist/**/*', '!dist/images/**/*']);
 });

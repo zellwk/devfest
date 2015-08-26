@@ -33,7 +33,7 @@
       "day": "Sun",
       "events": [{
         "title": "NodeSchool",
-        "image": "",
+        "image": "images/events/nodeschool.png",
         "desc": "NodeSchool is an open source project run by volunteers with two goals: to create high quality programming curriculum and to host community learning events.",
         "startTime": "10",
         "startTimeSuffix": "am",
@@ -486,32 +486,49 @@
       "url": "https://webchat.freenode.net"
     }],
     "workspaces": [{
+      "name": "Collective works",
+      "image": "collectiveworks.jpg",
+      "url": "http://www.collective.works"
+    }, {
       "name": "Hackerspace",
+      "image": "hackerspace.jpg",
       "url": "http://hackerspaces.org"
     }, {
-      "name": "Plugin @Blk 71",
-      "url": "http://www2.blk71.com"
-    }, {
-      "name": "The Working Capitol",
-      "url": "http://www.theworkingcapitol.com/en"
-    }, {
-      "name": "The Hub Singapore",
-      "url": "http://singapore.impacthub.net"
+      "name": "Smart Space",
+      "image": "smartspace.jpg",
+      "url": "http://www.smartspace.sg"
     }, {
       "name": "The Co",
+      "image": "co.jpg",
       "url": "http://jointhe.co"
+    }, {
+      "name": "The Hub",
+      "image": "hub.jpg",
+      "url": "http://singapore.impacthub.net"
+    }, {
+      "name": "The Working Capitol",
+      "image": "workingcapitol.jpg",
+      "url": "http://www.theworkingcapitol.com/en"
+    }, {
+      "name": "Woolf Works",
+      "image": "woolf.jpg",
+      "url": "http://woolfworks.sg"
+    }, {
+      "name": "Workhouse",
+      "image": "workhouse.jpg",
+      "url": "http://www.ourworkhouse.com/#/"
     }],
     "conferences": [{
       "name": "CSSConf Asia",
       "image": "cssconf.png",
       "url": "http://cssconf.asia",
       "devfest": true
-    },{
+    }, {
       "name": "JSConf Asia",
       "image": "jsconf.png",
       "url": "http://jsconf.asia",
       "devfest": true
-    },{
+    }, {
       "name": "Agile Conf",
       "image": "agile-singapore.jpeg",
       "url": "http://agilesingapore.org/"
@@ -519,7 +536,7 @@
       "name": "Barcamp",
       "image": "barcamp.jpeg",
       "url": "http://letsjoin.in/barcampsg"
-    },  {
+    }, {
       "name": "Drupal Camp",
       "image": "drupalcamp.png",
       "url": "http://www.drupalcamp.sg"
@@ -531,7 +548,7 @@
       "name": "iOS Conf",
       "image": "iosconf.png",
       "url": "http://www.iosconf.sg/"
-    },  {
+    }, {
       "name": "Maker Faire Singapore",
       "image": "makerfaire.png",
       "url": "http://makerfairesingapore.com/"

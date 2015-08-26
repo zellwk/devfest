@@ -1,5 +1,6 @@
 .c-quote {
   @include cf;
+
   padding: rhythm(2) calc(50% - 380px);
   background: white !important;
 
@@ -18,12 +19,17 @@
   position: relative;
   padding-bottom: rhythm(1);
   margin-bottom: rhythm(1.5);
-  line-height: 1.4;
 
   .p {
     position: relative;
-    font-size: ms(1);
-    color: #444;
+
+    @include bp(med) {
+      font-size: ms(1);
+      line-height: 1.4;
+    }
+
+
+    // color: #444;
 
     &:before {
       content: "\201c";
@@ -46,6 +52,7 @@
     right: 0;
     margin-right: auto;
     margin-left: auto;
+
     @include triangle(8px, #ddd, top);
   }
 
@@ -73,6 +80,7 @@
 
 .c-quote__image {
   @include square(rhythm(4));
+
   margin-right: auto;
   margin-left: auto;
   margin-bottom: rhythm(0.5);

@@ -1,3 +1,16 @@
 body {
   background: rgba(red, 0.25);
+  @include span(4);
+
+  @include bp(400px) {
+    color: blue;
+  }
+
+  @include media {
+    color: blue;
+  }
+
+  &:hover {
+    background: red;
+  }
 }

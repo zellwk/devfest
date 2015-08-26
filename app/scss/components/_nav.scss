@@ -27,17 +27,21 @@
 }
 
 .c-footer__nav {
-  margin-top: rhythm(2);
-  margin-bottom: rhythm(-2);
-  padding: rhythm(0) rhythm(0.5);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: rhythm(2);
+  margin-bottom: rhythm(-2);
+  padding: rhythm(0) rhythm(0.5);
 
   a {
     padding: 0 rhythm(0.25);
-    text-decoration: none !important;
     line-height: rhythm(1.5);
+    text-decoration: none !important;
+
+    @include bp("med-1") {
+      padding: 0 0.5em;
+    }
 
     &:hover,
     &:active,

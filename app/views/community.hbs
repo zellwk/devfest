@@ -112,17 +112,16 @@
       <h1 class="o-italic">Work side by side with us</h1>
       <p>And when you're in Singapore, you can always get a Co-working space and work together with the locals!</p>
     </div>
+  </div>
 
-    <div class="c-workspaces">
-      {{#each community.workspaces}}
-      <a class="c-workspace" href="{{url}}">
-        {{#if image}}
-        <img src="images/workspace/{{image}}" alt="{{name}}">
-        {{/if}}
-        <span>{{name}}</span>
+  <div class="c-workspaces">
+    {{#each community.workspaces}}
+    <div class="c-workspace">
+      <a href="{{url}}" style="background-image:url('images/workspaces/{{image}}');" >
+        <h2 class="c-event__title">{{name}}</h2>
       </a>
-      {{/each}}
     </div>
+    {{/each}}
   </div>
 </section>
 

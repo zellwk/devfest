@@ -5,6 +5,7 @@
 //
 html {
   @include ff(primary);
+
   // font-weight: 300;
 }
 
@@ -24,10 +25,10 @@ h6 {
 }
 
 h1 {
+  margin-bottom: rhythm(0.5);
   font-size: ms(3);
   font-weight: normal;
   line-height: rhythm(3);
-  margin-bottom: rhythm(0.5);
 }
 
 h2 {
@@ -35,6 +36,7 @@ h2 {
 
   @include bp(med) {
     font-size: ms(2);
+
     @include adjust-leading-to(2);
   }
 }
@@ -65,15 +67,16 @@ pre {
 }
 
 .o-italic {
-  @include ff(secondary);
-  font-style: italic;
   font-weight: bold;
+  font-style: italic;
   text-align: center;
+
+  @include ff(secondary);
 }
 
 a {
-  text-decoration: none;
   color: color(charcoal);
+  text-decoration: none;
 
   &:hover,
   &:active,
@@ -84,4 +87,9 @@ a {
 
 p {
   line-height: 1.4;
+}
+
+.o-block__title-2 {
+  font-family: 'Open Sans Condensed';
+  font-weight: 700;
 }

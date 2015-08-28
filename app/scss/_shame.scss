@@ -80,6 +80,7 @@
 
   @include bp(med) {
     @include gallery(4 of 12);
+
     margin-top: rhythm(2);
   }
 }
@@ -122,7 +123,6 @@
   }
 }
 
-
 form {
   animation: formsup 3s ease-out;
 }
@@ -143,7 +143,6 @@ form {
   }
 }
 
-
 .social.form-show {
   animation: formsup 0.5s ease-out;
 }
@@ -157,5 +156,42 @@ form {
       margin-top: rhythm(0.5) !important;
       margin-bottom: rhythm(0.5);
     }
+  }
+}
+
+article {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-content {
+  margin-bottom: rhythm(2);
+}
+
+.c-toc {
+  ol {
+    margin-left: auto;
+    padding-left: 0;
+
+    li {
+      @include bp(max "med") {
+        list-style-position: inside;
+      }
+    }
+  }
+
+  li + li > h2 {
+    margin-top: rhythm(2);
+  }
+
+  dt {
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
+  dd > ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 }

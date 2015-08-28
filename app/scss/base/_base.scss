@@ -18,7 +18,14 @@ img + p {
 // Adds default UL and LI styles back ONLY for articles
 // Adds margin bottom of 1 rhythm to images ONLY for articles
 article {
+  h2 + p {
+    margin-top: 1em;
+  }
+   p + h2 {
+    margin-top: 2em;
+   }
   ul,
+
   ol {
     margin-left: 1em;
   }
@@ -27,11 +34,11 @@ article {
     margin-top: rhythm(0.5);
   }
 
-  ul li {
-    list-style-type: disc;
-  }
-
   ol li {
     list-style-type: decimal;
+  }
+
+  ul li {
+    list-style-type: disc;
   }
 }

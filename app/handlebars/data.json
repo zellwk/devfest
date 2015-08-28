@@ -86,7 +86,7 @@
       "date": "18",
       "day": "Wed",
       "events": [{
-        "title": "CSSConf Asia",
+        "title": "CSSConf.Asia",
         "image": "images/events/cssconf.jpg",
         "logo": "images/events/cssconf-logo.png",
         "desc": "Bridging web design and implementation.",
@@ -104,7 +104,7 @@
       "date": "19",
       "day": "Thu",
       "events": [{
-        "title": "JSConf Asia (Day 1)",
+        "title": "JSConf.Asia (Day 1)",
         "image": "images/events/jsconf.jpg",
         "logo": "images/events/jsconf-logo.png",
         "desc": "It‘s a bit like TED just for web devs.",
@@ -122,7 +122,7 @@
       "date": "20",
       "day": "Thu",
       "events": [{
-        "title": "JSConf Asia (Day 2)",
+        "title": "JSConf.Asia (Day 2)",
         "image": "images/events/jsconf.jpg",
         "logo": "images/events/jsconf-logo.png",
         "desc": "It‘s a bit like TED just for web devs.",
@@ -257,6 +257,9 @@
   "sponsors": {
     "main": [],
     "supporters": [{
+      "name": "Braintree",
+      "logo": "images/sponsors/braintree.png"
+    }, {
       "name": "Microsoft",
       "logo": "images/sponsors/microsoft.png"
     }, {
@@ -265,9 +268,6 @@
     }, {
       "name": "Meteor",
       "logo": "images/sponsors/meteor.png"
-    }, {
-      "name": "Braintree",
-      "logo": "images/sponsors/braintree.png"
     }]
   },
 
@@ -519,12 +519,12 @@
       "url": "http://www.ourworkhouse.com/#/"
     }],
     "conferences": [{
-      "name": "CSSConf Asia",
+      "name": "CSSConf.Asia",
       "image": "cssconf.png",
       "url": "http://cssconf.asia",
       "devfest": true
     }, {
-      "name": "JSConf Asia",
+      "name": "JSConf.Asia",
       "image": "jsconf.png",
       "url": "http://jsconf.asia",
       "devfest": true

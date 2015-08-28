@@ -145,20 +145,26 @@ form {
 
   span + span {
     margin-left: rhythm(0.5);
+
+    @include bp(med) {
+      @include gallery(4 of 12);
+
+      margin-top: rhythm(2);
+    }
   }
-}
 
-.c-new__plus {
-  font-size: ms(3);
-}
+  .c-new__plus {
+    font-size: ms(3);
+  }
 
-.c-new:hover {
-  transition: none;
-  border-color: color(carmine);
-
-  span {
+  .c-new:hover {
     transition: none;
-    color: color(carmine);
+    border-color: color(carmine);
+
+    span {
+      transition: none;
+      color: color(carmine);
+    }
   }
 }
 
@@ -332,4 +338,41 @@ form {
   text-align: left;
   margin-right: auto;
   margin-left: auto;
+}
+
+article {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l-content {
+  margin-bottom: rhythm(2);
+}
+
+.c-toc {
+  ol {
+    margin-left: auto;
+    padding-left: 0;
+
+    li {
+      @include bp(max "med") {
+        list-style-position: inside;
+      }
+    }
+  }
+
+  li + li > h2 {
+    margin-top: rhythm(2);
+  }
+
+  dt {
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
+  dd > ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }

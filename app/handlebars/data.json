@@ -486,17 +486,9 @@
       "url": "https://webchat.freenode.net"
     }],
     "workspaces": [{
-      "name": "Collective works",
-      "image": "collectiveworks.jpg",
-      "url": "http://www.collective.works"
-    }, {
       "name": "Hackerspace",
       "image": "hackerspace.jpg",
       "url": "http://hackerspaces.org"
-    }, {
-      "name": "Smart Space",
-      "image": "smartspace.jpg",
-      "url": "http://www.smartspace.sg"
     }, {
       "name": "The Co",
       "image": "co.jpg",

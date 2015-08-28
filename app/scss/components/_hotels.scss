@@ -21,13 +21,16 @@
     padding: rhythm(0.25) rhythm(0.5);
   }
 
+
   text-align: center;
+
   // background-color: color(patterns-blue);
 }
 
 .c-hotel-carousel {
   position: relative;
   overflow: hidden;
+
   // border-radius: 6px 6px 0 0;
 
   &:after {
@@ -51,4 +54,38 @@
   .o-btn {
     margin-bottom: rhythm(1);
   }
+}
+
+.c-devfest-featured {
+  position: absolute;
+  right: rhythm(1);
+  top: rhythm(1);
+  width: rhythm(5);
+  height: rhythm(5);
+  border-radius: 100%;
+  background: radial-gradient(lighten(color(bleu-de-france), 3%), color(bleu-de-france));
+  border: 5px solid color(bleu-de-france);
+  box-shadow: inset 0 0 0 2px white, inset 0 0 0 5px color(bleu-de-france), inset 0 0 0 8px white, 0 0 0 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1;
+  z-index: 99;
+  color: white;
+  transform: rotateZ(15deg);
+
+  span {
+    line-height: 1.25;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.trip-advisor {
+  position: relative;
+  flex-grow: 1;
+  min-height: rhythm(6);
 }

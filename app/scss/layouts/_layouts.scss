@@ -2,7 +2,8 @@
 // =======
 
 .wrap {
-  @include container;
+  @include container(hide);
+
   padding-left: rhythm(0.5);
   padding-right: rhythm(0.5);
 
@@ -14,6 +15,7 @@
 
 .wrap--header {
   @extend .wrap;
+
   max-width: 1240px;
 }
 
@@ -68,6 +70,7 @@
     margin-top: rhythm(-1);
   }
 
+
   @include bp("med+1") {
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +81,7 @@
   @include bp(max "med+1") {
     margin-top: rhythm(1);
   }
+
 
   @include bp("med+1") {
     width: span(7 of 14);
@@ -104,7 +108,11 @@
 .l-hotels {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
+
+  @include bp("med-1") {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
 .l-hotel {
@@ -115,32 +123,47 @@
   @include bp("med-1") {
     display: flex;
     flex-direction: column;
-    width: span(6 of 12);
-    margin-right: gutter(12);
-    margin-bottom: gutter(12);
+    width: calc(50% - 40px);
+    flex-grow: 1;
+    margin: 20px;
 
     .TA_selfserveprop {
       flex: 1;
     }
   }
 
-  @include bp("med-1" large) {
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
-  }
 
   @include bp(large) {
-    width: span(5);
-    margin-right: gutter();
-    margin-bottom: gutter();
-
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
+    width: calc(33% - 40px);
   }
+
 
   .widSSP {
     width: auto !important;
   }
+}
+
+.c-hotel--featured {
+  width: 100%;
+
+  @include bp(large) {
+    width: calc(66% - 40px);
+  }
+}
+
+// Awesome Grids Margin with Flexbox
+.wrapper {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(red, 0.25);
+}
+
+.test-gallery {}
+
+.test-item {
+  background: rgba(blue, 0.25);
+  height: 60px;
+  border: 1px solid teal;
+  flex-grow: 1;
 }

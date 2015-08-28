@@ -114,6 +114,15 @@ form {
     padding: rhythm(1) rhythm(1);
   }
 
+  img {
+    max-height: rhythm(2);
+    width: auto;
+  }
+
+  img.zell {
+    max-height: rhythm(1.4)
+  }
+
   span {
     @include is-invisible;
   }

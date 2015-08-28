@@ -16,8 +16,7 @@
   <meta property="og:site_name" content="Devfest.Asia"/>
   <meta property="og:description" content="Southeast Asia's first community organized web developer festival"/>
 
-
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans300,400,700|Open+Sans+Condensed:300,300italic,700|Sue+Ellen+Francisco|Vollkorn:400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans300,400,700|Open+Sans+Condensed:300,300italic,700|Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
   <!-- build:css css/styles.min.css -->
   <link rel="stylesheet" href="css/styles.css">
   <!-- endbuild -->
@@ -26,30 +25,38 @@
   <!--endbuild -->
 </head>
 <body>
-
-  <div class="c-canvas jsCanvasContainer">
-    <div class="c-canvas__off-canvas jsOffCanvas">
-      Mobile Menu located here, but not styled yet
-    </div>
-    <div class="c-canvas__on-canvas jsOnCanvas">
-      <header class="c-site-header">
-        <div class="wrap--header c-canvas__fixed-item">
-          <div class="flex">
-            <div class="c-logo">
-              <div class="o-cursive c-logo__devfest">Devfest.Asia</div>
-            </div>
-
-            <nav class="c-nav" style="display: inline-block;">
-              <a href="mailto:sponsors@devfest.asia">Sponsor interest?</a>
-              <a href="https://jsconfasia.wufoo.com/forms/devfestasia-2015-list-my-event/" class="o-btn">List my event</a>
-            </nav>
+<div class="c-canvas jsCanvasContainer">
+  <div class="c-canvas__off-canvas jsOffCanvas">
+    <div class="c-mobile-menu">
+      <h3 class="c-event__title">Explore Devfest</h3>
+      <nav class="c-mobile-menu__nav">
+        <a href="index.html" class="">Events</a>
+        <a href="hotels.html" class="">Staying in SG</a>
+        <a href="community.html" class="">Developer Community</a>
+        <a href="sponsors.html" class="">Sponsors</a>
+        <a href="http://blog.devfest.asia" class="">Blog</a>  </nav>
+    </div>  </div>
+  <div class="c-canvas__on-canvas jsOnCanvas">
+    <header class="c-site-header">
+      <div class="wrap--header c-canvas__fixed-item">
+        <div class="flex">
+          <div class="c-logo">
+            <div class="o-cursive c-logo__devfest"><a href="index.html">Devfest.Asia</a></div>
           </div>
-
+    
+          <button class="c-canvas-toggle jsCanvasToggle"> <span>Explore</span> <img class="i-menu jsSvgInject"src="images/menu.svg" alt=""></button>
+    
+          <nav class="c-nav">
+            <a href="index.html" class="">Events</a>
+            <a href="hotels.html" class="">Staying in SG</a>
+            <a href="community.html" class="">Developer Community</a>
+            <a href="sponsors.html" class="">Sponsors</a>
+            <a href="http://blog.devfest.asia" class="">Blog</a>      </nav>
         </div>
-      </header>
-
-      <div class="l-content">
-        <div class="wrap">
+      </div>
+    </header>
+    <div class="l-content ">
+      <div class="wrap">
           <article>
             <h1 class="o-italic">Devfest.Asia 2015 Code of Conduct</h1>
             <p>All delegates, speakers, sponsors and volunteers at any JSConf event are required to agree with the following code of conduct. Organizers will enforce this code throughout the event.</p>
@@ -73,27 +80,72 @@
             <p>We expect participants to follow these rules at all conference venues and conference-related social events.</p>
           </article>
         </div>
+    </div>
+     <div class="site-footer">
+    
+      <nav class="c-footer__nav">
+       <a href="index.html" class="">Events</a>
+       <a href="hotels.html" class="">Hotels</a>
+       <a href="community.html" class="">Community</a>
+       <a href="sponsors.html" class="">Sponsors</a>
+       <a href="http://blog.devfest.asia" class="">Blog</a></nav>
+      <div class="c-logo--hero">
+        <div class="o-cursive c-logo__singapore">Singapore</div>
+        <div class="o-cursive c-logo__devfest">Devfest.Asia</div>
+        <div class="o-cursive c-logo__2015">2015</div>
+      </div>  
+    
+      <div class="c-creds">
+        <h4>Devfest Asia is brought to you by these people:</h4>
+    
+        <div class="c-creds__sigs">
+          <a href="#">
+            <span>Thomas Gorissen</span>
+            <img src="images/thomas-sig.png" alt="">
+          </a>
+          <a href="#">
+            <span>Zell Liew</span>
+            <img class="zell" src="images/zell-sig-3.png" alt="">
+          </a>
+          <a href="#">
+            <span>Jacin</span>
+            <img src="images/jacin-sig.png" alt="">
+          </a>
+        </div>
+      </div>
+    
+      <div class="nerdherd">
+        <p>A Nerdherd Pte. Ltd. event
+          <br> 
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+          <br>
+          <a href="code-of-conduct.html">Code of conduct</a>
+        </p>
+      </div>
+    
+      <div class="c-designed">
+        Site design and developed by <a href="http://zell-weekeat.com" target="_blank">Zell Liew</a>
       </div>
     </div>
+    
   </div>
+</div>
+<!--build:js js/foot.min.js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="js/b/bundle.js"></script>
+<!-- endbuild -->
 
-  <!--build:js js/foot.min.js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="js/b/bundle.js"></script>
-  <!-- endbuild -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-31025490-10', 'auto');
+  ga('send', 'pageview');
 
-    ga('create', 'UA-31025490-10', 'auto');
-    ga('send', 'pageview');
-
-  </script>
+</script>
 
 </body>
 
 </html>
-

@@ -20,11 +20,15 @@
   overflow-y: hidden;
   padding-top: rhythm(0.7);
   padding-bottom: rhythm(0.8);
+  padding-right: rhythm(1);
+  padding-left: rhythm(1);
 
   .wrap {
-    max-width: 760px;
-    margin-right: auto;
-    margin-left: auto;
+    @include bp(med) {
+      max-width: 760px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &::-webkit-scrollbar {
@@ -34,9 +38,13 @@
 
 .c-events-nav {
   display: flex;
-  justify-content: center;
   font-family: 'Open Sans Condensed';
   font-weight: bold;
+
+  @include bp(med) {
+    justify-content: center;
+  }
+
 
   a {
     display: inline-block;
@@ -46,13 +54,18 @@
     text-align: center;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
 
+    @include bp(max med) {
+      padding: 0 1em;
+    }
+
+
     &:first-child {
       padding-left: 0;
     }
 
-    &:last-child {
-      padding-right: 0;
-    }
+    // &:last-child {
+    //   padding-right: 0;
+    // }
   }
 
   .c-events-nav__weekend {

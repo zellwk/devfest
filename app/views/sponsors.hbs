@@ -32,25 +32,8 @@
           </div>
         </div>
 
-        <div class="c-sponsors-grid">
-          {{#sponsors}}
-          {{#each main}}
-          <div class="c-sponsors-grid__item">
-            <div style="background-image:url('{{background}}');" >
-              <img src="{{logo}}" alt="{{name}}">
-              <h2 class="c-event__title">{{name}}</h2>
-            </div>
-          </div>
-          {{/each}}
-          {{#each supporters}}
-          <div class="c-sponsors-grid__item">
-            <a class="c-sponsor__item" style="background-image:url('{{background}}');" href="{{url}}" target="_blank" >
-              <img src="{{logo}}" alt="{{name}}">
-            </a>
-          </div>
-          {{/each}}
-          {{/sponsors}}
-        </div>
+        {{> _sponsors }}
+        
       </section>
 
       <section>

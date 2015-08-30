@@ -5,6 +5,7 @@
   align-items: center;
   position: relative;
   z-index: 1;
+
   // padding-top: rhythm(4);
   // padding-bottom: rhythm(4);
   min-height: 100vh;
@@ -59,7 +60,6 @@
   }
 }
 
-
 // intro
 .c-hero__intro {
   button {
@@ -76,7 +76,7 @@
   line-height: 1.3em;
   margin-bottom: rhythm(0.5);
   animation: subtitle 2s ease-out;
-  text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
   margin-bottom: 1.5em;
   font-weight: 100;
   margin-left: auto;
@@ -95,10 +95,9 @@
   }
 }
 
-
 .c-hero__description {
   animation: herodesc 2.6s ease-out;
-  text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7);
   font-weight: 100;
 }
 
@@ -114,7 +113,6 @@
   }
 }
 
-
 // sponsors
 .c-hero__sponsors {
   margin-top: rhythm(2);
@@ -123,4 +121,15 @@
 .c-hero--community {
   height: rhythm(30);
   background-size: cover;
+}
+
+.c-downarr {
+  height: rhythm(2);
+  width: rhythm(2);
+  margin-bottom: rhythm(1);
+  animation: formsup 4s ease-out;
+
+  path {
+    fill: rgba(white, 0.7);
+  }
 }

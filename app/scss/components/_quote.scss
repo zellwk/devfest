@@ -21,7 +21,11 @@
   margin-bottom: rhythm(1.5);
 
   .p {
+    font-family: 'Vollkorn', 'serif';
+    font-style: italic;
     position: relative;
+    letter-spacing: 0.1px;
+    color: #888;
 
     @include bp(med) {
       font-size: ms(1);
@@ -34,12 +38,12 @@
     &:before {
       content: "\201c";
       color: #aaa;
-      font-family: Georgia, Times, serif;
+      font-family: Times, serif;
       position: absolute;
       font-size: ms(8);
       line-height: 0.75;
-      left: -0.5em;
-      top: 0;
+      left: -0.6em;
+      top: -0.15em;
       vertical-align: baseline;
     }
   }

@@ -5,6 +5,10 @@
   margin-bottom: rhythm(3);
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.25);
 
+  a {
+    text-decoration: none;
+  }
+
   &.is-fixed {
     //
  

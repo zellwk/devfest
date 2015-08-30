@@ -36,7 +36,14 @@
             </div>
           </div>
           <div class="c-event__aside">
-            <a href="#" class="o-btn">Get Ticket</a>
+            {{#if ticket}}
+            {{#if event-link}}<a href="{{event-link}}" target="_blank" class="o-btn">{{ticket}}</a> 
+            {{else}}<a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank"  class="o-btn">{{ticket}}</a>{{/if}}
+            {{else}}
+            <div class="ticket-info">
+              {{ticketinfo}}
+            </div>
+            {{/if}}
           </div>
         </div>
       </div>  

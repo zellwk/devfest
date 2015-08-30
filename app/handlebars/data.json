@@ -1,29 +1,38 @@
 {
   "dates": [{
       "type": "event",
+      "date": "12",
+      "day": "Thu",
+      "events": [{
+        "title": "Devfest.Asia Welcome Party",
+        "image": "images/events/devfestparty.jpg",
+        "desc": "Offical kickoff event for Devfest.Asia 2015",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "12",
+        "endTimeSuffix": "am",
+        "location": "TBC",
+        "location-2": "",
+        "ticketinfo": "For all Devfest.Asia ticket holders"
+      }]
+    },
+
+    {
+      "type": "event",
       "date": "14",
       "day": "Sat",
       "events": [{
         "title": "HackerspaceSG 6th Birthday Party",
         "image": "images/events/hackerspacesg-party.png",
         "logo": "images/events/hackerspacesg-party-logo.png",
-        "desc": "BBQ at HackerspaceSG",
+        "desc": "Hackerspace is turning 6! Join us for some good food and drinks at Singapore's first kiasu-free zone",
         "startTime": "7",
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "am",
         "location": "344B King George's Ave",
-        "location-2": "Singapore 208576"
-      }, {
-        "title": "NodeBots - Sumo Bot Battles",
-        "image": "images/events/nodebots.png",
-        "desc": "A day workshop where participants will learn how to build a simplebot with Arduino, servos and cardboard. They will then programme it using node.js.",
-        "startTime": "9",
-        "startTimeSuffix": "am",
-        "endTime": "6",
-        "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location-2": "TBC"
+        "location-2": "Singapore 208576",
+        "ticket": "Available Soon"
       }]
     },
 
@@ -33,14 +42,14 @@
       "day": "Sun",
       "events": [{
         "title": "NodeSchool",
-        "image": "images/events/nodeschool.png",
+        "image": "images/events/nodeschool2.png",
         "desc": "NodeSchool is an open source project run by volunteers with two goals: to create high quality programming curriculum and to host community learning events.",
         "startTime": "10",
         "startTimeSuffix": "am",
         "endTime": "5",
         "endTimeSuffix": "pm",
         "location": "TBC",
-        "location-2": "TBC"
+        "ticket": "Available Soon"
       }]
     },
 
@@ -57,8 +66,8 @@
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "TBC",
-        "location-2": "TBC",
-        "price": "free"
+        "price": "free",
+        "ticket": "Available Soon"
       }]
     },
 
@@ -67,7 +76,7 @@
       "date": "17",
       "day": "Tue",
       "events": [{
-        "title": "Talk.js",
+        "title": "Talk.js Special Edition",
         "image": "images/events/talk-js.jpeg",
         "logo": "images/events/talk-js-logo.png",
         "desc": "November meetup for talk.js. Few short talks in the evening + dinner and mingling.",
@@ -76,8 +85,8 @@
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "TBC",
-        "location-2": "TBC",
-        "price": "free"
+        "price": "free",
+        "ticket": "Available Soon"
       }]
     },
 
@@ -95,7 +104,19 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
-        "location-2": "28 Maxwell Road, Singapore 069120"
+        "location-2": "28 Maxwell Road, Singapore 069120",
+        "ticket": "Available Soon"
+      }, {
+        "title": "CSSConf.Asia After Party",
+        "image": "images/events/cssconfparty.jpg",
+        "desc": "Offical CSSConf.Asia after party for conference attendees",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "12",
+        "endTimeSuffix": "am",
+        "location": "Red Dot Design Museum",
+        "location-2": "28 Maxwell Road Singapore 069120",
+        "ticketinfo": "For CSSConf.Asia attendees"
       }]
     },
 
@@ -105,7 +126,7 @@
       "day": "Thu",
       "events": [{
         "title": "JSConf.Asia (Day 1)",
-        "image": "images/events/jsconf.jpg",
+        "image": "images/events/jsconf1.jpg",
         "logo": "images/events/jsconf-logo.png",
         "desc": "It‘s a bit like TED just for web devs.",
         "startTime": "9",
@@ -113,7 +134,20 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
-        "location-2": "28 Maxwell Road, Singapore 069120"
+        "location-2": "28 Maxwell Road, Singapore 069120",
+        "ticket": "Available soon"
+      }, {
+        "title": "NodeBots - Sumo Bot Battles",
+        "image": "images/events/nodebots.png",
+        "desc": "A day workshop where participants will learn how to build a simplebot with Arduino, servos and cardboard. They will then programme it using node.js.",
+        "startTime": "9",
+        "startTimeSuffix": "am",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location-2": "",
+        "ticket": "Available soon"
+        
       }]
     },
 
@@ -123,7 +157,7 @@
       "day": "Thu",
       "events": [{
         "title": "JSConf.Asia (Day 2)",
-        "image": "images/events/jsconf.jpg",
+        "image": "images/events/jsconf2.jpg",
         "logo": "images/events/jsconf-logo.png",
         "desc": "It‘s a bit like TED just for web devs.",
         "startTime": "9",
@@ -131,7 +165,21 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
-        "location-2": "28 Maxwell Road, Singapore 069120"
+        "location-2": "28 Maxwell Road, Singapore 069120",
+        "ticket": "Available soon"
+
+      }, {
+        "title": "JSConf.Asia After Party",
+        "image": "images/events/jsconfparty.jpg",
+        "desc": "Offical JSConf.Asia after party for conference attendees",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "12",
+        "endTimeSuffix": "am",
+        "location": "TBC",
+        "location-2": "",
+        "ticketinfo": "For JSConf.Asia attendees"
+
       }]
     },
 
@@ -140,17 +188,6 @@
       "date": "21",
       "day": "Sat",
       "events": [{
-        "title": "Kopi JS",
-        "image": "images/events/kopijs.jpg",
-        "logo": "images/events/kopijs-logo.png",
-        "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
-        "startTime": "11",
-        "startTimeSuffix": "am",
-        "endTime": "3",
-        "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location-2": "TBC"
-      }, {
         "title": "WebAudio Hack Day",
         "image": "images/events/webaudio-js.jpg",
         "logo": "images/events/webaudio-js-logo.png",
@@ -160,7 +197,29 @@
         "endTime": "9",
         "endTimeSuffix": "pm",
         "location": "TBC",
-        "location-2": "TBC"
+        "location-2": "",
+        "ticket": "Available soon"
+
+      }]
+    },
+
+    {
+      "type": "event",
+      "date": "22",
+      "day": "Sun",
+      "events": [{
+        "title": "KopiJS",
+        "image": "images/events/kopijs.jpg",
+        "logo": "images/events/kopijs-logo.png",
+        "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
+        "startTime": "11",
+        "startTimeSuffix": "am",
+        "endTime": "3",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location-2": "",
+        "ticket": "Available soon"
+
       }]
     },
 
@@ -258,16 +317,19 @@
     "main": [],
     "supporters": [{
       "name": "Braintree",
-      "logo": "images/sponsors/braintree.png"
-    }, {
-      "name": "Microsoft",
-      "logo": "images/sponsors/microsoft.png"
+      "logo": "images/sponsors/braintree.png",
+      "background": "images/sponsors/braintree-image.jpeg",
+      "url": "https://www.braintreepayments.com"
     }, {
       "name": "Piktochart",
-      "logo": "images/sponsors/piktochart.png"
+      "logo": "images/sponsors/piktochart.png",
+      "background": "images/sponsors/piktochart-image.jpeg",
+      "url": "http://piktochart.com"
     }, {
       "name": "Meteor",
-      "logo": "images/sponsors/meteor.png"
+      "logo": "images/sponsors/meteor.png",
+      "background": "images/sponsors/meteor-image.jpg",
+      "url": "https://www.meteor.com"
     }]
   },
 
@@ -488,13 +550,13 @@
     "workspaces": [{
       "name": "Hackerspace",
       "image": "hackerspace.jpg",
-      "url": "http://hackerspaces.org"
+      "url": "http://hackerspace.sg"
     }, {
       "name": "The Co",
       "image": "co.jpg",
       "url": "http://jointhe.co"
     }, {
-      "name": "The Hub",
+      "name": "Impact Hub",
       "image": "hub.jpg",
       "url": "http://singapore.impacthub.net"
     }, {

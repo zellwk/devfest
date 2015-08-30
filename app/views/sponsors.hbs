@@ -1,21 +1,18 @@
 {{> _head }}
-
 <div class="c-canvas jsCanvasContainer">
   <div class="c-canvas__off-canvas jsOffCanvas">
     {{> _mobile-menu active="sponsors"}}
   </div>
   <div class="c-canvas__on-canvas jsOnCanvas">
     {{> _header active="sponsors" }}
-
     <div class="l-content">
-
       <section class="c-quote">
         <div class="wrap">
           <div class="c-quote__message">
             <div class="p">
-              <p>Small and big companies from around the region participate in DevFest.Asia to get exposure for their developer focussed product, to share job opportunities and find talent or simply to gain exposure for their company or brand.</p> 
-              <p>With more than 1200 web developers attending 17 events last year we intend to increase reach and vibrancy this year even further and make it an unforgettable experience for attendees as well as a stepping stone into the local developer scene and the entrepreneurial and enterprise ecosystems. Singapore holds a great developer community and we need amazing companies to be part of it!
+              <p>With more than a thousand web developers attending more than 15 events over ten days this year DevFest.Asia will be the center of the regional developer community.
               </p>
+              <p>It’s going to be an unforgettable experience for attendees as well as a stepping stone into Southeast Asia’s diverse talent pool for entrepreneurs and enterprise. We need amazing companies to be part of it!</p>
             </div>
           </div>
           <div class="c-quote__author">
@@ -23,37 +20,55 @@
             <div class="c-quote__person">
               <h4>Thomas Gorissen</h4>
               <span>Devfest.Asia organizer</span>
-            </div>  
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="c-sponsors">
+      <section id="sponsors">
         <div class="wrap">
-          <h1 class="o-italic">Here are our awesome sponsors!</h1>
-          {{> _sponsors }}
+          <div class="c-community-intro">
+            <h1 class="o-italic">Here are our awesome sponsors!</h1>
+          </div>
+        </div>
+
+        <div class="c-sponsors-grid">
+          {{#sponsors}}
+          {{#each main}}
+          <div class="c-sponsors-grid__item">
+            <div style="background-image:url('{{background}}');" >
+              <img src="{{logo}}" alt="{{name}}">
+              <h2 class="c-event__title">{{name}}</h2>
+            </div>
+          </div>
+          {{/each}}
+          {{#each supporters}}
+          <div class="c-sponsors-grid__item">
+            <a class="c-sponsor__item" style="background-image:url('{{background}}');" href="{{url}}" target="_blank" >
+              <img src="{{logo}}" alt="{{name}}">
+            </a>
+          </div>
+          {{/each}}
+          {{/sponsors}}
         </div>
       </section>
 
       <section>
         <div class="wrap">
           <div class="c-section-intro">
-            <h1 class="o-italic">Can you sponsor Devfest?</h1>
-            <p>We're making Devfest much better this year! We're expecting more than 1500 developers from all across SEA (we had 1200 last year) to attend the free and paid meetups, conferences, workshops and parties. </p>
-
+            <h1 class="o-italic">Can you sponsor Devfest.Asia?</h1>
+            <p>We're making Devfest.Asia much better this year! We're expecting more than 1500 developers from all across SEA (we had 1200 last year) to attend the free and paid meetups, conferences, workshops and parties. </p>
             <p>
-              Your sponsorship monies used by our community to create better and more events, workshops or parties! 
+              Your sponsorship monies used by our community to create better and more events, workshops or parties!
             </p>
-
             <p>
-              Besides, you can also get access to talent, share job opportunities and gain exposure for your company and your product. 
+              Besides, you can also get access to talent, share job opportunities and gain exposure for your company and your product.
             </p>
-
             <p>
-              If you're interested in sponsoring Devfest, no matter how big or small your amount is, please click on the button and email us! 
+              If you're interested in sponsoring Devfest.Asia, no matter how big or small your amount is, please click on the button and email us!
             </p>
             <div>
-              <a href="mailto:sponsors@devfest.asia?subject=Devfest Sponsorship" class="o-btn" >Sponsor devfest</a>
+              <a href="mailto:sponsors@devfest.asia?subject=Devfest Sponsorship" class="o-btn">Sponsor devfest.asia</a>
               <p>
                 <small>
                   <a href="https://docs.google.com/a/jsconf.asia/uc?id=0BzQ1Dd6_7STXWkRqRXUtWHhKZVk&export=download">See the sponsorship menu</a>
@@ -67,8 +82,4 @@
     {{> _footer }}
   </div>
 </div>
-
-
-
 {{> _foot }}
-

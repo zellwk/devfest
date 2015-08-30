@@ -11,7 +11,12 @@
 .c-hotel {
   background: white;
   border-radius: 6px;
+  border: 1px solid #ddd;
   box-shadow: 0 1px 0px 0px rgba(black, 0.1);
+}
+
+.c-hotel--featured {
+  border: rhythm(0.25) solid color(malibu);
 }
 
 .c-hotel__title {
@@ -23,8 +28,6 @@
 
 
   text-align: center;
-
-  // background-color: color(patterns-blue);
 }
 
 .c-hotel-carousel {
@@ -58,23 +61,28 @@
 
 .c-devfest-featured {
   position: absolute;
-  right: rhythm(1);
+  right: rhythm(1.5);
   top: rhythm(1);
+  z-index: 999;
+}
+
+.c-devfest-featured__badge {
   width: rhythm(5);
   height: rhythm(5);
   border-radius: 100%;
   background: radial-gradient(lighten(color(bleu-de-france), 3%), color(bleu-de-france));
-  border: 5px solid color(bleu-de-france);
-  box-shadow: inset 0 0 0 2px white, inset 0 0 0 5px color(bleu-de-france), inset 0 0 0 8px white, 0 0 0 1px rgba(0, 0, 0, 0.5);
+  border: 4px solid color(bleu-de-france);
+  box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px color(bleu-de-france), inset 0 0 0 6px white;
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
   line-height: 1;
-  z-index: 99;
   color: white;
   transform: rotateZ(15deg);
+
+  // animation: rotater 2s 1s infinite ease-out;
 
   span {
     line-height: 1.25;
@@ -84,8 +92,44 @@
   }
 }
 
+.c-devfest-featured__aura {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0 0 12px 4px color(bleu-de-france);
+
+  // border: 4px solid color(bleu-de-france);
+  border-radius: 100%;
+  display: block;
+  width: rhythm(5);
+  height: rhythm(5);
+  animation: aura 2s infinite ease-out;
+}
+
 .trip-advisor {
   position: relative;
   flex-grow: 1;
   min-height: rhythm(6);
+}
+
+@-webkit-keyframes rotater {
+  0%,100% {
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateZ(30deg);
+  }
+}
+
+@-webkit-keyframes aura {
+  0% {
+    opacity: 1;
+  }
+
+  50%, 100% {
+    opacity: 0;
+    transform: scale(1.3, 1.3);
+  }
 }

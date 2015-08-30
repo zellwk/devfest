@@ -134,6 +134,15 @@
     <div class="c-conferences">
       {{#each community.conferences}}
       <a href="{{url}}" class="c-conference">
+        {{#if devfest}}
+        <div class="c-devfest-featured--conference">
+          <div class="c-devfest-featured__badge">
+            <span>Devfest</span>
+            <span>Event</span>
+          </div>  
+          <div class="c-devfest-featured__aura"></div>
+        </div>
+        {{/if}}
         <img src="images/conferences/{{image}}" alt="{{name}}">
         <span>{{name}}</span>
       </a>

@@ -120,7 +120,7 @@ form {
   }
 
   img.zell {
-    max-height: rhythm(1.4)
+    max-height: rhythm(1.4);
   }
 
   span {
@@ -195,8 +195,9 @@ form {
   background: white;
   margin: rhythm(0.5);
   padding: rhythm(1);
-  border: 1px solid #eaeaea;
+  border: 1px solid #ddd;
   border-radius: 3px;
+  box-shadow: 0 1px 0 0 rgba(black, 0.1);
 
   img {
     max-height: 63px;
@@ -217,6 +218,25 @@ form {
 .c-chat,
 .c-conference {
   @extend .c-hangout;
+}
+
+.c-conference {
+  position: relative;
+}
+
+.c-devfest-featured--conference {
+  @extend .c-devfest-featured;
+
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: rhythm(7);
+
+  @include bp(max med) {
+    top: 0;
+    right: 0;
+    bottom: auto;
+  }
 }
 
 .c-workspaces {

@@ -122,11 +122,6 @@
   @include bp("large") {
     @include span(5 of 7);
   }
-
-
-  a {
-    text-decoration: none;
-  }
 }
 
 .c-event__aside {
@@ -162,6 +157,10 @@
 .c-event__location {
   display: block;
   margin-top: rhythm(0.25);
+
+  a {
+    text-decoration: none;
+  }
 
   img {
     float: left;

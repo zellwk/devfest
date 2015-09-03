@@ -22,7 +22,7 @@
         <div class="c-event__content">
           <div class="c-event__desc">
             <h3 class="c-event__title">{{title}}</h3>
-            <p>{{desc}}</p>
+            <p>{{{desc}}}</p>
             <div class="c-event__time">
               <div class="css-clock" data-time="{{startTime}}-{{endTime}}"></div>
               {{startTime}}{{startTimeSuffix}} - {{endTime}}{{endTimeSuffix}}
@@ -30,8 +30,8 @@
             <div class="c-event__location">
               <img class="i-location jsSvgInject" src="images/location1.svg" />
               <a href="http://maps.google.com/?q={{location}}"> 
-                <div> {{location}}</div>
-                <div>{{location-2}}</div>
+                <div> {{{location}}}</div>
+                <div>{{{location-2}}}</div>
               </a>
             </div>
           </div>

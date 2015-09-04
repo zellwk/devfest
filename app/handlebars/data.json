@@ -4,7 +4,7 @@
       "text": "All <br> Week",
       "events": [{
         "title": "All-day hacking at Hackerspace.SG",
-        "image": "images/workspaces/hackerspace.jpg",
+        "image": "images/workspaces/hackerspace1.jpg",
         "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://hackerspace.sg' target='_blank'>http://hackerspace.sg</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
@@ -27,8 +27,9 @@
         "ticket": "Pre-register free"
       }, {
         "title": "Free day-pass at The Co",
-        "image": "images/workspaces/co.jpg",
+        "image": "images/workspaces/co1.jpg",
         "desc": "The Co is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. Please bring DevFest.Asia identification, and call 6595 6288 in advance to ensure availability on the day of booking.<br/><br/><a href='http://jointhe.co' target='_blank'>http://jointhe.co</a>",
+        "event-link": "http://jointhe.co",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
@@ -37,8 +38,9 @@
         "ticketinfo": "Register at the entrance upon arrival"
       }, {
         "title": "Shared work space for women",
-        "image": "images/workspaces/woolf.jpg",
+        "image": "images/workspaces/woolf1.jpg",
         "desc": "Woolf Works is a shared work space specifically for women, located on lively Joo Chiat Road, on the east coast of Singapore. Meet the great community of women to chat to over some amazing coffee.<br/><br/><a href='http://www.woolfworks.sg' target='_blank'>http://www.woolfworks.sg</a>",
+        "event-link": "http://www.woolfworks.sg",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
@@ -59,7 +61,8 @@
       }, {
         "title": "Work at the ACE Ideation Center",
         "image": "images/workspaces/ace.jpg",
-        "desc": "Visit Action Community for Entrepreneurship (ACE) is a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
+        "desc": "Visit Action Community for Entrepreneurship (ACE) is a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events' target='_blank'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
+        "event-link": "http://www.ace.sg/#calendar-of-events",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
@@ -625,11 +628,11 @@
     }],
     "workspaces": [{
       "name": "Hackerspace",
-      "image": "hackerspace.jpg",
+      "image": "hackerspace1.jpg",
       "url": "http://hackerspace.sg"
     }, {
       "name": "The Co",
-      "image": "co.jpg",
+      "image": "co1.jpg",
       "url": "http://jointhe.co"
     }, {
       "name": "Impact Hub",
@@ -641,7 +644,7 @@
       "url": "http://www.theworkingcapitol.com/en"
     }, {
       "name": "Woolf Works",
-      "image": "woolf.jpg",
+      "image": "woolf1.jpg",
       "url": "http://woolfworks.sg"
     }, {
       "name": "Workhouse",

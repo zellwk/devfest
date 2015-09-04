@@ -58,6 +58,16 @@
       "date": "16",
       "day": "Mon",
       "events": [{
+        "title": "iOS Dev Scout DevFest.Asia Edition",
+        "image": "images/events/ios-dev-scout.png",
+        "desc": " iOS Development, iOS Tools and Technologies",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": "am",
+        "location": "TBC",
+        "ticket": "Available soon"
+      },{
         "title": "Front End TL;DR",
         "image": "images/events/frontendtldr.jpg",
         "desc": "Front End TL;DR is a learning event where everyone participates.",
@@ -146,16 +156,6 @@
         "endTimeSuffix": "pm",
         "location": "TBC",
         "location-2": "",
-        "ticket": "Available soon"
-      }, {
-        "title": "iOS Dev Scout DevFest.Asia Edition",
-        "image": "images/events/ios-dev-scout.png",
-        "desc": " iOS Development, iOS Tools and Technologies",
-        "startTime": "7",
-        "startTimeSuffix": "pm",
-        "endTime": "9",
-        "endTimeSuffix": "am",
-        "location": "TBC",
         "ticket": "Available soon"
       }]
     },

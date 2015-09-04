@@ -34,7 +34,7 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "75 High St, Singapore 179435",
-        "ticketinfo": "Register at the entrance upon arrival"
+        "ticketinfo": "Register free at the entrance upon arrival"
       }, {
         "title": "Shared work space for women",
         "image": "images/workspaces/woolf.jpg",
@@ -44,9 +44,9 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "176 Joo Chiat Rd, Singpaore 427447",
-        "ticketinfo": "Come by and catch a free desk"
+        "ticketinfo": "Come by and catch a desk for free"
       }, {
-        "title": "Hang out at Our Workhouse",
+        "title": "Free hang-out at Our Workhouse",
         "image": "images/workspaces/workhouse.jpg",
         "desc": "Workhouse is a coworking space located in the heart of Little India. Meet our smart and diverse group of entrepreneurs with a social directive during DevFest.Asia. Best is to call 9853 1641 before to make sure we've space.<br/><br/><a href='http://www.ourworkhouse.com' target='_blank'>http://www.ourworkhouse.com</a>",
         "startTime": "9",
@@ -65,8 +65,8 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "1 Fusionopolis Walk,",
-        "location-2": "79 Ayer Rajah Crescent, Singapore",
-        "ticketinfo": "Free desks for walk-ins during DevFest.Asia"
+        "location-2": "#01-02 Solaris Building, South Tower <br> Singapore 138628",
+        "ticketinfo": "Register free at the entrance upon arrival"
       }]
     },
 

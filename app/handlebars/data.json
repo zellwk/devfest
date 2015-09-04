@@ -238,6 +238,7 @@
       "events": [{
         "title": "Free co-hacking at HSG",
         "image": "images/workspaces/hackerspace1.jpg",
+        "logo": "images/events/hackerspacesg-party-logo.png",
         "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://hackerspace.sg' target='_blank'>http://hackerspace.sg</a>",
         "startTime": "9",
         "startTimeSuffix": "am",

@@ -266,7 +266,6 @@ $(window).load(function() {
 
     $('.jsScrollSpyContainer').each(function(index, el) {
       var $el = $(el);
-      console.log('calc props');
       var props = calcScrollSpyProps(globalProps, $el);
 
       el.scrollSpy.update(props);

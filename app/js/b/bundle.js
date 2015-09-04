@@ -312,6 +312,9 @@ jQuery(document).ready(function ($) {
 },{}],3:[function(require,module,exports){
 (function (global){
 // Initializes scripts
+
+// Resets Hash location Immediately
+
 'use strict';
 
 global.jQuery = require('jquery');
@@ -364,13 +367,27 @@ $(window).load(function () {
   $(window).scroll(function (event) {
     var $container = $(window);
     if ($container.scrollTop() > activationPos) {
-      console.log('activated');
+      // console.log('activated');
       activateFixed();
     } else {
-      console.log('deactivated');
+      // console.log('deactivated');
       deactivateFixed();
     }
   });
+
+  // Checks location hash and navigates to it
+  if (location.hash) {
+    setTimeout(function () {
+      var eventsHeaderHeight = $('.c-events-nav').outerHeight();
+      var curPos = $(window).scrollTop();
+      var $target = $(location.hash);
+      var targetTop = parseInt($target.offset().top);
+
+      $('body').animate({
+        scrollTop: targetTop - eventsHeaderHeight
+      }, 1500);
+    }, 1000);
+  }
 });
 
 // $(document).ready(function() {
@@ -734,7 +751,6 @@ $(window).load(function () {
 
     $('.jsScrollSpyContainer').each(function (index, el) {
       var $el = $(el);
-      console.log('calc props');
       var props = calcScrollSpyProps(globalProps, $el);
 
       el.scrollSpy.update(props);

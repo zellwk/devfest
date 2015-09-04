@@ -221,7 +221,17 @@
         "location": "TBC",
         "location-2": "",
         "ticket": "Available soon"
-
+      }, {
+        "title": "iOS Dev Scout Nov Meetup",
+        "image": "images/events/ios-dev-scout.png",
+        "desc": " iOS Development, iOS Tools and Technologies",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": "am",
+        "location": "Paypal, Suntec Tower Five ",
+        "location-2": "5 Temasek Blvd, #09-01 <br> Singapore 038985",
+        "ticket": "Available soon"
       }]
     },
 

@@ -3,67 +3,70 @@
       "type": "event",
       "text": "All <br> Week",
       "events": [{
-        "title": "Hacker Space",
+        "title": "All-day hacking at Hackerspace.SG",
         "image": "images/workspaces/hackerspace.jpg",
-        "desc": "Hackerspace.SG is Singapore's very own Hackerspace. Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. <br> <br> Come hang out with the community in the evenings. Co-work with us during the day. We also host regular events, meetups, presentations, workshops, and movie nights for the local community.",
+        "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://hackerspace.sg' target='_blank'>http://hackerspace.sg</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "71 Ayer Rajah Crescent",
-        "location-2": "#05-16, Singapore 139951",
-        "ticketinfo": "Free"
+        "location": "344B King George’s Avenue",
+        "location-2": "Singapore 208576",
+        "ticketinfo": "Hop by and see if there's a chair free!"
       }, {
-        "title": "The Hub Singapore",
+        "title": "Impact Hub co-working",
         "image": "images/workspaces/hub.jpg",
-        "desc": "Building ecosystems that bridge early stage startups to mature ventures, The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. We are a coworking space in the heart of Singapore and also offer mentorship, incubation, workshops, events, marketing support, shared services, regional outreach and a dedicated corporate innovation program. <br><br>Please pre-register at <a href='http://bit.ly/hubpass'>bit.ly/hubpass</a> before coming.",
+        "desc": "The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. Come join us during DevFest.Asia for free co-working at our lovely, super new place. <br/><br/><a href='http://thehub.sg' target='_blank'>http://thehub.sg</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "128 Prinsep Street, Singapore 188655",
-        "ticketinfo": "Free"
+        "ticketinfo": "Free",
+        "event-link": "http://bit.ly/hubpass",
+        "ticket": "Pre-register free"
       }, {
-        "title": "The Co",
+        "title": "Free day-pass at The Co",
         "image": "images/workspaces/co.jpg",
-        "desc": "The Co. is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. <br><br>Registration with The Co personnel is required at the entrance. Please bring Devfest identification, and call in advance to ensure availability on the day of booking.",
+        "desc": "The Co is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. Please bring DevFest.Asia identification, and call 6595 6288 in advance to ensure availability on the day of booking.<br/><br/><a href='http://jointhe.co' target='_blank'>http://jointhe.co</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "75 High St, Singapore 179435",
-        "ticket": "Get Tickets"
+        "ticketinfo": "Register at the entrance upon arrival"
       }, {
-        "title": "Woolf Works",
+        "title": "Shared work space for women",
         "image": "images/workspaces/woolf.jpg",
-        "desc": "Woolf Works is a shared work space for women, located on lively Joo Chiat Rd, on the east coast of Singapore. We are a calm, quiet oasis in which you can really be productive. We also have an awesome coffee machine and a great community of women to chat to over your lunch break.",
+        "desc": "Woolf Works is a shared work space specifically for women, located on lively Joo Chiat Road, on the east coast of Singapore. Meet the great community of women to chat to over some amazing coffee.<br/><br/><a href='http://www.woolfworks.sg' target='_blank'>http://www.woolfworks.sg</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "176 Joo Chiat Rd, Singpaore 427447",
-        "ticket": "Get Tickets"
+        "ticketinfo": "Come by and catch a free desk"
       }, {
-        "title": "Workhouse",
+        "title": "Hang out at Our Workhouse",
         "image": "images/workspaces/workhouse.jpg",
-        "desc": "Workhouse is a coworking space located in the heart of Little India. Designed with startups and small businesses in mind, Workhouse aims to be a platform that fosters creative collaborations between community members by promoting entrepreneurship, diversity, and work with a social directive. <br><br> Just like our Facebook page and come down between 9 - 6 pm to use our space! (Subject to Availability, please call to reserve before coming down)",
+        "desc": "Workhouse is a coworking space located in the heart of Little India. Meet our smart and diverse group of entrepreneurs with a social directive during DevFest.Asia. Best is to call 9853 1641 before to make sure we've space.<br/><br/><a href='http://www.ourworkhouse.com' target='_blank'>http://www.ourworkhouse.com</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "2 Veerasamy Rd, Singapore 207305",
-        "ticketinfo": "Free from 17th - 23rd November"
+        "ticket": "Like on Facebook and come",
+        "event-link": "https://www.facebook.com/ourworkhouse"
       }, {
-        "title": "Ace Ideation Center",
+        "title": "Work at the ACE Ideation Center",
         "image": "images/workspaces/ace.jpg",
-        "desc": "Action Community for Entrepreneurship (ACE) Ltd is a private sector-led movement for entrepreneurs, by entrepreneurs. ACE helps aspiring entrepreneurs start up by building a vibrant community and connecting them to resources, people and knowledge. <br><br>     Please refer to <a href='http://www.ace.sg/#calendar-of-events'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
+        "desc": "Visit Action Community for Entrepreneurship (ACE) is a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "1 Fusionopolis Walk,",
-        "location-2": " #01-02 Solaris Building, South Tower <br> Singapore 138628",
-        "ticketinfo": "Free"
+        "location-2": "79 Ayer Rajah Crescent, Singapore",
+        "ticketinfo": "Free desks for walk-ins during DevFest.Asia"
       }]
     },
 

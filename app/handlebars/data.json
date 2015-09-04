@@ -3,7 +3,7 @@
       "type": "event",
       "text": "All<br>Week",
       "events": [{
-        "title": "All-day hacking at Hackerspace.SG",
+        "title": "Free co-hacking at HSG",
         "image": "images/workspaces/hackerspace1.jpg",
         "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://hackerspace.sg' target='_blank'>http://hackerspace.sg</a>",
         "startTime": "9",
@@ -14,52 +14,56 @@
         "location-2": "Singapore 208576",
         "ticketinfo": "Hop by and see if there's a chair free!"
       }, {
-        "title": "Impact Hub co-working",
+        "title": "Free Impact Hub co-working",
         "image": "images/workspaces/hub.jpg",
-        "desc": "The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. Come join us during DevFest.Asia for free co-working at our lovely, super new place. <br/><br/><a href='http://thehub.sg' target='_blank'>http://thehub.sg</a>",
+        "desc": "The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. Come join us during DevFest.Asia for free co-working at our lovely, super new place. Desks on a first-come, first-serve basis.<br/><br/><a href='http://thehub.sg' target='_blank'>http://thehub.sg</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "128 Prinsep Street, Singapore 188655",
+        "location": "128 Prinsep Street",
+        "location-2": "Singapore 188655",
         "ticketinfo": "Free",
         "event-link": "http://bit.ly/hubpass",
         "ticket": "Pre-register free"
       }, {
-        "title": "Free day-pass at The Co",
+        "title": "$20 Day-Pass at The Co",
         "image": "images/workspaces/co1.jpg",
-        "desc": "The Co is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. Please bring DevFest.Asia identification, and call 6595 6288 in advance to ensure availability on the day of booking.<br/><br/><a href='http://jointhe.co' target='_blank'>http://jointhe.co</a>",
+        "desc": "The Co is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. Please bring DevFest.Asia identification, and call 6595 6288 in advance. Includes all access hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://jointhe.co' target='_blank'>http://jointhe.co</a>",
         "event-link": "http://jointhe.co",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "75 High St, Singapore 179435",
-        "ticketinfo": "Register free at the entrance upon arrival"
+        "location": "75 High Street",
+        "location-2": "Singapore 179435",
+        "ticketinfo": "Register at the entrance upon arrival"
       }, {
-        "title": "Shared work space for women",
+        "title": "$25 Day-Pass at Woolf Works",
         "image": "images/workspaces/woolf1.jpg",
-        "desc": "Woolf Works is a shared work space specifically for women, located on lively Joo Chiat Road, on the east coast of Singapore. Meet the great community of women to chat to over some amazing coffee.<br/><br/><a href='http://www.woolfworks.sg' target='_blank'>http://www.woolfworks.sg</a>",
+        "desc": "Woolf Works is a shared work space specifically for women, located on lively Joo Chiat Road, on the east coast of Singapore. Meet our great community of women to chat over coffee. Includes hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://www.woolfworks.sg' target='_blank'>http://www.woolfworks.sg</a>",
         "event-link": "http://www.woolfworks.sg",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "176 Joo Chiat Rd, Singpaore 427447",
-        "ticketinfo": "Come by and catch a desk for free"
+        "location": "176 Joo Chiat Road",
+        "location-2": "Singpaore 427447",
+        "ticketinfo": "Register at the entrance upon arrival"
       }, {
-        "title": "Free hang-out at Our Workhouse",
+        "title": "Free co-working at Workhouse",
         "image": "images/workspaces/workhouse.jpg",
         "desc": "Workhouse is a coworking space located in the heart of Little India. Meet our smart and diverse group of entrepreneurs with a social directive during DevFest.Asia. Best is to call 9853 1641 before to make sure we've space.<br/><br/><a href='http://www.ourworkhouse.com' target='_blank'>http://www.ourworkhouse.com</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "2 Veerasamy Rd, Singapore 207305",
+        "location": "2 Veerasamy Road",
+        "location-2": "Singapore 207305",
         "ticket": "Like on Facebook and come",
         "event-link": "https://www.facebook.com/ourworkhouse"
       }, {
-        "title": "Work at the ACE Ideation Center",
+        "title": "Free co-working at ACE",
         "image": "images/workspaces/ace.jpg",
         "desc": "Visit Action Community for Entrepreneurship (ACE) is a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events' target='_blank'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
         "event-link": "http://www.ace.sg/#calendar-of-events",
@@ -69,7 +73,7 @@
         "endTimeSuffix": "pm",
         "location": "79 Ayer Rajah Crescent #01-13",
         "location-2": "Singapore 139955",
-        "ticketinfo": "Register free at the entrance upon arrival"
+        "ticketinfo": "Register at the entrance upon arrival"
       }]
     },
 
@@ -78,16 +82,16 @@
       "date": "12",
       "day": "Thu",
       "events": [{
-        "title": "Devfest.Asia Welcome Party",
+        "title": "DevFest.Asia Welcome Party",
         "image": "images/events/devfestparty.jpg",
-        "desc": "Offical kickoff event for Devfest.Asia 2015",
+        "desc": "Offical kickoff event for DevFest.Asia 2015",
         "startTime": "7",
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "am",
         "location": "TBC",
         "location-2": "",
-        "ticketinfo": "For all Devfest.Asia ticket holders"
+        "ticketinfo": "Free for all DevFest.Asia ticket holders"
       }]
     },
 
@@ -104,7 +108,7 @@
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "am",
-        "location": "344B King George's Ave",
+        "location": "344B King George's Avenue",
         "location-2": "Singapore 208576",
         "ticket": "Available Soon"
       }]

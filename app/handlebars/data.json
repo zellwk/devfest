@@ -1,7 +1,7 @@
 {
   "dates": [{
       "type": "event",
-      "text": "All <br> Week",
+      "text": "All<br>Week",
       "events": [{
         "title": "All-day hacking at Hackerspace.SG",
         "image": "images/workspaces/hackerspace1.jpg",

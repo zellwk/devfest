@@ -1,4 +1,7 @@
 // Initializes scripts
+
+// Resets Hash location Immediately
+
 global.jQuery = require('jquery');
 
 var $ = global.jQuery;
@@ -17,13 +20,15 @@ $(window).load(function() {
     .removeClass('jsFixedHeader')
     .addClass('jsFixedHeaderClone');
 
-  if (!$el.length) {return;}
+  if (!$el.length) {
+    return;
+  }
 
   var activationPos = $el.position().top;
 
   $clone.css({
     display: 'none',
-    position: 'absolute', 
+    position: 'absolute',
     top: '0',
     left: '0',
     right: '0',
@@ -49,13 +54,27 @@ $(window).load(function() {
   $(window).scroll(function(event) {
     var $container = $(window);
     if ($container.scrollTop() > activationPos) {
-      console.log('activated');
+      // console.log('activated');
       activateFixed();
     } else {
-      console.log('deactivated');
+      // console.log('deactivated');
       deactivateFixed();
     }
   });
+
+  // Checks location hash and navigates to it
+  if (location.hash) {
+    setTimeout(function() {
+      var eventsHeaderHeight = $('.c-events-nav').outerHeight();
+      var curPos = $(window).scrollTop();
+      var $target = $(location.hash);
+      var targetTop = parseInt($target.offset().top);
+
+      $('body').animate({
+        scrollTop: targetTop - eventsHeaderHeight
+      }, 1500);
+    }, 1000);
+  }
 })
 
 // $(document).ready(function() {

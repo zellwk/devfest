@@ -2,7 +2,7 @@
 
 {{#compare this.type 'event'}}
 <div class="wrap">
-  <div id="{{date}}" class="c-dates l-dates">
+  <div id="{{#if date}}{{date}}{{/if}}{{#if text}}allweek{{/if}}" class="c-dates l-dates">
     <div class="c-date l-date jsScrollSpyContainer">
       <div class="c-date__cal jsScrollSpy" data-scrollSpyHighlight="{{date}}">
         {{#if day}}<h4 class="weekday">Nov</h4> {{/if}}
@@ -14,11 +14,11 @@
     <div class="c-events l-events">
       {{#each events}}
       <div class="c-event l-event">
-        <div class="c-event__image" style="background-image:url('{{image}}');">
+        <a href="{{#if event-link}}{{event-link}}{{else}}https://www.eventnook.com/event/devfestasia2015/home{{/if}}" target="_blank" class="c-event__image" style="background-image:url('{{image}}');">
           {{#if logo}} 
           <div class="c-event__logo" style="background-image:url('{{logo}}');"></div>
           {{/if}}
-        </div>
+        </a>
         <div class="c-event__content">
           <div class="c-event__desc">
             <h3 class="c-event__title">{{title}}</h3>

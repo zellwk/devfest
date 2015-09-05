@@ -74,6 +74,7 @@
 }
 
 .c-event__image {
+  display: block;
   position: relative;
   background-position: center center;
   background-size: cover;
@@ -95,12 +96,14 @@
   position: absolute;
 
   // border: 4px solid white;
-  box-shadow: 0 0px 1px 0 black;
+  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.5);
   bottom: rhythm(0.25);
   right: rhythm(1);
   width: rhythm(4.5);
   height: rhythm(4.5);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .c-event__content {
@@ -121,11 +124,6 @@
 .c-event__desc {
   @include bp("large") {
     @include span(5 of 7);
-  }
-
-
-  a {
-    text-decoration: none;
   }
 }
 
@@ -162,6 +160,10 @@
 .c-event__location {
   display: block;
   margin-top: rhythm(0.25);
+
+  a {
+    text-decoration: none;
+  }
 
   img {
     float: left;

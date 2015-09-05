@@ -2,7 +2,7 @@
 
 {{#compare this.type 'event'}}
 <div class="wrap">
-  <div id="{{date}}" class="c-dates l-dates">
+  <div id="{{#if date}}{{date}}{{/if}}{{#if text}}allweek{{/if}}" class="c-dates l-dates">
     <div class="c-date l-date jsScrollSpyContainer">
       <div class="c-date__cal jsScrollSpy" data-scrollSpyHighlight="{{date}}">
         {{#if day}}<h4 class="weekday">Nov</h4> {{/if}}
@@ -14,15 +14,15 @@
     <div class="c-events l-events">
       {{#each events}}
       <div class="c-event l-event">
-        <div class="c-event__image" style="background-image:url('{{image}}');">
+        <a href="{{#if event-link}}{{event-link}}{{else}}https://www.eventnook.com/event/devfestasia2015/home{{/if}}" target="_blank" class="c-event__image" style="background-image:url('{{image}}');">
           {{#if logo}} 
           <div class="c-event__logo" style="background-image:url('{{logo}}');"></div>
           {{/if}}
-        </div>
+        </a>
         <div class="c-event__content">
           <div class="c-event__desc">
             <h3 class="c-event__title">{{title}}</h3>
-            <p>{{desc}}</p>
+            <p>{{{desc}}}</p>
             <div class="c-event__time">
               <div class="css-clock" data-time="{{startTime}}-{{endTime}}"></div>
               {{startTime}}{{startTimeSuffix}} - {{endTime}}{{endTimeSuffix}}
@@ -30,8 +30,8 @@
             <div class="c-event__location">
               <img class="i-location jsSvgInject" src="images/location1.svg" />
               <a href="http://maps.google.com/?q={{location}}"> 
-                <div> {{location}}</div>
-                <div>{{location-2}}</div>
+                <div> {{{location}}}</div>
+                <div>{{{location-2}}}</div>
               </a>
             </div>
           </div>

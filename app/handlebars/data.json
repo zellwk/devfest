@@ -4,16 +4,16 @@
       "date": "12",
       "day": "Thu",
       "events": [{
-        "title": "Devfest.Asia Welcome Party",
+        "title": "DevFest.Asia Welcome Party",
         "image": "images/events/devfestparty.jpg",
-        "desc": "Offical kickoff event for Devfest.Asia 2015",
+        "desc": "Offical kickoff event for DevFest.Asia 2015",
         "startTime": "7",
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "am",
         "location": "TBC",
         "location-2": "",
-        "ticketinfo": "For all Devfest.Asia ticket holders"
+        "ticketinfo": "Free for all DevFest.Asia ticket holders"
       }]
     },
 
@@ -30,7 +30,7 @@
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "am",
-        "location": "344B King George's Ave",
+        "location": "344B King George's Avenue",
         "location-2": "Singapore 208576",
         "ticket": "Available Soon"
       }]
@@ -58,6 +58,16 @@
       "date": "16",
       "day": "Mon",
       "events": [{
+        "title": "iOS Dev Scout DevFest.Asia Edition",
+        "image": "images/events/ios-dev-scout.png",
+        "desc": " iOS Development, iOS Tools and Technologies",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": "am",
+        "location": "TBC",
+        "ticket": "Available soon"
+      }, {
         "title": "Front End TL;DR",
         "image": "images/events/frontendtldr.jpg",
         "desc": "Front End TL;DR is a learning event where everyone participates.",
@@ -147,7 +157,6 @@
         "location": "TBC",
         "location-2": "",
         "ticket": "Available soon"
-        
       }]
     },
 
@@ -191,10 +200,22 @@
         "title": "WebAudio Hack Day",
         "image": "images/events/webaudio-js.jpg",
         "logo": "images/events/webaudio-js-logo.png",
-        "desc": "1. Talks on WebAudio, hack on WebAudio related projects and demos.",
+        "desc": "Talks on WebAudio, hack on WebAudio related projects and demos.",
         "startTime": "11",
         "startTimeSuffix": "am",
         "endTime": "9",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location-2": "",
+        "ticket": "Available soon"
+      }, {
+        "title": "Rails Girls (DevFest.Asia Edition)",
+        "image": "images/events/railsgirls.jpg",
+        "logo": "images/events/railsgirls-logo.jpg",
+        "desc": "Rails Girls is an initiative that provides a community for women to understand technology and to build their ideas.",
+        "startTime": "10",
+        "startTimeSuffix": "am",
+        "endTime": "1",
         "endTimeSuffix": "pm",
         "location": "TBC",
         "location-2": "",
@@ -220,6 +241,89 @@
         "location-2": "",
         "ticket": "Available soon"
 
+      }]
+    },
+
+    {
+      "type": "event",
+      "text": "All<br>Week",
+      "events": [{
+        "title": "Free co-hacking at HSG",
+        "image": "images/workspaces/hackerspace1.jpg",
+        "logo": "images/events/hackerspacesg-party-logo.png",
+        "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://hackerspace.sg' target='_blank'>http://hackerspace.sg</a>",
+        "startTime": "9",
+        "startTimeSuffix": "am",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "344B King George’s Avenue",
+        "location-2": "Singapore 208576",
+        "ticketinfo": "Hop by and see if there's a chair free!"
+      }, {
+        "title": "Free Impact Hub co-working",
+        "image": "images/workspaces/hub.jpg",
+        "logo": "images/workspaces/hub-logo.jpg",
+        "desc": "The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. Come join us during DevFest.Asia for free co-working at our lovely, super new place. Desks only for registered visitors.<br/><br/><a href='http://thehub.sg' target='_blank'>http://thehub.sg</a>",
+        "startTime": "9",
+        "startTimeSuffix": "am",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "128 Prinsep Street",
+        "location-2": "Singapore 188655",
+        "ticketinfo": "Free",
+        "event-link": "http://bit.ly/hubpass",
+        "ticket": "Register free"
+      }, {
+        "title": "$20 Day-Pass at The Co",
+        "image": "images/workspaces/co1.jpg",
+        "logo": "images/workspaces/co-logo.jpg",
+        "desc": "The Co is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. Please bring DevFest.Asia identification, and call 6595 6288 in advance. Includes all access hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://jointhe.co' target='_blank'>http://jointhe.co</a>",
+        "event-link": "http://jointhe.co",
+        "startTime": "9",
+        "startTimeSuffix": "am",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "75 High Street",
+        "location-2": "Singapore 179435",
+        "ticketinfo": "Register at the entrance upon arrival"
+      }, {
+        "title": "$25 Day-Pass at Woolf Works",
+        "image": "images/workspaces/woolf1.jpg",
+        "desc": "Woolf Works is a shared work space specifically for women, located on lively Joo Chiat Road, on the east coast of Singapore. Meet our great community of women to chat over coffee. Includes hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://www.woolfworks.sg' target='_blank'>http://www.woolfworks.sg</a>",
+        "event-link": "http://www.woolfworks.sg",
+        "startTime": "9",
+        "startTimeSuffix": "am",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "176 Joo Chiat Road",
+        "location-2": "Singpaore 427447",
+        "ticketinfo": "Register at the entrance upon arrival (women only)"
+      }, {
+        "title": "Free co-working at Workhouse",
+        "image": "images/workspaces/workhouse.jpg",
+        "logo": "images/workspaces/workhouse-logo.jpg",
+        "desc": "Workhouse is a coworking space located in the heart of Little India. Meet our smart and diverse group of entrepreneurs with a social directive during DevFest.Asia. Best is to call 9853 1641 before to make sure we've space.<br/><br/><a href='http://www.ourworkhouse.com' target='_blank'>http://www.ourworkhouse.com</a>",
+        "startTime": "9",
+        "startTimeSuffix": "am",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "2 Veerasamy Road",
+        "location-2": "Singapore 207305",
+        "ticket": "Like on Facebook to come",
+        "event-link": "https://www.facebook.com/ourworkhouse"
+      }, {
+        "title": "Free co-working at ACE",
+        "image": "images/workspaces/ace.jpg",
+        "logo": "images/workspaces/ace-logo.jpg",
+        "desc": "Visit the Action Community for Entrepreneurship (ACE), a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events' target='_blank'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
+        "event-link": "http://www.ace.sg/#calendar-of-events",
+        "startTime": "9",
+        "startTimeSuffix": "am",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "79 Ayer Rajah Crescent #01-13",
+        "location-2": "Singapore 139955",
+        "ticketinfo": "Register at the entrance upon arrival"
       }]
     },
 
@@ -330,6 +434,11 @@
       "logo": "images/sponsors/meteor.png",
       "background": "images/sponsors/meteor-image.jpg",
       "url": "https://www.meteor.com"
+    }, {
+      "name": "Flow Hero",
+      "logo": "images/sponsors/flowhero.png",
+      "background": "images/sponsors/flowhero-image.jpg",
+      "url": "http://flowhero.io"
     }]
   },
 
@@ -549,11 +658,11 @@
     }],
     "workspaces": [{
       "name": "Hackerspace",
-      "image": "hackerspace.jpg",
+      "image": "hackerspace1.jpg",
       "url": "http://hackerspace.sg"
     }, {
       "name": "The Co",
-      "image": "co.jpg",
+      "image": "co1.jpg",
       "url": "http://jointhe.co"
     }, {
       "name": "Impact Hub",
@@ -565,7 +674,7 @@
       "url": "http://www.theworkingcapitol.com/en"
     }, {
       "name": "Woolf Works",
-      "image": "woolf.jpg",
+      "image": "woolf1.jpg",
       "url": "http://woolfworks.sg"
     }, {
       "name": "Workhouse",

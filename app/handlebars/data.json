@@ -67,7 +67,7 @@
         "endTimeSuffix": "am",
         "location": "TBC",
         "ticket": "Available soon"
-      },{
+      }, {
         "title": "Front End TL;DR",
         "image": "images/events/frontendtldr.jpg",
         "desc": "Front End TL;DR is a learning event where everyone participates.",
@@ -200,10 +200,22 @@
         "title": "WebAudio Hack Day",
         "image": "images/events/webaudio-js.jpg",
         "logo": "images/events/webaudio-js-logo.png",
-        "desc": "1. Talks on WebAudio, hack on WebAudio related projects and demos.",
+        "desc": "Talks on WebAudio, hack on WebAudio related projects and demos.",
         "startTime": "11",
         "startTimeSuffix": "am",
         "endTime": "9",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location-2": "",
+        "ticket": "Available soon"
+      }, {
+        "title": "Rails Girls (DevFest.Asia Edition)",
+        "image": "images/events/railsgirls.jpg",
+        "logo": "images/events/railsgirls-logo.jpg",
+        "desc": "Rails Girls is an initiative that provides a community for women to understand technology and to build their ideas.",
+        "startTime": "10",
+        "startTimeSuffix": "am",
+        "endTime": "1",
         "endTimeSuffix": "pm",
         "location": "TBC",
         "location-2": "",

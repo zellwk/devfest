@@ -101,7 +101,9 @@
   right: rhythm(1);
   width: rhythm(4.5);
   height: rhythm(4.5);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .c-event__content {

@@ -238,6 +238,7 @@
       "events": [{
         "title": "Free co-hacking at HSG",
         "image": "images/workspaces/hackerspace1.jpg",
+        "logo": "images/events/hackerspacesg-party-logo.png",
         "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://hackerspace.sg' target='_blank'>http://hackerspace.sg</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
@@ -249,6 +250,7 @@
       }, {
         "title": "Free Impact Hub co-working",
         "image": "images/workspaces/hub.jpg",
+        "logo": "images/workspaces/hub-logo.jpg",
         "desc": "The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. Come join us during DevFest.Asia for free co-working at our lovely, super new place. Desks on a first-come, first-serve basis.<br/><br/><a href='http://thehub.sg' target='_blank'>http://thehub.sg</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
@@ -262,6 +264,7 @@
       }, {
         "title": "$20 Day-Pass at The Co",
         "image": "images/workspaces/co1.jpg",
+        "logo": "images/workspaces/co-logo.jpg",
         "desc": "The Co is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. Please bring DevFest.Asia identification, and call 6595 6288 in advance. Includes all access hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://jointhe.co' target='_blank'>http://jointhe.co</a>",
         "event-link": "http://jointhe.co",
         "startTime": "9",
@@ -286,6 +289,7 @@
       }, {
         "title": "Free co-working at Workhouse",
         "image": "images/workspaces/workhouse.jpg",
+        "logo": "images/workspaces/workhouse-logo.jpg",
         "desc": "Workhouse is a coworking space located in the heart of Little India. Meet our smart and diverse group of entrepreneurs with a social directive during DevFest.Asia. Best is to call 9853 1641 before to make sure we've space.<br/><br/><a href='http://www.ourworkhouse.com' target='_blank'>http://www.ourworkhouse.com</a>",
         "startTime": "9",
         "startTimeSuffix": "am",
@@ -298,6 +302,7 @@
       }, {
         "title": "Free co-working at ACE",
         "image": "images/workspaces/ace.jpg",
+        "logo": "images/workspaces/ace-logo.jpg",
         "desc": "Visit Action Community for Entrepreneurship (ACE) is a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events' target='_blank'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
         "event-link": "http://www.ace.sg/#calendar-of-events",
         "startTime": "9",

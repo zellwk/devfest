@@ -250,8 +250,12 @@
       }, {
         "title": "Free Impact Hub co-working",
         "image": "images/workspaces/hub.jpg",
+<<<<<<< HEAD
         "logo": "images/workspaces/hub-logo.jpg",
+        "desc": "The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. Come join us during DevFest.Asia for free co-working at our lovely, super new place. Desks on a first-come, first-serve basis.<br/><br/><a href='http://thehub.sg' target='_blank'>http://thehub.sg</a>",
+=======
         "desc": "The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. Come join us during DevFest.Asia for free co-working at our lovely, super new place. Desks only for registered visitors.<br/><br/><a href='http://thehub.sg' target='_blank'>http://thehub.sg</a>",
+>>>>>>> f48fea1d5c1c90865bc94182f32c082ef6512f3f
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
@@ -302,8 +306,12 @@
       }, {
         "title": "Free co-working at ACE",
         "image": "images/workspaces/ace.jpg",
+<<<<<<< HEAD
         "logo": "images/workspaces/ace-logo.jpg",
+        "desc": "Visit Action Community for Entrepreneurship (ACE) is a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events' target='_blank'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
+=======
         "desc": "Visit the Action Community for Entrepreneurship (ACE), a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events' target='_blank'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
+>>>>>>> f48fea1d5c1c90865bc94182f32c082ef6512f3f
         "event-link": "http://www.ace.sg/#calendar-of-events",
         "startTime": "9",
         "startTimeSuffix": "am",

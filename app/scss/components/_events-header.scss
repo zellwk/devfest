@@ -66,6 +66,7 @@
     // &:last-child {
     //   padding-right: 0;
     // }
+ 
   }
 
   .c-events-nav__weekend {
@@ -85,7 +86,7 @@
   }
 
   .is-active {
-    color: color(charcoal);
+    color: mix(#E74840, white, 50%);
   }
 }
 

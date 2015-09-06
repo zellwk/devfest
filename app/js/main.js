@@ -2,80 +2,16 @@
 
 // Resets Hash location Immediately
 
-global.jQuery = require('jquery');
-
 var $ = global.jQuery;
 
-require('./svg');
 // require('./smart-head');
+require('./simple-header');
 require('./zell-scrollspy');
-require('./nav-scroll');
-require('./canvas');
 require('./jqueryform');
+require('./canvas');
+require('./svg');
 
-// Header
-$(window).load(function() {
-  var $el = $('.jsFixedHeader');
-  var $clone = $('.jsFixedHeader').clone(true, true)
-    .removeClass('jsFixedHeader')
-    .addClass('jsFixedHeaderClone');
-
-  if (!$el.length) {
-    return;
-  }
-
-  var activationPos = $el.position().top;
-
-  $clone.css({
-    display: 'none',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    right: '0',
-    zIndex: '9999'
-  });
-
-  $el.after($clone);
-
-  function activateFixed() {
-    $clone.css({
-      'display': 'block',
-      'position': 'fixed'
-    })
-  }
-
-  function deactivateFixed() {
-    $clone.css({
-      'display': 'none',
-      'position': 'absolute',
-    });
-  }
-
-  $(window).scroll(function(event) {
-    var $container = $(window);
-    if ($container.scrollTop() > activationPos) {
-      // console.log('activated');
-      activateFixed();
-    } else {
-      // console.log('deactivated');
-      deactivateFixed();
-    }
-  });
-
-  // Checks location hash and navigates to it
-  if (location.hash) {
-    setTimeout(function() {
-      var eventsHeaderHeight = $('.c-events-nav').outerHeight();
-      var curPos = $(window).scrollTop();
-      var $target = $(location.hash);
-      var targetTop = parseInt($target.offset().top);
-
-      $('body').animate({
-        scrollTop: targetTop - eventsHeaderHeight
-      }, 1500);
-    }, 1000);
-  }
-})
+require('./hash-scroll');
 
 // $(document).ready(function() {
 //   var $form = $("#subscribeForm");

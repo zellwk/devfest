@@ -434,11 +434,6 @@
       "logo": "images/sponsors/meteor.png",
       "background": "images/sponsors/meteor-image.jpg",
       "url": "https://www.meteor.com"
-    }, {
-      "name": "Flow Hero",
-      "logo": "images/sponsors/flowhero.png",
-      "background": "images/sponsors/flowhero-image.jpg",
-      "url": "http://flowhero.io"
     }]
   },
 

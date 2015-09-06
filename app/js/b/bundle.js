@@ -44,6 +44,60 @@ jQuery(document).ready(function ($) {
 });
 
 },{"jquery":"jquery"}],2:[function(require,module,exports){
+(function (global){
+'use strict';
+
+var $ = global.jQuery;
+
+$(document).ready(function () {
+
+  if (location.hash) {
+    setTimeout(function () {
+      hashChangeScroll();
+    }, 800);
+  }
+
+  $('.c-events-nav').on('click', 'a', function (event) {
+    event.preventDefault();
+    replaceHashAndScroll($(this));
+  });
+
+  $('.c-community__ways').on('click', 'a', function (event) {
+    event.preventDefault();
+    replaceHashAndScroll($(this));
+  });
+
+  function replaceHashAndScroll($this) {
+    var hash = $this.attr('href');
+    var targetHash = hash.replace('-hash', '');
+
+    if (history.pushState) {
+      history.pushState(null, null, targetHash);
+    } else {
+      location.hash = targetHash;
+    }
+    hashChangeScroll();
+  }
+
+  function hashChangeScroll() {
+    var eventsHeaderHeight = $('.c-events-nav').outerHeight();
+
+    // scrolls to hash location
+    var curPos = $(window).scrollTop();
+    var currHash = location.hash;
+    var targetHash = location.hash + '-hash';
+    var $target = $(targetHash);
+    var targetTop = parseInt($target.offset().top);
+
+    $('body').animate({
+      scrollTop: targetTop - eventsHeaderHeight
+    }, 1500);
+  }
+});
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
+},{}],3:[function(require,module,exports){
 "use strict";
 
 (function (a) {
@@ -309,7 +363,7 @@ jQuery(document).ready(function ($) {
   };a.fn.ajaxSubmit.debug = !1;
 })(jQuery);
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 (function (global){
 // Initializes scripts
 
@@ -317,78 +371,16 @@ jQuery(document).ready(function ($) {
 
 'use strict';
 
-global.jQuery = require('jquery');
-
 var $ = global.jQuery;
 
-require('./svg');
 // require('./smart-head');
+require('./simple-header');
 require('./zell-scrollspy');
-require('./nav-scroll');
-require('./canvas');
 require('./jqueryform');
+require('./canvas');
+require('./svg');
 
-// Header
-$(window).load(function () {
-  var $el = $('.jsFixedHeader');
-  var $clone = $('.jsFixedHeader').clone(true, true).removeClass('jsFixedHeader').addClass('jsFixedHeaderClone');
-
-  if (!$el.length) {
-    return;
-  }
-
-  var activationPos = $el.position().top;
-
-  $clone.css({
-    display: 'none',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    right: '0',
-    zIndex: '9999'
-  });
-
-  $el.after($clone);
-
-  function activateFixed() {
-    $clone.css({
-      'display': 'block',
-      'position': 'fixed'
-    });
-  }
-
-  function deactivateFixed() {
-    $clone.css({
-      'display': 'none',
-      'position': 'absolute'
-    });
-  }
-
-  $(window).scroll(function (event) {
-    var $container = $(window);
-    if ($container.scrollTop() > activationPos) {
-      // console.log('activated');
-      activateFixed();
-    } else {
-      // console.log('deactivated');
-      deactivateFixed();
-    }
-  });
-
-  // Checks location hash and navigates to it
-  if (location.hash) {
-    setTimeout(function () {
-      var eventsHeaderHeight = $('.c-events-nav').outerHeight();
-      var curPos = $(window).scrollTop();
-      var $target = $(location.hash);
-      var targetTop = parseInt($target.offset().top);
-
-      $('body').animate({
-        scrollTop: targetTop - eventsHeaderHeight
-      }, 1500);
-    }, 1000);
-  }
-});
+require('./hash-scroll');
 
 // $(document).ready(function() {
 //   var $form = $("#subscribeForm");
@@ -437,40 +429,62 @@ $(window).load(function () {
 // });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./canvas":1,"./jqueryform":2,"./nav-scroll":4,"./svg":5,"./zell-scrollspy":6,"jquery":"jquery"}],4:[function(require,module,exports){
+
+},{"./canvas":1,"./hash-scroll":2,"./jqueryform":3,"./simple-header":5,"./svg":6,"./zell-scrollspy":7}],5:[function(require,module,exports){
+(function (global){
 'use strict';
 
-var $ = require('jquery');
+var $ = global.jQuery;
 
-$(document).ready(function () {
-  var eventsHeaderHeight = $('.c-events-nav').outerHeight();
+// Header
+$(window).ready(function () {
+  var $el = $('.jsFixedHeader');
+  var $clone = $('.jsFixedHeader').clone(true, true).removeClass('jsFixedHeader').addClass('jsFixedHeaderClone');
 
-  $('.c-events-nav').on('click', 'a', function (event) {
-    event.preventDefault();
-    var curPos = $(window).scrollTop();
-    var $target = $($(this).attr('href'));
-    var targetTop = parseInt($target.offset().top);
+  if (!$el.length) {
+    return;
+  }
 
-    $('body').animate({
-      scrollTop: targetTop - eventsHeaderHeight
-    }, 1500);
+  var activationPos = $el.position().top;
+
+  $clone.css({
+    display: 'none',
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    right: '0',
+    zIndex: '9999'
+  });
+
+  $el.after($clone);
+
+  function activateFixed() {
+    $clone.css({
+      'display': 'block',
+      'position': 'fixed'
+    });
+  }
+
+  function deactivateFixed() {
+    $clone.css({
+      'display': 'none',
+      'position': 'absolute'
+    });
+  }
+
+  $(window).scroll(function (event) {
+    var $container = $(window);
+    if ($container.scrollTop() > activationPos) {
+      activateFixed();
+    } else {
+      deactivateFixed();
+    }
   });
 });
 
-$(document).ready(function () {
-  $('.c-community__ways').on('click', 'a', function (event) {
-    event.preventDefault();
-    var curPos = $(window).scrollTop();
-    var $target = $($(this).attr('href'));
-    var targetTop = parseInt($target.offset().top);
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-    $('body').animate({
-      scrollTop: targetTop
-    }, 1500);
-  });
-});
-
-},{"jquery":"jquery"}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 var svgInjector = require('svg-injector');
@@ -481,7 +495,7 @@ if (svgsToInject) {
   svgInjector(svgsToInject);
 }
 
-},{"svg-injector":7}],6:[function(require,module,exports){
+},{"svg-injector":8}],7:[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
@@ -798,7 +812,7 @@ $(window).load(function () {
   }
 });
 
-},{"jquery":"jquery"}],7:[function(require,module,exports){
+},{"jquery":"jquery"}],8:[function(require,module,exports){
 /**
  * SVGInjector v1.1.2 - Fast, caching, dynamic inline SVG DOM injection library
  * https://github.com/iconic/SVGInjector
@@ -22686,6 +22700,8 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[3]);
+
+},{}]},{},[4])
+
 
 //# sourceMappingURL=bundle.js.map

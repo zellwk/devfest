@@ -8,6 +8,11 @@ $(document).ready(function() {
     }, 800);
   }
 
+  $('.downarr').click(function(event) {
+    event.preventDefault();
+    replaceHashAndScroll($(this));
+  }); 
+
   $('.c-events-nav').on('click', 'a', function(event) {
     event.preventDefault();
     replaceHashAndScroll($(this));

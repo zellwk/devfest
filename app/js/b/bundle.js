@@ -57,6 +57,11 @@ $(document).ready(function () {
     }, 800);
   }
 
+  $('.downarr').click(function (event) {
+    event.preventDefault();
+    replaceHashAndScroll($(this));
+  });
+
   $('.c-events-nav').on('click', 'a', function (event) {
     event.preventDefault();
     replaceHashAndScroll($(this));
@@ -96,7 +101,6 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-
 },{}],3:[function(require,module,exports){
 "use strict";
 
@@ -382,54 +386,52 @@ require('./svg');
 
 require('./hash-scroll');
 
-// $(document).ready(function() {
-//   var $form = $("#subscribeForm");
-//   var  $text = $('#subscribeForm .msg').find('span');
-//   var $spinner = $form.find('.spinner');
-//   var $social = $('.social');
+$(document).ready(function () {
+  var $form = $('#subscribeForm');
+  var $text = $('#subscribeForm .msg').find('span');
+  var $spinner = $form.find('.spinner');
+  var $social = $('.social');
 
-//   $("#subscribeForm").ajaxForm({
-//     url: "http://2014.cssconf.asia/addsubscriber.php",
-//     dataType: "html",
-//     beforeSubmit: function() {
-//       // Resets text before submitting
-//       $text.text("");
-//       // Starts spinner
-//       $spinner.show().addClass('play');
-//       $social.hide();
-//     },
-//     success: function(r) {
-//       if (r.substr(0, 6) != "Thanks") {
-//         console.log("No Thanks");
-//         $text.text(r.substr(0, r.indexOf('<br/>')));
-//       } else {
-//         console.log("Thanks");
-//         $form.find('input').val('');
-//         $text.text("Thanks. We'll keep you updated!");
+  $('#subscribeForm').ajaxForm({
+    url: 'http://2014.cssconf.asia/addsubscriber.php',
+    dataType: 'html',
+    beforeSubmit: function beforeSubmit() {
+      // Resets text before submitting
+      $text.text('');
+      // Starts spinner
+      $spinner.show().addClass('play');
+      $social.hide();
+    },
+    success: function success(r) {
+      if (r.substr(0, 6) != 'Thanks') {
+        console.log('No Thanks');
+        $text.text(r.substr(0, r.indexOf('<br/>')));
+      } else {
+        console.log('Thanks');
+        $form.find('input').val('');
+        $text.text('Thanks. We\'ll keep you updated!');
 
-//         $form.find('.social-msg').text('Check out our facebook page now! :)')
-//         // $social.show().addClass('form-show');
-//
-//         setTimeout(function() {
-//           window.location.href = 'http://facebook.com/devfestasia'
-//         }, 2000);
+        $form.find('.social-msg').text('Check out our facebook page now! :)');
+        // $social.show().addClass('form-show');
 
-//       }
-//     },
-//     error: function(r, s) {
-//       // $("#subscribeForm").removeClass("load").addClass("failure");
-//       $text.text("Something went utterly wrong...");
-//     },
-//     complete: function() {
-//       console.log('complete');
-//       $spinner.hide().removeClass('play');
-//       // Stops spinner
-//     }
-//   });
-// });
+        setTimeout(function () {
+          window.location.href = 'http://facebook.com/devfestasia';
+        }, 2000);
+      }
+    },
+    error: function error(r, s) {
+      // $("#subscribeForm").removeClass("load").addClass("failure");
+      $text.text('Something went utterly wrong...');
+    },
+    complete: function complete() {
+      console.log('complete');
+      $spinner.hide().removeClass('play');
+      // Stops spinner
+    }
+  });
+});
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-
 },{"./canvas":1,"./hash-scroll":2,"./jqueryform":3,"./simple-header":5,"./svg":6,"./zell-scrollspy":7}],5:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -483,7 +485,6 @@ $(window).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-
 },{}],6:[function(require,module,exports){
 'use strict';
 
@@ -22700,8 +22701,6 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-
-},{}]},{},[4])
-
+},{}]},{},[4]);
 
 //# sourceMappingURL=bundle.js.map

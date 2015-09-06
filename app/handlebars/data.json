@@ -22,6 +22,18 @@
       "date": "14",
       "day": "Sat",
       "events": [{
+        "title": "Dev Careers in Singapore",
+        "image": "images/events/workingmeetup.jpg",
+        "logo": "images/events/ga.jpg",
+        "desc": "Learn about developer opportunities in Singapore, the visa process and participate in 3min speed interviews with some of the coolest companies in town.",
+        "startTime": "3",
+        "startTimeSuffix": "pm",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "The Working Capitol, 1 Keong Saik Road",
+        "location-2": "Singapore 089109",
+        "ticket": "Available Soon"
+      },{
         "title": "HackerspaceSG 6th Birthday Party",
         "image": "images/events/hackerspacesg-party.png",
         "logo": "images/events/hackerspacesg-party-logo.png",
@@ -124,8 +136,7 @@
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "am",
-        "location": "Red Dot Design Museum",
-        "location-2": "28 Maxwell Road Singapore 069120",
+        "location": "TBC",
         "ticketinfo": "For CSSConf.Asia attendees"
       }]
     },
@@ -197,18 +208,6 @@
       "date": "21",
       "day": "Sat",
       "events": [{
-        "title": "WebAudio Hack Day",
-        "image": "images/events/webaudio-js.jpg",
-        "logo": "images/events/webaudio-js-logo.png",
-        "desc": "Talks on WebAudio, hack on WebAudio related projects and demos.",
-        "startTime": "11",
-        "startTimeSuffix": "am",
-        "endTime": "9",
-        "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location-2": "",
-        "ticket": "Available soon"
-      }, {
         "title": "Rails Girls (DevFest.Asia Edition)",
         "image": "images/events/railsgirls.jpg",
         "logo": "images/events/railsgirls-logo.jpg",
@@ -221,6 +220,18 @@
         "location-2": "",
         "ticket": "Available soon"
 
+      },{
+        "title": "WebAudio Hack Day",
+        "image": "images/events/webaudio-js.jpg",
+        "logo": "images/events/webaudio-js-logo.png",
+        "desc": "Talks on WebAudio, hack on WebAudio related projects and demos.",
+        "startTime": "11",
+        "startTimeSuffix": "am",
+        "endTime": "9",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location-2": "",
+        "ticket": "Available soon"
       }]
     },
 

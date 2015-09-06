@@ -25,7 +25,7 @@
             <p>{{{desc}}}</p>
             <div class="c-event__time">
               <div class="css-clock" data-time="{{startTime}}-{{endTime}}"></div>
-              {{startTime}}{{startTimeSuffix}} - {{endTime}}{{endTimeSuffix}}
+              {{startTime}}{{startTimeSuffix}} - {{endTime}}{{endTimeSuffix}}{{#if weekdays}} on weekdays {{/if}}
             </div>
             <div class="c-event__location">
               <img class="i-location jsSvgInject" src="images/location1.svg" />

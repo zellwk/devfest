@@ -256,6 +256,7 @@
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
+        "weekdays": true,
         "location": "344B King George’s Avenue",
         "location-2": "Singapore 208576",
         "ticketinfo": "Hop by and see if there's a chair free!"
@@ -268,6 +269,7 @@
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
+        "weekdays": true,
         "location": "128 Prinsep Street",
         "location-2": "Singapore 188655",
         "ticketinfo": "Free",
@@ -283,6 +285,7 @@
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
+        "weekdays": true,
         "location": "75 High Street",
         "location-2": "Singapore 179435",
         "ticketinfo": "Register at the entrance upon arrival"
@@ -295,6 +298,7 @@
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
+        "weekdays": true,
         "location": "176 Joo Chiat Road",
         "location-2": "Singpaore 427447",
         "ticketinfo": "Register at the entrance upon arrival (women only)"
@@ -307,6 +311,7 @@
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
+        "weekdays": true,
         "location": "2 Veerasamy Road",
         "location-2": "Singapore 207305",
         "ticket": "Like on Facebook to come",
@@ -321,6 +326,7 @@
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
+        "weekdays": true,
         "location": "79 Ayer Rajah Crescent #01-13",
         "location-2": "Singapore 139955",
         "ticketinfo": "Register at the entrance upon arrival"

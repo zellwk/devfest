@@ -101,6 +101,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],3:[function(require,module,exports){
 "use strict";
 
@@ -380,11 +381,10 @@ var $ = global.jQuery;
 // require('./smart-head');
 require('./simple-header');
 require('./zell-scrollspy');
-require('./jqueryform');
 require('./canvas');
 require('./svg');
-
 require('./hash-scroll');
+require('./jqueryform');
 
 $(document).ready(function () {
   var $form = $('#subscribeForm');
@@ -432,6 +432,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{"./canvas":1,"./hash-scroll":2,"./jqueryform":3,"./simple-header":5,"./svg":6,"./zell-scrollspy":7}],5:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -485,6 +486,7 @@ $(window).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],6:[function(require,module,exports){
 'use strict';
 
@@ -551,97 +553,103 @@ var ScrollSpy = (function () {
     init: function init() {
       var SS = this;
       var o = this.options;
-      var $el = o.$el;
-      var mode = o.mode;
-      var $container = $(o.container);
-      var buffer = o.buffer;
-      var enters = 0;
-      var leaves = 0;
-      var inside = false;
 
-      this.$el = $el;
+      this.$el = o.$el;
+      this.$container = $(o.container);
+      this.mode = o.mode;
+      this.buffer = o.buffer;
+      this.leaves = 0;
+      this.enters = 0;
+      this.inside = false;
 
-      $container.on('scroll.' + o.namespace, function (event) {
+      this.$container.on('scroll.' + o.namespace, function (event) {
         event.preventDefault();
+        SS.scrollEvent();
+      });
 
-        // Updates old position
-        SS.oldPosition = SS.curPosition;
+      // Hack for momentum scroll
+      // Problem: Scroll event fires only on end when momentum scrolling
+      // Possible solution: Timeout to check for page Offset
+      // (when between scroll start and scroll end). If Pos change, update.
 
-        var position = {
-          top: $(this).scrollTop(),
-          left: $(this).scrollLeft()
-        };
+      this.$container.on('touchstart.' + o.namespace, function (event) {
+        // Cannot prevent default, otherwise cannot scroll
+        // event.preventDefault();
 
-        var xy = mode == 'vertical' ? position.top + buffer : position.left + buffer;
+        SS.intervalId = setInterval(function () {
+          SS.scrollEvent();
+        }, 3);
+      });
 
-        var max = o.max;
-        var min = o.min;
-        var oldDirection = SS.direction;
-
-        // Updates new position
-        SS.curPosition = position;
-
-        // Updates Direction
-        if (o.mode === 'vertical') {
-          SS.direction = SS.curPosition.top > SS.oldPosition.top ? 'down' : 'up';
-        }
-
-        if (oldDirection != SS.direction) {
-          SS.onScrollDirectionChange();
-        }
-
-        // fit max
-        // if (typeof o.max === 'function') {
-        //   max = o.max();
-        // }
-
-        // if (typeof o.min === 'function') {
-        //   max = o.min();
-        // }
-
-        if (max === 0) {
-          max = mode == 'vertical' ? $container.height() : $container.outerWidth() + $(element).outerWidth();
-        }
-
-        // if we have reached the minimum bound but are below the max ...
-        if (xy >= min && xy <= max) {
-          // Trigger enter event
-          if (!inside) {
-            inside = true;
-            enters++;
-
-            // Fire enter event
-            // $el.trigger('scrollEnter', {
-            //   position: position
-            // });
-
-            SS.onEnter($el, position);
-          }
-
-          // Trigger Tick
-          $el.trigger('scrollTick', {
-            position: position,
-            inside: inside,
-            enters: enters,
-            leaves: leaves
-          });
-
-          SS.onTick($el, position, inside, enters, leaves);
-        } else {
-          if (inside) {
-            inside = false;
-            leaves++;
-
-            // Triggers leave event
-            $el.trigger('scrollLeave', {
-              position: position,
-              leaves: leaves
-            });
-
-            SS.onLeave($el, position);
-          }
+      this.$container.on('touchend.' + o.namespace, function (event) {
+        if (SS.intervalId) {
+          console.log('TOUCHEND + clearing interval');
+          clearInterval(SS.intervalId);
         }
       });
+    },
+
+    scrollEvent: function scrollEvent() {
+      // Updates old position
+      var o = this.options;
+      var $el = this.$el;
+
+      this.oldPosition = this.curPosition;
+
+      var position = {
+        top: this.$container.scrollTop(),
+        left: this.$container.scrollLeft()
+      };
+
+      var xy = this.mode == 'vertical' ? position.top + this.buffer : position.left + this.buffer;
+
+      var max = o.max;
+      var min = o.min;
+      var oldDirection = this.direction;
+
+      // Updates new position
+      this.curPosition = position;
+
+      // Updates Direction
+      if (this.mode === 'vertical') {
+        this.direction = this.curPosition.top > this.oldPosition.top ? 'down' : 'up';
+      }
+
+      if (oldDirection != this.direction) {
+        this.onScrollDirectionChange();
+      }
+
+      if (max === 0) {
+        max = this.mode == 'vertical' ? $container.height() : $container.outerWidth() + $(element).outerWidth();
+      }
+
+      // if we have reached the minimum bound but are below the max ...
+      if (xy >= min && xy <= max) {
+        // Trigger enter event
+        if (!this.inside) {
+          this.inside = true;
+          this.enters++;
+
+          this.onEnter($el, position);
+        }
+
+        // Trigger Tick
+        $el.trigger('scrollTick', {
+          position: position,
+          inside: this.inside,
+          enters: this.enters,
+          leaves: this.leaves
+        });
+
+        this.onTick($el, position, this.inside, this.enters, this.leaves);
+      } else {
+        if (this.inside) {
+          this.inside = false;
+          this.leaves++;
+
+          this.onLeave($el, position);
+        }
+      }
     },
 
     onEnter: function onEnter($el, pos) {
@@ -710,10 +718,7 @@ var ScrollSpy = (function () {
       }
     },
 
-    onScrollDirectionChange: function onScrollDirectionChange() {
-      this.setTransition();
-      this.changeMinMax();
-    },
+    onScrollDirectionChange: function onScrollDirectionChange() {},
 
     changeMinMax: function changeMinMax() {
       var o = this.options;
@@ -812,6 +817,9 @@ $(window).load(function () {
     };
   }
 });
+
+// this.setTransition();
+// this.changeMinMax();
 
 },{"jquery":"jquery"}],8:[function(require,module,exports){
 /**
@@ -22701,6 +22709,8 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[4]);
+
+},{}]},{},[4])
+
 
 //# sourceMappingURL=bundle.js.map

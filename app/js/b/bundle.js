@@ -101,6 +101,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],3:[function(require,module,exports){
 "use strict";
 
@@ -432,6 +433,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{"./canvas":1,"./hash-scroll":2,"./jqueryform":3,"./simple-header":5,"./svg":6,"./zell-scrollspy":7}],5:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -485,6 +487,7 @@ $(window).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],6:[function(require,module,exports){
 'use strict';
 
@@ -22706,6 +22709,8 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[4]);
+
+},{}]},{},[4])
+
 
 //# sourceMappingURL=bundle.js.map

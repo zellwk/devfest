@@ -7,11 +7,10 @@ var $ = global.jQuery;
 // require('./smart-head');
 require('./simple-header');
 require('./zell-scrollspy');
-require('./jqueryform');
 require('./canvas');
 require('./svg');
-
 require('./hash-scroll');
+require('./jqueryform');
 
 $(document).ready(function() {
   var $form = $("#subscribeForm");

@@ -381,11 +381,10 @@ var $ = global.jQuery;
 // require('./smart-head');
 require('./simple-header');
 require('./zell-scrollspy');
-require('./jqueryform');
 require('./canvas');
 require('./svg');
-
 require('./hash-scroll');
+require('./jqueryform');
 
 $(document).ready(function () {
   var $form = $('#subscribeForm');
@@ -554,97 +553,103 @@ var ScrollSpy = (function () {
     init: function init() {
       var SS = this;
       var o = this.options;
-      var $el = o.$el;
-      var mode = o.mode;
-      var $container = $(o.container);
-      var buffer = o.buffer;
-      var enters = 0;
-      var leaves = 0;
-      var inside = false;
 
-      this.$el = $el;
+      this.$el = o.$el;
+      this.$container = $(o.container);
+      this.mode = o.mode;
+      this.buffer = o.buffer;
+      this.leaves = 0;
+      this.enters = 0;
+      this.inside = false;
 
-      $container.on('scroll.' + o.namespace, function (event) {
+      this.$container.on('scroll.' + o.namespace, function (event) {
         event.preventDefault();
+        SS.scrollEvent();
+      });
 
-        // Updates old position
-        SS.oldPosition = SS.curPosition;
+      // Hack for momentum scroll
+      // Problem: Scroll event fires only on end when momentum scrolling
+      // Possible solution: Timeout to check for page Offset
+      // (when between scroll start and scroll end). If Pos change, update.
 
-        var position = {
-          top: $(this).scrollTop(),
-          left: $(this).scrollLeft()
-        };
+      this.$container.on('touchstart.' + o.namespace, function (event) {
+        // Cannot prevent default, otherwise cannot scroll
+        // event.preventDefault();
 
-        var xy = mode == 'vertical' ? position.top + buffer : position.left + buffer;
+        SS.intervalId = setInterval(function () {
+          SS.scrollEvent();
+        }, 3);
+      });
 
-        var max = o.max;
-        var min = o.min;
-        var oldDirection = SS.direction;
-
-        // Updates new position
-        SS.curPosition = position;
-
-        // Updates Direction
-        if (o.mode === 'vertical') {
-          SS.direction = SS.curPosition.top > SS.oldPosition.top ? 'down' : 'up';
-        }
-
-        if (oldDirection != SS.direction) {
-          SS.onScrollDirectionChange();
-        }
-
-        // fit max
-        // if (typeof o.max === 'function') {
-        //   max = o.max();
-        // }
-
-        // if (typeof o.min === 'function') {
-        //   max = o.min();
-        // }
-
-        if (max === 0) {
-          max = mode == 'vertical' ? $container.height() : $container.outerWidth() + $(element).outerWidth();
-        }
-
-        // if we have reached the minimum bound but are below the max ...
-        if (xy >= min && xy <= max) {
-          // Trigger enter event
-          if (!inside) {
-            inside = true;
-            enters++;
-
-            // Fire enter event
-            // $el.trigger('scrollEnter', {
-            //   position: position
-            // });
-
-            SS.onEnter($el, position);
-          }
-
-          // Trigger Tick
-          $el.trigger('scrollTick', {
-            position: position,
-            inside: inside,
-            enters: enters,
-            leaves: leaves
-          });
-
-          SS.onTick($el, position, inside, enters, leaves);
-        } else {
-          if (inside) {
-            inside = false;
-            leaves++;
-
-            // Triggers leave event
-            $el.trigger('scrollLeave', {
-              position: position,
-              leaves: leaves
-            });
-
-            SS.onLeave($el, position);
-          }
+      this.$container.on('touchend.' + o.namespace, function (event) {
+        if (SS.intervalId) {
+          console.log('TOUCHEND + clearing interval');
+          clearInterval(SS.intervalId);
         }
       });
+    },
+
+    scrollEvent: function scrollEvent() {
+      // Updates old position
+      var o = this.options;
+      var $el = this.$el;
+
+      this.oldPosition = this.curPosition;
+
+      var position = {
+        top: this.$container.scrollTop(),
+        left: this.$container.scrollLeft()
+      };
+
+      var xy = this.mode == 'vertical' ? position.top + this.buffer : position.left + this.buffer;
+
+      var max = o.max;
+      var min = o.min;
+      var oldDirection = this.direction;
+
+      // Updates new position
+      this.curPosition = position;
+
+      // Updates Direction
+      if (this.mode === 'vertical') {
+        this.direction = this.curPosition.top > this.oldPosition.top ? 'down' : 'up';
+      }
+
+      if (oldDirection != this.direction) {
+        this.onScrollDirectionChange();
+      }
+
+      if (max === 0) {
+        max = this.mode == 'vertical' ? $container.height() : $container.outerWidth() + $(element).outerWidth();
+      }
+
+      // if we have reached the minimum bound but are below the max ...
+      if (xy >= min && xy <= max) {
+        // Trigger enter event
+        if (!this.inside) {
+          this.inside = true;
+          this.enters++;
+
+          this.onEnter($el, position);
+        }
+
+        // Trigger Tick
+        $el.trigger('scrollTick', {
+          position: position,
+          inside: this.inside,
+          enters: this.enters,
+          leaves: this.leaves
+        });
+
+        this.onTick($el, position, this.inside, this.enters, this.leaves);
+      } else {
+        if (this.inside) {
+          this.inside = false;
+          this.leaves++;
+
+          this.onLeave($el, position);
+        }
+      }
     },
 
     onEnter: function onEnter($el, pos) {
@@ -713,10 +718,7 @@ var ScrollSpy = (function () {
       }
     },
 
-    onScrollDirectionChange: function onScrollDirectionChange() {
-      this.setTransition();
-      this.changeMinMax();
-    },
+    onScrollDirectionChange: function onScrollDirectionChange() {},
 
     changeMinMax: function changeMinMax() {
       var o = this.options;
@@ -815,6 +817,9 @@ $(window).load(function () {
     };
   }
 });
+
+// this.setTransition();
+// this.changeMinMax();
 
 },{"jquery":"jquery"}],8:[function(require,module,exports){
 /**
@@ -1260,7 +1265,7 @@ $(window).load(function () {
 
 },{}],"jquery":[function(require,module,exports){
 /*!
- * jQuery JavaScript Library v2.1.4
+ * jQuery JavaScript Library v2.1.3
  * http://jquery.com/
  *
  * Includes Sizzle.js
@@ -1270,7 +1275,7 @@ $(window).load(function () {
  * Released under the MIT license
  * http://jquery.org/license
  *
- * Date: 2015-04-28T16:01Z
+ * Date: 2014-12-18T15:11Z
  */
 
 (function( global, factory ) {
@@ -1328,7 +1333,7 @@ var
 	// Use the correct document accordingly with window argument (sandbox)
 	document = window.document,
 
-	version = "2.1.4",
+	version = "2.1.3",
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -1792,12 +1797,7 @@ jQuery.each("Boolean Number String Function Array Date RegExp Object Error".spli
 });
 
 function isArraylike( obj ) {
-
-	// Support: iOS 8.2 (not reproducible in simulator)
-	// `in` check used to prevent JIT error (gh-2145)
-	// hasOwn isn't used here due to false negatives
-	// regarding Nodelist length in IE
-	var length = "length" in obj && obj.length,
+	var length = obj.length,
 		type = jQuery.type( obj );
 
 	if ( type === "function" || jQuery.isWindow( obj ) ) {

@@ -68,6 +68,8 @@
   border: 1px solid #eee;
 
   @include bp("med+1") {
+    display: flex;
+    flex-direction: column;
     border-radius: 3px;
     box-shadow: 0 1px 0px 0px rgba(black, 0.1);
   }
@@ -108,10 +110,16 @@
 
 .c-event__content {
   @include cf;
-
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: rhythm(1);
   font-size: 0.875rem;
   line-height: 1.333;
+
+  @include bp("large") {
+    display: block;
+  }
 }
 
 .c-event__title {
@@ -122,6 +130,7 @@
 }
 
 .c-event__desc {
+  flex-grow: 1;
   @include bp("large") {
     @include span(5 of 7);
   }

@@ -109,6 +109,7 @@
 }
 
 .c-event__content {
+  position: relative;
   @include cf;
   display: flex;
   flex-direction: column;

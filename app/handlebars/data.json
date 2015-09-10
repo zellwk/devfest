@@ -4,6 +4,25 @@
       "date": "12",
       "day": "Thu",
       "events": [{
+        "title": "Grumpy Git Workshop",
+        "image": "images/events/devfestparty.jpg",
+        "logo": "images/events/grumpy-gits-logo.jpg",
+        "desc": "Offical kickoff event for DevFest.Asia 2015",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "12",
+        "endTimeSuffix": "am",
+        "location": "TBC",
+        "location-2": "",
+        "ticketinfo": "Free for all DevFest.Asia ticket holders"
+      }]
+    },
+
+    {
+      "type": "event",
+      "date": "13",
+      "day": "Fri",
+      "events": [{
         "title": "DevFest.Asia Welcome Party",
         "image": "images/events/devfestparty.jpg",
         "desc": "Offical kickoff event for DevFest.Asia 2015",
@@ -259,6 +278,20 @@
       "type": "event",
       "text": "All<br>Week",
       "events": [{
+        "title": "$50 for your Devfest.Asia Desk",
+        "image": "images/workspaces/workingcapitol.jpg",
+        "logo": "images/events/workingcapitol-logo.png",
+        "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://hackerspace.sg' target='_blank'>http://hackerspace.sg</a>",
+        "featured": true,
+        "startTime": "9",
+        "startTimeSuffix": "am",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "weekdays": true,
+        "location": "344B King George’s Avenue",
+        "location-2": "Singapore 208576",
+        "ticketinfo": "Hop by and see if there's a chair free!"
+      },{
         "title": "Free co-hacking at HSG",
         "image": "images/workspaces/hackerspace1.jpg",
         "logo": "images/events/hackerspacesg-party-logo.png",

@@ -1,0 +1,82 @@
+.c-devfest-featured {
+  @include ff(secondary);
+
+  position: absolute;
+  right: rhythm(1.5);
+  top: rhythm(1);
+  z-index: 999;
+}
+
+.c-devfest-featured__badge {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: rhythm(5);
+  height: rhythm(5);
+  background: radial-gradient(lighten(color(bleu-de-france), 3%), color(bleu-de-france));
+  border: 4px solid color(bleu-de-france);
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px color(bleu-de-france), inset 0 0 0 6px white;
+  transform: rotateZ(15deg);
+
+  span {
+    padding-left: 6px;
+    padding-top: 5px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.c-devfest-featured__aura {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0 0 12px 4px color(bleu-de-france);
+  border-radius: 100%;
+  display: block;
+  width: rhythm(5);
+  height: rhythm(5);
+  animation: aura 2s infinite ease-out;
+}
+
+.c-devfest-featured--coworking {
+  position: relative;
+  right: 0;
+  top: 0;
+
+  @include bp("large") {
+    top: rhythm(1);
+    right: rhythm(1);
+    position: absolute;
+  }
+}
+
+.c-devfest-featured__badge--coworking {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  float: right;
+
+  @include bp("large") {
+    float: none;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+
+  span {
+    font-size: 15px;
+    padding-left: 4px;
+    padding-top: 1px;
+  }
+
+  .c-devfeat-featured__aura {
+
+  }
+}

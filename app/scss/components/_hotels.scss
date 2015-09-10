@@ -65,59 +65,6 @@
   }
 }
 
-.c-devfest-featured {
-  @include ff(secondary);
-
-  position: absolute;
-  right: rhythm(1.5);
-  top: rhythm(1);
-  z-index: 999;
-}
-
-.c-devfest-featured__badge {
-  width: rhythm(5);
-  height: rhythm(5);
-  border-radius: 100%;
-  background: radial-gradient(lighten(color(bleu-de-france), 3%), color(bleu-de-france));
-  border: 4px solid color(bleu-de-france);
-  box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px color(bleu-de-france), inset 0 0 0 6px white;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  line-height: 1;
-  color: white;
-  transform: rotateZ(15deg);
-
-  // animation: rotater 2s 1s infinite ease-out;
-
-  span {
-    line-height: 1.5;
-    text-transform: uppercase;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    text-align: center;
-    padding-left: 6px;
-    padding-top: 5px;
-  }
-}
-
-.c-devfest-featured__aura {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 99;
-  box-shadow: 0 0 12px 4px color(bleu-de-france);
-
-  // border: 4px solid color(bleu-de-france);
-  border-radius: 100%;
-  display: block;
-  width: rhythm(5);
-  height: rhythm(5);
-  animation: aura 2s infinite ease-out;
-}
-
 .trip-advisor {
   position: relative;
   flex-grow: 1;

@@ -483,6 +483,11 @@
       "logo": "images/sponsors/meteor.png",
       "background": "images/sponsors/meteor-image.jpg",
       "url": "https://www.meteor.com"
+    }, {
+      "name": "sonoport",
+      "logo": "images/sponsors/sonoport.png",
+      "background": "images/sponsors/sonoport-image.jpg",
+      "url": "http://www.sonoport.com"
     }]
   },
 

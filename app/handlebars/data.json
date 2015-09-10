@@ -5,16 +5,16 @@
       "day": "Thu",
       "events": [{
         "title": "Grumpy Git Workshop",
-        "image": "images/events/devfestparty.jpg",
+        "image": "images/events/grumpy-gits-pic.jpg",
         "logo": "images/events/grumpy-gits-logo.jpg",
-        "desc": "Offical kickoff event for DevFest.Asia 2015",
-        "startTime": "7",
+        "desc": "Advancing git literacy through talks and workshops. Great for beginners, even better for pros. May the forks be with you.",
+        "startTime": "6",
         "startTimeSuffix": "pm",
-        "endTime": "12",
+        "endTime": "9",
         "endTimeSuffix": "am",
         "location": "TBC",
         "location-2": "",
-        "ticketinfo": "Free for all DevFest.Asia ticket holders"
+        "ticket": "Available soon"
       }]
     },
 
@@ -277,19 +277,19 @@
       "type": "event",
       "text": "All<br>Week",
       "events": [{
-        "title": "$50 for your Devfest.Asia Desk",
+        "title": "$50 for your Devfest.Asia desk",
         "image": "images/workspaces/workingcapitol.jpg",
         "logo": "images/workspaces/workingcapitol-logo.jpg",
-        "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://www.theworkingcapitol.com/en' target='_blank'>http://www.theworkingcapitol.com/en</a>",
+        "desc": "The Working Capitol gives you access to its beautiful space, Wi-Fi and community for the entire timespan of DevFest.Asia. It's also venue of some of our other events. Hop by, sign up with your DevFest.Asia identification and enjoy!<br/><br/><a href='http://www.theworkingcapitol.com' target='_blank'>http://www.theworkingcapitol.com</a>",
         "featured": true,
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "weekdays": true,
-        "location": "344B King George’s Avenue",
-        "location-2": "Singapore 208576",
-        "ticketinfo": "Hop by and see if there's a chair free!"
+        "location": "1 Keong Saik Road",
+        "location-2": "Singapore 089109",
+        "ticketinfo": "Hop by and sign up"
       },{
         "title": "Free co-hacking at HSG",
         "image": "images/workspaces/hackerspace1.jpg",
@@ -302,7 +302,7 @@
         "weekdays": true,
         "location": "344B King George’s Avenue",
         "location-2": "Singapore 208576",
-        "ticketinfo": "Hop by and see if there's a chair free!"
+        "ticketinfo": "Register at the entrance upon arrival"
       }, {
         "title": "Free Impact Hub co-working",
         "image": "images/workspaces/hub.jpg",

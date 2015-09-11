@@ -127,7 +127,7 @@
         "endTimeSuffix": "pm",
         "location": "TBC",
         "price": "free",
-        "ticket": "Available Soon"
+        "ticket": "Available soon"
       }]
     },
 
@@ -146,7 +146,7 @@
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Available Soon"
+        "ticket": "Get ticket S$300"
       }, {
         "title": "CSSConf.Asia After Party",
         "image": "images/events/cssconfparty.jpg",
@@ -175,7 +175,7 @@
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Available soon"
+        "ticket": "Get ticket S$600"
       }, {
         "title": "NodeBots - Sumo Bot Battles",
         "image": "images/events/nodebots.png",
@@ -205,7 +205,7 @@
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Available soon"
+        "ticket": "Get ticket S$600"
 
       }, {
         "title": "JSConf.Asia After Party",

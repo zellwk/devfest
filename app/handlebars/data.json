@@ -37,6 +37,13 @@
       }]
     },
 
+     {
+      "type": "tickets",
+      "title": "Pssst. Want go to every conference?",
+      "desc": "You can grab a Devfest Ticket for just $900!",
+      "button": "Get the Devfest Ticket"
+    },
+
     {
       "type": "event",
       "date": "14",

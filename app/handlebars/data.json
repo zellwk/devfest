@@ -6,6 +6,7 @@
       "events": [{
         "title": "Grumpy Gits - Git Learning",
         "image": "images/events/grumpy-gits-pic.jpg",
+        "image-link": "https://www.facebook.com/groups/sggrumpygits",
         "logo": "images/events/grumpy-gits-logo.jpg",
         "desc": "Advancing git literacy through talks and workshops. Great for beginners, even better for pros. May the forks be with you.",
         "startTime": "6",
@@ -36,6 +37,13 @@
       }]
     },
 
+     {
+      "type": "tickets",
+      "title": "Pssst. Want go to every event?",
+      "desc": "You can grab a Devfest.Asia Festival Ticket for just $900!",
+      "button": "Get the Festival Ticket"
+    },
+
     {
       "type": "event",
       "date": "14",
@@ -55,6 +63,7 @@
       },{
         "title": "HackerspaceSG 6th Birthday Party",
         "image": "images/events/hackerspacesg-party.png",
+        "image-link": "http://hackerspace.sg",
         "logo": "images/events/hackerspacesg-party-logo.png",
         "desc": "Hackerspace is turning 6! Join us for some good food and drinks at Singapore's first kiasu-free zone",
         "startTime": "7",
@@ -74,6 +83,7 @@
       "events": [{
         "title": "NodeSchool",
         "image": "images/events/nodeschool2.png",
+        "image-link": "http://nodeschool.io",
         "desc": "NodeSchool is an open source project run by volunteers with two goals: to create high quality programming curriculum and to host community learning events.",
         "startTime": "10",
         "startTimeSuffix": "am",
@@ -91,6 +101,7 @@
       "events": [{
         "title": "iOS Dev Scout DevFest.Asia Edition",
         "image": "images/events/ios-dev-scout.png",
+        "image-link": "https://www.facebook.com/groups/iosdevscout",
         "desc": " iOS Development, iOS Tools and Technologies",
         "startTime": "7",
         "startTimeSuffix": "pm",
@@ -101,6 +112,7 @@
       }, {
         "title": "Front End TL;DR",
         "image": "images/events/frontendtldr.jpg",
+        "image-link": "http://www.meetup.com/Singapore-JS/",
         "desc": "Front End TL;DR is a learning event where everyone participates.",
         "startTime": "7",
         "startTimeSuffix": "pm",
@@ -119,6 +131,7 @@
       "events": [{
         "title": "Talk.js Special Edition",
         "image": "images/events/talk-js.jpeg",
+        "image-link": "http://www.meetup.com/Singapore-JS/",
         "logo": "images/events/talk-js-logo.png",
         "desc": "November meetup for talk.js. Few short talks in the evening + dinner and mingling.",
         "startTime": "7",
@@ -138,6 +151,7 @@
       "events": [{
         "title": "CSSConf.Asia",
         "image": "images/events/cssconf.jpg",
+        "image-link": "http://2015.cssconf.asia",
         "logo": "images/events/cssconf-logo.png",
         "desc": "Bridging web design and implementation.<br/><br/><a href='http://2015.cssconf.asia' target='_blank'>http://2015.cssconf.asia</a>",
         "startTime": "9",
@@ -150,6 +164,7 @@
       }, {
         "title": "CSSConf.Asia After Party",
         "image": "images/events/cssconfparty.jpg",
+        "image-link": "http://2015.cssconf.asia",
         "desc": "Offical CSSConf.Asia after party for conference attendees",
         "startTime": "7",
         "startTimeSuffix": "pm",
@@ -167,6 +182,7 @@
       "events": [{
         "title": "JSConf.Asia (Day 1)",
         "image": "images/events/jsconf1.jpg",
+        "image-link": "http://2015.jsconf.asia",
         "logo": "images/events/jsconf-logo.png",
         "desc": "It‘s a bit like TED just for web devs.<br/><br/><a href='http://2015.jsconf.asia' target='_blank'>http://2015.jsconf.asia</a>",
         "startTime": "9",
@@ -179,6 +195,7 @@
       }, {
         "title": "NodeBots - Sumo Bot Battles",
         "image": "images/events/nodebots.png",
+        "image-link": "http://nodebots.io",
         "desc": "A day workshop where participants will learn how to build a simplebot with Arduino, servos and cardboard. They will then programme it using node.js.",
         "startTime": "9",
         "startTimeSuffix": "am",
@@ -197,6 +214,7 @@
       "events": [{
         "title": "JSConf.Asia (Day 2)",
         "image": "images/events/jsconf2.jpg",
+        "image-link": "http://2015.jsconf.asia",
         "logo": "images/events/jsconf-logo.png",
         "desc": "It‘s a bit like TED just for web devs.<br/><br/><a href='http://2015.jsconf.asia' target='_blank'>http://2015.jsconf.asia</a>",
         "startTime": "9",
@@ -210,6 +228,7 @@
       }, {
         "title": "JSConf.Asia After Party",
         "image": "images/events/jsconfparty.jpg",
+        "image-link": "http://2015.jsconf.asia",
         "desc": "Offical JSConf.Asia after party for conference attendees",
         "startTime": "7",
         "startTimeSuffix": "pm",
@@ -229,6 +248,7 @@
       "events": [{
         "title": "Rails Girls (DevFest.Asia Edition)",
         "image": "images/events/railsgirls.jpg",
+        "image-link": "http://www.meetup.com/Singapore-Ruby-Group/",
         "logo": "images/events/railsgirls-logo.jpg",
         "desc": "Rails Girls is an initiative that provides a community for women to understand technology and to build their ideas.",
         "startTime": "10",
@@ -261,6 +281,7 @@
       "events": [{
         "title": "KopiJS",
         "image": "images/events/kopijs.jpg",
+        "image-link": "http://kopijs.org",
         "logo": "images/events/kopijs-logo.png",
         "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
         "startTime": "11",
@@ -279,6 +300,7 @@
       "events": [{
         "title": "$50 for your Devfest.Asia desk",
         "image": "images/workspaces/workingcapitol.jpg",
+        "image-link": "http://www.theworkingcapitol.com/en",
         "logo": "images/workspaces/workingcapitol-logo.jpg",
         "desc": "The Working Capitol gives you access to its beautiful space, Wi-Fi and community for the entire timespan of DevFest.Asia. It's also the venue for some of our other events. Hop by, sign up with your DevFest.Asia identification and enjoy!<br/><br/><a href='http://www.theworkingcapitol.com' target='_blank'>http://www.theworkingcapitol.com</a>",
         "featured": true,
@@ -293,6 +315,7 @@
       },{
         "title": "Free co-hacking at HSG",
         "image": "images/workspaces/hackerspace1.jpg",
+        "image-link": "http://hackerspace.sg",
         "logo": "images/events/hackerspacesg-party-logo.png",
         "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://hackerspace.sg' target='_blank'>http://hackerspace.sg</a>",
         "startTime": "9",
@@ -306,6 +329,7 @@
       }, {
         "title": "Free Impact Hub co-working",
         "image": "images/workspaces/hub.jpg",
+        "image-link": "http://thehub.sg",
         "logo": "images/workspaces/hub-logo.jpg",
         "desc": "The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. Come join us during DevFest.Asia for free co-working at our lovely, super new place. Desks only for registered visitors.<br/><br/><a href='http://thehub.sg' target='_blank'>http://thehub.sg</a>",
         "startTime": "9",
@@ -321,6 +345,7 @@
       }, {
         "title": "$20 Day-Pass at The Co",
         "image": "images/workspaces/co1.jpg",
+        "image-link": "http://jointhe.co",
         "logo": "images/workspaces/co-logo.jpg",
         "desc": "The Co is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. Please bring DevFest.Asia identification, and call 6595 6288 in advance. Includes all access hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://jointhe.co' target='_blank'>http://jointhe.co</a>",
         "event-link": "http://jointhe.co",
@@ -335,6 +360,7 @@
       }, {
         "title": "$25 Day-Pass at Woolf Works",
         "image": "images/workspaces/woolf1.jpg",
+        "image-link": "http://www.woolfworks.sg",
         "desc": "Woolf Works is a shared work space specifically for women, located on lively Joo Chiat Road, on the east coast of Singapore. Meet our great community of women to chat over coffee. Includes hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://www.woolfworks.sg' target='_blank'>http://www.woolfworks.sg</a>",
         "event-link": "http://www.woolfworks.sg",
         "startTime": "9",
@@ -348,6 +374,7 @@
       }, {
         "title": "Free co-working at Workhouse",
         "image": "images/workspaces/workhouse.jpg",
+        "image-link": "http://www.ourworkhouse.com",
         "logo": "images/workspaces/workhouse-logo.jpg",
         "desc": "Workhouse is a coworking space located in the heart of Little India. Meet our smart and diverse group of entrepreneurs with a social directive during DevFest.Asia. Best is to call 6291 2650 before to make sure we've space.<br/><br/><a href='http://www.ourworkhouse.com' target='_blank'>http://www.ourworkhouse.com</a>",
         "startTime": "9",

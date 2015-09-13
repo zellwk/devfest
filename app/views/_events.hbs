@@ -14,7 +14,7 @@
     <div class="c-events l-events">
       {{#each events}}
       <div class="c-event l-event">
-        <a href="{{#if event-link}}{{event-link}}{{else}}https://www.eventnook.com/event/devfestasia2015/home{{/if}}" target="_blank" class="c-event__image" style="background-image:url('{{image}}');">
+        <a {{#if image-link}} href="{{image-link}}" target="_blank" {{/if}}  class="c-event__image" style="background-image:url('{{image}}');">
           {{#if logo}} 
           <div class="c-event__logo" style="background-image:url('{{logo}}');"></div>
           {{/if}}
@@ -96,7 +96,7 @@
   <div class="wrap">
     <h1 class="o-italic">{{{title}}}</h1>
     <h4>{{{desc}}}</h4>
-    <button class="o-btn">{{button}}</button>
+    <a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank" class="o-btn">{{button}}</a>
   </div>
 </div> 
 {{/compare}}

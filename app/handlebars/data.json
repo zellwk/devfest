@@ -9,10 +9,10 @@
         "image-link": "https://www.facebook.com/groups/sggrumpygits",
         "logo": "images/events/grumpy-gits-logo.jpg",
         "desc": "Advancing git literacy through talks and workshops. Great for beginners, even better for pros. May the forks be with you.",
-        "startTime": "6",
+        "startTime": "7",
         "startTimeSuffix": "pm",
-        "endTime": "9",
-        "endTimeSuffix": "am",
+        "endTime": "10",
+        "endTimeSuffix": "pm",
         "location": "TBC",
         "location-2": "",
         "ticket": "Available soon"

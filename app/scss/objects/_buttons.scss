@@ -9,14 +9,10 @@
   letter-spacing: 0.05em;
   font-weight: bold;
   text-decoration: none;
-  text-shadow: 1px 1px 0 rgba(0,0,0,.4);
-  box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.15s ease;
   text-transform: uppercase;
-
-  &:visited {
-    color: rgba(white, 0.7);
-  }
 
   &:hover,
   &:active,
@@ -28,6 +24,7 @@
 
 .o-btn--highlight {
   @extend .o-btn;
+
   background: color(froly);
   color: rgba(white, 0.85);
 
@@ -36,5 +33,20 @@
   &:focus {
     background: color(charcoal);
     color: white;
+  }
+}
+
+.o-btn--disabled {
+  @extend .o-btn;
+
+  background: #aaa;
+  color: rgba(#fff, 0.7);
+  cursor: default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: #aaa;
+    color: rgba(#fff, 0.7);
   }
 }

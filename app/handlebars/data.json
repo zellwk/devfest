@@ -37,11 +37,13 @@
       }]
     },
 
-     {
+    {
       "type": "tickets",
       "title": "Pssst. Want go to every event?",
       "desc": "You can grab a DevFest.Asia Festival Ticket for just $900!",
-      "button": "Get the Festival Ticket"
+      "button": "Get the Festival Ticket",
+      "sold-out": true,
+      "url": "https://www.eventnook.com/event/devfestasia2015/home"
     },
 
     {
@@ -60,7 +62,7 @@
         "location": "The Working Capitol, ",
         "location-2": "1 Keong Saik Road <br> Singapore 089109",
         "ticket": "Available Soon"
-      },{
+      }, {
         "title": "HackerspaceSG 6th Birthday Party",
         "image": "images/events/hackerspacesg-party.png",
         "image-link": "http://hackerspace.sg",
@@ -122,6 +124,13 @@
         "price": "free",
         "ticket": "Available Soon"
       }]
+    },
+
+    {
+      "type": "tickets",
+      "title": "Looking for accommodations?",
+      "desc": "You can grab a Devfest.Asia Festival Hotel at just $1089 for four nights!",
+      "button": "Get the Festival Ticket"
     },
 
     {
@@ -270,7 +279,7 @@
         "location-2": "",
         "ticket": "Available soon"
 
-      },{
+      }, {
         "title": "WebAudio Hack Day",
         "image": "images/events/webaudio-js.jpg",
         "logo": "images/events/webaudio-js-logo.png",
@@ -323,7 +332,7 @@
         "location": "1 Keong Saik Road",
         "location-2": "Singapore 089109",
         "ticketinfo": "Hop by and sign up"
-      },{
+      }, {
         "title": "Free co-hacking at HSG",
         "image": "images/workspaces/hackerspace1.jpg",
         "image-link": "http://hackerspace.sg",

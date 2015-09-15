@@ -94,9 +94,14 @@
 {{#compare this.type "tickets"}}
 <div class="c-interrupt c-tickets">  
   <div class="wrap">
+    {{#if sold-out}} <div class="sold-out"><img src="images/soldout.png" alt=""></div> {{/if}}
     <h1 class="o-italic">{{{title}}}</h1>
     <h4>{{{desc}}}</h4>
-    <a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank" class="o-btn">{{button}}</a>
+    {{#if sold-out}}
+      <div class="o-btn--disabled">{{button}}</div>
+      {{else}}
+      <a href="{{url}}" target="_blank" class="o-btn">{{button}}</a>
+    {{/if}}
   </div>
 </div> 
 {{/compare}}

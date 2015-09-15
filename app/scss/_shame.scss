@@ -431,6 +431,7 @@ article {
     // flex-basis: percentage(1 / 3);
     flex-basis: percentage(1 / 2);
     flex-grow: 1;
+
     // padding-bottom: 18.75%; // ((100/3) * 9/16)
     padding-bottom: percentage(1 / 2 * 9 / 16);
   }
@@ -475,4 +476,18 @@ article {
   border: 1px solid #ddd;
   padding: 10px;
   border-radius: 4px;
+}
+
+// Sold out
+.c-interrupt {
+  position: relative;
+
+  .wrap {}
+
+  .sold-out {
+    position: absolute;
+    top: 0;
+    // top: rhythm(-2);
+    left: 0;
+  }
 }

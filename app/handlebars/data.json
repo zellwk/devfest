@@ -139,6 +139,17 @@
       "date": "17",
       "day": "Tue",
       "events": [{
+        "title": "Hacking UX: Design thinking for techies",
+        "image": "images/events/hackingux.jpg",
+        "desc": "Whether it's to validate an idea, or to understand what you're building is meant to achieve, learn to better understand who you're building for and how to hack your way to an awesome user experience.",
+        "startTime": "6",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "price": "$75",
+        "ticket": "Available Soon"
+      }, {
         "title": "Talk.js Special Edition",
         "image": "images/events/talk-js.jpeg",
         "image-link": "http://www.meetup.com/Singapore-JS/",
@@ -150,17 +161,6 @@
         "endTimeSuffix": "pm",
         "location": "TBC",
         "price": "free",
-        "ticket": "Available Soon"
-      }, {
-        "title": "Hacking UX: Design thinking for techies",
-        "image": "images/events/hackingux.jpg",
-        "desc": "Whether it's to validate an idea, or to understand what you're building is meant to achieve, learn to better understand who you're building for and how to hack your way to an awesome user experience.",
-        "startTime": "6",
-        "startTimeSuffix": "pm",
-        "endTime": "9",
-        "endTimeSuffix": "pm",
-        "location": "TBC",
-        "price": "$75",
         "ticket": "Available Soon"
       }]
     },

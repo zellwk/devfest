@@ -39,9 +39,9 @@
 
      {
       "type": "tickets",
-      "title": "Pssst. Want go to every conference?",
-      "desc": "You can grab a Devfest Ticket for just $900!",
-      "button": "Get the Devfest Ticket"
+      "title": "Pssst. Want to go to all events?",
+      "desc": "You can grab a Festival ticket for just S$900",
+      "button": "Get the Festival Ticket"
     },
 
     {
@@ -140,6 +140,17 @@
         "endTimeSuffix": "pm",
         "location": "TBC",
         "price": "free",
+        "ticket": "Available Soon"
+      }, {
+        "title": "Hacking UX: Design thinking for techies",
+        "image": "images/events/hackingux.jpg",
+        "desc": "Whether it's to validate an idea, or to understand what you're building is meant to achieve, learn to better understand who you're building for and how to hack your way to an awesome user experience.",
+        "startTime": "6",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "price": "$75",
         "ticket": "Available Soon"
       }]
     },

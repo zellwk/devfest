@@ -489,10 +489,29 @@ article {
     top: 0;
     left: 0;
     bottom: 0;
-    right: 0;
+
+    @include bp(600px) {
+      left: rhythm(-15);
+      right: 0;
+    }
+
 
     img {
       max-height: 100%;
+    }
+
+    .sold-out__img {
+      @include bp(600px) {
+        display: none;
+      }
+    }
+
+    .sold-out__img--large {
+      display: none;
+
+      @include bp(600px) {
+        display: inline-block;
+      }
     }
   }
 }

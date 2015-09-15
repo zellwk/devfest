@@ -94,7 +94,11 @@
 {{#compare this.type "tickets"}}
 <div class="c-interrupt c-tickets">  
   <div class="wrap">
-    {{#if sold-out}} <div class="sold-out"><img src="images/soldout-large.png" alt=""></div> {{/if}}
+    {{#if sold-out}} 
+      <div class="sold-out">
+        <img class="sold-out__img" src="images/soldout.png" alt="">
+        <img class="sold-out__img--large" src="images/soldout-large.png" alt="">
+      </div> {{/if}}
     <h1 class="o-italic">{{{title}}}</h1>
     <h4>{{{desc}}}</h4>
     {{#if sold-out}}

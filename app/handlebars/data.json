@@ -128,9 +128,10 @@
 
     {
       "type": "tickets",
-      "title": "Looking for accommodations?",
-      "desc": "You can grab a Devfest.Asia Festival Hotel at just $1089 for four nights!",
-      "button": "Get the Festival Ticket"
+      "title": "Looking for a place to stay?",
+      "desc": "We have curated a list of hotels and hostels including our special 4-day Festival offer for just S$1089.",
+      "button": "Check out the accommodations",
+      "url": "hotels.html"
     },
 
     {

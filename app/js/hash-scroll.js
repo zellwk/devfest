@@ -36,7 +36,7 @@ $(document).ready(function() {
   }
 
   function hashChangeScroll() {
-  var eventsHeaderHeight = $('.c-events-nav').outerHeight();
+  var eventsHeaderHeight = $('.c-events-header').outerHeight();
 
   // scrolls to hash location 
   var curPos = $(window).scrollTop();

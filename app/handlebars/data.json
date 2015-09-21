@@ -191,6 +191,17 @@
         "endTimeSuffix": "am",
         "location": "TBC",
         "ticketinfo": "For CSSConf.Asia attendees"
+      }, {
+        "title": "Haskell with Web Technologies",
+        "image": "images/events/haskell.png",
+        "image-link": "http://www.meetup.com/HASKELL-SG/",
+        "desc": "Haskell.SG plans a special edition of a meetup that would be entirely devoted to making web applications with Haskell. This would include hosting Haskell code in the browser with GHCjs, interoperating with Web API portals, and more.",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "10",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "ticket": "Register Free"
       }]
     },
 
@@ -615,7 +626,7 @@
       "image": "hackware.png",
       "url": "http://www.meetup.com/hackware/"
     }, {
-      "name": "HASKELL.SG",
+      "name": "Haskell.SG",
       "url": "http://www.meetup.com/HASKELL-SG/"
     }, {
       "name": "iOS Dev Scout",

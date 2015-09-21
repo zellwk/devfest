@@ -101,16 +101,16 @@
       "date": "16",
       "day": "Mon",
       "events": [{
-        "title": "iOS Dev Scout DevFest.Asia Edition",
+        "title": "iOS Dev Scout DevFest.Asia workshop",
         "image": "images/events/ios-dev-scout.png",
         "image-link": "https://www.facebook.com/groups/iosdevscout",
-        "desc": " iOS Development, iOS Tools and Technologies",
+        "desc": "Singapore's iOS user-group invites you to a Swift 2.0 workshop session and pizza.",
         "startTime": "7",
         "startTimeSuffix": "pm",
-        "endTime": "9",
+        "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "TBC",
-        "ticket": "Available soon"
+        "ticket": "Get ticket S$25"
       }, {
         "title": "Front End TL;DR",
         "image": "images/events/frontendtldr.jpg",

@@ -53,13 +53,14 @@
       "events": [{
         "title": "SuperHappyDevHouse_4.0",
         "image": "images/events/shdh.png",
-        "desc": "SuperHappyDevHouse_4.0 is coming back to Singapore! The all-day, all-night hackathon of brilliant code, pizza, and copious amount of coffee, is better than ever. This event is done BY the tech community, FOR the tech community, and we can think of no better way to bring the creme de la creme of SE Asian talent hacking into one (preferably big and air-conditioned) venue. ",
+        "desc": "SuperHappyDevHouse is back in Singapore! The all-day, all-night hackathon of brilliant code, pizza, and copious amounts of coffee, is better than ever. Done BY the tech community, FOR the tech community, meet the creme de la creme of SE Asian talent hacking in one venue.<br/><br/><a href='http://superhappydevhouse.sg' target='_blank'>http://superhappydevhouse.sg</a>",
         "startTime": "12",
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "pm (the next day)",
-        "location": "TBC",
-        "ticket": "Available Soon"
+        "location": "The Impact Hub",
+        "location-2": "128 Prinsep St, Singapore 188655",
+        "ticket": "Register Free"
       }, {
         "title": "HackerspaceSG 6th Birthday Party",
         "image": "images/events/hackerspacesg-party.png",

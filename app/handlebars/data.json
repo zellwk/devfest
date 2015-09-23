@@ -51,16 +51,14 @@
       "date": "14",
       "day": "Sat",
       "events": [{
-        "title": "Dev Careers in Singapore",
-        "image": "images/events/workingmeetup.jpg",
-        "logo": "images/events/ga.jpg",
-        "desc": "Learn about developer opportunities in Singapore, the visa process and participate in 3min speed interviews with some of the coolest companies in town.",
-        "startTime": "3",
+        "title": "SuperHappyDevHouse_4.0",
+        "image": "images/events/shdh.png",
+        "desc": "SuperHappyDevHouse_4.0 is coming back to Singapore! The all-day, all-night hackathon of brilliant code, pizza, and copious amount of coffee, is better than ever. This event is done BY the tech community, FOR the tech community, and we can think of no better way to bring the creme de la creme of SE Asian talent hacking into one (preferably big and air-conditioned) venue. ",
+        "startTime": "12",
         "startTimeSuffix": "pm",
-        "endTime": "6",
-        "endTimeSuffix": "pm",
-        "location": "The Working Capitol, ",
-        "location-2": "1 Keong Saik Road <br> Singapore 089109",
+        "endTime": "12",
+        "endTimeSuffix": "pm (the next day)",
+        "location": "TBC",
         "ticket": "Available Soon"
       }, {
         "title": "HackerspaceSG 6th Birthday Party",
@@ -93,6 +91,18 @@
         "endTimeSuffix": "pm",
         "location": "TBC",
         "ticket": "Get ticket S$50"
+      }, {
+        "title": "Dev Careers in Singapore",
+        "image": "images/events/workingmeetup.jpg",
+        "logo": "images/events/ga.jpg",
+        "desc": "Learn about developer opportunities in Singapore, the visa process and participate in 3min speed interviews with some of the coolest companies in town.",
+        "startTime": "3",
+        "startTimeSuffix": "pm",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "The Working Capitol, ",
+        "location-2": "1 Keong Saik Road <br> Singapore 089109",
+        "ticket": "Available Soon"
       }]
     },
 

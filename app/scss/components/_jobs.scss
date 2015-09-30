@@ -6,6 +6,10 @@
   @include bp(max med) {
     flex-wrap: wrap;
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .l-company {

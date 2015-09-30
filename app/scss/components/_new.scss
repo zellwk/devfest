@@ -31,6 +31,8 @@
   }
 
   span + span {
+    position: relative;
+    top: 2px;
     font-size: ms(0);
   }
 }
@@ -41,10 +43,11 @@
   height: rhythm(8);
 
   span {
-    font-size: ms(5);
+    font-size: ms(4);
   }
 
   span + span {
+    top: 1px;
     font-size: ms(1);
   }
 }

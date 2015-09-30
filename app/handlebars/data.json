@@ -466,7 +466,7 @@
   }, {
     "type": "company",
     "employer": "microsoft",
-    "image": "images/microsoft.png",
+    "image": "images/sponsors/microsoft.png",
     "jobs": [{
       "job-title": "Design Lead",
       "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping. lorem ipsum dolor sit"
@@ -483,7 +483,7 @@
   }, {
     "type": "company",
     "employer": "Piktochart",
-    "image": "images/piktochart.png",
+    "image": "images/sponsors/piktochart.png",
     "jobs": [{
       "job-title": "Design Lead",
       "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
@@ -500,7 +500,7 @@
   }, {
     "type": "company",
     "employer": "Meteor",
-    "image": "images/meteor.png",
+    "image": "images/sponsors/meteor.png",
     "jobs": [{
       "job-title": "Design Lead",
       "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
@@ -517,7 +517,7 @@
   }, {
     "type": "company",
     "employer": "Paypal",
-    "image": "images/paypal.png",
+    "image": "images/sponsors/paypal.png",
     "jobs": [{
       "job-title": "Design Lead",
       "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."

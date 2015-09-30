@@ -1,0 +1,50 @@
+.c-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px dashed #ddd;
+  border-radius: 6px;
+  transition: all 0.15s ease-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: none;
+    border-color: color(carmine);
+
+    span {
+      transition: none;
+      color: color(carmine);
+    }
+  }
+}
+
+.c-new__item {
+  text-align: center;
+
+  span {
+    font-size: ms(3);
+    font-weight: bold;
+    color: #ddd;
+    transition: all 0.15s ease-out;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span + span {
+    font-size: ms(0);
+  }
+}
+
+.c-new--large {
+  @extend .c-new;
+
+  height: rhythm(8);
+
+  span {
+    font-size: ms(5);
+  }
+
+  span + span {
+    font-size: ms(1);
+  }
+}

@@ -21,14 +21,14 @@
         </a>
         <div class="c-event__content">
           <div class="c-event__desc">
-            
+
             {{#if featured}}
-              <div class="c-devfest-featured c-devfest-featured--coworking">
-                <div class="c-devfest-featured__badge c-devfest-featured__badge--coworking">
-                  <span>Devfest <br> Co-working</span>
-                </div>  
-                <div class="c-devfest-featured__aura"></div>
-              </div>
+            <div class="c-devfest-featured c-devfest-featured--coworking">
+              <div class="c-devfest-featured__badge c-devfest-featured__badge--coworking">
+                <span>Devfest <br> Co-working</span>
+              </div>  
+              <div class="c-devfest-featured__aura"></div>
+            </div>
             {{/if}}
 
             <h3 class="c-event__title">{{title}}</h3>
@@ -48,15 +48,15 @@
           <div class="c-event__aside">
             {{#if featured}}
             {{else}}
-              {{#if ticket}}
-                {{#if event-link}}<a href="{{event-link}}" target="_blank" class="o-btn">{{ticket}}</a> 
-                {{else}}<a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank"  class="o-btn">{{ticket}}</a>
-                {{/if}}
-              {{else}}
-                <div class="ticket-info">
-                  {{ticketinfo}}
-                </div>
-              {{/if}}
+            {{#if ticket}}
+            {{#if event-link}}<a href="{{event-link}}" target="_blank" class="o-btn">{{ticket}}</a> 
+            {{else}}<a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank"  class="o-btn">{{ticket}}</a>
+            {{/if}}
+            {{else}}
+            <div class="ticket-info">
+              {{ticketinfo}}
+            </div>
+            {{/if}}
             {{/if}}
           </div>
         </div>
@@ -95,16 +95,16 @@
 <div class="c-interrupt c-tickets">  
   <div class="wrap">
     {{#if sold-out}} 
-      <div class="sold-out">
-        <img class="sold-out__img" src="images/soldout.png" alt="">
-        <img class="sold-out__img--large" src="images/soldout-large.png" alt="">
-      </div> {{/if}}
+    <div class="sold-out">
+      <img class="sold-out__img" src="images/soldout.png" alt="">
+      <img class="sold-out__img--large" src="images/soldout-large.png" alt="">
+    </div> {{/if}}
     <h1 class="o-italic">{{{title}}}</h1>
     <h4>{{{desc}}}</h4>
     {{#if sold-out}}
-      <div class="o-btn--disabled">{{button}}</div>
-      {{else}}
-      <a href="{{url}}" class="o-btn">{{button}}</a>
+    <div class="o-btn--disabled">{{button}}</div>
+    {{else}}
+    <a href="{{url}}" class="o-btn">{{button}}</a>
     {{/if}}
   </div>
 </div> 
@@ -134,8 +134,8 @@
 
     <div class="c-events l-events">
 
-      <a href="https://jsconfasia.wufoo.com/forms/devfestasia-2015-list-my-event/" class="c-event--new l-event">
-        <div class="c-event-new-item">
+    <a href="https://jsconfasia.wufoo.com/forms/devfestasia-2015-list-my-event/" class="c-new--large l-event">
+        <div class="c-new__item">
           <span>+</span>
           <span>Add your event</span>
         </div>

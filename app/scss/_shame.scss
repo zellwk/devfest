@@ -35,18 +35,6 @@ form {
   animation: formsup 0.5s ease-out;
 }
 
-// .c-nav {
-//   text-align: center;
-
-//   @include bp(max 350px) {
-//     a + a {
-//       display: inline-block;
-//       margin-top: rhythm(0.5) !important;
-//       margin-bottom: rhythm(0.5);
-//     }
-//   }
-// }
-
 .c-interrupt-2 {
   @extend .c-interrupt;
 
@@ -137,44 +125,6 @@ form {
   font-size: 13px;
   margin-top: 1em;
   font-weight: 400;
-}
-
-// New stuff
-
-.c-new {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border: 4px dashed #ddd;
-  border-radius: 6px;
-  font-weight: bold;
-  color: #ddd;
-  transition: all 0.15s ease-out;
-
-  span + span {
-    margin-left: rhythm(0.5);
-
-    @include bp(med) {
-      @include gallery(4 of 12);
-
-      margin-top: rhythm(2);
-    }
-  }
-
-  .c-new__plus {
-    font-size: ms(3);
-  }
-
-  .c-new:hover {
-    transition: none;
-    border-color: color(carmine);
-
-    span {
-      transition: none;
-      color: color(carmine);
-    }
-  }
 }
 
 // hangouts

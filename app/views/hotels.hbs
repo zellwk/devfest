@@ -17,6 +17,11 @@
           <div id="hotels" class="c-hotels l-hotels">
             {{!-- start Hotel --}}
             <div class="c-hotel l-hotel c-hotel--featured">
+              {{!-- {{#if sold-out}}  --}}
+              <div class="sold-out">
+                <img class="sold-out__img" src="images/soldout.png" alt="">
+              </div> 
+              {{!-- {{/if}} --}}
               <h2 class="o-block__title c-hotel__title">New Majestic Hotel</h2>
               <div class="c-hotel-carousel">
                 <div style="background-image:url('images/hotels/new-majestic-2.jpg')"></div>
@@ -36,273 +41,274 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div>              
               <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=871&amp;locationId=562390&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
               <div class="c-hotel__cta">
-                <a class="o-btn" href="https://jsconfasia.wufoo.com/forms/devfestasia-2015-festival-hotel/">Get our special DevFest.Asia Festival rate</a>
-              </div>
+               <div class="o-btn--disabled">Get our special DevFest.Asia Festival rate</div>
+               {{!-- <a href="https://jsconfasia.wufoo.com/forms/devfestasia-2015-festival-hotel/" class="o-btn">Get our special DevFest.Asia Festival rate</a> --}}
+             </div>
+           </div>
+           {{!-- End Hotel --}} {{!-- start Hotel --}}
+           <div class="c-hotel l-hotel">
+            <h2 class="o-block__title c-hotel__title">The Scarlet Singapore</h2>
+            <div class="c-hotel-carousel">
+              <div style="background-image:url('images/hotels/scarlet.jpg')"></div>
             </div>
-            {{!-- End Hotel --}} {{!-- start Hotel --}}
-            <div class="c-hotel l-hotel">
-              <h2 class="o-block__title c-hotel__title">The Scarlet Singapore</h2>
-              <div class="c-hotel-carousel">
-                <div style="background-image:url('images/hotels/scarlet.jpg')"></div>
-              </div>
-              <div id="TA_selfserveprop566" class="TA_selfserveprop">
-                <ul id="TnBaQeFSp" class="TA_links YHyYz4nZ">
-                  <li id="jVNQjgTjEn6" class="UfTHkeRhRjX">
-                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                  </li>
-                </ul>
-              </div>
-              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=566&amp;locationId=503404&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-              <div class="c-hotel__cta">
-                <a href="http://www.agoda.com/the-scarlet-singapore-hotel/hotel/singapore-sg.html?cid=1733091" class="o-btn"  rel="nofollow">Book a room at Scarlet</a>
-              </div>
+            <div id="TA_selfserveprop566" class="TA_selfserveprop">
+              <ul id="TnBaQeFSp" class="TA_links YHyYz4nZ">
+                <li id="jVNQjgTjEn6" class="UfTHkeRhRjX">
+                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                </li>
+              </ul>
             </div>
-            {{!-- End Hotel --}} {{!-- start Hotel --}}
-            <div class="c-hotel l-hotel">
-              <h2 class="o-block__title c-hotel__title">M Hotel Singapore</h2>
-              <div class="c-hotel-carousel">
-                <div style="background-image:url('images/hotels/m.jpg')"></div>
-              </div>
-              <div id="TA_selfserveprop111" class="TA_selfserveprop">
-                <ul id="X3z886" class="TA_links 6FnVXAOnj">
-                  <li id="Yu6NQC" class="wZUxFJvTa">
-                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                  </li>
-                </ul>
-              </div>
-              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=111&amp;locationId=301680&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-              <div class="c-hotel__cta">
-                <a href="http://www.agoda.com/en-sg/m-hotel/hotel/singapore-sg.html?cid=1733091" class="o-btn"  rel="nofollow">Book a room at M Hotel</a>
-              </div>
+            <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=566&amp;locationId=503404&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+            <div class="c-hotel__cta">
+              <a href="http://www.agoda.com/the-scarlet-singapore-hotel/hotel/singapore-sg.html?cid=1733091" class="o-btn"  rel="nofollow">Book a room at Scarlet</a>
             </div>
-            {{!-- End Hotel --}} {{!-- start Hotel --}}
-            <div class="c-hotel l-hotel">
-              <h2 class="o-block__title c-hotel__title">Amara Hotel Singapore</h2>
-              <div class="c-hotel-carousel">
-                <div style="background-image:url('images/hotels/amara.jpg')"></div>
-              </div>
-              <div id="TA_selfserveprop164" class="TA_selfserveprop">
-                <ul id="4NhJ3fGZvA" class="TA_links H2JWBZXcSC">
-                  <li id="rCsa2Gg" class="D4kCNqyf">
-                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                  </li>
-                </ul>
-              </div>
-              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=164&amp;locationId=305416&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-              <div class="c-hotel__cta">
-                <a href="http://www.agoda.com/en-sg/amara-hotel/hotel/new-delhi-and-ncr-in.html?cid=1733091" class="o-btn"  rel="nofollow">Book a room at Amara Hotel</a>
-              </div>
-            </div>
-            {{!-- End Hotel --}} {{!-- start Hotel --}}
-            <div class="c-hotel l-hotel">
-              <h2 class="o-block__title c-hotel__title">Naumi Liora</h2>
-              <div class="c-hotel-carousel">
-                <div style="background-image:url('images/hotels/naumi.jpg')"></div>
-              </div>
-              <div id="TA_selfserveprop44" class="TA_selfserveprop">
-                <ul id="mGaTNb68" class="TA_links Om4wODD2M">
-                  <li id="eAx90m7SF" class="Hf7vymKNw3">
-                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                  </li>
-                </ul>
-              </div>
-              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=44&amp;locationId=309916&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-              <div class="c-hotel__cta">
-                <a class="o-btn" href="http://www.agoda.com/en-sg/naumi-liora-hotel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Naumi Liora</a>
-              </div>
-            </div>
-            {{!-- End Hotel --}} {{!-- start Hotel --}}
-            <div class="c-hotel l-hotel">
-              <h2 class="o-block__title c-hotel__title">Klapsons Hotel</h2>
-              <div class="c-hotel-carousel">
-                <div style="background-image:url('images/hotels/klapsons.jpg')"></div>
-              </div>
-              <div id="TA_selfserveprop837" class="TA_selfserveprop">
-                <ul id="KM3Nmo" class="TA_links dPEpYVKuFOzF">
-                  <li id="SYskicU7a2nZ" class="dupCZfQ">
-                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                  </li>
-                </ul>
-              </div>
-              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=837&amp;locationId=1581565&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-              <div class="c-hotel__cta">
-                <a class="o-btn" href="http://www.agoda.com/en-sg/klapsons-the-boutique-hotel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Klapsons</a>
-              </div>
-            </div>
-            {{!-- End Hotel --}} {{!-- start Hotel --}}
-            <div class="c-hotel l-hotel">
-              <h2 class="o-block__title c-hotel__title">AMOY Hotel</h2>
-              <div class="c-hotel-carousel">
-                <div style="background-image:url('images/hotels/amoy.jpg')"></div>
-              </div>
-              <div id="TA_selfserveprop620" class="TA_selfserveprop">
-                <ul id="iOB20q" class="TA_links GHDZaHct4Q">
-                  <li id="lcJdWoLt" class="lBRAKZ">
-                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                  </li>
-                </ul>
-              </div>
-              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=620&amp;locationId=4341475&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-              <div class="c-hotel__cta">
-                <a class="o-btn" href="http://www.agoda.com/en-sg/amoy-by-far-east-hospitality/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Amoy</a>
-              </div>
-            </div>
-            {{!-- End Hotel --}} {{!-- start Hotel --}}
-            <div class="c-hotel l-hotel">
-              <h2 class="o-block__title c-hotel__title">Hotel 1929</h2>
-              <div class="c-hotel-carousel">
-                <div style="background-image:url('images/hotels/1929.jpg')"></div>
-              </div>
-              <div id="TA_selfserveprop104" class="TA_selfserveprop">
-                <ul id="5T4clRF569" class="TA_links gXbAdw">
-                  <li id="Lxv4Gfq" class="5KD45mhD5A">
-                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                  </li>
-                </ul>
-              </div>
-              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=104&amp;locationId=306179&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-              <div class="c-hotel__cta">
-                <a class="o-btn" href="http://www.agoda.com/en-sg/hotel-1929/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at 1929</a>
-              </div>
-            </div>
-            {{!-- End Hotel --}} {{!-- start Hotel --}}
-            <div class="c-hotel l-hotel">
-              <h2 class="o-block__title c-hotel__title">ParkRoyal on Pickering</h2>
-              <div class="c-hotel-carousel">
-                <div style="background-image:url('images/hotels/pickering.jpg')"></div>
-              </div>
-              <div id="TA_selfserveprop474" class="TA_selfserveprop">
-                <ul id="ohBVsK9akB" class="TA_links QfBKun">
-                  <li id="dGnxe5gECPz" class="jvwwWPJ">
-                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                  </li>
-                </ul>
-              </div>
-              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=474&amp;locationId=3523347&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-              <div class="c-hotel__cta">
-                <a class="o-btn" href="http://www.agoda.com/en-sg/parkroyal-on-pickering/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at ParkRoyal</a>
-              </div>
-            </div>
-            {{!-- End Hotel --}} {{!-- start Hotel --}}
-            <div class="c-hotel l-hotel">
-              <h2 class="o-block__title c-hotel__title">Keong Saik Hotel</h2>
-              <div class="c-hotel-carousel">
-                <div style="background-image:url('images/hotels/keong-saik.jpg')"></div>
-              </div>
-              <div id="TA_selfserveprop186" class="TA_selfserveprop">
-                <ul id="ZasP4mqeWe" class="TA_links 5nNkQq">
-                  <li id="KzBiRd" class="n59Hpe7n">
-                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                  </li>
-                </ul>
-              </div>
-              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=186&amp;locationId=584452&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-              <div class="c-hotel__cta">
-                <a class="o-btn" href="http://www.agoda.com/en-sg/the-keong-saik-hotel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Keong Saik</a>
-              </div>
-            </div> {{!-- End Hotel --}}
           </div>
-        </section>
-        <section id="hostels">
-          <div class="wrap">
-            <div class="c-section-intro">
-              <h1 class="o-italic">And here are some hostels</h1>
-              <p>if you're just a tad tighter on the budget</p>
+          {{!-- End Hotel --}} {{!-- start Hotel --}}
+          <div class="c-hotel l-hotel">
+            <h2 class="o-block__title c-hotel__title">M Hotel Singapore</h2>
+            <div class="c-hotel-carousel">
+              <div style="background-image:url('images/hotels/m.jpg')"></div>
             </div>
-            <div class="c-hotels l-hotels">
-              {{!-- start Hotel --}}
-              <div class="c-hotel l-hotel">
-                <h2 class="o-block__title c-hotel__title">The Porcelain Hotel</h2>
-                <div class="c-hotel-carousel">
-                  <div style="background-image:url('images/hotels/porcelain.jpg')"></div>
-                </div>
-                <div id="TA_selfserveprop746" class="TA_selfserveprop">
-                  <ul id="Zi3dv3HHNA" class="TA_links nUGbRsUu">
-                    <li id="sGodeTTfrBSB" class="YtFNXK5ZX">
-                      <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                    </li>
-                  </ul>
-                </div>
-                <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=746&amp;locationId=1982647&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-                <div class="c-hotel__cta">
-                  <a class="o-btn" href="http://www.agoda.com/en-sg/porcelain-hotel-by-jl-asia/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Porcelain Hotel</a>
-                </div>
+            <div id="TA_selfserveprop111" class="TA_selfserveprop">
+              <ul id="X3z886" class="TA_links 6FnVXAOnj">
+                <li id="Yu6NQC" class="wZUxFJvTa">
+                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=111&amp;locationId=301680&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+            <div class="c-hotel__cta">
+              <a href="http://www.agoda.com/en-sg/m-hotel/hotel/singapore-sg.html?cid=1733091" class="o-btn"  rel="nofollow">Book a room at M Hotel</a>
+            </div>
+          </div>
+          {{!-- End Hotel --}} {{!-- start Hotel --}}
+          <div class="c-hotel l-hotel">
+            <h2 class="o-block__title c-hotel__title">Amara Hotel Singapore</h2>
+            <div class="c-hotel-carousel">
+              <div style="background-image:url('images/hotels/amara.jpg')"></div>
+            </div>
+            <div id="TA_selfserveprop164" class="TA_selfserveprop">
+              <ul id="4NhJ3fGZvA" class="TA_links H2JWBZXcSC">
+                <li id="rCsa2Gg" class="D4kCNqyf">
+                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=164&amp;locationId=305416&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+            <div class="c-hotel__cta">
+              <a href="http://www.agoda.com/en-sg/amara-hotel/hotel/new-delhi-and-ncr-in.html?cid=1733091" class="o-btn"  rel="nofollow">Book a room at Amara Hotel</a>
+            </div>
+          </div>
+          {{!-- End Hotel --}} {{!-- start Hotel --}}
+          <div class="c-hotel l-hotel">
+            <h2 class="o-block__title c-hotel__title">Naumi Liora</h2>
+            <div class="c-hotel-carousel">
+              <div style="background-image:url('images/hotels/naumi.jpg')"></div>
+            </div>
+            <div id="TA_selfserveprop44" class="TA_selfserveprop">
+              <ul id="mGaTNb68" class="TA_links Om4wODD2M">
+                <li id="eAx90m7SF" class="Hf7vymKNw3">
+                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=44&amp;locationId=309916&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+            <div class="c-hotel__cta">
+              <a class="o-btn" href="http://www.agoda.com/en-sg/naumi-liora-hotel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Naumi Liora</a>
+            </div>
+          </div>
+          {{!-- End Hotel --}} {{!-- start Hotel --}}
+          <div class="c-hotel l-hotel">
+            <h2 class="o-block__title c-hotel__title">Klapsons Hotel</h2>
+            <div class="c-hotel-carousel">
+              <div style="background-image:url('images/hotels/klapsons.jpg')"></div>
+            </div>
+            <div id="TA_selfserveprop837" class="TA_selfserveprop">
+              <ul id="KM3Nmo" class="TA_links dPEpYVKuFOzF">
+                <li id="SYskicU7a2nZ" class="dupCZfQ">
+                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=837&amp;locationId=1581565&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+            <div class="c-hotel__cta">
+              <a class="o-btn" href="http://www.agoda.com/en-sg/klapsons-the-boutique-hotel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Klapsons</a>
+            </div>
+          </div>
+          {{!-- End Hotel --}} {{!-- start Hotel --}}
+          <div class="c-hotel l-hotel">
+            <h2 class="o-block__title c-hotel__title">AMOY Hotel</h2>
+            <div class="c-hotel-carousel">
+              <div style="background-image:url('images/hotels/amoy.jpg')"></div>
+            </div>
+            <div id="TA_selfserveprop620" class="TA_selfserveprop">
+              <ul id="iOB20q" class="TA_links GHDZaHct4Q">
+                <li id="lcJdWoLt" class="lBRAKZ">
+                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=620&amp;locationId=4341475&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+            <div class="c-hotel__cta">
+              <a class="o-btn" href="http://www.agoda.com/en-sg/amoy-by-far-east-hospitality/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Amoy</a>
+            </div>
+          </div>
+          {{!-- End Hotel --}} {{!-- start Hotel --}}
+          <div class="c-hotel l-hotel">
+            <h2 class="o-block__title c-hotel__title">Hotel 1929</h2>
+            <div class="c-hotel-carousel">
+              <div style="background-image:url('images/hotels/1929.jpg')"></div>
+            </div>
+            <div id="TA_selfserveprop104" class="TA_selfserveprop">
+              <ul id="5T4clRF569" class="TA_links gXbAdw">
+                <li id="Lxv4Gfq" class="5KD45mhD5A">
+                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=104&amp;locationId=306179&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+            <div class="c-hotel__cta">
+              <a class="o-btn" href="http://www.agoda.com/en-sg/hotel-1929/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at 1929</a>
+            </div>
+          </div>
+          {{!-- End Hotel --}} {{!-- start Hotel --}}
+          <div class="c-hotel l-hotel">
+            <h2 class="o-block__title c-hotel__title">ParkRoyal on Pickering</h2>
+            <div class="c-hotel-carousel">
+              <div style="background-image:url('images/hotels/pickering.jpg')"></div>
+            </div>
+            <div id="TA_selfserveprop474" class="TA_selfserveprop">
+              <ul id="ohBVsK9akB" class="TA_links QfBKun">
+                <li id="dGnxe5gECPz" class="jvwwWPJ">
+                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=474&amp;locationId=3523347&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+            <div class="c-hotel__cta">
+              <a class="o-btn" href="http://www.agoda.com/en-sg/parkroyal-on-pickering/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at ParkRoyal</a>
+            </div>
+          </div>
+          {{!-- End Hotel --}} {{!-- start Hotel --}}
+          <div class="c-hotel l-hotel">
+            <h2 class="o-block__title c-hotel__title">Keong Saik Hotel</h2>
+            <div class="c-hotel-carousel">
+              <div style="background-image:url('images/hotels/keong-saik.jpg')"></div>
+            </div>
+            <div id="TA_selfserveprop186" class="TA_selfserveprop">
+              <ul id="ZasP4mqeWe" class="TA_links 5nNkQq">
+                <li id="KzBiRd" class="n59Hpe7n">
+                  <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                </li>
+              </ul>
+            </div>
+            <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=186&amp;locationId=584452&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+            <div class="c-hotel__cta">
+              <a class="o-btn" href="http://www.agoda.com/en-sg/the-keong-saik-hotel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Keong Saik</a>
+            </div>
+          </div> {{!-- End Hotel --}}
+        </div>
+      </section>
+      <section id="hostels">
+        <div class="wrap">
+          <div class="c-section-intro">
+            <h1 class="o-italic">And here are some hostels</h1>
+            <p>if you're just a tad tighter on the budget</p>
+          </div>
+          <div class="c-hotels l-hotels">
+            {{!-- start Hotel --}}
+            <div class="c-hotel l-hotel">
+              <h2 class="o-block__title c-hotel__title">The Porcelain Hotel</h2>
+              <div class="c-hotel-carousel">
+                <div style="background-image:url('images/hotels/porcelain.jpg')"></div>
               </div>
-              {{!-- End Hotel --}} {{!-- start Hotel --}}
-              <div class="c-hotel l-hotel">
-                <h2 class="o-block__title c-hotel__title">Matchbox Hostel</h2>
-                <div class="c-hotel-carousel">
-                  <div style="background-image:url('images/hotels/matchbox.jpg')"></div>
-                </div>
-                <div id="TA_selfserveprop47" class="TA_selfserveprop">
-                  <ul id="OzGMtUgwYPI8" class="TA_links M5TDjhx">
-                    <li id="ZyptZWqZV" class="MgLejTgPwtn">
-                      <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                    </li>
-                  </ul>
-                </div>
-                <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=47&amp;locationId=2281072&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-                <div class="c-hotel__cta">
-                  <a class="o-btn" href="http://www.agoda.com/en-sg/matchbox-the-concept-hostel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Matchbox</a>
-                </div>
+              <div id="TA_selfserveprop746" class="TA_selfserveprop">
+                <ul id="Zi3dv3HHNA" class="TA_links nUGbRsUu">
+                  <li id="sGodeTTfrBSB" class="YtFNXK5ZX">
+                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                  </li>
+                </ul>
               </div>
-              {{!-- End Hotel --}} {{!-- start Hotel --}}
-              <div class="c-hotel l-hotel">
-                <h2 class="o-block__title c-hotel__title">Wink Hostel</h2>
-                <div class="c-hotel-carousel">
-                  <div style="background-image:url('images/hotels/wink.jpg')"></div>
-                </div>
-                <div id="TA_selfserveprop698" class="TA_selfserveprop">
-                  <ul id="j5MIwMEwpe" class="TA_links ZvVWnoCFaG">
-                    <li id="TZqOw6V" class="CJLXuDN">
-                      <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                    </li>
-                  </ul>
-                </div>
-                <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=698&amp;locationId=2291380&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-                <div class="c-hotel__cta">
-                  <a class="o-btn" href="http://www.agoda.com/en-sg/wink-hostel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Wink</a>
-                </div>
+              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=746&amp;locationId=1982647&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+              <div class="c-hotel__cta">
+                <a class="o-btn" href="http://www.agoda.com/en-sg/porcelain-hotel-by-jl-asia/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Porcelain Hotel</a>
               </div>
-              {{!-- End Hotel --}} {{!-- start Hotel --}}
-              <div class="c-hotel l-hotel">
-                <h2 class="o-block__title c-hotel__title">Adler Hostel</h2>
-                <div class="c-hotel-carousel">
-                  <div style="background-image:url('images/hotels/adler.jpg')"></div>
-                </div>
-                <div id="TA_selfserveprop726" class="TA_selfserveprop">
-                  <ul id="mINLbhoFkl" class="TA_links qMXqCR">
-                    <li id="IGeTLV" class="fbvfdO5Lvw">
-                      <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                    </li>
-                  </ul>
-                </div>
-                <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=726&amp;locationId=3494064&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-                <div class="c-hotel__cta">
-                  <a class="o-btn" href="http://www.agoda.com/en-sg/adler-hostel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Adler</a>
-                </div>
+            </div>
+            {{!-- End Hotel --}} {{!-- start Hotel --}}
+            <div class="c-hotel l-hotel">
+              <h2 class="o-block__title c-hotel__title">Matchbox Hostel</h2>
+              <div class="c-hotel-carousel">
+                <div style="background-image:url('images/hotels/matchbox.jpg')"></div>
               </div>
-              {{!-- End Hotel --}} {{!-- start Hotel --}}
-              <div class="c-hotel l-hotel">
-                <h2 class="o-block__title c-hotel__title">A Beary Good Hostel</h2>
-                <div class="c-hotel-carousel">
-                  <div style="background-image:url('images/hotels/beary.jpg')"></div>
-                </div>
-                <div id="TA_selfserveprop867" class="TA_selfserveprop">
-                  <ul id="yCaoAQdE" class="TA_links 8CX27d1">
-                    <li id="R0qrYHhk" class="DJmWbmni0J">
-                      <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
-                    </li>
-                  </ul>
-                </div>
-                <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=867&amp;locationId=1655965&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
-                <div class="c-hotel__cta">
-                  <a class="o-btn" href="http://www.agoda.com/en-sg/a-beary-good-hostel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Beary</a>
-                </div>
+              <div id="TA_selfserveprop47" class="TA_selfserveprop">
+                <ul id="OzGMtUgwYPI8" class="TA_links M5TDjhx">
+                  <li id="ZyptZWqZV" class="MgLejTgPwtn">
+                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                  </li>
+                </ul>
               </div>
+              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=47&amp;locationId=2281072&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+              <div class="c-hotel__cta">
+                <a class="o-btn" href="http://www.agoda.com/en-sg/matchbox-the-concept-hostel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Matchbox</a>
+              </div>
+            </div>
+            {{!-- End Hotel --}} {{!-- start Hotel --}}
+            <div class="c-hotel l-hotel">
+              <h2 class="o-block__title c-hotel__title">Wink Hostel</h2>
+              <div class="c-hotel-carousel">
+                <div style="background-image:url('images/hotels/wink.jpg')"></div>
+              </div>
+              <div id="TA_selfserveprop698" class="TA_selfserveprop">
+                <ul id="j5MIwMEwpe" class="TA_links ZvVWnoCFaG">
+                  <li id="TZqOw6V" class="CJLXuDN">
+                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                  </li>
+                </ul>
+              </div>
+              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=698&amp;locationId=2291380&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+              <div class="c-hotel__cta">
+                <a class="o-btn" href="http://www.agoda.com/en-sg/wink-hostel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Wink</a>
+              </div>
+            </div>
+            {{!-- End Hotel --}} {{!-- start Hotel --}}
+            <div class="c-hotel l-hotel">
+              <h2 class="o-block__title c-hotel__title">Adler Hostel</h2>
+              <div class="c-hotel-carousel">
+                <div style="background-image:url('images/hotels/adler.jpg')"></div>
+              </div>
+              <div id="TA_selfserveprop726" class="TA_selfserveprop">
+                <ul id="mINLbhoFkl" class="TA_links qMXqCR">
+                  <li id="IGeTLV" class="fbvfdO5Lvw">
+                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                  </li>
+                </ul>
+              </div>
+              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=726&amp;locationId=3494064&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+              <div class="c-hotel__cta">
+                <a class="o-btn" href="http://www.agoda.com/en-sg/adler-hostel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Adler</a>
+              </div>
+            </div>
+            {{!-- End Hotel --}} {{!-- start Hotel --}}
+            <div class="c-hotel l-hotel">
+              <h2 class="o-block__title c-hotel__title">A Beary Good Hostel</h2>
+              <div class="c-hotel-carousel">
+                <div style="background-image:url('images/hotels/beary.jpg')"></div>
+              </div>
+              <div id="TA_selfserveprop867" class="TA_selfserveprop">
+                <ul id="yCaoAQdE" class="TA_links 8CX27d1">
+                  <li id="R0qrYHhk" class="DJmWbmni0J">
+                    <a target="_blank" href="http://www.tripadvisor.com/"><img src="http://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" /></a>
+                  </li>
+                </ul>
+              </div>
+              <script src="http://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=867&amp;locationId=1655965&amp;lang=en_US&amp;rating=true&amp;nreviews=0&amp;writereviewlink=false&amp;popIdx=true&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+              <div class="c-hotel__cta">
+                <a class="o-btn" href="http://www.agoda.com/en-sg/a-beary-good-hostel/hotel/singapore-sg.html?cid=1733091"  rel="nofollow">Book a room at Beary</a>
+              </div>
+            </div>
             {{!-- End Hotel --}} {{!-- start Hotel --}} {{!--
             <div class="c-hotel l-hotel">
               <h2 class="o-block__title c-hotel__title">Pillows &amp; Toast Heritage</h2>

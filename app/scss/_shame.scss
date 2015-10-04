@@ -358,6 +358,15 @@ article {
     margin-top: 1em;
     margin-bottom: 1em;
   }
+
+  h3 {
+    margin-top: rhythm(1);
+    margin-bottom: rhythm(1);
+  }
+
+  h2:first-of-type {
+    margin-top: rhythm(3);
+  }
 }
 
 .c-sponsors-grid {
@@ -369,6 +378,12 @@ article {
 
   a {
     text-decoration: none;
+  }
+}
+
+.c-article {
+  ol {
+    padding-left: rhythm(2);
   }
 }
 
@@ -464,4 +479,11 @@ article {
       }
     }
   }
+}
+
+.wrap-text {
+  text-align: left;
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
 }

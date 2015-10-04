@@ -465,3 +465,14 @@ article {
     }
   }
 }
+
+.wrap-text {
+  text-align: left;
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+  h1 {
+    text-align: left;
+    margin-bottom: rhythm(0.5);
+  }
+}

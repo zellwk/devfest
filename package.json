@@ -17,8 +17,6 @@
     "browserify": "^10.2.1",
     "browserify-shim": "^3.8.9",
     "critical": "^0.6.0",
-    "css-sprite": "^0.9.9",
-    "css-sprites": "0.0.4",
     "del": "^1.2.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.0",

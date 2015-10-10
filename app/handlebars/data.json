@@ -583,6 +583,10 @@
       "image": "aws.jpeg",
       "url": "http://www.meetup.com/AWS-SG/"
     }, {
+      "name": "Azure community Singapore",
+      "image": "azure.png",
+      "url": "http://www.meetup.com/AzureSG/"
+    }, {
       "name": "BigData SG",
       "url": "https://www.facebook.com/groups/bigdatasg"
     }, {
@@ -650,6 +654,10 @@
       "name": "Meteor Singapore",
       "image": "meteor.png",
       "url": "http://www.meetup.com/Meteor-Singapore/"
+    }, {
+      "name": ".Net Developers Singapore",
+      "image": "net.png",
+      "url": "http://www.meetup.com/Net-Developers-SG"
     }, {
       "name": "NodeBots Singapore",
       "image": "nodebots.png",

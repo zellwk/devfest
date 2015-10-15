@@ -532,6 +532,23 @@
       "job-title": "Design Lead",
       "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
     }]
+  }, {
+    "type": "company",
+    "employer": "Smove",
+    "image": "images/sponsors/smove.png",
+    "jobs": [{
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }, {
+      "job-title": "Design Lead",
+      "job-desc": "Oversee all phases of UX work: research, conceptual design and prototyping."
+    }]
   }],
 
   "sponsors": {
@@ -556,6 +573,16 @@
       "logo": "images/sponsors/sonoport.png",
       "background": "images/sponsors/sonoport-image.jpg",
       "url": "http://www.sonoport.com"
+    }, {
+      "name": "Smove",
+      "logo": "images/sponsors/smove.png",
+      "background": "images/sponsors/smove-image.jpg",
+      "url": "http://smove.sg"
+    }, {
+      "name": "Hired",
+      "logo": "images/sponsors/hired.png",
+      "background": "images/sponsors/hired-image.jpg",
+      "url": "http://hired.com"
     }]
   },
 

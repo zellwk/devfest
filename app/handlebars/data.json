@@ -51,6 +51,17 @@
       "date": "14",
       "day": "Sat",
       "events": [{
+        "title": "Global Day of Coderetreat",
+        "image": "images/events/coderetreat.jpg",
+        "desc": "Coderetreat is a day-long, intensive practice event, focusing on the fundamentals of software development and design. By providing developers the opportunity to take part in focused practice, away from the pressures of 'getting things done', the coderetreat format has proven itself to be a highly effective means of skill improvement. Practicing the basic principles of modular and object-oriented design, developers can improve their ability to write code that minimizes the cost of change over time.",
+        "startTime": "9",
+        "startTimeSuffix": "am",
+        "endTime": "5",
+        "endTimeSuffix": "pm",
+        "location": "The Impact Hub",
+        "location-2": "128 Prinsep St, Singapore 188655",
+        "ticket": "Register Free"
+      }, {
         "title": "SuperHappyDevHouse_4.0",
         "image": "images/events/shdh.png",
         "desc": "SuperHappyDevHouse is back in Singapore! The all-day, all-night hackathon of brilliant code, pizza, and copious amounts of coffee, is better than ever. Done BY the tech community, FOR the tech community, meet the creme de la creme of SE Asian talent hacking in one venue.<br/><br/><a href='http://superhappydevhouse.sg' target='_blank'>http://superhappydevhouse.sg</a>",
@@ -61,19 +72,6 @@
         "location": "The Impact Hub",
         "location-2": "128 Prinsep St, Singapore 188655",
         "ticket": "Register Free"
-      }, {
-        "title": "HackerspaceSG 6th Birthday Party",
-        "image": "images/events/hackerspacesg-party.png",
-        "image-link": "http://hackerspace.sg",
-        "logo": "images/events/hackerspacesg-party-logo.png",
-        "desc": "Hackerspace is turning 6! Join us for some good food and drinks at Singapore's first kiasu-free zone",
-        "startTime": "7",
-        "startTimeSuffix": "pm",
-        "endTime": "12",
-        "endTimeSuffix": "am",
-        "location": "344B King George's Avenue",
-        "location-2": "Singapore 208576",
-        "ticket": "Available Soon"
       }]
     },
 
@@ -556,6 +554,11 @@
       "logo": "images/sponsors/sonoport.png",
       "background": "images/sponsors/sonoport-image.jpg",
       "url": "http://www.sonoport.com"
+    }, {
+      "name": "smove",
+      "logo": "images/sponsors/smove.png",
+      "background": "images/sponsors/smove-image.jpeg",
+      "url": "https://www.smove.sg"
     }]
   },
 

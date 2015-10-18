@@ -38,15 +38,6 @@
     },
 
     {
-      "type": "tickets",
-      "title": "Pssst. Want go to every event?",
-      "desc": "You can grab a DevFest.Asia Festival Ticket for just $900!",
-      "button": "Get the Festival Ticket",
-      "sold-out": true,
-      "url": "https://www.eventnook.com/event/devfestasia2015/home"
-    },
-
-    {
       "type": "event",
       "date": "14",
       "day": "Sat",

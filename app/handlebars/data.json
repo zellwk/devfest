@@ -79,7 +79,8 @@
         "startTimeSuffix": "am",
         "endTime": "5",
         "endTimeSuffix": "pm",
-        "location": "TBC",
+        "location": "Microsoft Singapore",
+        "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
         "ticket": "Get ticket S$25"
       }, {
         "title": "Dev Careers in Singapore",
@@ -158,7 +159,8 @@
         "startTimeSuffix": "pm",
         "endTime": "10",
         "endTimeSuffix": "pm",
-        "location": "TBC",
+        "location": "Microsoft Singapore",
+        "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
         "ticket": "Get ticket S$25"
       }]
     },
@@ -226,14 +228,15 @@
         "title": "NodeBots - Sumo Bot Battles",
         "image": "images/events/nodebots.png",
         "image-link": "http://nodebots.io",
+        "logo": "images/workspaces/workingcapitol-logo.jpg",
         "desc": "A day workshop where participants will learn how to build a simplebot with Arduino, servos and cardboard. They will then programme it using node.js.",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location-2": "",
-        "ticket": "Available soon"
+        "location": "The Working Capitol, ",
+        "location-2": "1 Keong Saik Road <br> Singapore 089109",
+        "ticket": "Get ticket S$50"
       }]
     },
 
@@ -287,7 +290,7 @@
         "endTimeSuffix": "pm",
         "location": "TBC",
         "location-2": "",
-        "ticket": "Available soon"
+        "ticket": "Register Free"
 
       }, {
         "title": "WebAudio Hack Day",
@@ -562,6 +565,11 @@
       "logo": "images/sponsors/sonoport.png",
       "background": "images/sponsors/sonoport-image.jpg",
       "url": "http://www.sonoport.com"
+    },{
+      "name": "Redmart",
+      "logo": "images/sponsors/redmart.png",
+      "background": "images/sponsors/redmart-image.jpg",
+      "url": "http://www.redmart.com"
     }, {
       "name": "Smove",
       "logo": "images/sponsors/smove.png",

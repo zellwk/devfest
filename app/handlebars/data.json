@@ -402,21 +402,6 @@
         "location-2": "Singpaore 427447",
         "ticketinfo": "Register at the entrance upon arrival (women only)"
       }, {
-        "title": "Free co-working at Workhouse",
-        "image": "images/workspaces/workhouse.jpg",
-        "image-link": "http://www.ourworkhouse.com",
-        "logo": "images/workspaces/workhouse-logo.jpg",
-        "desc": "Workhouse is a coworking space located in the heart of Little India. Meet our smart and diverse group of entrepreneurs with a social directive during DevFest.Asia. Best is to call 6291 2650 before to make sure we've space.<br/><br/><a href='http://www.ourworkhouse.com' target='_blank'>http://www.ourworkhouse.com</a>",
-        "startTime": "9",
-        "startTimeSuffix": "am",
-        "endTime": "6",
-        "endTimeSuffix": "pm",
-        "weekdays": true,
-        "location": "2 Veerasamy Road",
-        "location-2": "Singapore 207305",
-        "ticket": "Like on Facebook to come",
-        "event-link": "https://www.facebook.com/ourworkhouse"
-      }, {
         "title": "Free co-working at ACE",
         "image": "images/workspaces/ace.jpg",
         "logo": "images/workspaces/ace-logo.jpg",

@@ -74,15 +74,15 @@
     <h4>{{desc}}</h4>
     <div class="c-interrupt__jobs">
       {{#each ../../jobs}}
-      {{#compare this.type "featured"}}
-      {{#each jobs}}
-      <div class="c-interrupt__job">
-        <img src="http://placehold.it/160x90" alt="">
-        <h4><strong>{{title}} at {{employer}}</strong></h4>
-        <p>{{jd}}</p>
-      </div>
-      {{/each}}
-      {{/compare}}
+        {{#compare this.type "featured"}}
+         {{#each jobs}}
+          <div class="c-interrupt__job">
+            <img class="c-interrupt__job-image" src="{{image}}" alt="{{employer}}">
+            <h4><strong>{{title}} at {{employer}}</strong></h4>
+            <p>{{jd}}</p>
+          </div>
+          {{/each}}
+        {{/compare}}
       {{/each}}
     </div>      
 

@@ -2,6 +2,7 @@
 .c-interrupt {
   text-align: center;
   display: block;
+
   // background: #fafafa;
   margin-top: rhythm(1);
   margin-bottom: rhythm(1);
@@ -16,6 +17,7 @@
     margin-top: rhythm(3);
     margin-bottom: rhythm(3);
   }
+
 
   h4, p {
     color: rgba(#fff, 0.8);
@@ -39,6 +41,7 @@
 
   @include bp(med) {
     @include gallery(4 of 12);
+
     margin-top: rhythm(2);
   }
 }
@@ -69,4 +72,10 @@
   li {
     list-style-position: inside;
   }
+}
+
+.c-interrupt__job-image {
+  padding: rhythm(0.75) rhythm(1);
+  margin-bottom: rhythm(0.25);
+  background: white;
 }

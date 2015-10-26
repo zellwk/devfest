@@ -503,9 +503,11 @@ article {
   background: white;
   padding-top: rhythm(1);
   padding-bottom: rhythm(1);
-  margin-bottom: rhythm(2);
 
   .c-section-intro {
     margin-top: rhythm(1);
+  }
+  + .site-footer {
+    margin-top: 0;
   }
 }

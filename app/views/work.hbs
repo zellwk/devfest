@@ -8,50 +8,70 @@
     {{> _header active="work" }}
 
     <div class="l-content">
-
-      <section>
-        <div class="wrap">
-          <div class="c-section-intro">
-            <h1 class="o-italic">Working in Singapore</h1>
-            <p>Singapore is awesome to work in, and <br>we have a vibrant community to back it up! </p>
-            <div>
-              <a class="o-btn" href="/community.html">Check out the community!</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="wrap">
-          <div class="section-intro">
-            <h1 class="o-italic">These companies are hiring!</h1>
-          </div>
-        </div>
-      </section>
-      {{#each jobs}}
-      {{#compare this.type 'company'}}
+     <section>
       <div class="wrap">
-        <div class="c-company-and-jobs l-company-and-jobs">
-          <div class="c-company l-company">
-            <div>
-              <img src="{{image}}" alt="{{employer}}">
-            </div>
-          </div>
-
-          <div class="c-jobs l-jobs">
-            {{#each jobs}}
-            <a href="{{url}}" class="c-job l-job" target="_blank">
-              <div class="c-job__content">
-                <h4>{{job-title}}</h4>
-                <p>{{job-desc}}</p>
-              </div>
-            </a>  
-            {{/each}}
+        <div class="c-section-intro">
+          <h1 class="o-italic">Working in Singapore</h1>
+          <p>Singapore is awesome to work in, and <br>we have a vibrant community to back it up! </p>
+          <div>
+            <a class="o-btn" href="/community.html">Check out the community!</a>
           </div>
         </div>
       </div>
-      {{/compare}}
-      {{/each}}
+    </section>
+
+    <section class="section--alt">
+      <div class="wrap">
+        <div class="c-section-intro">
+          <h1 class="o-italic">Dev Careers Meetup</h1>
+          <p>We're also holding a meetup to help you learn more about developer opportunities and visa process in Singapore. You can also participate in 3min speed interviews with some of the coolest companies in town.</p>
+
+          <p>This meetup is enabled by</p>
+
+          <div class="enablers">
+            <img src="images/sponsors/ga.png" alt="">
+            <img src="images/sponsors/hired.png" alt="">
+          </div>
+
+          <div>
+            <a class="o-btn" href="/index.html#Sun15">Check out the Meetup!</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <h1 class="o-italic">These companies are hiring!</h1>
+        </div>
+      </div>
+    </section>
+    {{#each jobs}}
+    {{#compare this.type 'company'}}
+    <div class="wrap">
+      <div class="c-company-and-jobs l-company-and-jobs">
+        <div class="c-company l-company">
+          <div>
+            <img src="{{image}}" alt="{{employer}}">
+          </div>
+        </div>
+
+        <div class="c-jobs l-jobs">
+          {{#each jobs}}
+          <a href="{{url}}" class="c-job l-job" target="_blank">
+            <div class="c-job__content">
+              <h4>{{job-title}}</h4>
+              <p>{{job-desc}}</p>
+            </div>
+          </a>  
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    {{/compare}}
+    {{/each}}
 
      {{!--  <div class="wrap">
         <div class="c-company-and-jobs l-company-and-jobs">
@@ -67,6 +87,8 @@
       </div> --}}
 
     </div>
+
+    
     {{> _footer }}
   </div>
 </div>

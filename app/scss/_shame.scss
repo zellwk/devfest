@@ -491,3 +491,21 @@ article {
   margin-left: auto;
   margin-right: auto;
 }
+
+.enablers {
+  margin-top: rhythm(1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section--alt {
+  background: white;
+  padding-top: rhythm(1);
+  padding-bottom: rhythm(1);
+  margin-bottom: rhythm(2);
+
+  .c-section-intro {
+    margin-top: rhythm(1);
+  }
+}

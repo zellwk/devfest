@@ -442,13 +442,15 @@
     }, {
       "employer": "Piktochart",
       "image": "images/sponsors/piktochart.png",
-      "title": "UI Designer",
-      "jd": "Piktochart team is looking for a solid UI UX designer who is able to combine insights from users, wireframe and consider the best user experience."
+      "title": "UI Developer (HTML/CSS)",
+      "jd": "We are looking to improve our web app and there's so much new interactions to implement to better the user experience. We are looking for a UI developer who is motivated to combine the art of design with the science of programming.",
+      "url": "http://grnh.se/kfbs17"
     }, {
       "employer": "Redmart",
       "image": "images/sponsors/redmart.png",
       "title": "Design Lead",
-      "jd": "Build the world's most customer centric ecommerce and logistics company."
+      "jd": "Build the world's most customer centric ecommerce and logistics company.",
+      "url": "http://geeks.redmart.com/2015/01/07/skiing-in-singapore-a-coding-diversion"
     }]
   }, {
     "type": "company",
@@ -472,7 +474,7 @@
       "url": "http://grnh.se/jqiy0g"
     }, {
       "job-title": "UI Developer (HTML/CSS)",
-      "job-desc": " We are looking to improve our web app and there's so much new interactions to implement to better the user experience. We are looking for a UI developer who is motivated to combine the art of design with the science of programming.",
+      "job-desc": "We are looking to improve our web app and there's so much new interactions to implement to better the user experience. We are looking for a UI developer who is motivated to combine the art of design with the science of programming.",
       "url": "http://grnh.se/kfbs17"
     }, {
       "job-title": "UI Designer",

@@ -76,17 +76,17 @@
       {{#each ../../jobs}}
         {{#compare this.type "featured"}}
          {{#each jobs}}
-          <div class="c-interrupt__job">
+          <a href="{{url}}" class="c-interrupt__job">
             <img class="c-interrupt__job-image" src="{{image}}" alt="{{employer}}">
             <h4><strong>{{title}} at {{employer}}</strong></h4>
             <p>{{jd}}</p>
-          </div>
+          </a>
           {{/each}}
         {{/compare}}
       {{/each}}
     </div>      
 
-    <button class="o-btn">See other jobs</button>
+    <a href="work.html" class="o-btn">See other jobs</a>
   </div>
 </div> 
 {{/compare}}

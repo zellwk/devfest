@@ -37,6 +37,7 @@
 }
 
 .c-interrupt__job {
+  text-decoration: none;
   margin-top: rhythm(1);
 
   @include bp(med) {

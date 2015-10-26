@@ -111,6 +111,10 @@ form {
     max-height: rhythm(1.4);
   }
 
+  img.moritz {
+    max-height: rhythm(1.5);
+  }
+
   span {
     @include is-invisible;
   }
@@ -394,9 +398,9 @@ article {
 
   @include bp(large) {
     flex-basis: percentage(1 / 3);
+
     // flex-basis: percentage(1 / 2);
     flex-grow: 1;
-
     padding-bottom: 18.75%; // ((100/3) * 9/16)
     // padding-bottom: percentage(1 / 2 * 9 / 16);
   }

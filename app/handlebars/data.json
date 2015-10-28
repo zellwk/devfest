@@ -474,6 +474,24 @@
       "job-desc": "Build the world's most customer centric ecommerce and logistics company.",
       "url": "http://geeks.redmart.com/2015/01/07/skiing-in-singapore-a-coding-diversion"
     }]
+  }, {
+    "type": "company",
+    "employer": "Meteor",
+    "image": "images/sponsors/meteor.png",
+    "jobs": [{
+      "job-title": "Core Developer - Applications",
+      "job-desc": "You love making things. Make gorgeous components and interfaces that are used by tens of thousands of open source developers all over the world. See your work inside successful startups, be thanked by developers at Devshop for your contributions.",
+      "url": "https://www.meteor.com/jobs/core-developer-applications"
+    }]
+  }, {
+    "type": "company",
+    "employer": "Smove",
+    "image": "images/sponsors/smove.png",
+    "jobs": [{
+      "job-title": "3x Awesome JS Engineers",
+      "job-desc": "At smove, our software engineers create innovative technology to solve real world problems in the urban mobility/transportation space. We code really cool realtime “Internet of Things” systems that connect to our growing fleet of hybrid cars.",
+      "url": "https://www.smove.sg/wp-content/uploads/2015/09/smove_recruitment_150915.pdf"
+    }]
   }],
 
   "sponsors": {

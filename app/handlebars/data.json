@@ -306,8 +306,8 @@
         "startTimeSuffix": "am",
         "endTime": "9",
         "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location-2": "",
+        "location": "Skyscanner Singapore",
+        "location-2": "39 Robinson Road, #08-01<br/>Singapore 068911",
         "ticket": "Get ticket S$25"
       }]
     },
@@ -328,6 +328,18 @@
         "endTimeSuffix": "pm",
         "location": "TBC",
         "location-2": "",
+        "ticket": "Register Free"
+      },{
+        "title": "CSS Singapore Meetup",
+        "image": "images/events/csssingapore.png",
+        "image-link": "http://www.meetup.com/Singapore-CSS/events/226313643/",
+        "desc": "Come to the first ever CSS Singapore! Featuring short talks to learn something new about the front end world. Whether you're a CSS veteran or are just starting out, there's something for you.",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": "pm",
+        "location": "Hackerspace.SG",
+        "location-2": "344B King George’s Avenue<br>Singapore 208576",
         "ticket": "Register Free"
       }]
     },

@@ -449,23 +449,23 @@
   "jobs": [{
     "type": "featured",
     "jobs": [{
-      "employer": "Piktochart",
-      "image": "images/sponsors/piktochart.png",
-      "title": "Javascript Developer",
-      "jd": "Piktochart team is looking for a solid Javascript developer who loves writing JavaScript from scratch. You will be creating visually appealing interfaces.",
-      "url": "http://grnh.se/xwy2jg"
+      "employer": "sonoport",
+      "image": "images/sponsors/sonoport.png",
+      "title": "Senior Frontend Developer",
+      "jd": "Sonoport FrontEnd team is looking for a Senior FrontEnd Developer. We build a platform allowing users to create multisensory experiences with touch, sight and especially sound. We work with cutting edge Web technologies like WebAudio and WebComponents.",
+      "url": "http://sonoport.com/jobs/"
     }, {
-      "employer": "Piktochart",
-      "image": "images/sponsors/piktochart.png",
-      "title": "UI Developer (HTML/CSS)",
-      "jd": "We are looking to improve our web app and there's so much new interactions to implement to better the user experience. We are looking for a UI developer who is motivated to combine the art of design with the science of programming.",
-      "url": "http://grnh.se/kfbs17"
+      "employer": "Smove",
+      "image": "images/sponsors/smove.png",
+      "title": "3x Awesome JS Engineers",
+      "jd": "Sonoport FrontEnd team is looking for a Senior FrontEnd Developer. We build a platform allowing users to create multisensory experiences with touch, sight and especially sound. We work with cutting edge Web technologies like WebAudio and WebComponents.",
+      "url": "https://www.smove.sg/wp-content/uploads/2015/09/smove_recruitment_150915.pdf"
     }, {
-      "employer": "Redmart",
-      "image": "images/sponsors/redmart.png",
-      "title": "Design Lead",
-      "jd": "Build the world's most customer centric ecommerce and logistics company.",
-      "url": "http://geeks.redmart.com/2015/01/07/skiing-in-singapore-a-coding-diversion"
+      "employer": "Meteor",
+      "image": "images/sponsors/meteor.png",
+      "title": "Core Developer - Applications",
+      "jd": "You love making things. Make gorgeous components and interfaces that are used by tens of thousands of open source developers all over the world. See your work inside successful startups, be thanked by developers at Devshop for your contributions.",
+      "url": "https://www.meteor.com/jobs/core-developer-applications"
     }]
   }, {
     "type": "company",
@@ -506,6 +506,15 @@
       "job-title": "3x Awesome JS Engineers",
       "job-desc": "At smove, our software engineers create innovative technology to solve real world problems in the urban mobility/transportation space. We code really cool realtime “Internet of Things” systems that connect to our growing fleet of hybrid cars.",
       "url": "https://www.smove.sg/wp-content/uploads/2015/09/smove_recruitment_150915.pdf"
+    }]
+  }, {
+    "type": "company",
+    "employer": "sonoport",
+    "image": "images/sponsors/sonoport.png",
+    "jobs": [{
+      "job-title": "Senior Frontend Developer",
+      "job-desc": "Sonoport FrontEnd team is looking for a Senior FrontEnd Developer. We build a platform allowing users to create multisensory experiences with touch, sight and especially sound. We work with cutting edge Web technologies like WebAudio and WebComponents.",
+      "url": "http://sonoport.com/jobs/"
     }]
   }],
 

@@ -48,7 +48,7 @@
 
         <div class="c-jobs l-jobs">
           {{#each jobs}}
-          <a href="{{url}}" class="c-job l-job" target="_blank">
+          <a href="{{#if url}}{{url}}{{else}}mailto:{{email}}{{/if}}" class="c-job l-job" target="_blank">
             <div class="c-job__content">
               <h4>{{job-title}}</h4>
               <p>{{job-desc}}</p>

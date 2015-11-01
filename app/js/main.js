@@ -57,3 +57,5 @@ $(document).ready(function() {
     }
   });
 });
+
+require('./jobs');

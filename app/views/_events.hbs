@@ -72,8 +72,8 @@
   <div class="wrap">
     <h1 class="o-italic"><strong>{{title}}</strong></h1>
     <h4>{{desc}}</h4>
-    <div class="c-interrupt__jobs">
-      {{#each ../../jobs}}
+    <div id="featured-jobs" class="c-interrupt__jobs">
+     {{!--  {{#each ../../jobs}}
         {{#compare this.type "featured"}}
          {{#each jobs}}
           <a href="{{url}}" class="c-interrupt__job">
@@ -83,13 +83,22 @@
           </a>
           {{/each}}
         {{/compare}}
-      {{/each}}
+      {{/each}} --}}
     </div>      
 
     <a href="work.html" class="o-btn">See other jobs</a>
   </div>
 </div> 
+
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="entry">
+    <h1>{{random}}</h1>
+  </div>
+</script>
+
 {{/compare}}
+
+
 
 {{#compare this.type "tickets"}}
 <div class="c-interrupt c-tickets">  

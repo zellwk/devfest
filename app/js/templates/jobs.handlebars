@@ -1,0 +1,11 @@
+{{#each this}}
+  {{#each jobs}}
+    {{#if @first}}
+      <a href="{{#if url}}{{url}}{{else}}mailto:{{email}}{{/if}}" class="c-interrupt__job">
+        <img class="c-interrupt__job-image" src="{{../image}}" alt="{{../employer}}">
+      <h4><strong>{{job-title}} at {{../employer}}</strong></h4>
+        <p>{{#truncate job-desc '150'}}{{/truncate}}</p>
+      </a>
+    {{/if}}
+  {{/each}}
+{{/each}}

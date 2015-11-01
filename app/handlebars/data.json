@@ -127,7 +127,8 @@
         "startTimeSuffix": "pm",
         "endTime": "10",
         "endTimeSuffix": "pm",
-        "location": "TBC",
+        "location": "TradeGecko",
+        "location-2": "121 Telok Ayer #02 <br/>Singapore 068590",
         "price": "free",
         "ticket": "Register Free"
       }]
@@ -153,7 +154,8 @@
         "startTimeSuffix": "pm",
         "endTime": "9",
         "endTimeSuffix": "pm",
-        "location": "TBC",
+        "location": "TradeGecko",
+        "location-2": "121 Telok Ayer #02 <br/>Singapore 068590",
         "ticket": "Get ticket S$75"
       }, {
         "title": "Talk.js Special Edition",

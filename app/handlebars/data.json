@@ -162,14 +162,14 @@
         "image": "images/events/talk-js.jpeg",
         "image-link": "http://www.meetup.com/Singapore-JS/",
         "logo": "images/events/talk-js-logo.png",
-        "desc": "November meetup for talk.js. Few short talks in the evening + dinner and mingling. Special guests for this edition:<br/><br/>Simon Swain from Sydney, creator of <a href='https://coldwar.io' target='_blank'>Cold War</a> and <a href='https://strawjs.com' target='_blank'>Straw</a><br/>Christian Heilmann from the US, <a href='https://christianheilmann.com' target='_blank'>better web evangelist</a>",
+        "desc": "November meetup for talk.js. Few short talks in the evening + dinner and mingling. Special guests for this edition:<br/><br/>Simon Swain from Sydney, creator of <a href='https://coldwar.io' target='_blank'>Cold War</a> and <a href='https://strawjs.com' target='_blank'>Straw</a>",
         "startTime": "7",
         "startTimeSuffix": "pm",
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "Microsoft Singapore",
         "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
-        "ticket": "Get ticket S$25"
+        "ticket": "Register Free"
       }]
     },
 
@@ -189,7 +189,7 @@
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$340"
+        "ticket": "Get ticket S$400"
       }, {
         "title": "CSSConf.Asia After Party",
         "image": "images/events/cssconfparty.jpg",
@@ -231,7 +231,7 @@
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$680"
+        "ticket": "Get ticket S$750"
       }, {
         "title": "NodeBots - Sumo Bot Battles",
         "image": "images/events/nodebots.png",
@@ -264,7 +264,7 @@
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$680"
+        "ticket": "Get ticket S$750"
 
       }, {
         "title": "JSConf.Asia After Party",
@@ -454,12 +454,6 @@
       "title": "Senior Frontend Developer",
       "jd": "Sonoport FrontEnd team is looking for a Senior FrontEnd Developer. We build a platform allowing users to create multisensory experiences with touch, sight and especially sound. We work with cutting edge Web technologies like WebAudio and WebComponents.",
       "url": "http://sonoport.com/jobs/"
-    }, {
-      "employer": "Smove",
-      "image": "images/sponsors/smove.png",
-      "title": "3x Awesome JS Engineers",
-      "jd": "Sonoport FrontEnd team is looking for a Senior FrontEnd Developer. We build a platform allowing users to create multisensory experiences with touch, sight and especially sound. We work with cutting edge Web technologies like WebAudio and WebComponents.",
-      "url": "https://www.smove.sg/wp-content/uploads/2015/09/smove_recruitment_150915.pdf"
     }, {
       "employer": "Meteor",
       "image": "images/sponsors/meteor.png",

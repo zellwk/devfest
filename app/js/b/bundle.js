@@ -521,6 +521,11 @@ module.exports={
       "background": "images/sponsors/braintree-image.jpeg",
       "url": "https://www.braintreepayments.com"
     }, {
+      "name": "TradeGecko",
+      "logo": "images/sponsors/tradegecko.png",
+      "background": "images/sponsors/tradegecko-image.jpg",
+      "url": "http://tradegecko.com"
+    }, {
       "name": "Piktochart",
       "logo": "images/sponsors/piktochart.png",
       "background": "images/sponsors/piktochart-image.jpeg",
@@ -535,16 +540,16 @@ module.exports={
       "logo": "images/sponsors/sonoport.png",
       "background": "images/sponsors/sonoport-image.jpg",
       "url": "http://www.sonoport.com"
-    },{
-      "name": "Redmart",
-      "logo": "images/sponsors/redmart.png",
-      "background": "images/sponsors/redmart-image.jpg",
-      "url": "http://www.redmart.com"
     }, {
       "name": "Smove",
       "logo": "images/sponsors/smove.png",
       "background": "images/sponsors/smove-image.jpg",
       "url": "http://smove.sg"
+    }, {
+      "name": "Redmart",
+      "logo": "images/sponsors/redmart.png",
+      "background": "images/sponsors/redmart-image.jpg",
+      "url": "http://www.redmart.com"
     }, {
       "name": "Hired",
       "logo": "images/sponsors/hired.png",

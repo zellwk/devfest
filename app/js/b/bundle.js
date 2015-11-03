@@ -509,7 +509,7 @@ module.exports={
     "jobs": [{
       "job-title": "Senior Frontend Developer",
       "job-desc": "Sonoport FrontEnd team is looking for a Senior FrontEnd Developer. We build a platform allowing users to create multisensory experiences with touch, sight and especially sound. We work with cutting edge Web technologies like WebAudio and WebComponents.",
-      "email": "http://sonoport.com/jobs"
+      "url": "http://sonoport.com/jobs"
     }]
   }],
 

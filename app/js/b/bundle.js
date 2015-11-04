@@ -211,7 +211,8 @@ module.exports={
         "startTimeSuffix": "pm",
         "endTime": "10",
         "endTimeSuffix": "pm",
-        "location": "TBC",
+        "location": "Microsoft Singapore",
+        "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
         "ticket": "Register Free"
       }]
     },

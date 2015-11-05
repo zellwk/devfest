@@ -531,6 +531,11 @@
       "background": "images/sponsors/piktochart-image.jpeg",
       "url": "http://piktochart.com"
     }, {
+      "name": "Skyscanner",
+      "logo": "images/sponsors/skyscanner.png",
+      "background": "images/sponsors/skyscanner-image.jpg",
+      "url": "http://skyscanner.com"
+    }, {
       "name": "Meteor",
       "logo": "images/sponsors/meteor.png",
       "background": "images/sponsors/meteor-image.jpg",

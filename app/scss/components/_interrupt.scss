@@ -30,7 +30,6 @@
 
 .c-interrupt__jobs {
   @include cf;
-
   h4 {
     margin-bottom: rhythm(0.5);
   }
@@ -38,6 +37,7 @@
 
 .c-interrupt__job {
   text-decoration: none;
+  display: block;
   margin-top: rhythm(1);
 
   @include bp(med) {

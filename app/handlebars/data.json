@@ -696,6 +696,10 @@
       "image": "geekgirls.png",
       "url": "http://www.sggeekgirls.com/"
     }, {
+      "name": "SingaporeCSS",
+      "image": "singaporecss.png",
+      "url": "http://www.meetup.com/Singapore-CSS/"
+    }, {
       "name": "SingaporeJS",
       "image": "singaporejs.png",
       "url": "http://www.meetup.com/Singapore-JS/"

@@ -136,8 +136,10 @@
 
     {
       "type": "tickets",
-      "title": "Register All day at The Working Capitol",
-      "desc": "We're using Devfest.Asia wrist-bands for registration in Devfest.Asia events. Pick yours up at The Working capital, 1 Keong Saik Road on workdays at 10am-5pm."
+      "title": "Register all-day at The Working Capitol",
+      "desc": "We're using Devfest.Asia wrist-bands for registration in Devfest.Asia events. Pick yours up at The Working capital, 1 Keong Saik Road on workdays at 10am-5pm. Please remember to bring your photo-ID indicating your ticket holder name.",
+      "button": "Here's everything you should know about Devfest.Asia",
+      "url": "http://blog.devfest.asia/welcome-to-the-singapore-developer-community/"
     },
 
     {

@@ -24,12 +24,29 @@
   }
 }
 
+.c-interrupt__desc {
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rhythm(1);
+  a {
+    color: color(carmine);
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
 .c-tickets {
   text-align: center;
 }
 
 .c-interrupt__jobs {
   @include cf;
+
   h4 {
     margin-bottom: rhythm(0.5);
   }

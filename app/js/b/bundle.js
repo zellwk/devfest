@@ -138,7 +138,8 @@ module.exports={
     {
       "type": "tickets",
       "title": "Register all-day at The Working Capitol",
-      "desc": "We're using Devfest.Asia wrist-bands for registration in Devfest.Asia events. Pick yours up at The Working capital, 1 Keong Saik Road on workdays at 10am-5pm. Please remember to bring your photo-ID indicating your ticket holder name.",
+      "desc": "We're using Devfest.Asia wrist-bands for registration in Devfest.Asia events. You can skip queues at the events once you have this. <br><br> Pick yours up at <a class='jsTel' data-link='http://www.theworkingcapitol.com/en' data-tel='tel:+65 6805 4050' href='tel:+65 6805 4050'>The Working capitol</a>, 1 Keong Saik Road on workdays at 10am-5pm. Please remember to bring your photo-ID indicating your ticket holder name.",
+      "img": "images/wristbands-1.jpg",
       "button": "Here's everything you should know about Devfest.Asia",
       "url": "http://blog.devfest.asia/welcome-to-the-singapore-developer-community/"
     },
@@ -972,6 +973,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],4:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -1011,6 +1013,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{"../handlebars/data.json":1,"./templates/jobs.handlebars":9,"hbsfy/runtime":30,"lodash":"lodash"}],5:[function(require,module,exports){
 "use strict";
 
@@ -1342,7 +1345,39 @@ $(document).ready(function () {
 
 require('./jobs');
 
+$(document).ready(function () {
+  var $tels = $('.jsTel');
+
+  $tels.each(function (index, el) {
+    var $el = $(el);
+    var tel = $el.attr('data-tel');
+    var link = $el.attr('data-link');
+    var ww = $(window).width();
+
+    checkTelAndUrl($el, tel, link, ww);
+
+    $(window).resize(function () {
+      ww = $(window).width();
+      checkTelAndUrl($el, tel, link, ww);
+    });
+  });
+
+  function changeTelAndUrl($el, value) {
+    console.log(value);
+    $el.attr('href', value);
+  }
+
+  function checkTelAndUrl($el, tel, link, ww) {
+    if (ww > 1024) {
+      changeTelAndUrl($el, link);
+    } else {
+      changeTelAndUrl($el, tel);
+    }
+  }
+});
+
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{"./canvas":2,"./hash-scroll":3,"./jobs":4,"./jqueryform":5,"./simple-header":7,"./svg":8,"./zell-scrollspy":10}],7:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -1396,6 +1431,7 @@ $(window).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],8:[function(require,module,exports){
 'use strict';
 
@@ -2432,6 +2468,7 @@ module.exports = exports['default'];
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],26:[function(require,module,exports){
 'use strict';
 
@@ -24905,6 +24942,8 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[6]);
+
+},{}]},{},[6])
+
 
 //# sourceMappingURL=bundle.js.map

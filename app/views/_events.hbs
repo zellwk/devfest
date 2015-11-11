@@ -109,7 +109,8 @@
       <img class="sold-out__img--large" src="images/soldout-large.png" alt="">
     </div> {{/if}}
     <h1 class="o-italic">{{{title}}}</h1>
-    <h4>{{{desc}}}</h4>
+    <p class="c-interrupt__desc">{{{desc}}}</p>
+    {{#if img}} <div><img src="{{img}}" alt=""></div> {{/if}}
     {{#if sold-out}}
     <div class="o-btn--disabled">{{button}}</div>
     {{else}}

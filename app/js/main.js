@@ -59,3 +59,35 @@ $(document).ready(function() {
 });
 
 require('./jobs');
+
+$(document).ready(function() {
+  let $tels = $('.jsTel'); 
+
+  $tels.each(function(index, el) {
+    let $el = $(el);
+    let tel = $el.attr('data-tel');
+    let link = $el.attr('data-link');
+    let ww = $(window).width();
+
+    checkTelAndUrl($el, tel, link, ww)
+
+    $(window).resize(function() {
+      ww = $(window).width();
+      checkTelAndUrl($el, tel, link, ww)
+    });
+  
+  }); 
+
+  function changeTelAndUrl ($el, value){
+    console.log(value);
+    $el.attr('href', value);
+  }
+
+  function checkTelAndUrl ($el, tel, link, ww){
+    if (ww > 1024) {
+      changeTelAndUrl($el, link);
+    } else {
+      changeTelAndUrl($el, tel);
+    }
+  }
+});

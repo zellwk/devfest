@@ -21,11 +21,12 @@ article {
   h2 + p {
     margin-top: 1em;
   }
-   p + h2 {
-    margin-top: 2em;
-   }
-  ul,
 
+  * + h2 {
+    margin-top: 2em;
+  }
+
+  ul,
   ol {
     margin-left: 1em;
   }

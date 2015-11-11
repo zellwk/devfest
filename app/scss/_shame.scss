@@ -507,7 +507,21 @@ article {
   .c-section-intro {
     margin-top: rhythm(1);
   }
+
   + .site-footer {
     margin-top: 0;
+  }
+}
+
+.u-center {
+  p {
+    margin-top: 1em;
+  }
+
+  > * {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

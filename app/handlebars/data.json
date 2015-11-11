@@ -15,7 +15,7 @@
         "endTimeSuffix": "pm",
         "location": "General Assembly",
         "location-2": "1A Keong Saik Road<br/>Singapore 089109",
-        "ticket": "Register Free"
+        "ticket": "Fully Booked"
       }]
     },
 
@@ -51,7 +51,7 @@
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
         "location-2": "#09-01 Suntec Tower Five <br/> Singapore 038985",
-        "ticket": "Register Free"
+        "ticket": "Fully Booked"
       }, {
         "title": "SuperHappyDevHouse_4.0",
         "image": "images/events/shdh.png",
@@ -148,9 +148,9 @@
         "title": "Hacking UX: Design thinking for techies",
         "image": "images/events/hackingux.jpg",
         "desc": "Whether it's to validate an idea, or to understand what you're building is meant to achieve, the amazing <a href='https://www.linkedin.com/in/thedesignnomad' target='_blank'>Melissa Ng</a> will teach you how to better understand who you're building for and how to hack your way to an awesome user experience.",
-        "startTime": "6",
+        "startTime": "7",
         "startTimeSuffix": "pm",
-        "endTime": "9",
+        "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "TradeGecko",
         "location-2": "121 Telok Ayer #02 <br/>Singapore 068590",
@@ -328,9 +328,9 @@
         "startTimeSuffix": "am",
         "endTime": "3",
         "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location-2": "",
-        "ticket": "Register Free"
+        "location": "Ya Kun Kaya Toast",
+        "location-2": "18 China St #01-01<br/>Singapore 049560",
+        "ticket": "Fully Booked"
       },{
         "title": "CSS Singapore Meetup",
         "image": "images/events/csssingapore.png",

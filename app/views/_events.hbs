@@ -113,7 +113,7 @@
     {{#if sold-out}}
     <div class="o-btn--disabled">{{button}}</div>
     {{else}}
-    <a href="{{url}}" class="o-btn">{{button}}</a>
+    {{#if button}} <a href="{{url}}" class="o-btn">{{button}}</a> {{/if}}
     {{/if}}
   </div>
 </div> 

@@ -31,8 +31,8 @@
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "am",
-        "location": "TBC",
-        "location-2": "",
+        "location": "111 Middle Road",
+        "location-2": "#01-05, Café Kapok <br> Singapore 188969",
         "ticketinfo": "Free for all DevFest.Asia ticket holders"
       }]
     },
@@ -116,7 +116,7 @@
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
-        "location-2": "#09-01 Suntec Tower Five <br/> Singapore 038985",
+        "location-2": "#07-01 Suntec Tower Five <br/> Singapore 038985",
         "ticket": "Get ticket S$25"
       }, {
         "title": "Front End TL;DR",

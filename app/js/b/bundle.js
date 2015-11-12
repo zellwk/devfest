@@ -32,8 +32,8 @@ module.exports={
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "am",
-        "location": "TBC",
-        "location-2": "",
+        "location": "111 Middle Road",
+        "location-2": "#01-05, Café Kapok <br> Singapore 188969",
         "ticketinfo": "Free for all DevFest.Asia ticket holders"
       }]
     },
@@ -117,7 +117,7 @@ module.exports={
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
-        "location-2": "#09-01 Suntec Tower Five <br/> Singapore 038985",
+        "location-2": "#07-01 Suntec Tower Five <br/> Singapore 038985",
         "ticket": "Get ticket S$25"
       }, {
         "title": "Front End TL;DR",
@@ -972,6 +972,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],4:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -1011,6 +1012,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{"../handlebars/data.json":1,"./templates/jobs.handlebars":9,"hbsfy/runtime":30,"lodash":"lodash"}],5:[function(require,module,exports){
 "use strict";
 
@@ -1374,6 +1376,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{"./canvas":2,"./hash-scroll":3,"./jobs":4,"./jqueryform":5,"./simple-header":7,"./svg":8,"./zell-scrollspy":10}],7:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -1427,6 +1430,7 @@ $(window).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],8:[function(require,module,exports){
 'use strict';
 
@@ -2463,6 +2467,7 @@ module.exports = exports['default'];
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],26:[function(require,module,exports){
 'use strict';
 
@@ -24936,6 +24941,8 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[6]);
+
+},{}]},{},[6])
+
 
 //# sourceMappingURL=bundle.js.map

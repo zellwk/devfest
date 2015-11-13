@@ -324,34 +324,35 @@ module.exports={
       "date": "22",
       "day": "Sun",
       "events": [{
-        "title": "KopiJS",
-        "image": "images/events/kopijs.jpg",
-        "image-link": "http://kopijs.org",
-        "logo": "images/events/kopijs-logo.png",
-        "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
-        "startTime": "11",
-        "startTimeSuffix": "am",
-        "endTime": "3",
-        "endTimeSuffix": "pm",
-        "location": "Ya Kun Kaya Toast",
-        "location-2": "18 China St #01-01<br/>Singapore 049560",
-        "ticket": "Fully Booked",
-        "gmap": "18 China St #01-01 Singapore 049560"
-      },
+          "title": "KopiJS",
+          "image": "images/events/kopijs.jpg",
+          "image-link": "http://kopijs.org",
+          "logo": "images/events/kopijs-logo.png",
+          "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
+          "startTime": "11",
+          "startTimeSuffix": "am",
+          "endTime": "3",
+          "endTimeSuffix": "pm",
+          "location": "Ya Kun Kaya Toast",
+          "location-2": "18 China St #01-01<br/>Singapore 049560",
+          "ticket": "Fully Booked",
+          "gmap": "18 China St #01-01 Singapore 049560"
+        },
 
-      {
-        "title": "CSS Singapore Meetup",
-        "image": "images/events/csssingapore.png",
-        "image-link": "http://www.meetup.com/Singapore-CSS/events/226313643/",
-        "desc": "Come to the first ever CSS Singapore! Featuring short talks to learn something new about the front end world. Whether you're a CSS veteran or are just starting out, there's something for you.",
-        "startTime": "7",
-        "startTimeSuffix": "pm",
-        "endTime": "9",
-        "endTimeSuffix": "pm",
-        "location": "Hackerspace.SG",
-        "location-2": "344B King George’s Avenue<br>Singapore 208576",
-        "ticket": "Register Free"
-      }]
+        {
+          "title": "CSS Singapore Meetup",
+          "image": "images/events/csssingapore.png",
+          "image-link": "http://www.meetup.com/Singapore-CSS/events/226313643/",
+          "desc": "Come to the first ever CSS Singapore! Featuring short talks to learn something new about the front end world. Whether you're a CSS veteran or are just starting out, there's something for you.",
+          "startTime": "7",
+          "startTimeSuffix": "pm",
+          "endTime": "9",
+          "endTimeSuffix": "pm",
+          "location": "Hackerspace.SG",
+          "location-2": "344B King George’s Avenue<br>Singapore 208576",
+          "ticket": "Register Free"
+        }
+      ]
     },
 
     {
@@ -516,6 +517,15 @@ module.exports={
       "job-title": "Senior Frontend Developer",
       "job-desc": "Sonoport FrontEnd team is looking for a Senior FrontEnd Developer. We build a platform allowing users to create multisensory experiences with touch, sight and especially sound. We work with cutting edge Web technologies like WebAudio and WebComponents.",
       "url": "http://sonoport.com/jobs"
+    }]
+  }, {
+    "type": "company",
+    "employer": "TradeGecko",
+    "image": "images/sponsors/tradegecko.png",
+    "jobs": [{
+      "job-title": "Senior engineers in Ruby and JavaScript (EmberJS)",
+      "job-desc": "Help build the future of commerce in an exciting and rapidly growing company.",
+      "url": "https://www.tradegecko.com/jobs"
     }]
   }],
 

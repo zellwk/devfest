@@ -702,6 +702,10 @@ module.exports={
       "image": "geekgirls.png",
       "url": "http://www.sggeekgirls.com/"
     }, {
+      "name": "Singapore Clojure Meetup",
+      "image": "singaporeclojure.jpeg",
+      "url": "http://www.meetup.com/Singapore-Clojure-Meetup/"
+    }, {
       "name": "SingaporeCSS",
       "image": "singaporecss.png",
       "url": "http://www.meetup.com/Singapore-CSS/"

@@ -14,9 +14,10 @@ module.exports={
         "startTimeSuffix": "pm",
         "endTime": "10",
         "endTimeSuffix": "pm",
-        "location": "General Assembly",
+        "location": "The Working Capitol",
         "location-2": "1A Keong Saik Road<br/>Singapore 089109",
-        "ticket": "Fully Booked"
+        "ticket": "Fully Booked",
+        "gmap": "The Working Capitol 1A Keong Saik Road Singapore 089109"
       }]
     },
 
@@ -313,7 +314,8 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Skyscanner Singapore",
         "location-2": "39 Robinson Road, #08-01<br/>Singapore 068911",
-        "ticket": "Get ticket S$25"
+        "ticket": "Get ticket S$25",
+        "gmap": "39 Robinson Road"
       }]
     },
 
@@ -333,8 +335,11 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Ya Kun Kaya Toast",
         "location-2": "18 China St #01-01<br/>Singapore 049560",
-        "ticket": "Fully Booked"
-      },{
+        "ticket": "Fully Booked",
+        "gmap": "18 China St #01-01 Singapore 049560"
+      },
+
+      {
         "title": "CSS Singapore Meetup",
         "image": "images/events/csssingapore.png",
         "image-link": "http://www.meetup.com/Singapore-CSS/events/226313643/",
@@ -972,6 +977,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],4:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -1011,6 +1017,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{"../handlebars/data.json":1,"./templates/jobs.handlebars":9,"hbsfy/runtime":30,"lodash":"lodash"}],5:[function(require,module,exports){
 "use strict";
 
@@ -1374,6 +1381,7 @@ $(document).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{"./canvas":2,"./hash-scroll":3,"./jobs":4,"./jqueryform":5,"./simple-header":7,"./svg":8,"./zell-scrollspy":10}],7:[function(require,module,exports){
 (function (global){
 'use strict';
@@ -1427,6 +1435,7 @@ $(window).ready(function () {
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],8:[function(require,module,exports){
 'use strict';
 
@@ -2463,6 +2472,7 @@ module.exports = exports['default'];
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+
 },{}],26:[function(require,module,exports){
 'use strict';
 
@@ -24936,6 +24946,8 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}]},{},[6]);
+
+},{}]},{},[6])
+
 
 //# sourceMappingURL=bundle.js.map

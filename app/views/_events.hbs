@@ -39,7 +39,7 @@
             </div>
             <div class="c-event__location">
               <img class="i-location jsSvgInject" src="images/location1.svg" />
-              <a href="http://maps.google.com/?q={{location}}"> 
+              <a href="http://maps.google.com/?q={{#if gmap}}{{gmap}}{{else}}{{location}}{{/if}}"> 
                 <div> {{{location}}}</div>
                 <div>{{{location-2}}}</div>
               </a>

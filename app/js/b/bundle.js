@@ -16,7 +16,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "The Working Capitol",
         "location-2": "1A Keong Saik Road<br/>Singapore 089109",
-        "ticket": "Fully Booked",
+        "ticketinfo": "Registration ended",
         "gmap": "The Working Capitol 1A Keong Saik Road Singapore 089109"
       }]
     },
@@ -53,7 +53,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
         "location-2": "#09-01 Suntec Tower Five <br/> Singapore 038985",
-        "ticket": "Fully Booked"
+        "ticketinfo": "Registration ended"
       }, {
         "title": "SuperHappyDevHouse_4.0",
         "image": "images/events/shdh.png",
@@ -64,7 +64,7 @@ module.exports={
         "endTimeSuffix": "pm (the next day)",
         "location": "The Impact Hub",
         "location-2": "128 Prinsep St, Singapore 188655",
-        "ticket": "Register Free"
+        "ticketinfo": "Registration Ended"
       }]
     },
 
@@ -88,7 +88,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Microsoft Singapore",
         "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
-        "ticket": "Get ticket S$25"
+        "ticketinfo": "Registration ended"
       }, {
         "title": "Dev Careers in Singapore",
         "image": "images/events/workingmeetup.jpg",
@@ -100,7 +100,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "The Working Capitol, ",
         "location-2": "1 Keong Saik Road <br> Singapore 089109",
-        "ticket": "Register Free"
+        "ticketinfo": "Registration ended"
       }]
     },
 
@@ -191,7 +191,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$400"
+        "ticket": "Get ticket S$450"
       }, {
         "title": "CSSConf.Asia After Party",
         "image": "images/events/cssconfparty.jpg",
@@ -234,7 +234,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$750"
+        "ticket": "Get ticket S$800"
       }, {
         "title": "NodeBots - Sumo Bot Battles",
         "image": "images/events/nodebots.png",
@@ -267,7 +267,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$750"
+        "ticket": "Get ticket S$800"
 
       }, {
         "title": "JSConf.Asia After Party",
@@ -1003,13 +1003,13 @@ var $ = global.jQuery;
 var _ = require('lodash');
 var templateFn = require('./templates/jobs.handlebars');
 
-var Handlebars = require("hbsfy/runtime");
+var Handlebars = require('hbsfy/runtime');
 
 Handlebars.registerHelper('truncate', function (str, len) {
   if (str.length > len && str.length > 0) {
-    var new_str = str + " ";
+    var new_str = str + ' ';
     new_str = str.substr(0, len);
-    new_str = str.substr(0, new_str.lastIndexOf(" "));
+    new_str = str.substr(0, new_str.lastIndexOf(' '));
     new_str = new_str.length > 0 ? new_str : str.substr(0, len);
 
     return new Handlebars.SafeString(new_str + '...');
@@ -1083,7 +1083,7 @@ $(document).ready(function () {
             e = g.attr("action");f.setAttribute("target", l);c || f.setAttribute("method", "POST");e != j.url && f.setAttribute("action", j.url);!j.skipEncodingOverride && (!c || /post/i.test(c)) && g.attr({ encoding: "multipart/form-data", enctype: "multipart/form-data" });j.timeout && (s = setTimeout(function () {
           r = !0;E(u);
         }, j.timeout));var i = [];try {
-          if (j.extraData) for (var k in j.extraData) i.push(a('<input type="hidden" name="' + k + '">').attr("value", j.extraData[k]).appendTo(f)[0]);if (!j.iframeTarget) {
+          if (j.extraData) for (var k in j.extraData) i.push(a("<input type=\"hidden\" name=\"" + k + "\">").attr("value", j.extraData[k]).appendTo(f)[0]);if (!j.iframeTarget) {
             m.appendTo("body");n.attachEvent ? n.attachEvent("onload", E) : n.addEventListener("load", E, !1);
           }setTimeout(h, 15);f.submit();
         } finally {
@@ -1148,11 +1148,11 @@ $(document).ready(function () {
       } else for (i = 0; i < e.length; i++) {
         h = a(f[e[i].name]);h.removeAttr("disabled");
       }if (a(":input[name=submit],:input[id=submit]", f).length) {
-        alert('Error: Form elements must not have name or id of "submit".');return;
+        alert("Error: Form elements must not have name or id of \"submit\".");return;
       }j = a.extend(!0, {}, a.ajaxSettings, b);j.context = j.context || j;l = "jqFormIO" + new Date().getTime();if (j.iframeTarget) {
         m = a(j.iframeTarget);q = m.attr("name");q == null ? m.attr("name", l) : l = q;
       } else {
-        m = a('<iframe name="' + l + '" src="' + j.iframeSrc + '" />');m.css({ position: "absolute", top: "-1000px", left: "-1000px" });
+        m = a("<iframe name=\"" + l + "\" src=\"" + j.iframeSrc + "\" />");m.css({ position: "absolute", top: "-1000px", left: "-1000px" });
       }n = m[0];o = { aborted: 0, responseText: null, responseXML: null, status: 0, statusText: "n/a", getAllResponseHeaders: function getAllResponseHeaders() {}, getResponseHeader: function getResponseHeader() {}, setRequestHeader: function setRequestHeader() {}, abort: function abort(b) {
           var c = b === "timeout" ? "timeout" : "aborted";d("aborting upload... " + c);this.aborted = 1;m.attr("src", j.iframeSrc);o.error = c;j.error && j.error.call(j.context, o, c, b);k && a.event.trigger("ajaxError", [o, j, c]);j.complete && j.complete.call(j.context, o, c);
         } };k = j.global;k && ! a.active++ && a.event.trigger("ajaxStart");k && a.event.trigger("ajaxSend", [o, j]);if (j.beforeSend && j.beforeSend.call(j.context, o, j) === !1) {
@@ -1319,29 +1319,29 @@ require('./hash-scroll');
 require('./jqueryform');
 
 $(document).ready(function () {
-  var $form = $("#subscribeForm");
+  var $form = $('#subscribeForm');
   var $text = $('#subscribeForm .msg').find('span');
   var $spinner = $form.find('.spinner');
   var $social = $('.social');
 
-  $("#subscribeForm").ajaxForm({
-    url: "http://2014.cssconf.asia/addsubscriber.php",
-    dataType: "html",
+  $('#subscribeForm').ajaxForm({
+    url: 'http://2014.cssconf.asia/addsubscriber.php',
+    dataType: 'html',
     beforeSubmit: function beforeSubmit() {
       // Resets text before submitting
-      $text.text("");
+      $text.text('');
       // Starts spinner
       $spinner.show().addClass('play');
       $social.hide();
     },
     success: function success(r) {
-      if (r.substr(0, 6) != "Thanks") {
-        console.log("No Thanks");
+      if (r.substr(0, 6) != 'Thanks') {
+        console.log('No Thanks');
         $text.text(r.substr(0, r.indexOf('<br/>')));
       } else {
-        console.log("Thanks");
+        console.log('Thanks');
         $form.find('input').val('');
-        $text.text("Thanks. We'll keep you updated!");
+        $text.text('Thanks. We\'ll keep you updated!');
 
         $form.find('.social-msg').text('Check out our facebook page now! :)');
         // $social.show().addClass('form-show');
@@ -1353,7 +1353,7 @@ $(document).ready(function () {
     },
     error: function error(r, s) {
       // $("#subscribeForm").removeClass("load").addClass("failure");
-      $text.text("Something went utterly wrong...");
+      $text.text('Something went utterly wrong...');
     },
     complete: function complete() {
       console.log('complete');
@@ -1725,10 +1725,7 @@ var ScrollSpy = (function () {
       }
     },
 
-    onScrollDirectionChange: function onScrollDirectionChange() {
-      // this.setTransition();
-      // this.changeMinMax();
-    },
+    onScrollDirectionChange: function onScrollDirectionChange() {},
 
     changeMinMax: function changeMinMax() {
       var o = this.options;
@@ -1827,6 +1824,9 @@ $(window).load(function () {
     };
   }
 });
+
+// this.setTransition();
+// this.changeMinMax();
 
 },{"jquery":"jquery"}],11:[function(require,module,exports){
 'use strict';
@@ -3399,7 +3399,7 @@ module.exports = require("handlebars/runtime")["default"];
 
 },{}],"jquery":[function(require,module,exports){
 /*!
- * jQuery JavaScript Library v2.1.3
+ * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
  *
  * Includes Sizzle.js
@@ -3409,7 +3409,7 @@ module.exports = require("handlebars/runtime")["default"];
  * Released under the MIT license
  * http://jquery.org/license
  *
- * Date: 2014-12-18T15:11Z
+ * Date: 2015-04-28T16:01Z
  */
 
 (function( global, factory ) {
@@ -3467,7 +3467,7 @@ var
 	// Use the correct document accordingly with window argument (sandbox)
 	document = window.document,
 
-	version = "2.1.3",
+	version = "2.1.4",
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -3931,7 +3931,12 @@ jQuery.each("Boolean Number String Function Array Date RegExp Object Error".spli
 });
 
 function isArraylike( obj ) {
-	var length = obj.length,
+
+	// Support: iOS 8.2 (not reproducible in simulator)
+	// `in` check used to prevent JIT error (gh-2145)
+	// hasOwn isn't used here due to false negatives
+	// regarding Nodelist length in IE
+	var length = "length" in obj && obj.length,
 		type = jQuery.type( obj );
 
 	if ( type === "function" || jQuery.isWindow( obj ) ) {
@@ -12608,7 +12613,7 @@ return jQuery;
 (function (global){
 /**
  * @license
- * lodash 3.10.1 (Custom Build) <https://lodash.com/>
+ * lodash 3.10.0 (Custom Build) <https://lodash.com/>
  * Build: `lodash modern -d -o ./index.js`
  * Copyright 2012-2015 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
@@ -12621,7 +12626,7 @@ return jQuery;
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '3.10.1';
+  var VERSION = '3.10.0';
 
   /** Used to compose bitmasks for wrapper metadata. */
   var BIND_FLAG = 1,

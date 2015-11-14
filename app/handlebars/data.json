@@ -15,7 +15,7 @@
         "endTimeSuffix": "pm",
         "location": "The Working Capitol",
         "location-2": "1A Keong Saik Road<br/>Singapore 089109",
-        "ticket": "Fully Booked",
+        "ticketinfo": "Registration ended",
         "gmap": "The Working Capitol 1A Keong Saik Road Singapore 089109"
       }]
     },
@@ -52,7 +52,7 @@
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
         "location-2": "#09-01 Suntec Tower Five <br/> Singapore 038985",
-        "ticket": "Fully Booked"
+        "ticketinfo": "Registration ended"
       }, {
         "title": "SuperHappyDevHouse_4.0",
         "image": "images/events/shdh.png",
@@ -63,7 +63,7 @@
         "endTimeSuffix": "pm (the next day)",
         "location": "The Impact Hub",
         "location-2": "128 Prinsep St, Singapore 188655",
-        "ticket": "Register Free"
+        "ticketinfo": "Registration Ended"
       }]
     },
 
@@ -87,7 +87,7 @@
         "endTimeSuffix": "pm",
         "location": "Microsoft Singapore",
         "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
-        "ticket": "Get ticket S$25"
+        "ticketinfo": "Registration ended"
       }, {
         "title": "Dev Careers in Singapore",
         "image": "images/events/workingmeetup.jpg",
@@ -99,7 +99,7 @@
         "endTimeSuffix": "pm",
         "location": "The Working Capitol, ",
         "location-2": "1 Keong Saik Road <br> Singapore 089109",
-        "ticket": "Register Free"
+        "ticketinfo": "Registration ended"
       }]
     },
 
@@ -190,7 +190,7 @@
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$400"
+        "ticket": "Get ticket S$450"
       }, {
         "title": "CSSConf.Asia After Party",
         "image": "images/events/cssconfparty.jpg",
@@ -233,7 +233,7 @@
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$750"
+        "ticket": "Get ticket S$800"
       }, {
         "title": "NodeBots - Sumo Bot Battles",
         "image": "images/events/nodebots.png",
@@ -266,7 +266,7 @@
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$750"
+        "ticket": "Get ticket S$800"
 
       }, {
         "title": "JSConf.Asia After Party",

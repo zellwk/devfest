@@ -21,7 +21,6 @@
         </a>
         <div class="c-event__content">
           <div class="c-event__desc">
-
             {{#if featured}}
             <div class="c-devfest-featured c-devfest-featured--coworking">
               <div class="c-devfest-featured__badge c-devfest-featured__badge--coworking">
@@ -45,25 +44,33 @@
               </a>
             </div>
           </div>
+          {{!-- /desc --}}
           <div class="c-event__aside">
             {{#if featured}}
             {{else}}
-            {{#if ticket}}
-            {{#if event-link}}<a href="{{event-link}}" target="_blank" class="o-btn">{{ticket}}</a> 
-            {{else}}<a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank"  class="o-btn">{{ticket}}</a>
-            {{/if}}
-            {{else}}
-            <div class="ticket-info">
-              {{ticketinfo}}
-            </div>
-            {{/if}}
+              {{#if ticket}}
+                {{#if event-link}}
+                  <a href="{{event-link}}" target="_blank" class="o-btn">{{ticket}}</a> 
+                  {{else}}
+                  <a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank"  class="o-btn">{{ticket}}</a>
+                {{/if}}
+              {{else}}
+                <div class="ticket-info">
+                  {{ticketinfo}}
+                </div>
+              {{/if}}
             {{/if}}
           </div>
+          {{!-- /aside --}}
         </div>
-      </div>  
+        {{!-- /content --}}
+      </div> 
+      {{!-- /event --}}
       {{/each}}
     </div>
+    {{!-- /events --}}
   </div>
+  {{!-- /date --}}
 </div>
 {{/compare}}
 

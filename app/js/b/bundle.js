@@ -954,7 +954,11 @@ $(document).ready(function () {
 
   $('.c-events-nav').on('click', 'a', function (event) {
     event.preventDefault();
-    replaceHashAndScroll($(this));
+    if (!$(this).hasClass('c-events__calendar')) {
+      replaceHashAndScroll($(this));
+    } else {
+      window.location = $(this).attr('href');
+    }
   });
 
   $('.c-community__ways').on('click', 'a', function (event) {

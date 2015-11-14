@@ -1,0 +1,55 @@
+.c-sponsors-grid {
+  @include cf;
+
+  display: block;
+  margin-top: rhythm(1);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.c-sponsors-grid__item {
+  position: relative;
+  padding-bottom: 56.25%;
+
+  @include bp(large) {
+    float: left;
+    width: percentage(1 / 3);
+    padding-bottom: 18.75%; // ((100/3) * 9/16)
+    // padding-bottom: percentage(1 / 2 * 9 / 16);
+  }
+
+
+  .c-sponsor__item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+    }
+  }
+
+  img {
+    margin-right: rhythm(1.5);
+    padding: rhythm(1);
+
+    // height: rhythm(2);
+    width: auto;
+    background: white;
+    color: white;
+    transform: scale(0.8, 0.8);
+    transform-origin: bottom right;
+  }
+}

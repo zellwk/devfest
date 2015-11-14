@@ -4,20 +4,27 @@
       <nav class="c-events-nav">
 
         {{#each dates}} 
-          {{#compare this.type "event"}}
-            {{#if date}}
-            <a href="#{{day}}{{date}}-hash" class="{{#compare day "Sat"}}c-events-nav__weekend{{/compare}}{{#compare day "Sun"}}c-events-nav__weekend{{/compare}} jsScrollSpyHighlight" data-scrollSpyHighlight="{{date}}">
-              <span class="c-events-nav__day">{{day}}</span>
-              <span class="c-events-nav__date">{{date}}</span>
-            </a>
-            {{else}}
-            <a href="#allweek-hash" class="jsScrollSpyHighlight" data-scrollSpyHighlight="{{date}}">
-              <span class="c-events-nav__day"><br></span>
-              <span class="c-events-nav__date c-events-nav__date--all-week">All Week</span>
-            </a>
-            {{/if}}
-          {{/compare}}
+        {{#compare this.type "event"}}
+        {{#if date}}
+        <a href="#{{day}}{{date}}-hash" class="{{#compare day "Sat"}}c-events-nav__weekend{{/compare}}{{#compare day "Sun"}}c-events-nav__weekend{{/compare}} jsScrollSpyHighlight" data-scrollSpyHighlight="{{date}}">
+          <span class="c-events-nav__day">{{day}}</span>
+          <span class="c-events-nav__date">{{date}}</span>
+        </a>
+        {{else}}
+        <a href="#allweek-hash" class="jsScrollSpyHighlight" data-scrollSpyHighlight="{{date}}">
+          <span class="c-events-nav__day"><br></span>
+          <span class="c-events-nav__date c-events-nav__date--all-week">All Week</span>
+        </a>
+        {{/if}}
+        {{/compare}}
         {{/each }}
+{{!-- 
+        <a href="https://calendar.google.com/calendar/b/1/embed?src=jsconf.asia_eff7b6hqscmr177ltm5n7opsgs@group.calendar.google.com&ctz=Asia/Singapore&pli=1" class="c-events__calendar">
+         <svg viewBox="0 0 24 24">
+            <path d="M23.5 2H20V.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V2H8V.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5V2H.5a.5.5 0 0 0-.5.5v21a.5.5 0 0 0 .5.5h23a.5.5 0 0 0 .5-.5v-21a.5.5 0 0 0-.5-.5zM17 1h2v3h-2V1zM5 1h2v3H5V1zM4 3v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V3h8v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V3h3v4H1V3h3zM1 23V8h22v15H1z"/>
+            <path d="M21.5 12a.5.5 0 0 0 0-1H17V9.5a.5.5 0 0 0-1 0V11h-4V9.5a.5.5 0 0 0-1 0V11H7V9.5a.5.5 0 0 0-1 0V11H2.5a.5.5 0 0 0 0 1H6v3H2.5a.5.5 0 0 0 0 1H6v3H2.5a.5.5 0 0 0 0 1H6v1.5a.5.5 0 0 0 1 0V20h4v1.5a.5.5 0 0 0 1 0V20h4v1.5a.5.5 0 0 0 1 0V20h4.5a.5.5 0 0 0 0-1H17v-3h4.5a.5.5 0 0 0 0-1H17v-3h4.5zM7 12h4v3H7v-3zm0 7v-3h4v3H7zm9 0h-4v-3h4v3zm0-4h-4v-3h4v3z"/>
+          </svg>
+        </a> --}}
       </nav>
     </div>
   </div>

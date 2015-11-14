@@ -93,3 +93,22 @@
 .c-events-nav__date--all-week {
   min-width: 83px;
 }
+
+a.c-events__calendar {
+  display: flex;
+  flex-wrap: nowrap;
+
+  // justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: normal;
+  background-color: color(carmine);
+  margin: 0;
+
+  svg {
+    width: rhythm(1.25);
+    height: rhythm(1.25);
+    fill: white;
+  }
+}

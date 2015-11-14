@@ -11,11 +11,15 @@ $(document).ready(function() {
   $('.downarr').click(function(event) {
     event.preventDefault();
     replaceHashAndScroll($(this));
-  }); 
+  });
 
   $('.c-events-nav').on('click', 'a', function(event) {
     event.preventDefault();
-    replaceHashAndScroll($(this));
+    if (!$(this).hasClass('c-events__calendar')) {
+      replaceHashAndScroll($(this));
+    } else {
+      window.location = $(this).attr('href');
+    }
   });
 
   $('.c-community__ways').on('click', 'a', function(event) {
@@ -38,7 +42,7 @@ $(document).ready(function() {
   function hashChangeScroll() {
   var eventsHeaderHeight = $('.c-events-header').outerHeight();
 
-  // scrolls to hash location 
+  // scrolls to hash location
   var curPos = $(window).scrollTop();
   var currHash = location.hash;
   var targetHash = location.hash + '-hash';

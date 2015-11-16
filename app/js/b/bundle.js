@@ -119,7 +119,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
         "location-2": "#07-01 Suntec Tower Five <br/> Singapore 038985",
-        "ticket": "Get ticket S$25"
+        "ticketinfo": "Registration ended"
       }, {
         "title": "Front End TL;DR",
         "image": "images/events/frontendtldr.jpg",
@@ -132,7 +132,7 @@ module.exports={
         "location": "TradeGecko",
         "location-2": "121 Telok Ayer #02 <br/>Singapore 068590",
         "price": "free",
-        "ticket": "Register Free"
+        "ticketinfo": "Registration ended"
       }]
     },
 

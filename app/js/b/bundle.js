@@ -214,7 +214,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Microsoft Singapore",
         "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
-        "ticket": "Register Free"
+        "ticketinfo": "Registration Ended"
       }]
     },
 
@@ -234,7 +234,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$800"
+        "ticketinfo": "Registration Ended"
       }, {
         "title": "NodeBots - Sumo Bot Battles",
         "image": "images/events/nodebots.png",
@@ -267,7 +267,7 @@ module.exports={
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
         "location-2": "28 Maxwell Road, Singapore 069120",
-        "ticket": "Get ticket S$800"
+        "ticketinfo": "Registration Ended"
 
       }, {
         "title": "JSConf.Asia After Party",

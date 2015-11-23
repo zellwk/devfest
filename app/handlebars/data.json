@@ -157,7 +157,7 @@
         "endTimeSuffix": "pm",
         "location": "TradeGecko",
         "location-2": "121 Telok Ayer #02 <br/>Singapore 068590",
-        "ticket": "Get ticket S$75"
+        "ticketinfo": "Registration ended"
       }, {
         "title": "Talk.js Special Edition",
         "image": "images/events/talk-js.jpeg",
@@ -170,7 +170,7 @@
         "endTimeSuffix": "pm",
         "location": "Microsoft Singapore",
         "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
-        "ticket": "Register Free"
+        "ticketinfo": "Registration ended"
       }]
     },
 
@@ -246,7 +246,7 @@
         "endTimeSuffix": "pm",
         "location": "The Working Capitol, ",
         "location-2": "1 Keong Saik Road <br> Singapore 089109",
-        "ticket": "Get ticket S$50"
+        "ticketinfo": "Registration Ended"
       }]
     },
 
@@ -277,7 +277,7 @@
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "am",
-        "location": "TBC",
+        "location": "offsite",
         "location-2": "",
         "ticketinfo": "For JSConf.Asia attendees"
 
@@ -300,7 +300,7 @@
         "endTimeSuffix": "pm",
         "location": "The Impact Hub",
         "location-2": "128 Prinsep St, Singapore 188655",
-        "ticket": "Register Free"
+        "ticketinfo": "Registration Ended"
 
       }, {
         "title": "WebAudio Hack Day",
@@ -313,7 +313,7 @@
         "endTimeSuffix": "pm",
         "location": "Skyscanner Singapore",
         "location-2": "39 Robinson Road, #08-01<br/>Singapore 068911",
-        "ticket": "Get ticket S$25",
+        "ticketinfo": "Registration Ended",
         "gmap": "39 Robinson Road"
       }]
     },
@@ -334,7 +334,7 @@
           "endTimeSuffix": "pm",
           "location": "Ya Kun Kaya Toast",
           "location-2": "18 China St #01-01<br/>Singapore 049560",
-          "ticket": "Fully Booked",
+          "ticketinfo": "Registration Ended",
           "gmap": "18 China St #01-01 Singapore 049560"
         },
 
@@ -349,7 +349,7 @@
           "endTimeSuffix": "pm",
           "location": "Hackerspace.SG",
           "location-2": "344B King George’s Avenue<br>Singapore 208576",
-          "ticket": "Register Free"
+          "ticketinfo": "Registration Ended"
         }
       ]
     },

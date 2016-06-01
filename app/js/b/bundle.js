@@ -1325,7 +1325,7 @@ $(document).ready(function () {
   var $social = $('.social');
 
   $("#subscribeForm").ajaxForm({
-    url: "http://2014.cssconf.asia/addsubscriber.php",
+    url: "https://2014.cssconf.asia/addsubscriber.php",
     dataType: "html",
     beforeSubmit: function beforeSubmit() {
       // Resets text before submitting
@@ -1347,7 +1347,7 @@ $(document).ready(function () {
         // $social.show().addClass('form-show');
 
         setTimeout(function () {
-          window.location.href = 'http://facebook.com/devfestasia';
+          window.location.href = 'https://facebook.com/devfestasia';
         }, 2000);
       }
     },

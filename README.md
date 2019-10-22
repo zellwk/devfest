@@ -4,13 +4,13 @@ This is [Zell's](http://www.zell-weekeat.com) personal starter kit for all his f
 
 ## Initialization
 
-Install Node dependencies 
+Install Node dependencies:
 
 ~~~
 $ npm install
 ~~~
 
-Install Bower dependencies
+Install Bower dependencies:
 
 ~~~
 $ bower install
@@ -20,7 +20,7 @@ $ bower install
 
 ### Development
 
-This project uses [Gulp]() to watch for changes in HTML, Sass, JS, images. Whenever a file is changed, the project is recompiled. 
+This project uses [Gulp]() to watch for changes in HTML, Sass, JS, and images. Whenever a file is changed, the project is recompiled. 
 
 Here are the file locations: 
 
@@ -29,7 +29,7 @@ SCSS - `app/scss`
 JS - `app/js`
 Images - `app/images`
 
-Run this command to get the dev server up and running
+Run this command to get the dev server up and running:
 
 ~~~
 $ gulp
@@ -37,7 +37,7 @@ $ gulp
 
 ### Production
 
-Run this command to build for production. Minified and revved files are found under the `dist` folder
+Run this command to build for production (Minified and revved files are found under the `dist` folder):
 
 ~~~
 $ gulp build
